@@ -1,0 +1,34 @@
+# Global project defaults
+random_seed: 42
+
+# Data Processing
+window_length_sec: 4
+overlap_pct: 0.5
+preictal_duration_min: 5
+
+# Feature Extraction Flags
+features:
+  bandpower: true
+  relative_bandpower: true
+  spectral_entropy: true
+  hjorth: true
+  line_length: true
+  rms_amplitude: true
+  variance: true
+  zero_crossing_rate: true
+  skew_kurtosis: true
+  inter_channel_correlation: false
+
+# Model Selection
+models_to_train:
+  - logistic_regression
+  - random_forest
+  - lightgbm
+  - ebm
+
+# Explainability
+use_shap: true
+
+# Plotting
+figure_dpi: 300
+figure_formats: ["png", "svg"]

@@ -1,0 +1,5 @@
+# Simulated responsive stimulation-triggering policy — not evidence of therapeutic efficacy.
+Policy,Total_Stimulations,Stimulations_per_Hour,False_Stimulations_per_Hour,Sensitivity_WindowLevel
+Fixed (0.5),41,51.2499999359375,29.9999999625,0.2394366197149375
+Patient-Specific,18,22.499999971875,2.4999999968749997,0.22535211267288235
+Explanation-Constrained,0,0.0,0.0,0.0

@@ -1,0 +1,53 @@
+# CHB-MIT Multi-Subject Configuration
+data_dir: "data/external/chbmit"
+
+subjects:
+  - "01"
+  - "02"
+  - "03"
+  - "05"
+  - "08"
+
+channels: []
+
+windowing:
+  window_length_sec: 4.0
+  overlap: 0.5
+  preictal_sec: 300
+
+features:
+  bandpower: true
+  relative_bandpower: true
+  spectral_entropy: true
+  hjorth: true
+  line_length: true
+  rms_amplitude: true
+  variance: true
+  zero_crossing_rate: true
+  skew_kurtosis: true
+
+models_to_train:
+  - logistic_regression
+  - random_forest
+  - lightgbm
+
+evaluation:
+  modes:
+    - within_subject_chronological
+    - held_out_subject
+  test_fraction_per_subject: 0.4
+
+use_shap: true
+random_seed: 42
+
+policies:
+  fixed_threshold: 0.5
+  target_fa_per_hour: 2.0
+  min_consistency_windows: 3
+  top_k_attribution_features: 5
+  attribution_stability_gamma: 0.4
+
+calibration_bins: 10
+
+figure_formats:
+  - png

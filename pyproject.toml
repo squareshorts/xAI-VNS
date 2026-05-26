@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "explainable_vns"
+version = "0.1.0"
+description = "Explainable Patient-Specific Seizure-Risk Modeling for Responsive Vagus Nerve Stimulation"
+authors = [
+    {name = "Research Team"}
+]
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "numpy",
+    "scipy",
+    "mne",
+    "pandas",
+    "scikit-learn",
+    "xgboost",
+    "lightgbm",
+    "matplotlib",
+    "seaborn",
+    "pyyaml",
+    "tqdm",
+    "joblib",
+    "pytest"
+]
+
+[project.optional-dependencies]
+xai = ["shap", "interpret"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = "test_*.py"

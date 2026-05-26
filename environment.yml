@@ -1,0 +1,23 @@
+name: explainable_vns
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python>=3.10
+  - pip
+  - numpy
+  - scipy
+  - pandas
+  - scikit-learn
+  - matplotlib
+  - seaborn
+  - pyyaml
+  - tqdm
+  - joblib
+  - pytest
+  - pip:
+    - mne
+    - xgboost
+    - lightgbm
+    - shap
+    - interpret

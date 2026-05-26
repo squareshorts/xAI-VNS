@@ -1,0 +1,16 @@
+C:\work\explainable-AI\src\features\eeg_features.py:210: RuntimeWarning: Precision loss occurred in moment calculation due to catastrophic cancellation. This occurs when the data are nearly identical. Results may be unreliable.
+  skew = stats.skew(windows, axis=-1)
+C:\work\explainable-AI\src\features\eeg_features.py:211: RuntimeWarning: Precision loss occurred in moment calculation due to catastrophic cancellation. This occurs when the data are nearly identical. Results may be unreliable.
+  kurt = stats.kurtosis(windows, axis=-1)
+C:\work\explainable-AI\src\features\eeg_features.py:210: RuntimeWarning: Precision loss occurred in moment calculation due to catastrophic cancellation. This occurs when the data are nearly identical. Results may be unreliable.
+  skew = stats.skew(windows, axis=-1)
+C:\work\explainable-AI\src\features\eeg_features.py:211: RuntimeWarning: Precision loss occurred in moment calculation due to catastrophic cancellation. This occurs when the data are nearly identical. Results may be unreliable.
+  kurt = stats.kurtosis(windows, axis=-1)
+C:\work\explainable-AI\src\features\eeg_features.py:210: RuntimeWarning: Precision loss occurred in moment calculation due to catastrophic cancellation. This occurs when the data are nearly identical. Results may be unreliable.
+  skew = stats.skew(windows, axis=-1)
+C:\work\explainable-AI\src\features\eeg_features.py:211: RuntimeWarning: Precision loss occurred in moment calculation due to catastrophic cancellation. This occurs when the data are nearly identical. Results may be unreliable.
+  kurt = stats.kurtosis(windows, axis=-1)
+C:\work\explainable-AI\src\features\eeg_features.py:210: RuntimeWarning: Precision loss occurred in moment calculation due to catastrophic cancellation. This occurs when the data are nearly identical. Results may be unreliable.
+  skew = stats.skew(windows, axis=-1)
+C:\work\explainable-AI\src\features\eeg_features.py:211: RuntimeWarning: Precision loss occurred in moment calculation due to catastrophic cancellation. This occurs when the data are nearly identical. Results may be unreliable.
+  kurt = stats.kurtosis(windows, axis=-1)

@@ -1,0 +1,119 @@
+2026-05-25 14:00:12,304 - pipeline - INFO - Starting Explainable VNS Pipeline
+2026-05-25 14:00:12,304 - pipeline - INFO - Python Version: 3.10.11 (tags/v3.10.11:7d4cc5a, Apr  5 2023, 00:38:17) [MSC v.1929 64 bit (AMD64)]
+2026-05-25 14:00:12,304 - pipeline - INFO - Package 'numpy': 2.2.6
+2026-05-25 14:00:12,304 - pipeline - INFO - Package 'scipy': 1.15.3
+2026-05-25 14:00:12,304 - pipeline - INFO - Package 'mne': 1.11.0
+2026-05-25 14:00:12,304 - pipeline - INFO - Package 'pandas': 2.3.3
+2026-05-25 14:00:12,304 - pipeline - INFO - Package 'scikit-learn': 1.7.2
+2026-05-25 14:00:12,304 - pipeline - INFO - Package 'xgboost': 3.2.0
+2026-05-25 14:00:12,304 - pipeline - INFO - Package 'lightgbm': 4.6.0
+2026-05-25 14:00:12,304 - pipeline - INFO - Package 'shap': 0.49.1
+2026-05-25 14:00:12,304 - pipeline - INFO - Package 'matplotlib': 3.10.8
+2026-05-25 14:00:12,304 - pipeline - INFO - Package 'seaborn': 0.13.2
+2026-05-25 14:00:12,304 - pipeline - INFO - Package 'pyyaml': 6.0.3
+2026-05-25 14:00:12,320 - load_chbmit - INFO - Using synthetic data for demo_subject (PIPELINE VALIDATION ONLY - NOT SCIENTIFIC RESULTS)
+2026-05-25 14:00:12,320 - load_chbmit - INFO - Generating synthetic EEG data for 7200 seconds
+2026-05-25 14:00:13,008 - make_windows - INFO - Creating 3599 windows of length 4s for subject demo_subject
+2026-05-25 14:00:13,189 - eeg_features - INFO - Extracting features for 3599 windows
+2026-05-25 14:00:20,069 - train_models - INFO - Training models: ['logistic_regression', 'random_forest', 'lightgbm', 'ebm']
+2026-05-25 14:00:20,075 - train_models - INFO - Training Logistic Regression...
+2026-05-25 14:00:20,127 - train_models - INFO - Training Random Forest...
+2026-05-25 14:00:21,036 - train_models - INFO - Training LightGBM...
+2026-05-25 14:00:24,294 - train_models - INFO - Training Explainable Boosting Machine...
+2026-05-25 14:00:37,637 - evaluate_models - INFO - Evaluating models on test set...
+2026-05-25 14:00:37,687 - evaluate_models - INFO - Saved Table 2 to C:\work\explainable-AI\results\tables\table2_model_performance.csv
+2026-05-25 14:00:37,687 - explain_models - INFO - Generating model explanations...
+2026-05-25 14:00:38,479 - explain_models - INFO - Computing SHAP values for LightGBM...
+2026-05-25 14:00:38,681 - explain_models - INFO - Saved XAI summary to C:\work\explainable-AI\results\reports\xai_summary.md
+2026-05-25 14:00:38,681 - simulate_vns_triggering - INFO - Simulating VNS triggering policies...
+2026-05-25 14:00:38,729 - simulate_vns_triggering - INFO - Saved Table 3 to C:\work\explainable-AI\results\tables\table3_policy_comparison.csv
+2026-05-25 14:00:38,730 - plot_results - INFO - Generating Figure 2: Model Performance
+2026-05-25 14:00:39,920 - plot_results - INFO - Generating Figure 3: Global Explainability
+2026-05-25 14:00:40,392 - plot_results - INFO - Generating Figure 4: Policy Comparison
+2026-05-25 14:00:40,731 - pipeline - INFO - Pipeline completed successfully.
+2026-05-25 14:57:37,856 - pipeline - INFO - Starting Explainable VNS Pipeline on REAL EEG Data
+2026-05-25 14:57:37,856 - pipeline - INFO - Python Version: 3.10.11 (tags/v3.10.11:7d4cc5a, Apr  5 2023, 00:38:17) [MSC v.1929 64 bit (AMD64)]
+2026-05-25 14:57:37,857 - pipeline - INFO - Package 'numpy': 2.2.6
+2026-05-25 14:57:37,857 - pipeline - INFO - Package 'scipy': 1.15.3
+2026-05-25 14:57:37,858 - pipeline - INFO - Package 'mne': 1.11.0
+2026-05-25 14:57:37,858 - pipeline - INFO - Package 'pandas': 2.3.3
+2026-05-25 14:57:37,858 - pipeline - INFO - Package 'scikit-learn': 1.7.2
+2026-05-25 14:57:37,858 - pipeline - INFO - Package 'xgboost': 3.2.0
+2026-05-25 14:57:37,859 - pipeline - INFO - Package 'lightgbm': 4.6.0
+2026-05-25 14:57:37,859 - pipeline - INFO - Package 'shap': 0.49.1
+2026-05-25 14:57:37,859 - pipeline - INFO - Package 'matplotlib': 3.10.8
+2026-05-25 14:57:37,859 - pipeline - INFO - Package 'seaborn': 0.13.2
+2026-05-25 14:57:37,860 - pipeline - INFO - Package 'pyyaml': 6.0.3
+2026-05-25 14:57:37,867 - load_chbmit - ERROR - Real CHB-MIT data not found in C:\work\explainable-AI\data\chbmit\chb01. Please download it.
+2026-05-25 15:57:23,164 - pipeline - INFO - Starting Explainable VNS Pipeline on REAL EEG Data
+2026-05-25 15:57:23,164 - pipeline - INFO - Python Version: 3.10.11 (tags/v3.10.11:7d4cc5a, Apr  5 2023, 00:38:17) [MSC v.1929 64 bit (AMD64)]
+2026-05-25 15:57:23,164 - pipeline - INFO - Package 'numpy': 2.2.6
+2026-05-25 15:57:23,164 - pipeline - INFO - Package 'scipy': 1.15.3
+2026-05-25 15:57:23,173 - pipeline - INFO - Package 'mne': 1.11.0
+2026-05-25 15:57:23,173 - pipeline - INFO - Package 'pandas': 2.3.3
+2026-05-25 15:57:23,173 - pipeline - INFO - Package 'scikit-learn': 1.7.2
+2026-05-25 15:57:23,173 - pipeline - INFO - Package 'xgboost': 3.2.0
+2026-05-25 15:57:23,173 - pipeline - INFO - Package 'lightgbm': 4.6.0
+2026-05-25 15:57:23,173 - pipeline - INFO - Package 'shap': 0.49.1
+2026-05-25 15:57:23,173 - pipeline - INFO - Package 'matplotlib': 3.10.8
+2026-05-25 15:57:23,173 - pipeline - INFO - Package 'seaborn': 0.13.2
+2026-05-25 15:57:23,173 - pipeline - INFO - Package 'pyyaml': 6.0.3
+2026-05-25 15:57:23,173 - pipeline - INFO - Using CHB-MIT data directory: C:\work\explainable-AI\data\external\chbmit
+2026-05-25 15:57:29,293 - load_chbmit - INFO - Saved dataset summary to C:\work\explainable-AI\results\tables\table1_dataset_summary.csv
+2026-05-25 15:57:29,296 - make_windows - INFO - Creating 1799 windows of length 4.0s for chb01_01.edf
+2026-05-25 15:57:29,390 - make_windows - INFO - Creating 1799 windows of length 4.0s for chb01_02.edf
+2026-05-25 15:57:29,492 - make_windows - INFO - Creating 1799 windows of length 4.0s for chb01_03.edf
+2026-05-25 15:57:29,593 - make_windows - INFO - Creating 1799 windows of length 4.0s for chb01_04.edf
+2026-05-25 15:57:29,697 - make_windows - INFO - Creating 1799 windows of length 4.0s for chb01_05.edf
+2026-05-25 15:57:29,801 - make_windows - INFO - Creating 1799 windows of length 4.0s for chb01_06.edf
+2026-05-25 15:57:29,903 - make_windows - INFO - Creating 1799 windows of length 4.0s for chb01_14.edf
+2026-05-25 15:57:30,017 - make_windows - INFO - Creating 1799 windows of length 4.0s for chb01_15.edf
+2026-05-25 15:57:30,124 - make_windows - INFO - Creating 1799 windows of length 4.0s for chb01_16.edf
+2026-05-25 15:57:30,226 - make_windows - INFO - Creating 1799 windows of length 4.0s for chb01_17.edf
+2026-05-25 15:57:30,326 - make_windows - INFO - Creating 1799 windows of length 4.0s for chb01_18.edf
+2026-05-25 15:57:30,507 - make_windows - INFO - Creating 1799 windows of length 4.0s for chb01_19.edf
+2026-05-25 15:57:30,614 - make_windows - INFO - Creating 1330 windows of length 4.0s for chb01_20.edf
+2026-05-25 15:57:30,705 - make_windows - INFO - Creating 1799 windows of length 4.0s for chb01_21.edf
+2026-05-25 15:57:30,812 - make_windows - INFO - Creating 1799 windows of length 4.0s for chb01_22.edf
+2026-05-25 15:57:30,917 - make_windows - INFO - Creating 1799 windows of length 4.0s for chb01_23.edf
+2026-05-25 15:57:31,025 - make_windows - INFO - Creating 1799 windows of length 4.0s for chb01_24.edf
+2026-05-25 15:57:31,126 - make_windows - INFO - Creating 1799 windows of length 4.0s for chb01_25.edf
+2026-05-25 15:57:31,234 - make_windows - INFO - Creating 1161 windows of length 4.0s for chb01_26.edf
+2026-05-25 15:57:31,303 - make_windows - INFO - Creating 299 windows of length 4.0s for chb01_27.edf
+2026-05-25 15:57:33,622 - eeg_features - INFO - Extracting features for 33373 windows
+2026-05-25 15:58:51,114 - pipeline - INFO - Saved features to C:\work\explainable-AI\data\processed\chbmit_features.parquet
+2026-05-25 15:58:51,114 - pipeline - INFO - Saved labels to C:\work\explainable-AI\data\processed\chbmit_window_labels.csv
+2026-05-25 15:58:51,114 - pipeline - INFO - Training windows: 17990
+2026-05-25 15:58:51,114 - pipeline - INFO - Testing windows: 15383
+2026-05-25 15:58:51,114 - pipeline - INFO - Training positives: 682
+2026-05-25 15:58:51,114 - pipeline - INFO - Testing positives: 594
+2026-05-25 15:58:51,114 - train_models - INFO - Training models: ['logistic_regression', 'random_forest', 'lightgbm']
+2026-05-25 15:58:51,114 - train_models - INFO - Training Logistic Regression...
+2026-05-25 15:58:51,167 - train_models - INFO - Training Random Forest...
+2026-05-25 15:58:55,320 - train_models - INFO - Training LightGBM...
+2026-05-25 15:58:58,112 - evaluate_models - INFO - Evaluating models on test set...
+2026-05-25 15:58:58,201 - evaluate_models - INFO - Saved Table 2 to C:\work\explainable-AI\results\tables\table2_model_performance_real_eeg.csv
+2026-05-25 15:58:58,201 - explain_models - INFO - Generating model explanations...
+2026-05-25 15:58:58,987 - explain_models - INFO - Computing SHAP values for LightGBM...
+2026-05-25 15:58:59,201 - explain_models - INFO - Saved XAI summary to C:\work\explainable-AI\results\reports\xai_summary_real_eeg.md
+2026-05-25 15:58:59,201 - simulate_vns_triggering - INFO - Simulating VNS triggering policies...
+2026-05-25 15:58:59,301 - simulate_vns_triggering - INFO - Saved Table 3 to C:\work\explainable-AI\results\tables\table3_policy_comparison_real_eeg.csv
+2026-05-25 15:58:59,301 - plot_results - INFO - Generating Figure 2: Model Performance
+2026-05-25 15:59:00,325 - plot_results - INFO - Generating Figure 3: Global Explainability
+2026-05-25 15:59:00,705 - plot_results - INFO - Generating Figure 4: Policy Comparison
+2026-05-25 15:59:01,016 - plot_results - INFO - Generating Figure 5: Stimulation Burden Tradeoff
+2026-05-25 15:59:01,320 - pipeline - INFO - Pipeline completed successfully on real CHB-MIT EEG data.
+2026-05-25 16:24:38,086 - pipeline - INFO - Starting Explainable VNS Pipeline on REAL EEG Data
+2026-05-25 16:24:38,087 - pipeline - INFO - Python Version: 3.10.11 (tags/v3.10.11:7d4cc5a, Apr  5 2023, 00:38:17) [MSC v.1929 64 bit (AMD64)]
+2026-05-25 16:24:38,087 - pipeline - INFO - Package 'numpy': 2.2.6
+2026-05-25 16:24:38,087 - pipeline - INFO - Package 'scipy': 1.15.3
+2026-05-25 16:24:38,088 - pipeline - INFO - Package 'mne': 1.11.0
+2026-05-25 16:24:38,088 - pipeline - INFO - Package 'pandas': 2.3.3
+2026-05-25 16:24:38,088 - pipeline - INFO - Package 'scikit-learn': 1.7.2
+2026-05-25 16:24:38,088 - pipeline - INFO - Package 'xgboost': 3.2.0
+2026-05-25 16:24:38,088 - pipeline - INFO - Package 'lightgbm': 4.6.0
+2026-05-25 16:24:38,088 - pipeline - INFO - Package 'shap': 0.49.1
+2026-05-25 16:24:38,089 - pipeline - INFO - Package 'matplotlib': 3.10.8
+2026-05-25 16:24:38,089 - pipeline - INFO - Package 'seaborn': 0.13.2
+2026-05-25 16:24:38,089 - pipeline - INFO - Package 'pyyaml': 6.0.3
+2026-05-25 16:24:38,096 - pipeline - INFO - Using CHB-MIT data directory: C:\work\explainable-AI\data\external\chbmit

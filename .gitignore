@@ -1,0 +1,40 @@
+# Python cache and temporary files
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.ipynb_checkpoints/
+.venv/
+venv/
+env/
+
+# OS specific files
+.DS_Store
+Thumbs.db
+
+# IDE settings
+.vscode/
+.idea/
+
+# LaTeX build outputs (ignore auxiliary files, keep tex, bib, sty, pdf)
+manuscript/*.aux
+manuscript/*.log
+manuscript/*.out
+manuscript/*.blg
+manuscript/*.bbl
+manuscript/*.synctex.gz
+manuscript/*.toc
+manuscript/*.fdb_latexmk
+manuscript/*.fls
+
+# Data directories (ignore actual datasets and features, keep folder structures)
+data/external/**/*
+data/raw/**/*
+data/interim/**/*
+data/processed/**/*
+# Avoid committing raw/processed data files directly
+*.edf
+*.parquet
+chbmit_window_labels.csv
+*.pkl
+
