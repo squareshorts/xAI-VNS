@@ -1,0 +1,38 @@
+name: Final targeted analyses
+
+on:
+  push:
+    paths:
+      - 'reproducibility/scripts/final_targeted_analyses.py'
+      - '.github/workflows/final-targeted-analyses.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  analyze:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install dependencies
+        run: pip install numpy pandas scikit-learn
+      - name: Run targeted analyses
+        working-directory: reproducibility/scripts
+        run: python final_targeted_analyses.py
+      - name: Commit generated results
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add reproducibility/results/decision_time_false_cluster_sensitivity.csv
+          git add reproducibility/results/decision_time_changed_clusters.csv
+          git add reproducibility/results/decision_time_sensitivity_summary.json
+          git add reproducibility/results/chb05_per_edf_diagnostic.csv
+          git add reproducibility/results/chb05_score_shift_summary.csv
+          git add reproducibility/results/chb05_diagnostic_summary.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Add final targeted analysis results"
+            git push
+          fi
