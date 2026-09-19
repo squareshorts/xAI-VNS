@@ -1,0 +1,29 @@
+{
+  "principal_policy": "+ persistence + overlap",
+  "case_false_clusters_center": {
+    "chb01": 2,
+    "chb02": 12,
+    "chb03": 4,
+    "chb05": 681,
+    "chb08": 1
+  },
+  "case_false_clusters_end": {
+    "chb01": 2,
+    "chb02": 12,
+    "chb03": 4,
+    "chb05": 681,
+    "chb08": 1
+  },
+  "pooled_center_false_clusters": 700,
+  "pooled_end_false_clusters": 700,
+  "pooled_hours": 172.82944444444445,
+  "pooled_center_rate": 4.050235781582999,
+  "pooled_end_rate": 4.050235781582999,
+  "case_mean_center_rate": 3.601024775496433,
+  "case_mean_end_rate": 3.601024775496433,
+  "case_median_center_rate": 0.1052585412920486,
+  "case_median_end_rate": 0.1052585412920486,
+  "total_changed_clusters": 0,
+  "center_true_to_end_false": 0,
+  "center_false_to_end_true": 0
+}
