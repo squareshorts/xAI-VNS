@@ -1,20 +1,21 @@
 {
-  "title": "xAI-VNS: Burden-Constrained Policy-Layer Explainability for Simulated EEG-Guided Adaptive Vagus Nerve Stimulation",
+  "title": "xAI-VNS: Burden-Constrained Policy-Layer Authorization for Simulated EEG-Guided Adaptive Vagus Nerve Stimulation",
   "upload_type": "software",
-  "version": "v1.1.0",
+  "version": "v1.2.0",
   "creators": [
     {"name": "Cescon, Suzana", "affiliation": "Federal University of Para"},
     {"name": "Pereira, Antonio", "affiliation": "Federal University of Para", "orcid": "0000-0002-0808-1058"}
   ],
-  "description": "Executable complete-recording analysis accompanying the manuscript on simulated EEG-guided VNS authorization. Version v1.1.0 evaluates all 175 EDF recordings available for five CHB-MIT cases while keeping model fitting, calibration, and operating-point selection restricted to the model-development recordings. The release includes derived inputs, fitted models, predictions, policy/event outputs, tests, final manuscript figures, and LaTeX sources. Raw CHB-MIT EEG is not redistributed.",
+  "description": "Final resubmission analysis accompanying the manuscript on simulated EEG-guided VNS policy-layer authorization. Version v1.2.0 retains the complete 175-EDF evaluation, adds a causal decision-time sensitivity showing that the principal false-cluster endpoint is unchanged under window-end truth assignment, and adds an EDF-level chb05 diagnostic showing that the high held-out burden is distributed across recordings rather than driven by a single anomalous EDF. The release includes derived inputs, fitted models, predictions, policy/event outputs, targeted robustness outputs, tests, final figures, compiled manuscript and reviewer response, and LaTeX sources. Raw CHB-MIT EEG is not redistributed.",
   "keywords": [
     "EEG",
     "epilepsy",
     "vagus nerve stimulation",
     "adaptive neuromodulation",
+    "authorization policy",
     "explainable artificial intelligence",
     "probability calibration",
-    "seizure detection",
+    "seizure-responsive authorization",
     "CHB-MIT"
   ],
   "related_identifiers": [
