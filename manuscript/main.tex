@@ -155,7 +155,6 @@ arrow/.style={-{Latex[length=2mm]}, thick}
 \draw[arrow] (model) -- (xai);
 \draw[arrow] (xai) -- (policy);
 \draw[arrow] (policy) -- (sim);
-\draw[arrow] (sim) -- (review);
 \end{tikzpicture}%
 }
 \caption{Simulated EEG-guided authorization framework. EEG windows are converted into features and operational risk scores; calibration, temporal persistence, and attribution-overlap constraints determine authorization; burden and event timing are evaluated separately from model discrimination.}
