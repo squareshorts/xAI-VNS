@@ -1,8 +1,8 @@
 cff-version: 1.2.0
-title: "xAI-VNS: Burden-Constrained Policy-Layer Explainability for Simulated EEG-Guided Adaptive Vagus Nerve Stimulation"
+title: "xAI-VNS: Burden-Constrained Policy-Layer Authorization for Simulated EEG-Guided Adaptive Vagus Nerve Stimulation"
 message: "Please cite the version-specific Zenodo DOI associated with the release used."
 type: software
-version: 1.1.0
+version: 1.2.0
 date-released: 2026-09-19
 authors:
   - family-names: Cescon
@@ -19,4 +19,6 @@ keywords:
   - vagus nerve stimulation
   - adaptive neuromodulation
   - explainable artificial intelligence
+  - authorization policy
+  - seizure-responsive authorization
   - probability calibration
