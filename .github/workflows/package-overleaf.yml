@@ -5,6 +5,10 @@ on:
     branches: [main]
     paths:
       - '.github/workflows/package-overleaf.yml'
+      - 'manuscript/main.tex'
+      - 'manuscript/response_to_reviewers.tex'
+      - 'manuscript/references.bib'
+      - 'manuscript/figures/**'
 
 permissions:
   contents: read
