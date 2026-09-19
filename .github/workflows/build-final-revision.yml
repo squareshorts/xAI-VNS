@@ -1,0 +1,51 @@
+name: Build final manuscript revision
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'manuscript/main.tex'
+      - 'manuscript/response_to_reviewers.tex'
+      - 'reproducibility/scripts/make_final_figures.py'
+      - '.github/workflows/build-final-revision.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install Python dependencies
+        run: pip install numpy pandas matplotlib
+      - name: Regenerate manuscript figures
+        run: python reproducibility/scripts/make_final_figures.py
+      - name: Install LaTeX
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y texlive-latex-base texlive-latex-extra texlive-fonts-recommended texlive-pictures texlive-science
+      - name: Compile manuscript
+        working-directory: manuscript
+        run: |
+          pdflatex -interaction=nonstopmode -halt-on-error main.tex
+          bibtex main
+          pdflatex -interaction=nonstopmode -halt-on-error main.tex
+          pdflatex -interaction=nonstopmode -halt-on-error main.tex
+      - name: Compile response
+        working-directory: manuscript
+        run: |
+          pdflatex -interaction=nonstopmode -halt-on-error response_to_reviewers.tex
+          pdflatex -interaction=nonstopmode -halt-on-error response_to_reviewers.tex
+      - name: Commit generated figures and PDFs
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add manuscript/figures results/figures manuscript/main.pdf manuscript/response_to_reviewers.pdf
+          if ! git diff --cached --quiet; then
+            git commit -m "Regenerate final revision figures and PDFs"
+            git push
+          fi
