@@ -1,0 +1,29 @@
+name: Package Overleaf source
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/package-overleaf.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  package:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Create Overleaf package
+        run: |
+          mkdir -p /tmp/overleaf/figures
+          cp manuscript/main.tex /tmp/overleaf/
+          cp manuscript/response_to_reviewers.tex /tmp/overleaf/
+          cp manuscript/references.bib /tmp/overleaf/
+          cp manuscript/figures/*.pdf /tmp/overleaf/figures/
+          cd /tmp/overleaf
+          zip -qr "$GITHUB_WORKSPACE/xAI_VNS_Overleaf_final.zip" .
+      - uses: actions/upload-artifact@v4
+        with:
+          name: xAI_VNS_Overleaf_final
+          path: xAI_VNS_Overleaf_final.zip
