@@ -678,10 +678,11 @@ Reproduction files & Figure-generation scripts, manuscript-generation scripts, p
 \centering
 \caption{Paired case-level false-cluster-rate differences relative to persistence plus attribution overlap under the common 300 s refractory rule on the complete recording inventory. Positive values indicate a higher false-cluster rate than the persistence-plus-overlap baseline. Intervals and sign-flip probabilities are descriptive because there are only five cases.}
 \label{tab:comparator_paired}
-\small
-\begin{tabular}{lrrrr}
+\scriptsize
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{@{}lrrrr@{}}
 \toprule
-Comparison & Mean difference (/h) & 95\% case-bootstrap interval & Sign-flip $p$ & Cases lower/equal/higher \\
+Comparison & Mean diff. (/h) & 95\% interval & Sign-flip $p$ & Lower/equal/higher \\
 \midrule
 Threshold & 0.175 & $[-0.126,\ 0.631]$ & 0.750 & 1/2/2 \\
 Persistence & 0.000 & $[0.000,\ 0.000]$ & 1.000 & 0/5/0 \\
@@ -696,10 +697,11 @@ Firing power & -0.094 & $[-0.267,\ 0.083]$ & 0.313 & 4/0/1 \\
 \centering
 \caption{Decision-time sensitivity of the principal train-selected persistence-plus-overlap policy. False clusters are classified either from the original center-based operational labels or from operational labels evaluated at window-end decision availability.}
 \label{tab:decision_time_sensitivity}
-\small
-\begin{tabular}{lrrrr}
+\scriptsize
+\setlength{\tabcolsep}{5pt}
+\begin{tabular}{@{}lrrrr@{}}
 \toprule
-Case & Center-label false clusters & End-time false clusters & Evaluated h & End-time rate (/h) \\
+Case & Center false & End-time false & Evaluated h & End-time rate (/h) \\
 \midrule
 chb01 & 2 & 2 & 40.55 & 0.049 \\
 chb02 & 12 & 12 & 35.27 & 0.340 \\
@@ -716,10 +718,11 @@ Pooled & 700 & 700 & 172.83 & 4.050 \\
 \centering
 \caption{Distribution of chb05 false-cluster burden across the original analysis inventory and the additional evaluation-only exposure for the principal train-selected policy.}
 \label{tab:chb05_diagnostic}
-\small
-\begin{tabular}{lrrrrr}
+\scriptsize
+\setlength{\tabcolsep}{5pt}
+\begin{tabular}{@{}lrrrrr@{}}
 \toprule
-Exposure & EDFs & EDFs with false clusters & Evaluated h & False clusters & False clusters/h \\
+Exposure & EDFs & EDFs w/ false & Evaluated h & False clusters & False/h \\
 \midrule
 Original analysis inventory & 14 & 10 & 14.00 & 66 & 4.71 \\
 Additional evaluation only & 25 & 22 & 25.00 & 615 & 24.60 \\
