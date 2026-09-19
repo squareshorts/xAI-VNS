@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+title: "xAI-VNS: Burden-Constrained Policy-Layer Explainability for Simulated EEG-Guided Adaptive Vagus Nerve Stimulation"
+message: "Please cite the version-specific Zenodo DOI associated with the release used."
+type: software
+version: 1.1.0
+date-released: 2026-09-19
+authors:
+  - family-names: Cescon
+    given-names: Suzana
+    affiliation: Federal University of Para
+  - family-names: Pereira
+    given-names: Antonio
+    affiliation: Federal University of Para
+    orcid: "https://orcid.org/0000-0002-0808-1058"
+repository-code: "https://github.com/squareshorts/xAI-VNS"
+keywords:
+  - EEG
+  - epilepsy
+  - vagus nerve stimulation
+  - adaptive neuromodulation
+  - explainable artificial intelligence
+  - probability calibration

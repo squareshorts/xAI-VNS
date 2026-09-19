@@ -1,7 +1,0 @@
-evaluation_mode,policy,n_folds,seizure_events,events_with_authorization,pre_onset_authorizations,event_level_sensitivity,median_latency_seconds,iqr_latency_seconds,false_authorization_windows_per_hour_mean,false_authorization_windows_per_hour_std
-within_subject_chronological,Fixed threshold,5,10,10,10,1.0,-280.0,155.25,123.9384308405404,37.73433266171264
-within_subject_chronological,Temporal persistence,5,10,10,6,1.0,-154.5,293.25,53.352658979141935,29.10190595643924
-within_subject_chronological,Attribution-stability gating,5,10,10,6,1.0,-154.5,293.25,50.65251370753491,29.29637547235569
-held_out_subject,Fixed threshold,5,27,27,22,1.0,-269.0,149.5,254.43859522116367,112.52342245093976
-held_out_subject,Temporal persistence,5,27,27,20,1.0,-199.0,281.5,154.64263704424687,104.23271215760433
-held_out_subject,Attribution-stability gating,5,27,27,20,1.0,-199.0,282.5,146.67229503029506,101.54754499427492

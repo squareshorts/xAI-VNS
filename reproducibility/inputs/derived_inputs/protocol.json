@@ -1,0 +1,45 @@
+{
+  "protocol_id": "xai_vns_recording_completion_v1",
+  "created_before_added_recording_evaluation_utc": "2026-09-18",
+  "purpose": "Acquisition and feature preparation, not model fitting or a completed reviewer response.",
+  "source_commit": "e586c0998f0f4962ff0a4597084824e317fb9e86",
+  "original_uploaded_input_sha256": {
+    "chbmit_features.parquet": "275a8e28260edc82e067797bab2cce95ce0e78acbcb38f34c3087540493c842c",
+    "chbmit_window_labels.csv": "a25413603af13c84debb7e085fe51924ff3e4bb210e2f0330611f0883d5245d6"
+  },
+  "subjects": [
+    "chb01",
+    "chb02",
+    "chb03",
+    "chb05",
+    "chb08"
+  ],
+  "expected_edfs": 175,
+  "original_edfs": 70,
+  "added_edfs": 105,
+  "original_windows": 122007,
+  "original_positive_windows": 5227,
+  "original_seizures": 27,
+  "window_length_seconds": 4,
+  "step_seconds": 2,
+  "sampling_rate_hz": 256,
+  "preictal_label_seconds": 300,
+  "feature_validation": {
+    "windows_per_original_edf": "first, middle, last",
+    "rtol": 1e-05,
+    "atol": 1e-14,
+    "failure_action": "Stop; do not score added recordings or alter the original cache."
+  },
+  "additional_recording_eligibility": "Official checksum verified, valid EDF dimensions, all original 22 channels at 256 Hz, explicitly parsed official seizure annotations. No performance-based exclusions. Record every failure or incompatibility.",
+  "feature_rules": "Original 20 handcrafted features averaged across the original 22 channels; no new filtering or normalization; float32 EEG in volts; same fixed epsilon constants as archived code.",
+  "prospective_extended_evaluation": "Use existing subject-held-out models and train-only settings on the additional recordings of their held-out case. Added recordings are test-only; original core/calibration/test membership remains unchanged. This is a recording-exposure sensitivity analysis, not a new independent-subject cohort.",
+  "remaining_analyses_after_inputs_are_verified": [
+    "Frozen-model burden, probability calibration and duty/burden summaries for original, additional and combined recording exposure; no denominator-only adjustment.",
+    "Full file-level endpoint and original core/calibration/test provenance.",
+    "Per-event center-time and end-of-window decision-time timing with pre-onset, at/after-onset-only, missed categories; retain original versus train-selected policy distinctions.",
+    "Literature-inspired temporal-rule comparators on common scores with selection confined to original training/calibration recordings; adapted components not full-paper reproductions.",
+    "Fixed-gamma sweep figure and correct authorization-fraction axis; subject-level data and paired exploratory uncertainty.",
+    "Attribution-lag and independent outcome analyses with explicit scope limits.",
+    "Reproducible code, exact environment, manuscript patches, reviewer-by-reviewer response and remaining historical cohort-selection uncertainty."
+  ]
+}

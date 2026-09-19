@@ -1,0 +1,13 @@
+{
+  "python": "3.10.11 (tags/v3.10.11:7d4cc5a, Apr  5 2023, 00:38:17) [MSC v.1929 64 bit (AMD64)]",
+  "executable": "C:\\work\\xai_vns_resubmission_run\\.venv\\Scripts\\python.exe",
+  "packages": {
+    "numpy": "2.2.6",
+    "scipy": "1.15.3",
+    "pandas": "2.3.3",
+    "mne": "1.11.0",
+    "pyarrow": "20.0.0",
+    "lightgbm": "4.6.0",
+    "scikit-learn": "1.7.2"
+  }
+}

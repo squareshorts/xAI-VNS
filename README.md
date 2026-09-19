@@ -1,44 +1,67 @@
-# README: Explainable Patient-Specific Seizure-Risk Modeling for Simulated Responsive VNS Triggering
+# xAI-VNS
 
-## Project Aim
-This repository provides a reproducible research pipeline for explainable seizure-risk modeling to support simulated responsive Vagus Nerve Stimulation (rVNS) decision policies using real scalp EEG data. The goal is to demonstrate how transparent, patient-specific Machine Learning can be integrated into clinical decision support systems for drug-resistant epilepsy.
+Reproducible analysis accompanying the manuscript **“Burden-Constrained Policy-Layer Explainability for Simulated EEG-Guided Adaptive Vagus Nerve Stimulation.”**
 
-This project is implemented as a single-subject feasibility study using CHB-MIT scalp EEG (subject `chb01`).
+This repository evaluates how calibrated EEG model scores are converted into **simulated VNS authorization decisions**. The analysis separates model discrimination from operational policy behavior, including temporal persistence, attribution overlap, false authorization-cluster burden, event timing, and temporal-rule comparisons.
 
-## Important Disclaimer: No Clinical Claims
-All VNS stimulation outcomes in this repository are **simulated triggering policies** based on real scalp EEG data from the CHB-MIT database. 
-This study does **not** claim to clinically optimize implanted VNS parameters, nor does it provide evidence of therapeutic efficacy. 
-The focus is strictly on the computational framework, explainability (XAI), and algorithmic decision support.
+## Scope
 
-## Dataset Access (CHB-MIT)
-This project is designed to use the CHB-MIT Scalp EEG Database (specifically subject `chb01`).
-To run the pipeline, the CHB-MIT EDF and summary files for `chb01` must be placed in:
-`data/external/chbmit/chb01/`
+The study uses five CHB-MIT cases (`chb01`, `chb02`, `chb03`, `chb05`, `chb08`). The complete evaluation inventory contains **175 EDF recordings, 172.83 h of EEG, 310,916 four-second windows, and 27 annotated seizures**.
 
-You can download the data automatically using the provided download script:
-```powershell
-$env:PYTHONPATH = "C:\work\explainable-AI"
-python scripts/download_chbmit_real.py
-```
+Model fitting, calibration, and operating-point selection use 70 EDF recordings. The fitted pipeline is then evaluated over the full 175-EDF inventory; the other 105 EDFs enter evaluation only and are never used for fitting or parameter selection.
 
-## How to Run
+No VNS was delivered. The repository does not establish clinical efficacy, reliable advance seizure prediction, or a subject-independent low-burden guarantee.
 
-### Installation
+## Principal findings in v1.1.0
+
+- Full-inventory false authorization-cluster burden for the train-selected persistence-plus-attribution-overlap policy: case median **0.105/h**, case mean **3.601 +/- 7.748/h**, pooled **4.050/h**.
+- Burden is strongly heterogeneous: `chb05` contributes 681 of 700 false clusters; the other four cases range from 0.049 to 0.340/h.
+- In the common-score factorial analysis, temporal persistence accounts for most of the burden reduction; attribution overlap adds a smaller incremental restriction.
+- At complete-window decision time: **2/27** seizures are authorized pre-onset, **18/27** only at/after onset, and **7/27** are missed; median latency among covered events is **16 s** (IQR 8.5-28 s).
+- The attribution-overlap difference remains positive on average at the first non-overlapping comparison (4 s separation), but this is not clinical validation of explanation reliability.
+- Adapted majority-voting and firing-power rules occupy similar burden-coverage ranges under a common 300 s refractory rule; no comparator family is presented as a winner.
+
+## Repository layout
+
+- `manuscript/` - final LaTeX manuscript, response to reviewers, compiled PDFs, and the six retained manuscript/supplementary figures.
+- `reproducibility/` - derived inputs, fitted models/calibrators, per-window predictions, cluster/event outputs, parameter searches, tests, and executable analysis scripts.
+- `results/figures/` - final raster exports of manuscript figures.
+- `src/`, `configs/`, `tests/` - core analysis code retained from the development pipeline.
+
+Legacy `archive/` material and obsolete manuscript/result snapshots are intentionally excluded from v1.1.0; they remain available through Git history and the immutable v1.0.1 release.
+
+## Reproduce the complete-recording analysis
+
+Create an isolated Python environment and install:
+
 ```bash
-pip install -r requirements.txt
-# OR
-conda env create -f environment.yml
+pip install -r reproducibility/requirements-evaluation.txt
 ```
 
-### Full Pipeline (Real EEG)
-To run the preprocessing, feature extraction, modeling, explainability analysis, and VNS triggering simulations:
-```powershell
-$env:PYTHONPATH = "C:\work\explainable-AI"
-python scripts/run_pipeline.py --config configs/chbmit.yaml
+Then run:
+
+```bash
+python reproducibility/run_analysis.py
 ```
 
-## Repository Outputs
-- `results/figures/`: Manuscript-ready plots (PNG) comparing model performance (`figure2`), global explainability (`figure3`), policy comparison (`figure4`), and the stimulation burden tradeoff (`figure5`).
-- `results/tables/`: Machine-readable CSV tables with dataset summaries (`table1`), model metrics (`table2`), and policy comparisons (`table3`).
-- `results/reports/`: Text summaries including the XAI feature summary (`xai_summary_real_eeg.md`).
-- `manuscript/`: LaTeX manuscript (`main.tex`) and compiled PDF.
+The supplied derived inputs allow the evaluation to run without redistributing raw CHB-MIT EDFs. Raw EEG must be obtained directly from PhysioNet if feature extraction itself is to be repeated.
+
+## Data
+
+CHB-MIT Scalp EEG Database: PhysioNet, DOI `10.13026/C2K01R`.
+
+Raw EEG is **not** redistributed in this repository. Public file manifests, subject summary files, checksums, and derived features used for reproducibility are included under `reproducibility/inputs/`.
+
+## Versioning and archival record
+
+- `v1.0.1`: historical manuscript archive; Zenodo DOI `10.5281/zenodo.20403195`.
+- `v1.1.0`: complete-recording resubmission release. A new version-specific Zenodo DOI is generated when this GitHub release is archived by the connected Zenodo integration.
+
+## Authors
+
+- Suzana Cescon - Signal Processing Laboratory, Institute of Technology, Federal University of Para
+- Antonio Pereira - Signal Processing Laboratory, Institute of Technology, Federal University of Para; ORCID 0000-0002-0808-1058
+
+## Citation
+
+Use the version-specific Zenodo DOI associated with the GitHub release used in your analysis. See `CITATION.cff` and the GitHub release metadata.

@@ -1,0 +1,30 @@
+{
+  "derived_checksums_passed": 11,
+  "original_windows": 122007,
+  "added_windows": 188909,
+  "original_positive": 5227,
+  "added_positive": 0,
+  "all_175_reported_checksum_verified": true,
+  "feature_names": [
+    "bp_delta",
+    "rel_bp_delta",
+    "bp_theta",
+    "rel_bp_theta",
+    "bp_alpha",
+    "rel_bp_alpha",
+    "bp_beta",
+    "rel_bp_beta",
+    "bp_gamma",
+    "rel_bp_gamma",
+    "spectral_entropy",
+    "hjorth_activity",
+    "hjorth_mobility",
+    "hjorth_complexity",
+    "line_length",
+    "rms_amplitude",
+    "variance",
+    "zero_crossing_rate",
+    "skewness",
+    "kurtosis"
+  ]
+}

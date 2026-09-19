@@ -1,0 +1,53 @@
+exposure,policy,clock,events,pre,post,missed,pooled_median_latency,latency_q25,latency_q75,pooled_median_lead,pre_only_median_lead
+combined,+ attribution overlap,center,27,3,17,7,10.0,4.5,24.0,-10.0,182.0
+combined,+ attribution overlap,end,27,3,17,7,12.0,6.5,26.0,-12.0,180.0
+combined,+ persistence,center,27,2,18,7,14.0,6.5,26.0,-14.0,191.5
+combined,+ persistence,end,27,2,18,7,16.0,8.5,28.0,-16.0,189.5
+combined,+ persistence + overlap,center,27,2,18,7,14.0,6.5,26.0,-14.0,191.5
+combined,+ persistence + overlap,end,27,2,18,7,16.0,8.5,28.0,-16.0,189.5
+combined,Calibrated threshold only,center,27,3,17,7,10.0,4.5,24.0,-10.0,182.0
+combined,Calibrated threshold only,end,27,3,17,7,12.0,6.5,26.0,-12.0,180.0
+combined,Full overlap lag 10s,center,27,1,18,8,17.0,6.0,26.0,-17.0,203.0
+combined,Full overlap lag 10s,end,27,1,18,8,19.0,8.0,28.0,-19.0,201.0
+combined,Full overlap lag 20s,center,27,2,13,12,17.0,7.0,37.0,-17.0,191.5
+combined,Full overlap lag 20s,end,27,2,13,12,19.0,9.0,39.0,-19.0,189.5
+combined,Full overlap lag 4s,center,27,2,18,7,14.0,6.5,26.0,-14.0,191.5
+combined,Full overlap lag 4s,end,27,2,18,7,16.0,8.5,28.0,-16.0,189.5
+combined,Full overlap lag 6s,center,27,2,16,9,15.0,5.5,25.25,-15.0,191.5
+combined,Full overlap lag 6s,end,27,2,16,9,17.0,7.5,27.25,-17.0,189.5
+combined,Nominal full 0.5,center,27,1,18,8,16.0,6.0,24.5,-16.0,180.0
+combined,Nominal full 0.5,end,27,1,18,8,18.0,8.0,26.5,-18.0,178.0
+combined,Nominal raw-plus-isotonic,center,27,3,16,8,10.0,4.0,20.0,-10.0,182.0
+combined,Nominal raw-plus-isotonic,end,27,3,16,8,12.0,6.0,22.0,-12.0,180.0
+combined,Raw overlap 0.5,center,27,23,4,0,-216.0,-289.5,-134.5,216.0,268.0
+combined,Raw overlap 0.5,end,27,23,4,0,-214.0,-287.5,-132.5,214.0,266.0
+combined,Raw persistence 0.5,center,27,22,5,0,-193.0,-276.0,-56.0,193.0,226.5
+combined,Raw persistence 0.5,end,27,22,5,0,-191.0,-274.0,-54.0,191.0,224.5
+combined,Raw threshold 0.5,center,27,24,3,0,-243.0,-289.5,-160.5,243.0,262.0
+combined,Raw threshold 0.5,end,27,24,3,0,-241.0,-287.5,-158.5,241.0,260.0
+original,+ attribution overlap,center,27,3,17,7,10.0,4.5,24.0,-10.0,182.0
+original,+ attribution overlap,end,27,3,17,7,12.0,6.5,26.0,-12.0,180.0
+original,+ persistence,center,27,2,18,7,14.0,6.5,26.0,-14.0,191.5
+original,+ persistence,end,27,2,18,7,16.0,8.5,28.0,-16.0,189.5
+original,+ persistence + overlap,center,27,2,18,7,14.0,6.5,26.0,-14.0,191.5
+original,+ persistence + overlap,end,27,2,18,7,16.0,8.5,28.0,-16.0,189.5
+original,Calibrated threshold only,center,27,3,17,7,10.0,4.5,24.0,-10.0,182.0
+original,Calibrated threshold only,end,27,3,17,7,12.0,6.5,26.0,-12.0,180.0
+original,Full overlap lag 10s,center,27,1,18,8,17.0,6.0,26.0,-17.0,203.0
+original,Full overlap lag 10s,end,27,1,18,8,19.0,8.0,28.0,-19.0,201.0
+original,Full overlap lag 20s,center,27,2,13,12,17.0,7.0,37.0,-17.0,191.5
+original,Full overlap lag 20s,end,27,2,13,12,19.0,9.0,39.0,-19.0,189.5
+original,Full overlap lag 4s,center,27,2,18,7,14.0,6.5,26.0,-14.0,191.5
+original,Full overlap lag 4s,end,27,2,18,7,16.0,8.5,28.0,-16.0,189.5
+original,Full overlap lag 6s,center,27,2,16,9,15.0,5.5,25.25,-15.0,191.5
+original,Full overlap lag 6s,end,27,2,16,9,17.0,7.5,27.25,-17.0,189.5
+original,Nominal full 0.5,center,27,1,18,8,16.0,6.0,24.5,-16.0,180.0
+original,Nominal full 0.5,end,27,1,18,8,18.0,8.0,26.5,-18.0,178.0
+original,Nominal raw-plus-isotonic,center,27,3,16,8,10.0,4.0,20.0,-10.0,182.0
+original,Nominal raw-plus-isotonic,end,27,3,16,8,12.0,6.0,22.0,-12.0,180.0
+original,Raw overlap 0.5,center,27,23,4,0,-216.0,-289.5,-134.5,216.0,268.0
+original,Raw overlap 0.5,end,27,23,4,0,-214.0,-287.5,-132.5,214.0,266.0
+original,Raw persistence 0.5,center,27,22,5,0,-193.0,-276.0,-56.0,193.0,226.5
+original,Raw persistence 0.5,end,27,22,5,0,-191.0,-274.0,-54.0,191.0,224.5
+original,Raw threshold 0.5,center,27,24,3,0,-243.0,-289.5,-160.5,243.0,262.0
+original,Raw threshold 0.5,end,27,24,3,0,-241.0,-287.5,-158.5,241.0,260.0

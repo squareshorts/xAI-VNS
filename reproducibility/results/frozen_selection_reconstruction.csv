@@ -1,0 +1,6 @@
+fold,subject,selected_calibrator,theta,sigmoid,isotonic,calibration_hours,calibration_events,selection_rule,calibration_false_clusters_per_hour
+loso_chb01,chb01,isotonic,0.24,0.0361934547728614,0.031888298623051425,15.0,5,threshold_only; maximize positive-window sensitivity under <=2 false support-clusters/h,1.8666666666666667
+loso_chb02,chb02,isotonic,0.44,0.03269038057771652,0.029554229881098376,16.8125,5,threshold_only; maximize positive-window sensitivity under <=2 false support-clusters/h,1.486988847583643
+loso_chb03,chb03,isotonic,0.34,0.0265481070381491,0.02476004934058485,15.8125,4,threshold_only; maximize positive-window sensitivity under <=2 false support-clusters/h,1.6442687747035574
+loso_chb05,chb05,isotonic,0.48,0.03231254208035719,0.029923136985629904,15.8125,5,threshold_only; maximize positive-window sensitivity under <=2 false support-clusters/h,1.2015810276679841
+loso_chb08,chb08,isotonic,0.22,0.03187758150447817,0.029434356538142664,15.8125,5,threshold_only; maximize positive-window sensitivity under <=2 false support-clusters/h,1.8972332015810276

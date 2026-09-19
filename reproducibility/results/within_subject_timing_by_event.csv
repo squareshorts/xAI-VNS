@@ -1,0 +1,101 @@
+subject_id,edf_file,event_index,onset,offset,clock,first_authorization,latency_seconds,lead_seconds,category,n_authorizations,fold,policy
+chb01,chb01_21.edf,1,327.0,420.0,center,30.0,-297.0,297.0,pre_onset,119,within_chb01,Raw threshold 0.5
+chb01,chb01_26.edf,1,1862.0,1963.0,center,1562.0,-300.0,300.0,pre_onset,107,within_chb01,Raw threshold 0.5
+chb01,chb01_21.edf,1,327.0,420.0,end,28.0,-299.0,299.0,pre_onset,120,within_chb01,Raw threshold 0.5
+chb01,chb01_26.edf,1,1862.0,1963.0,end,1562.0,-300.0,300.0,pre_onset,107,within_chb01,Raw threshold 0.5
+chb01,chb01_21.edf,1,327.0,420.0,center,38.0,-289.0,289.0,pre_onset,89,within_chb01,Raw persistence 0.5
+chb01,chb01_26.edf,1,1862.0,1963.0,center,1562.0,-300.0,300.0,pre_onset,77,within_chb01,Raw persistence 0.5
+chb01,chb01_21.edf,1,327.0,420.0,end,28.0,-299.0,299.0,pre_onset,90,within_chb01,Raw persistence 0.5
+chb01,chb01_26.edf,1,1862.0,1963.0,end,1564.0,-298.0,298.0,pre_onset,76,within_chb01,Raw persistence 0.5
+chb01,chb01_21.edf,1,327.0,420.0,center,30.0,-297.0,297.0,pre_onset,115,within_chb01,Raw overlap 0.5
+chb01,chb01_26.edf,1,1862.0,1963.0,center,1562.0,-300.0,300.0,pre_onset,102,within_chb01,Raw overlap 0.5
+chb01,chb01_21.edf,1,327.0,420.0,end,28.0,-299.0,299.0,pre_onset,116,within_chb01,Raw overlap 0.5
+chb01,chb01_26.edf,1,1862.0,1963.0,end,1562.0,-300.0,300.0,pre_onset,102,within_chb01,Raw overlap 0.5
+chb01,chb01_21.edf,1,327.0,420.0,center,80.0,-247.0,247.0,pre_onset,37,within_chb01,Nominal raw-plus-isotonic
+chb01,chb01_26.edf,1,1862.0,1963.0,center,1746.0,-116.0,116.0,pre_onset,39,within_chb01,Nominal raw-plus-isotonic
+chb01,chb01_21.edf,1,327.0,420.0,end,82.0,-245.0,245.0,pre_onset,37,within_chb01,Nominal raw-plus-isotonic
+chb01,chb01_26.edf,1,1862.0,1963.0,end,1748.0,-114.0,114.0,pre_onset,39,within_chb01,Nominal raw-plus-isotonic
+chb01,chb01_21.edf,1,327.0,420.0,center,346.0,19.0,-19.0,at_or_after_onset_only,24,within_chb01,Nominal full 0.5
+chb01,chb01_26.edf,1,1862.0,1963.0,center,1880.0,18.0,-18.0,at_or_after_onset_only,33,within_chb01,Nominal full 0.5
+chb01,chb01_21.edf,1,327.0,420.0,end,348.0,21.0,-21.0,at_or_after_onset_only,24,within_chb01,Nominal full 0.5
+chb01,chb01_26.edf,1,1862.0,1963.0,end,1882.0,20.0,-20.0,at_or_after_onset_only,33,within_chb01,Nominal full 0.5
+chb02,chb02_19.edf,1,3369.0,3378.0,center,3132.0,-237.0,237.0,pre_onset,10,within_chb02,Raw threshold 0.5
+chb02,chb02_19.edf,1,3369.0,3378.0,end,3134.0,-235.0,235.0,pre_onset,10,within_chb02,Raw threshold 0.5
+chb02,chb02_19.edf,1,3369.0,3378.0,center,3370.0,1.0,-1.0,at_or_after_onset_only,4,within_chb02,Raw persistence 0.5
+chb02,chb02_19.edf,1,3369.0,3378.0,end,3372.0,3.0,-3.0,at_or_after_onset_only,4,within_chb02,Raw persistence 0.5
+chb02,chb02_19.edf,1,3369.0,3378.0,center,3132.0,-237.0,237.0,pre_onset,9,within_chb02,Raw overlap 0.5
+chb02,chb02_19.edf,1,3369.0,3378.0,end,3134.0,-235.0,235.0,pre_onset,9,within_chb02,Raw overlap 0.5
+chb02,chb02_19.edf,1,3369.0,3378.0,center,3370.0,1.0,-1.0,at_or_after_onset_only,4,within_chb02,Nominal raw-plus-isotonic
+chb02,chb02_19.edf,1,3369.0,3378.0,end,3372.0,3.0,-3.0,at_or_after_onset_only,4,within_chb02,Nominal raw-plus-isotonic
+chb02,chb02_19.edf,1,3369.0,3378.0,center,3372.0,3.0,-3.0,at_or_after_onset_only,3,within_chb02,Nominal full 0.5
+chb02,chb02_19.edf,1,3369.0,3378.0,end,3374.0,5.0,-5.0,at_or_after_onset_only,3,within_chb02,Nominal full 0.5
+chb03,chb03_34.edf,1,1982.0,2029.0,center,1800.0,-182.0,182.0,pre_onset,7,within_chb03,Raw threshold 0.5
+chb03,chb03_35.edf,1,2592.0,2656.0,center,2302.0,-290.0,290.0,pre_onset,13,within_chb03,Raw threshold 0.5
+chb03,chb03_36.edf,1,1725.0,1778.0,center,1614.0,-111.0,111.0,pre_onset,6,within_chb03,Raw threshold 0.5
+chb03,chb03_34.edf,1,1982.0,2029.0,end,1802.0,-180.0,180.0,pre_onset,6,within_chb03,Raw threshold 0.5
+chb03,chb03_35.edf,1,2592.0,2656.0,end,2304.0,-288.0,288.0,pre_onset,13,within_chb03,Raw threshold 0.5
+chb03,chb03_36.edf,1,1725.0,1778.0,end,1616.0,-109.0,109.0,pre_onset,6,within_chb03,Raw threshold 0.5
+chb03,chb03_34.edf,1,1982.0,2029.0,center,2016.0,34.0,-34.0,at_or_after_onset_only,3,within_chb03,Raw persistence 0.5
+chb03,chb03_35.edf,1,2592.0,2656.0,center,2516.0,-76.0,76.0,pre_onset,4,within_chb03,Raw persistence 0.5
+chb03,chb03_36.edf,1,1725.0,1778.0,center,1728.0,3.0,-3.0,at_or_after_onset_only,2,within_chb03,Raw persistence 0.5
+chb03,chb03_34.edf,1,1982.0,2029.0,end,2018.0,36.0,-36.0,at_or_after_onset_only,2,within_chb03,Raw persistence 0.5
+chb03,chb03_35.edf,1,2592.0,2656.0,end,2518.0,-74.0,74.0,pre_onset,4,within_chb03,Raw persistence 0.5
+chb03,chb03_36.edf,1,1725.0,1778.0,end,1730.0,5.0,-5.0,at_or_after_onset_only,2,within_chb03,Raw persistence 0.5
+chb03,chb03_34.edf,1,1982.0,2029.0,center,1984.0,2.0,-2.0,at_or_after_onset_only,6,within_chb03,Raw overlap 0.5
+chb03,chb03_35.edf,1,2592.0,2656.0,center,2472.0,-120.0,120.0,pre_onset,10,within_chb03,Raw overlap 0.5
+chb03,chb03_36.edf,1,1725.0,1778.0,center,1614.0,-111.0,111.0,pre_onset,6,within_chb03,Raw overlap 0.5
+chb03,chb03_34.edf,1,1982.0,2029.0,end,1986.0,4.0,-4.0,at_or_after_onset_only,5,within_chb03,Raw overlap 0.5
+chb03,chb03_35.edf,1,2592.0,2656.0,end,2474.0,-118.0,118.0,pre_onset,10,within_chb03,Raw overlap 0.5
+chb03,chb03_36.edf,1,1725.0,1778.0,end,1616.0,-109.0,109.0,pre_onset,6,within_chb03,Raw overlap 0.5
+chb03,chb03_34.edf,1,1982.0,2029.0,center,1984.0,2.0,-2.0,at_or_after_onset_only,3,within_chb03,Nominal raw-plus-isotonic
+chb03,chb03_35.edf,1,2592.0,2656.0,center,2592.0,0.0,-0.0,at_or_after_onset_only,4,within_chb03,Nominal raw-plus-isotonic
+chb03,chb03_36.edf,1,1725.0,1778.0,center,1730.0,5.0,-5.0,at_or_after_onset_only,1,within_chb03,Nominal raw-plus-isotonic
+chb03,chb03_34.edf,1,1982.0,2029.0,end,1986.0,4.0,-4.0,at_or_after_onset_only,2,within_chb03,Nominal raw-plus-isotonic
+chb03,chb03_35.edf,1,2592.0,2656.0,end,2594.0,2.0,-2.0,at_or_after_onset_only,4,within_chb03,Nominal raw-plus-isotonic
+chb03,chb03_36.edf,1,1725.0,1778.0,end,1732.0,7.0,-7.0,at_or_after_onset_only,1,within_chb03,Nominal raw-plus-isotonic
+chb03,chb03_34.edf,1,1982.0,2029.0,center,2028.0,46.0,-46.0,at_or_after_onset_only,1,within_chb03,Nominal full 0.5
+chb03,chb03_35.edf,1,2592.0,2656.0,center,2594.0,2.0,-2.0,at_or_after_onset_only,1,within_chb03,Nominal full 0.5
+chb03,chb03_36.edf,1,1725.0,1778.0,center,,,,missed,0,within_chb03,Nominal full 0.5
+chb03,chb03_34.edf,1,1982.0,2029.0,end,,,,missed,0,within_chb03,Nominal full 0.5
+chb03,chb03_35.edf,1,2592.0,2656.0,end,2596.0,4.0,-4.0,at_or_after_onset_only,1,within_chb03,Nominal full 0.5
+chb03,chb03_36.edf,1,1725.0,1778.0,end,,,,missed,0,within_chb03,Nominal full 0.5
+chb05,chb05_16.edf,1,2317.0,2413.0,center,2022.0,-295.0,295.0,pre_onset,52,within_chb05,Raw threshold 0.5
+chb05,chb05_17.edf,1,2451.0,2571.0,center,2228.0,-223.0,223.0,pre_onset,75,within_chb05,Raw threshold 0.5
+chb05,chb05_22.edf,1,2348.0,2465.0,center,2048.0,-300.0,300.0,pre_onset,83,within_chb05,Raw threshold 0.5
+chb05,chb05_16.edf,1,2317.0,2413.0,end,2024.0,-293.0,293.0,pre_onset,51,within_chb05,Raw threshold 0.5
+chb05,chb05_17.edf,1,2451.0,2571.0,end,2230.0,-221.0,221.0,pre_onset,74,within_chb05,Raw threshold 0.5
+chb05,chb05_22.edf,1,2348.0,2465.0,end,2048.0,-300.0,300.0,pre_onset,83,within_chb05,Raw threshold 0.5
+chb05,chb05_16.edf,1,2317.0,2413.0,center,2024.0,-293.0,293.0,pre_onset,47,within_chb05,Raw persistence 0.5
+chb05,chb05_17.edf,1,2451.0,2571.0,center,2260.0,-191.0,191.0,pre_onset,65,within_chb05,Raw persistence 0.5
+chb05,chb05_22.edf,1,2348.0,2465.0,center,2048.0,-300.0,300.0,pre_onset,64,within_chb05,Raw persistence 0.5
+chb05,chb05_16.edf,1,2317.0,2413.0,end,2026.0,-291.0,291.0,pre_onset,46,within_chb05,Raw persistence 0.5
+chb05,chb05_17.edf,1,2451.0,2571.0,end,2262.0,-189.0,189.0,pre_onset,64,within_chb05,Raw persistence 0.5
+chb05,chb05_22.edf,1,2348.0,2465.0,end,2050.0,-298.0,298.0,pre_onset,63,within_chb05,Raw persistence 0.5
+chb05,chb05_16.edf,1,2317.0,2413.0,center,2022.0,-295.0,295.0,pre_onset,51,within_chb05,Raw overlap 0.5
+chb05,chb05_17.edf,1,2451.0,2571.0,center,2228.0,-223.0,223.0,pre_onset,73,within_chb05,Raw overlap 0.5
+chb05,chb05_22.edf,1,2348.0,2465.0,center,2048.0,-300.0,300.0,pre_onset,83,within_chb05,Raw overlap 0.5
+chb05,chb05_16.edf,1,2317.0,2413.0,end,2024.0,-293.0,293.0,pre_onset,50,within_chb05,Raw overlap 0.5
+chb05,chb05_17.edf,1,2451.0,2571.0,end,2230.0,-221.0,221.0,pre_onset,72,within_chb05,Raw overlap 0.5
+chb05,chb05_22.edf,1,2348.0,2465.0,end,2048.0,-300.0,300.0,pre_onset,83,within_chb05,Raw overlap 0.5
+chb05,chb05_16.edf,1,2317.0,2413.0,center,2328.0,11.0,-11.0,at_or_after_onset_only,43,within_chb05,Nominal raw-plus-isotonic
+chb05,chb05_17.edf,1,2451.0,2571.0,center,2258.0,-193.0,193.0,pre_onset,52,within_chb05,Nominal raw-plus-isotonic
+chb05,chb05_22.edf,1,2348.0,2465.0,center,2144.0,-204.0,204.0,pre_onset,56,within_chb05,Nominal raw-plus-isotonic
+chb05,chb05_16.edf,1,2317.0,2413.0,end,2330.0,13.0,-13.0,at_or_after_onset_only,42,within_chb05,Nominal raw-plus-isotonic
+chb05,chb05_17.edf,1,2451.0,2571.0,end,2260.0,-191.0,191.0,pre_onset,51,within_chb05,Nominal raw-plus-isotonic
+chb05,chb05_22.edf,1,2348.0,2465.0,end,2146.0,-202.0,202.0,pre_onset,55,within_chb05,Nominal raw-plus-isotonic
+chb05,chb05_16.edf,1,2317.0,2413.0,center,2330.0,13.0,-13.0,at_or_after_onset_only,42,within_chb05,Nominal full 0.5
+chb05,chb05_17.edf,1,2451.0,2571.0,center,2260.0,-191.0,191.0,pre_onset,47,within_chb05,Nominal full 0.5
+chb05,chb05_22.edf,1,2348.0,2465.0,center,2146.0,-202.0,202.0,pre_onset,50,within_chb05,Nominal full 0.5
+chb05,chb05_16.edf,1,2317.0,2413.0,end,2332.0,15.0,-15.0,at_or_after_onset_only,41,within_chb05,Nominal full 0.5
+chb05,chb05_17.edf,1,2451.0,2571.0,end,2262.0,-189.0,189.0,pre_onset,46,within_chb05,Nominal full 0.5
+chb05,chb05_22.edf,1,2348.0,2465.0,end,2148.0,-200.0,200.0,pre_onset,49,within_chb05,Nominal full 0.5
+chb08,chb08_21.edf,1,2083.0,2347.0,center,1798.0,-285.0,285.0,pre_onset,127,within_chb08,Raw threshold 0.5
+chb08,chb08_21.edf,1,2083.0,2347.0,end,1800.0,-283.0,283.0,pre_onset,126,within_chb08,Raw threshold 0.5
+chb08,chb08_21.edf,1,2083.0,2347.0,center,1890.0,-193.0,193.0,pre_onset,107,within_chb08,Raw persistence 0.5
+chb08,chb08_21.edf,1,2083.0,2347.0,end,1892.0,-191.0,191.0,pre_onset,106,within_chb08,Raw persistence 0.5
+chb08,chb08_21.edf,1,2083.0,2347.0,center,1798.0,-285.0,285.0,pre_onset,122,within_chb08,Raw overlap 0.5
+chb08,chb08_21.edf,1,2083.0,2347.0,end,1800.0,-283.0,283.0,pre_onset,121,within_chb08,Raw overlap 0.5
+chb08,chb08_21.edf,1,2083.0,2347.0,center,2094.0,11.0,-11.0,at_or_after_onset_only,90,within_chb08,Nominal raw-plus-isotonic
+chb08,chb08_21.edf,1,2083.0,2347.0,end,2096.0,13.0,-13.0,at_or_after_onset_only,89,within_chb08,Nominal raw-plus-isotonic
+chb08,chb08_21.edf,1,2083.0,2347.0,center,2098.0,15.0,-15.0,at_or_after_onset_only,78,within_chb08,Nominal full 0.5
+chb08,chb08_21.edf,1,2083.0,2347.0,end,2100.0,17.0,-17.0,at_or_after_onset_only,78,within_chb08,Nominal full 0.5

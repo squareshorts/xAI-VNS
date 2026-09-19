@@ -1,0 +1,76 @@
+fold,test,observed,expected,error
+loso_chb01,train_only_theta_reconstruction,0.24,0.24,0.0
+loso_chb01,calibration_oof_brier_sigmoid,0.0361934547728614,0.0361934547728614,0.0
+loso_chb01,calibration_oof_brier_isotonic,0.031888298623051425,0.0318882986230514,2.7755575615628914e-17
+loso_chb01,Calibrated threshold only false_clusters_per_hour,0.0,0.0,0.0
+loso_chb01,Calibrated threshold only authorization_fraction,0.0011686093548677074,0.0011686093548677,7.37257477290143e-18
+loso_chb01,Calibrated threshold only center_coverage,0.8571428571428571,0.8571428571428571,0.0
+loso_chb01,+ persistence false_clusters_per_hour,0.0,0.0,0.0
+loso_chb01,+ persistence authorization_fraction,0.0007191442183801277,0.0007191442183801,2.7647155398380363e-17
+loso_chb01,+ persistence center_coverage,0.8571428571428571,0.8571428571428571,0.0
+loso_chb01,+ attribution overlap false_clusters_per_hour,0.0,0.0,0.0
+loso_chb01,+ attribution overlap authorization_fraction,0.0011686093548677074,0.0011686093548677,7.37257477290143e-18
+loso_chb01,+ attribution overlap center_coverage,0.8571428571428571,0.8571428571428571,0.0
+loso_chb01,+ persistence + overlap false_clusters_per_hour,0.0,0.0,0.0
+loso_chb01,+ persistence + overlap authorization_fraction,0.0007191442183801277,0.0007191442183801,2.7647155398380363e-17
+loso_chb01,+ persistence + overlap center_coverage,0.8571428571428571,0.8571428571428571,0.0
+loso_chb02,train_only_theta_reconstruction,0.44,0.44,0.0
+loso_chb02,calibration_oof_brier_sigmoid,0.03269038057771652,0.0326903805777165,2.0816681711721685e-17
+loso_chb02,calibration_oof_brier_isotonic,0.029554229881098376,0.0295542298810983,7.632783294297951e-17
+loso_chb02,Calibrated threshold only false_clusters_per_hour,2.177492523270271,2.177492523270271,0.0
+loso_chb02,Calibrated threshold only authorization_fraction,0.006119704102219233,0.0061197041022192,3.2959746043559335e-17
+loso_chb02,Calibrated threshold only center_coverage,1.0,1.0,0.0
+loso_chb02,+ persistence false_clusters_per_hour,0.8468026479384388,0.8468026479384388,0.0
+loso_chb02,+ persistence authorization_fraction,0.004371217215870881,0.0043712172158708,8.153200337090993e-17
+loso_chb02,+ persistence center_coverage,1.0,1.0,0.0
+loso_chb02,+ attribution overlap false_clusters_per_hour,1.9355489095735745,1.9355489095735745,0.0
+loso_chb02,+ attribution overlap authorization_fraction,0.005783456624075319,0.0057834566240753,1.9081958235744878e-17
+loso_chb02,+ attribution overlap center_coverage,1.0,1.0,0.0
+loso_chb02,+ persistence + overlap false_clusters_per_hour,0.8468026479384388,0.8468026479384388,0.0
+loso_chb02,+ persistence + overlap authorization_fraction,0.004371217215870881,0.0043712172158708,8.153200337090993e-17
+loso_chb02,+ persistence + overlap center_coverage,1.0,1.0,0.0
+loso_chb03,train_only_theta_reconstruction,0.34,0.34,0.0
+loso_chb03,calibration_oof_brier_sigmoid,0.0265481070381491,0.0265481070381491,0.0
+loso_chb03,calibration_oof_brier_isotonic,0.02476004934058485,0.0247600493405848,5.204170427930421e-17
+loso_chb03,Calibrated threshold only false_clusters_per_hour,0.38461538461538464,0.3846153846153846,5.551115123125783e-17
+loso_chb03,Calibrated threshold only authorization_fraction,0.000598623166716552,0.0005986231667165,5.193328406205566e-17
+loso_chb03,Calibrated threshold only center_coverage,0.2857142857142857,0.2857142857142857,0.0
+loso_chb03,+ persistence false_clusters_per_hour,0.23076923076923078,0.2307692307692307,8.326672684688674e-17
+loso_chb03,+ persistence authorization_fraction,0.00021379398811305426,0.000213793988113,5.42643187328995e-17
+loso_chb03,+ persistence center_coverage,0.2857142857142857,0.2857142857142857,0.0
+loso_chb03,+ attribution overlap false_clusters_per_hour,0.38461538461538464,0.3846153846153846,5.551115123125783e-17
+loso_chb03,+ attribution overlap authorization_fraction,0.0005131055714713302,0.0005131055714713,3.0249240612345574e-17
+loso_chb03,+ attribution overlap center_coverage,0.2857142857142857,0.2857142857142857,0.0
+loso_chb03,+ persistence + overlap false_clusters_per_hour,0.23076923076923078,0.2307692307692307,8.326672684688674e-17
+loso_chb03,+ persistence + overlap authorization_fraction,0.00021379398811305426,0.000213793988113,5.42643187328995e-17
+loso_chb03,+ persistence + overlap center_coverage,0.2857142857142857,0.2857142857142857,0.0
+loso_chb05,train_only_theta_reconstruction,0.48,0.48,0.0
+loso_chb05,calibration_oof_brier_sigmoid,0.03231254208035719,0.0323125420803571,9.020562075079397e-17
+loso_chb05,calibration_oof_brier_isotonic,0.029923136985629904,0.0299231369856299,3.469446951953614e-18
+loso_chb05,Calibrated threshold only false_clusters_per_hour,10.854989089466375,10.854989089466375,0.0
+loso_chb05,Calibrated threshold only authorization_fraction,0.018776547179548252,0.0187765471795482,5.204170427930421e-17
+loso_chb05,Calibrated threshold only center_coverage,0.8,0.8,0.0
+loso_chb05,+ persistence false_clusters_per_hour,4.784764927593732,4.784764927593732,0.0
+loso_chb05,+ persistence authorization_fraction,0.010995990631574769,0.0109959906315747,6.938893903907228e-17
+loso_chb05,+ persistence center_coverage,0.8,0.8,0.0
+loso_chb05,+ attribution overlap false_clusters_per_hour,10.92640349137076,10.92640349137076,0.0
+loso_chb05,+ attribution overlap authorization_fraction,0.01758564566710333,0.0175856456671033,3.122502256758253e-17
+loso_chb05,+ attribution overlap center_coverage,0.8,0.8,0.0
+loso_chb05,+ persistence + overlap false_clusters_per_hour,4.713350525689347,4.713350525689347,0.0
+loso_chb05,+ persistence + overlap authorization_fraction,0.010440236592433805,0.0104402365924338,5.204170427930421e-18
+loso_chb05,+ persistence + overlap center_coverage,0.8,0.8,0.0
+loso_chb08,train_only_theta_reconstruction,0.22,0.22,0.0
+loso_chb08,calibration_oof_brier_sigmoid,0.03187758150447817,0.0318775815044781,6.938893903907228e-17
+loso_chb08,calibration_oof_brier_isotonic,0.029434356538142664,0.0294343565381426,6.245004513516506e-17
+loso_chb08,Calibrated threshold only false_clusters_per_hour,0.2857142857142857,0.2857142857142857,0.0
+loso_chb08,Calibrated threshold only authorization_fraction,0.0020646390852060667,0.002064639085206,6.678685382510707e-17
+loso_chb08,Calibrated threshold only center_coverage,1.0,1.0,0.0
+loso_chb08,+ persistence false_clusters_per_hour,0.0,0.0,0.0
+loso_chb08,+ persistence authorization_fraction,0.0007146827602636385,0.0007146827602636,3.848917712323541e-17
+loso_chb08,+ persistence center_coverage,1.0,1.0,0.0
+loso_chb08,+ attribution overlap false_clusters_per_hour,0.2857142857142857,0.2857142857142857,0.0
+loso_chb08,+ attribution overlap authorization_fraction,0.0020249344874136424,0.0020249344874136,4.2500725161431774e-17
+loso_chb08,+ attribution overlap center_coverage,1.0,1.0,0.0
+loso_chb08,+ persistence + overlap false_clusters_per_hour,0.0,0.0,0.0
+loso_chb08,+ persistence + overlap authorization_fraction,0.0007146827602636385,0.0007146827602636,3.848917712323541e-17
+loso_chb08,+ persistence + overlap center_coverage,1.0,1.0,0.0

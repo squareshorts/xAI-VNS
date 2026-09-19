@@ -1,0 +1,22 @@
+{
+  "time_utc": "2026-09-19T16:37:50.400670+00:00",
+  "stage": "Verified feature inputs only; no added-recording model results yet.",
+  "original_edfs": 70,
+  "original_hours": 67.82138888888889,
+  "original_windows": 122007,
+  "added_expected_edfs": 105,
+  "added_usable_edfs": 105,
+  "added_hours": 105.00805555555556,
+  "added_windows": 188909,
+  "complete_usable_edfs": 175,
+  "technical_exclusions": [],
+  "all_175_usable": true,
+  "reference_windows_checked": 210,
+  "feature_comparisons": 4200,
+  "reference_pass": true,
+  "record_local_annotation_caveat": "Same original record-local five-minute labeling convention; no preictal labels propagated across EDF boundaries. Seizure-free added files are not proof of physiologically interictal EEG.",
+  "sources": {
+    "feature_core_sha256": "e7fc7ab77db05895b5ea12a24ba231feade8cc70718f4f69a4d1f19f5b068978",
+    "pinned_commit": "e586c0998f0f4962ff0a4597084824e317fb9e86"
+  }
+}

@@ -1,0 +1,153 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath}
+\usepackage[hyphens]{url}
+\usepackage[hidelinks]{hyperref}
+\usepackage{enumitem}
+\setlength{\emergencystretch}{1em}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.6em}
+\title{Response to reviewers}
+\author{Manuscript BSPC-D-26-09285}
+\date{}
+\begin{document}
+\maketitle
+\textbf{Manuscript:} Burden-Constrained Policy-Layer Explainability for Simulated EEG-Guided Adaptive Vagus Nerve Stimulation.
+
+We thank the reviewers for identifying the distinction between a useful policy formulation and sufficient evidence for its operational claims. The revised manuscript includes complete-recording held-out evaluation, implemented temporal comparator rules, a common-score factorial analysis, attribution-lag sensitivity, causal decision-time accounting, and executable reproducibility materials.
+
+Review of the recording inventory identified an important limitation in the initial evaluation set. Completing all recordings available for the five cases increases the principal false-cluster estimate rather than strengthening the earlier headline performance. We retain that result and narrow the claims accordingly. The complete executable analysis is supplied with this revision and prepared as a new versioned repository release.
+
+Locations below refer to the accompanying revised manuscript. Each reviewer comment is reproduced before the response.
+\section*{Reviewer 4}
+
+\textbf{Comment.} This paper evaluates EEG-guided adaptive VNS as a governed authorization problem. The comparison of this platform with existing similar works is provided only descriptively within the Discussion section. For a more effective evaluation, the comparison with recent related works should be conducted based on implementation methodologies and presented through appropriate graphical representations, enabling readers to clearly distinguish the advantages and disadvantages of the proposed platform. Furthermore, the Introduction section includes only a very limited review of previous related works, and the comparative analysis lacks any statistical evaluation or visual diagrams. To enhance the comparison with the proposed platform, it is recommended that the methodologies illustrated in Figure 2 and summarized in Tables 4 and 5 be similarly applied to the related works under consideration.
+
+\textbf{Response.} We expanded the Introduction and retained a structured methodological table and coverage map, but also added an implemented common-score comparator benchmark rather than relying on description alone. The benchmark applies causal majority voting and firing-power mechanisms to the same calibrated LightGBM outputs, original calibration recordings, and complete held-out EEG as thresholding, persistence, and persistence plus attribution overlap. Majority voting uses the current and two preceding binary decisions; firing power averages a strictly past/current decision history and applies a 0.7 cutoff. The selected mechanisms are motivated by the cited temporal-processing studies, but we explicitly identify them as adaptations: we did not reproduce the external studies' complete artifact detectors, classifiers, training datasets, or hardware implementations.
+
+All five comparator families use one shared training-only objective: maximize window-end event coverage under at most 2 false clusters per calibration recording-hour, with the documented tie-breaking rule. Each family is evaluated both without refractory suppression and with 300 s suppression applied to every family. The new results include burden, event timing, authorized-support duration, paired case differences, and exploratory uncertainty. Raw discrimination and probability calibration are identical across these common-score rule comparisons by design; the rule outputs are authorization states, not independently recalibrated probabilities. Accordingly, a common discrimination and calibration summary accompanies the comparison, while rule-specific differences are evaluated with operational endpoints.
+
+The results do not establish superiority of the proposed overlap constraint. With 300 s refractory suppression, persistence plus overlap produced $0.611\pm1.140$ false clusters/h and covered 17/27 events, versus $0.614\pm1.193$/h and 16/27 for majority voting, and $0.517\pm1.007$/h and 15/27 for firing power. None of those refractory benchmark configurations authorized a seizure pre-onset. Without suppression, firing power attained 12 pre-onset authorizations, but at settings authorizing over 91\% of windows in two cases; this exposes a limitation of cluster-count-only comparisons rather than demonstrating effective low-burden prediction.
+
+The revised table and figures show these trade-offs, and the paired values, all training-search candidates, and executable implementations are included in Supplementary Software 1. The Discussion now states both the methodological advantage of explicit policy auditing and the disadvantages of the present retrospective five-case, non-device evaluation. The last column of the methodological map is explicitly labeled simulated VNS authorization, not a generic action policy.
+
+\textbf{Locations in revised manuscript.} Introduction; Table 1; Figure 1; Section 2.9; Section 3.5; Table 8; Figure 5.
+
+\section*{Reviewer 2 -- major comment 1}
+
+\textbf{Comment.} Define the cohort and every analysis partition. Section 2.3 and Table 1 name five CHB-MIT subjects but do not explain the source population, eligibility criteria, exclusions, or why these five were chosen. Section 2.4 describes chronological and nested-calibration splitting without giving subject-level cutoffs or the core-model, calibration, and test composition. With five subjects, these choices can materially affect every main result. Please report the inclusion/exclusion account and a per-fold partition table with EDFs or counts, hours, seizures, and positive windows, and state whether these choices preceded model and policy development.
+
+\textbf{Response.} We traced the collection back to the original loader and acquisition log. The original 70-EDF sample retained all 27 seizure-containing recordings in the five configured cases but only 43 of their 148 EDFs without annotated seizures. The missing 105 EDFs were absent locally, not excluded by a documented quality criterion. We have corrected the collection account rather than describing those omissions as clinical or technical exclusions.
+
+We then acquired and evaluated all 105 omitted recordings. All 175 available EDFs in these cases passed the preparation checks; no added recording was excluded. The complete exposure is 172.8294 h and 310,916 windows, compared with 67.8214 h and 122,007 windows originally. The positive-label count and seizure count remain 5,227 and 27. Added recordings were test-only: the original core, calibration, and test membership was preserved, and no added EDF entered fitting or threshold selection. The acquisition checks and feature-reference comparisons are included in Supplementary Software 1.
+
+The within-subject cutoffs are now given explicitly. The appendix reports both within-subject and held-out core/calibration/test counts, hours, positive windows, and seizure-containing recordings. Supplementary Software 1 includes exact EDF-level membership, not just aggregate counts.
+
+We cannot substantiate a prospective clinical selection rule for the five cases or establish that their selection preceded every stage of earlier development. The manuscript explicitly states this limitation and calls the cases a convenience subset. It does not fabricate a preregistration history. Recording completion resolves the within-case omission concern but does not add independent patients or seizures. Importantly, we retain the unfavorable result: the frozen complete policy rose from $1.16\pm2.02$ to $3.60\pm7.75$ false clusters/h, with 681 of 700 false clusters in chb05.
+
+\textbf{Locations in revised manuscript.} Sections 2.2--2.3; Table 2; Section 3.3; Table 6; Figure 3; Supplementary Tables 9--10.
+
+\section*{Reviewer 2 -- major comment 2}
+
+\textbf{Comment.} Define the primary false-authorization-cluster endpoint. The Methods defines cluster construction but not what makes a cluster false or what time supplies the hourly denominator. Please give the exact rule for clusters that overlap the five-minute-pre-onset-to-offset interval, cross a label boundary, occur near adjacent seizures, or are merged by cooldown, as well as the at-risk-time denominator. A worked example would make the central reduction from 84.44 to 1.17 false clusters/hour reproducible.
+
+\textbf{Response.} The Methods now gives the exact implemented support-based endpoint. Within an EDF, selected windows merge when the next selected support starts at or before the current cluster end plus the cooldown. With four-second windows and a two-second step, selected supports can touch despite an intervening unselected decision; we have removed the inaccurate implication that clusters are necessarily uninterrupted runs of positive decisions.
+
+A cluster is false only when none of its selected windows has a positive center-based preictal/ictal label. A boundary-crossing cluster with at least one selected positive window is non-false. Envelope overlap or an unselected positive window alone does not change its classification. Overlapping event intervals form a union for labeling, while event coverage is assessed separately per seizure. Clusters never cross EDF boundaries.
+
+The primary denominator is full analyzed duration of unique EDFs in the specified exposure, including preictal and ictal time. We call this false clusters per analyzed recording-hour, not an interictal-only false-alarm rate. A supplementary rate with the positive-interval union removed from the denominator is also provided. Selected-support occupancy is reported separately so long continuous positive states cannot be interpreted as low burden solely because they form few clusters.
+
+Worked examples include a false support interval at 4--8 s in chb01\_01.edf and a mixed-boundary cluster at 2996--3040 s in chb01\_03.edf, containing 18 selected windows, 17 positive. The latter crosses seizure offset at 3036 s but is non-false under the explicit rule. A cooldown example shows how two negative clusters can merge without becoming positive. Executable unit tests cover these cases, and per-cluster ledgers allow direct count verification. Original nominal results remain labeled historical; the main revised burden interpretation uses the complete exposure rather than retaining 84.44 versus 1.17 as an unqualified headline.
+
+\textbf{Locations in revised manuscript.} Section 2.7; Section 3.3; Table 6; Supplementary Table 13.
+
+\section*{Reviewer 2 -- major comment 3}
+
+\textbf{Comment.} Do not interpret the current policy rows as an isolating ablation. Table 9 shows that fixed, persistence, and stability policies use raw scores; the calibration-aware gate uses raw plus isotonic scores; and the full policy uses isotonic scores with persistence and stability. The same numerical threshold therefore acts on different scales, and the full policy changes multiple conditions while dropping the raw-score requirement. Please give a train-only selection rule for the calibrator, thresholds, and highlighted operating point. Either describe Table 5 as a comparison of selected configurations or add a factorial/incremental analysis that changes one component at a time, preferably at matched coverage or burden.
+
+\textbf{Response.} We agree. The original rows are now explicitly a nominal configuration comparison, not an isolating ablation. They remain identifiable in the appendix, including their different probability inputs.
+
+The new factorial analysis uses one calibrated probability stream and one frozen threshold within each fold. Sigmoid and isotonic calibration were compared by leave-one-EDF-out cross-fitted Brier score on the original calibration block. The selected calibrator was refit on that complete block. Thresholds in 0.01--0.99 were selected for calibrated thresholding alone by maximizing positive-window sensitivity subject to at most 2 false clusters per calibration recording-hour; ties favor lower burden and then lower threshold. The reconstructed choices are isotonic in all folds and thresholds 0.24, 0.44, 0.34, 0.48, and 0.22 for chb01, chb02, chb03, chb05, and chb08, respectively. Reproduction checks and the executable selection procedure are supplied.
+
+Persistence and attribution overlap are then toggled independently, without changing the score or threshold. On full exposure, thresholding, persistence, overlap alone, and both produce $6.044\pm12.620$, $3.657\pm7.875$, $5.791\pm12.116$, and $3.601\pm7.748$ false clusters/h. Broad event coverage is unchanged across these four configurations, while timing is reported separately. Persistence removes 455 false clusters; overlap after persistence removes 11, all in one case. Thus the main incremental effect is persistence, not attribution overlap. This decomposition is conditional on the calibrated score and does not isolate calibration itself as a burden-reduction cause.
+
+The old star is now identified as the nominal setting $\theta=0.5$, $\gamma=0.4$, not an optimized point. The corrected sweep keeps $\gamma$ fixed. No operating point is selected from the added test recordings, and no matched-test-burden or superiority claim is made.
+
+\textbf{Locations in revised manuscript.} Sections 2.5 and 2.10; Section 3.2; Table 5; Section 3.4; Table 7; Figure 4; Supplementary Table 11 and Figure S1.
+
+\section*{Reviewer 2 -- major comment 4}
+
+\textbf{Comment.} Narrow or validate the explainability claim. The stability score is top-five attribution overlap between adjacent 4-second windows that already share 50\% of their samples. Selecting on this score and then reporting a higher mean among retained windows does not independently establish more reliable or clinically meaningful explanations; weak correlation with probability demonstrates nonredundancy only. Please specify the complete per-window SHAP ranking protocol and feature/model configuration, assess non-overlapping or more widely separated windows, and evaluate an outcome not used as the gate. Unless an independent explanatory target is validated, describe this as an attribution-overlap constraint rather than "evidence consistency."
+
+\textbf{Response.} We have narrowed the terminology to an attribution-overlap constraint. A higher overlap after selecting on overlap is no longer presented as independent explanatory validation, and weak correlation with probability is not taken as evidence of explanation reliability.
+
+The Methods specifies the 20 channel-averaged features, original 22-channel extraction, LightGBM configuration, native prediction-contribution API, removal of the bias column, absolute-contribution ranking, stored feature order and sorting convention, top-five Jaccard calculation, undefined-history handling, and EDF-local temporal matching. Contribution additivity is checked; fitted boosters and per-window top-five ranks are supplied.
+
+Overlap is evaluated at 2, 4, 6, 10, and 20 s separation. Four seconds is the first comparison without shared raw samples. The independent-of-gate outcome is the within-case overlap difference between positive-label and negative-label raw-threshold authorizations. On complete exposure it is 0.093 at 4 s (exploratory interval 0.064--0.123), positive in all five cases, and 0.033 at 20 s (0.006--0.053), positive in four cases. We explicitly correct the earlier all-cases/all-lags claim for the expanded exposure. A coarse probability-stratified sensitivity gives differences of 0.094 and 0.050 at those separations, respectively, without being interpreted as proof of independence from all score effects.
+
+These analyses show that the association is not limited to windows sharing samples, but the outcome is still an engineered operational label, not a clinician-rated or physiological explanation target. We therefore retain the narrow claim and report the small incremental policy effect rather than claiming clinically meaningful explanation reliability.
+
+\textbf{Locations in revised manuscript.} Section 2.6; Section 3.4; Table 7; Section 3.6; Figure 6.
+
+\section*{Reviewer 2 -- major comment 5}
+
+\textbf{Comment.} Separate event coverage from pre-onset authorization. Coverage includes any authorization from five minutes before onset through seizure offset. For the held-out full policy, 19/27 events were covered, but only 1/19 covered events had a pre-onset authorization and the reported median lead summary was -17.4 +/- 10.8 seconds. Please add this timing result to the abstract, report pre-onset-only coverage, and separate pre-onset, post-onset-only, and missed events throughout. If ictal authorization is an intended use, explain its role separately from advance seizure prediction.
+
+\textbf{Response.} The abstract now reports the principal train-selected policy's full event categories and latency, not only broad coverage: 2/27 pre-onset, 18/27 at-or-after-onset only, and 7/27 missed. Pre-onset coverage is 7.4\% of all seizures and 10\% of the 20 covered seizures. Pooled coverage is 20/27 (74.1\%), distinct from equal-weight fold coverage of 78.9\%.
+
+We also corrected the timing clock. A four-second feature window cannot authorize intervention at its center because half its samples are then unavailable. The revised principal timing uses window ends, with no invented processing/device delay. Median latency among covered events is 16 s, with interquartile range 8.5--28 s; the center-referenced median was 14 s. Counts happen to remain unchanged for the principal held-out policy, but this was recalculated from the complete mask rather than assumed.
+
+The original nominal full policy remains separately labeled: its historical center-referenced result is 1 pre-onset, 18 post-onset only, and 8 missed, with $-17.4\pm10.8$ s being the mean and SD of fold-specific median leads. The clock correction changes one within-subject nominal result from 9/10 to 8/10 covered because an authorization in chb03\_34.edf becomes available after seizure offset; this is now disclosed.
+
+The Discussion and Conclusion consequently describe an audit of seizure-responsive authorization, not demonstrated advance seizure prediction. Post-onset authorization is not treated as evidence of seizure termination or delivered-VNS benefit. The abstract, main tables, appendix case table, and per-event ledgers now make the timing distinctions explicit.
+
+\textbf{Locations in revised manuscript.} Abstract; Section 2.8; Section 3.5; Figure 5A; Supplementary Table 14.
+
+\section*{Reviewer 2 -- minor comment 1}
+
+\textbf{Comment.} Link Tables 3-5 to the exact fitted model and output path. In particular, explain the held-out raw LightGBM difference between Table 3 (AUROC/AUPRC 0.620/0.142) and Table 4 (0.612/0.133), identify which output supplies each Table 5 policy, and report the threshold used for Table 3's thresholded metrics.
+
+\textbf{Response.} The discrimination table uses the original complete outer-training fits; the calibration and policy tables use the smaller nested-core fits. Raw nested LightGBM AUROC/AUPRC therefore need not equal the complete-outer-fit values. The reconstructed nested held-out values agree with the archived fold-level reference to absolute tolerance $10^{-10}$. The original discrimination table's thresholded metrics use $p\geq0.5$; the policy masks use their stated strict thresholds.
+
+Supplementary Software 1 includes \path{TABLE_PROVENANCE.csv}, mapping every retained or new table/figure to the source file and generating code. Nominal configurations use per-window raw/isotonic nested-core columns as specified, whereas the factorial analysis uses the train-selected isotonic column and fold threshold. Model files, feature order, calibrator mappings, and per-window score files are included. The original complete-outer-fit logistic-regression/random-forest discrimination tables are retained from the archive; we do not claim those models were refitted for this recording-completion experiment.
+
+\textbf{Locations in revised manuscript.} Sections 2.4--2.5 and 2.10; Tables 3--5; Supplementary Table 15 and the table-provenance file in Supplementary Software 1.
+
+\section*{Reviewer 2 -- minor comment 2}
+
+\textbf{Comment.} Clarify the timing estimands. Tables 5 and 7 mix pooled event counts, pre-onset counts conditional on coverage, equal-weight fold coverage, and a "Median lead" value with a plus/minus term. Define the lead-time aggregation, provide fold/subject denominators, and report pre-onset authorization among all events as well as among covered events.
+
+\textbf{Response.} The Methods now defines all estimands separately. Counts are pooled over annotated seizures; fold coverage gives each case equal weight; pre-onset proportions are reported both among all events and among covered events. Latency is first authorization minus onset, and lead is its negative. The principal timing statistic is a pooled median and interquartile range, while any mean $\pm$ SD of case-specific medians is explicitly named as such.
+
+For the frozen train-selected policy, the case event denominators are 7, 3, 7, 5, and 5. The appendix table supplies pre-onset, post-onset-only, missed, covered, and median-latency values by case. At window ends, the pooled median latency is 16 s (8.5--28 s), whereas the mean $\pm$ SD of five case median leads is $-1.3\pm49.9$ s; those summaries are not interchangeable. Every first authorization and both timestamp conventions are supplied in \path{results/event_timing_by_event.csv}.
+
+\textbf{Locations in revised manuscript.} Abstract; Section 2.8; Section 3.5; Figure 5A; Supplementary Table 14.
+
+\section*{Reviewer 2 -- minor comment 3}
+
+\textbf{Comment.} Define "positive authorization rate" in the Methods, including its numerator, denominator, window/cluster level, and fold aggregation.
+
+\textbf{Response.} Positive authorization rate is now explicitly a window-level ratio: selected windows with a positive operational label divided by all selected windows in the fold. It is neither cluster precision nor event coverage. Equal-weight case means omit undefined ratios from folds with no selected windows; the supplied summaries report the number of defined cases. Pooled ratios use the sum of positive selections divided by the sum of all selections. The separate authorization fraction is selected windows divided by all evaluated windows and is not labeled as positive authorization rate.
+
+\textbf{Locations in revised manuscript.} Sections 2.7 and 2.10.
+
+\section*{Reviewer 2 -- minor comment 4}
+
+\textbf{Comment.} In Figure 4, identify the black star markers, report the sweep grid and selected parameter values, state the aggregation level, and provide uncertainty or a fold-level table.
+
+\textbf{Response.} The operating figure has been regenerated. We found and corrected two implementation/reporting mismatches: the earlier curve averaged over different attribution thresholds, and the former middle axis labeled the fraction of all windows authorized as positive authorization rate. The revised sweep fixes $\gamma=0.4$, varies $\theta$ over 0.1--0.9 in steps of 0.1, and plots equal-weight case means for one defined configuration at each point. The nominal star is $\theta=0.5$, $\gamma=0.4$; it is not an optimized point.
+
+The revised burden--coverage figure uses window-end timing and complete recording exposure. Exploratory case-bootstrap intervals are shown at nominal operating points, and all sweep-specific case values and interval summaries are supplied in \path{results/fixed_gamma_sweep_by_fold.csv} and \path{results/fixed_gamma_sweep_summary.csv}. A separate correctly labeled authorization-fraction plot is included in Supplementary Software 1. The methods state the aggregation and interval calculation. The star is distinct from the train-selected fold thresholds used in the principal factorial analysis.
+
+\textbf{Locations in revised manuscript.} Section 2.10; Table 5; Supplementary Figure S1 and the accompanying case-level sweep files.
+
+\section*{Reviewer 2 -- minor comment 5}
+
+\textbf{Comment.} Reword the cooldown comparison. Table 10 retains coverage 1.00 +/- 0.00 for fixed thresholding and 0.76 +/- 0.29 for the full policy, so the policies are not compared at common coverage; cooldown preserves each policy's own coverage.
+
+\textbf{Response.} Corrected. Cooldown is support-cluster merging and does not alter the authorization mask, so it preserves each policy's own event coverage. We no longer imply that fixed and full policies have matched coverage. The updated Methods further distinguishes this from the comparator benchmark's actual refractory suppression, which removes decisions and can change coverage. Both the original and complete-exposure cooldown outputs are identifiable in the supplied results.
+
+\textbf{Locations in revised manuscript.} Sections 2.7 and 2.9; Supplementary Table 13.
+\end{document}

@@ -1,0 +1,16 @@
+subject,exposure,edfs,hours,seizure_edfs
+chb01,original,20,18.552222222222223,7
+chb01,additional,22,22.0,0
+chb01,combined,42,40.55222222222222,7
+chb02,original,9,8.266388888888889,3
+chb02,additional,27,27.0,0
+chb02,combined,36,35.26638888888889,3
+chb03,original,13,13.0,7
+chb03,additional,25,25.001666666666665,0
+chb03,combined,38,38.001666666666665,7
+chb05,original,14,14.002777777777778,5
+chb05,additional,25,25.0,0
+chb05,combined,39,39.00277777777778,5
+chb08,original,14,14.0,5
+chb08,additional,6,6.006388888888889,0
+chb08,combined,20,20.00638888888889,5

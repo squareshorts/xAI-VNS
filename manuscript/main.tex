@@ -1,5 +1,7 @@
 \documentclass[11pt,a4paper]{article}
 
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
 \usepackage[margin=1in]{geometry}
 \usepackage{graphicx}
 \usepackage{booktabs}
@@ -9,444 +11,659 @@
 \usepackage{amsmath,amssymb}
 \usepackage{xcolor}
 \usepackage{tikz}
-\usetikzlibrary{arrows.meta,positioning,shapes.geometric,fit}
+\usetikzlibrary{arrows.meta,positioning,shapes.geometric,fit,matrix}
 \usepackage{float}
 \usepackage{placeins}
 \usepackage[numbers,sort&compress]{natbib}
 \usepackage[hyphens]{url}
+\usepackage{authblk}
 \usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
 
 \graphicspath{{../results/figures/}{results/figures/}{figures/}}
-\sisetup{round-mode=places,round-precision=3,detect-weight=true,detect-family=true}
 
-\title{Policy-Layer Explainability for Simulated EEG-Guided Adaptive Vagus Nerve Stimulation}
-
-\author{
-Antonio Pereira\textsuperscript{1,*} \\
-\textsuperscript{1}Department/Institution, City, Country \\
-\textsuperscript{*}Correspondence: squareshorts@gmail.com
+\sisetup{
+  round-mode=places,
+  round-precision=3
 }
 
+\title{Burden-Constrained Policy-Layer Explainability for Simulated EEG-Guided Adaptive Vagus Nerve Stimulation}
+
+\author[1]{Suzana Cescon\thanks{Email: \texttt{seuzanacescon@gmail.com}.}}
+\author[1]{Antonio Pereira\thanks{Corresponding author: Antonio Pereira, Signal Processing Laboratory, Institute of Technology, Federal University of Par\'a, 66075-110 Bel\'em, PA, Brazil. Email: \texttt{apereira@ufpa.br}. ORCID: \href{https://orcid.org/0000-0002-0808-1058}{0000-0002-0808-1058}.}}
+
+\affil[1]{Signal Processing Laboratory, Institute of Technology, Federal University of Par\'a, 66075-110 Bel\'em, PA, Brazil}
 \date{}
 
 \begin{document}
 \maketitle
 
 \begin{abstract}
-Adaptive neuromodulation should be evaluated as a burden-constrained authorization policy. We studied simulated EEG-guided vagus nerve stimulation (VNS) in a CHB-MIT governance framework that converts operational risk scores into authorization windows only after calibration, persistence, and attribution-stability constraints are applied.
+EEG-guided adaptive neuromodulation requires explicit rules for converting model scores into intervention authorization. We evaluated a simulated vagus nerve stimulation (VNS) authorization framework that combines probability calibration, temporal persistence, and attribution overlap, with burden and event timing treated as policy-level outcomes rather than inferred from discrimination alone.
 
-The analysis used five CHB-MIT scalp EEG subjects, 70 EDF files, 67.82 h of EEG, and 27 annotated seizures. Four-second overlapping windows were represented with handcrafted EEG features. Logistic regression, random forest, LightGBM, a line-length score, and prevalence baselines were evaluated with held-out-subject and within-subject chronological validation. Discrimination was moderate: LightGBM held-out-subject AUROC was $0.620 \pm 0.098$ and AUPRC was $0.142 \pm 0.062$; within-subject AUROC was $0.679 \pm 0.231$ and AUPRC was $0.269 \pm 0.203$. Nested calibration improved policy-input reliability: held-out-subject LightGBM ECE decreased from $0.211 \pm 0.081$ raw to $0.020 \pm 0.017$ after Platt scaling. In held-out-subject policy ablation, false authorization clusters decreased from $84.44 \pm 29.57$/h under fixed thresholding to $1.17 \pm 2.05$/h under the full governed policy, with fold-mean event-level authorization coverage decreasing from $1.00$ to $0.76$.
+Five CHB-MIT cases contributed 175 EDF recordings (172.83 h), 310,916 four-second windows, and 27 annotated seizures. Model development, calibrator fitting, and threshold selection used 70 EDF recordings; the fitted pipeline was then evaluated over the full 175-EDF inventory, with the other 105 recordings entering evaluation only and no operating parameter retuned on them. Across the full recording inventory, the train-selected policy produced a case-median burden of 0.105 false authorization clusters per recording-hour but a case mean of $3.60\pm7.75$/h because chb05 contributed 681 of 700 false clusters (17.46/h). Thus, a 2/h training-side burden constraint did not generalize as a held-out-case bound. In a common-score factorial analysis, temporal persistence reduced burden more strongly than the attribution-overlap constraint. At the earliest complete-window decision time, 2/27 seizures were authorized before onset, 18/27 only at or after onset, and 7/27 were missed; median latency among covered events was 16 s (interquartile range 8.5--28 s). Adapted majority-voting and firing-power comparators occupied similar burden--coverage ranges under a common 300 s refractory rule, without establishing superiority of any policy family. Attribution-overlap differences between positive- and negative-label authorized windows persisted at non-overlapping temporal separations, but the incremental burden effect of overlap gating was small.
 
-These results identify the governed authorization policy, rather than the classifier score alone, as the appropriate object of evaluation for adaptive neuromodulation simulations. Policy-layer governance converted uncertain EEG-derived scores into auditable authorization decisions and exposed the trade-off between event coverage, calibration, attribution stability, and false-intervention burden.
+Authorization burden was therefore strongly case dependent, and most covered seizures were authorized after onset. The results support explicit evaluation of calibration, temporal policy, recording exposure, decision-time availability, and attribution constraints, but not a subject-independent low-burden guarantee or clinically validated predictive VNS control.
 \end{abstract}
 
-\noindent\textbf{Keywords:} explainable AI; EEG; adaptive neuromodulation; vagus nerve stimulation; calibration; authorization policy.
+\noindent\textbf{Keywords:} explainable AI; EEG; adaptive neuromodulation; vagus nerve stimulation; calibration; authorization policy; attribution overlap.
 
 \section{Introduction}
 
-Drug-resistant epilepsy is commonly defined as failure of adequate trials of two tolerated, appropriately chosen and used antiseizure medication schedules to achieve sustained seizure freedom\citep{kwan2010drugresistant}. For patients who remain refractory and are not candidates for curative resective surgery, neuromodulation is an important therapeutic option. Vagus nerve stimulation is used as adjunctive therapy for selected patients with refractory epilepsy, with programming shaped by dose, duty cycle, tolerability, adverse effects, battery use, and longitudinal clinical judgment\citep{morris2013vns,fahoum2022vnsparams}.
+Epilepsy affects more than 50 million people worldwide, with more than 4.9 million new cases each year, and approximately one-third of people with epilepsy remain drug resistant despite appropriately selected antiseizure medications\citep{guery2023drugresistant}. For patients who remain refractory and are not candidates for curative resective surgery, neuromodulation is an important therapeutic option. Vagus nerve stimulation is used as adjunctive therapy for selected patients with refractory epilepsy, with programming shaped by dose, duty cycle, tolerability, adverse effects, battery use, and longitudinal clinical judgment\citep{morris2013vns,fahoum2022vnsparams}.
 
-Adaptive neuromodulation changes the decision problem. Instead of using a fixed schedule alone, an adaptive system links intervention authorization to measured signals and algorithmic estimates. Contemporary VNS already includes biomarker-triggered stimulation based on ictal tachycardia\citep{fisher2016autostim}. EEG-derived estimates offer another route for adaptive triggering, but they introduce a governance problem: the system constructs an operational risk score from recorded signals, preprocessing choices, labels, model structure, calibration, and threshold rules.
+In adaptive neuromodulation, the relevant decision is not simply whether stimulation is delivered according to a fixed schedule, but how sensed physiological activity is used to trigger, withhold, or modify stimulation in real time\citep{yang2024closedloop,rao2023rnsmechanisms}. Contemporary VNS already implements one form of biomarker-triggered stimulation through ictal tachycardia detection\citep{fisher2016autostim}. EEG-derived estimates offer a more direct route for seizure-responsive triggering, but they also expand the decision chain: intervention authorization depends on signal acquisition, preprocessing, feature extraction, label definition, model structure, calibration, thresholding, temporal post-processing, and the rule used to consolidate repeated outputs into operational episodes\citep{zhang2024eegreview,batista2024postprocessing}.
 
-This distinction is central for retrospective EEG simulation. In CHB-MIT, seizure annotations define observed ictal intervals, while preictal labels define a modeling convention around those intervals\citep{guttag2010chbmit,goldberger2000physionet}. Different preictal horizons, window lengths, feature sets, validation schemes, and thresholds produce different operational risk scores and different authorization policies. Adaptive neuromodulation should therefore be evaluated as a burden-constrained authorization policy.
+This expanded decision chain is especially important in retrospective EEG simulation, where the recorded seizure interval is observed but the preictal state is inferred by convention. In CHB-MIT, seizure annotations define observed ictal start and stop times in pediatric scalp EEG recordings made available through PhysioNet\citep{goldberger2000physionet,guttag2010chbmit}. By contrast, preictal labels are modeling constructs imposed around those intervals, and seizure-prediction studies emphasize that preictal duration, alarm generation, and post-processing choices materially affect operational performance\citep{batista2024postprocessing,andrade2024samplealarm}. Consequently, choices of preictal horizon, window length, feature representation, validation scheme, thresholding, and post-processing define different operational risk scores and alarm or authorization policies.
 
-AUROC is useful but incomplete for action systems. AUROC summarizes ranking across thresholds, while an authorization policy acts at specific operating points. Discrimination alone can produce high authorization burden, unstable triggering, poor calibration, or explanations that shift across adjacent windows. These properties become visible only when the model score is evaluated together with the policy that converts it into authorization windows and authorization clusters.
+Although AUROC remains useful for characterizing discrimination, it is insufficient for systems that act because it summarizes ranking performance rather than calibrated risk, threshold-specific utility, or operational consequences\citep{dehond2022auroc,vancalster2025performance}. This limitation is particularly important for seizure prediction and detection, where sample-level performance can diverge markedly from alarm-level behavior once temporal regularization, refractory intervals, false alarms per hour, and event timing are introduced\citep{andrade2024samplealarm,batista2024postprocessing}. Deployment-oriented work has likewise emphasized false-alarm burden and temporal behavior in wearable EEG seizure detection, including artifact filtering and boosted-tree models evaluated on CHB-MIT\citep{ingolfsson2024artifact}.
 
-Explainability is also a policy-layer property. Feature attribution can show which EEG features support an operational risk score, but the present framework uses attribution stability as an authorization constraint. A governed policy can require elevated risk, temporal persistence, calibrated uncertainty, attribution stability, and burden reporting before simulated intervention authorization.
+Explainability addresses a different part of the decision chain. SHAP and related attribution methods can identify which EEG features or channels contribute to seizure-related predictions, and recent work has used XAI to reduce the feature and channel set required for seizure detection\citep{vieira2023xai}. Such use is primarily interpretive or model-reduction oriented. If attribution information is used inside an authorization policy, a separate question arises: whether the attribution structure is temporally stable enough to serve as a reproducible constraint, rather than whether it is clinically meaningful in its own right. That distinction is important because explanation reliability and uncertainty are not interchangeable\citep{salvi2025uncertainty}.
 
-The contribution of this study is methodological. It evaluates adaptive neuromodulation as a governed authorization problem in which discrimination, calibration, temporal persistence, attribution stability, and burden are jointly measured. This provides a reproducible framework for auditing how uncertain EEG-derived scores become simulated intervention decisions.
+Recent related studies therefore address complementary, but non-equivalent, stages of the pipeline (Table~\ref{tab:related_work}; Figure~\ref{fig:method_comparison}). Andrade et al. evaluated sample- and alarm-based seizure-prediction performance using firing-power post-processing and a refractory period\citep{andrade2024samplealarm}. Batista et al. examined post-processing as an explicit chronology of seizure-prediction decisions\citep{batista2024postprocessing}. Ingolfsson et al. emphasized artifact-aware false-alarm reduction and wearable implementation constraints\citep{ingolfsson2024artifact}. Vieira et al. used XAI for feature and channel reduction in seizure detection\citep{vieira2023xai}. The published performance numbers are not directly exchangeable because cohorts, targets, validation schemes, and alarm definitions differ. Alongside the methodological comparison, we therefore implement adapted temporal voting and firing-power mechanisms on common calibrated scores, training-only parameter selection, and identical held-out recordings. This tests decision components under controlled conditions without claiming replication of the external systems in their entirety. Unlike device-oriented work, the present study delivers no stimulation and evaluates neither artifact suppression nor embedded hardware; its scope is retrospective authorization analysis in five cases.
+
+\begin{table}[H]
+\centering
+\caption{Methodological comparison with recent EEG seizure-prediction and seizure-detection studies. ``Not reported'' indicates that the cited study did not present the item as a formal component of the evaluated pipeline; it does not imply that the item is unimportant to that application.}
+\label{tab:related_work}
+\scriptsize
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{1.18}
+
+\begin{tabular}{@{}
+>{\raggedright\arraybackslash}p{0.15\textwidth}
+>{\raggedright\arraybackslash}p{0.14\textwidth}
+>{\raggedright\arraybackslash}p{0.20\textwidth}
+>{\raggedright\arraybackslash}p{0.22\textwidth}
+>{\raggedright\arraybackslash}p{0.20\textwidth}
+@{}}
+\toprule
+Study &
+Primary task &
+Temporal or operational rule &
+Calibration and burden reporting &
+Attribution/XAI role \\
+\midrule
+
+Andrade et al. (2024)\citep{andrade2024samplealarm} &
+Seizure prediction across databases &
+Firing-power regularization with a refractory period &
+Probability calibration not reported; sensitivity and false predictions/h reported &
+Not part of the decision rule \\
+
+Batista et al. (2024)\citep{batista2024postprocessing} &
+Patient-specific seizure prediction &
+Explicit post-processing chronology around preictal alarms &
+Probability calibration not reported; alarm-level consequences evaluated &
+Not part of the decision rule \\
+
+Ingolfsson et al. (2024)\citep{ingolfsson2024artifact} &
+Seizure detection for wearable EEG &
+Artifact detector combined with a boosted-tree seizure detector &
+Probability calibration not reported; false positives/h and sensitivity emphasized &
+Not part of the decision rule \\
+
+Vieira et al. (2023)\citep{vieira2023xai} &
+Seizure detection &
+Window-level classification &
+Probability calibration and cluster burden not reported &
+SHAP used for feature and channel interpretation and reduction \\
+
+Present study &
+Simulated EEG-guided VNS authorization &
+Train-only threshold selection, temporal persistence, attribution-overlap constraint, and cluster/cooldown rules &
+Nested calibration; false authorization clusters per analyzed recording-hour; event-level timing &
+Top-$k$ attribution overlap used as a policy constraint and evaluated across temporal lags \\
+
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.96\linewidth]{figure1_methodological_coverage.pdf}
+\caption{Methodological coverage of representative related work. Filled cells indicate that a stage was explicitly modeled or evaluated in the cited pipeline. The comparison is structural rather than a ranking of predictive performance; the last column refers specifically to simulated VNS authorization.}
+\label{fig:method_comparison}
+\end{figure}
+\FloatBarrier
+
+By separating score estimation from the rules that permit simulated intervention, this study tests how probability calibration, temporal persistence, and attribution overlap affect authorization burden and event timing across heterogeneous EEG recordings. Attribution overlap is treated as an operational policy variable rather than as a surrogate for clinical explanation validity.
 
 \section{Methods}
 
 \subsection{Framework}
-
-The framework was implemented as a modular Python workflow with separate components for data access, windowing, feature extraction, model training, evaluation, calibration, feature attribution, policy simulation, event-level summarization, visualization, and audit tables. Configuration files defined dataset paths, windowing parameters, model choices, calibration bins, attribution-stability parameters, and policy thresholds.
-
-\subsection{Data and Windowing}
-
-The analysis used a real EEG subset from the CHB-MIT scalp EEG database\citep{guttag2010chbmit}. The subset included five subjects: chb01, chb02, chb03, chb05, and chb08. A total of 70 EDF recordings were analyzed, corresponding to 67.82 h of EEG and 27 annotated seizures. Recordings were sampled at 256 Hz. Duplicate channel names were harmonized, and 22 unique bipolar EEG channels were retained for feature extraction.
-
-Continuous EEG recordings were segmented into 4 s windows with 50\% overlap. Each window was assigned a timestamp at its center. Labels were interictal, preictal, or ictal. The preictal interval was the 5 min period preceding annotated seizure onset. For binary model training and policy simulation, preictal and ictal windows were collapsed into an operational risk class; interictal windows were treated as non-risk windows.
-
-\begin{table}[H]
-\centering
-\caption{Dataset summary for the five-subject CHB-MIT real-EEG subset.}
-\label{tab:dataset}
-\small
-\begin{tabular}{lrrrr}
-\toprule
-Subject & EDF recordings & EEG hours & Annotated seizures & Windows \\
-\midrule
-chb01 & 20 & 18.55 & 7 & 33,373 \\
-chb02 & 9 & 8.27 & 3 & 14,870 \\
-chb03 & 13 & 13.00 & 7 & 23,387 \\
-chb05 & 14 & 14.00 & 5 & 25,191 \\
-chb08 & 14 & 14.00 & 5 & 25,186 \\
-\midrule
-Total & 70 & 67.82 & 27 & 122,007 \\
-\bottomrule
-\end{tabular}
-\end{table}
-\FloatBarrier
-
-\subsection{Validation and Leakage Control}
-
-Two validation modes were implemented. Held-out-subject validation used each subject as the test set in turn and trained on the remaining subjects. Within-subject chronological validation used subject-specific chronological file-level splits, with earlier recordings assigned to training and later recordings assigned to testing. No EDF file contributed windows to both training and testing.
-
-A leakage-control audit checked train-test EDF overlap, subject overlap, held-out-subject exclusion, file-level splitting, chronological ordering in within-subject folds, and whether overlapping windows crossed a split boundary. Nested calibration used disjoint training recordings for core model fitting and calibration fitting.
-
-\subsection{Features and Risk-Score Generators}
-
-Each EEG window was represented with interpretable handcrafted features: amplitude summaries, line length, zero-crossing rate, Hjorth mobility, Hjorth complexity, kurtosis, spectral power, and relative band-power measures. Logistic regression, random forest, and LightGBM were evaluated as operational risk-score generators. Baseline comparisons included test-set prevalence and a simple line-length score. LightGBM was used for the main governance analysis as a representative nonlinear risk-score generator.
-
-\subsection{Metrics and Calibration}
-
-Window-level evaluation used AUROC, AUPRC, sensitivity, specificity, F1-score, balanced accuracy, Brier score, and false authorization windows per hour. Calibration was evaluated with 10-bin reliability curves, Brier score, expected calibration error (ECE), calibration slope, calibration intercept, maximum predicted probability, and bin counts. Platt scaling and isotonic regression were fit in a nested train-only procedure: within each outer fold, training recordings were split into core model-fitting and calibration subsets, and the outer test fold was used only for final evaluation.
-
-\subsection{Attribution Stability}
-
-Global explanations were generated using model-native importance measures and SHAP values for LightGBM\citep{lundberg2017shap,ke2017lightgbm}. Let $p_t$ denote the operational risk score for window $t$. Let $E_t$ denote the ranked feature-attribution set for that window and $T_k(E_t)$ the top-$k$ attributed features. Attribution stability between adjacent windows was quantified as
-\[
-S_t =
-\frac{|T_k(E_t) \cap T_k(E_{t-1})|}
-{|T_k(E_t) \cup T_k(E_{t-1})|}.
-\]
-The attribution-stability analysis used $k=5$. A threshold of $\gamma=0.4$ required at least three shared top-attributed features across adjacent windows.
-
-\subsection{Governed Authorization Policies}
-
-The governance layer formalized how operational risk scores became authorization windows. A fixed-threshold policy authorized a window when $p_t > \theta$. Temporal persistence required adjacent windows to exceed threshold. Calibration-aware gating required raw and calibrated probabilities to exceed threshold. The full governed policy required calibrated probability persistence and $S_t > \gamma$:
-\[
-p_t^{cal} > \theta,\qquad p_{t-1}^{cal} > \theta,\qquad S_t > \gamma.
-\]
-The default threshold was $\theta=0.5$ and the default stability threshold was $\gamma=0.4$.
-
-Terminology was restricted to authorization behavior. An authorization window is a single EEG window satisfying a policy rule. An authorization cluster merges consecutive authorized windows within the same EDF recording into a single cluster. Cooldown sensitivity additionally merged authorized windows separated by 30 s, 60 s, or 120 s. The main burden metrics were authorization clusters per hour and false authorization clusters per hour. Window-level burden was retained as authorization windows per hour.
-
-\subsection{Event-Level Authorization}
-
-For each annotated seizure in held-out test recordings, an event was counted as covered when at least one authorization occurred from 5 min before annotated onset through annotated offset. Lead time was the negative of the first authorization latency relative to annotated onset; positive values indicate pre-onset authorization and negative values indicate first authorization after annotated onset.
+The framework was implemented as a modular Python workflow comprising data access, windowing, feature extraction, model fitting, probability calibration, feature attribution, authorization-policy simulation, event-level timing, and burden estimation. Figure~\ref{fig:pipeline} summarizes the analysis chain. All reported VNS outcomes are simulated authorizations; no stimulation was delivered.
 
 \begin{figure}[H]
 \centering
 \resizebox{\linewidth}{!}{%
 \begin{tikzpicture}[
-    node distance=1.5cm,
-    box/.style={rectangle, rounded corners, draw=black, thick, align=center, minimum width=2.7cm, minimum height=0.9cm, fill=gray!8},
-    warn/.style={rectangle, rounded corners, draw=red!70!black, thick, align=center, minimum width=3.0cm, minimum height=0.9cm, fill=red!5},
-    arrow/.style={-{Latex[length=2mm]}, thick}
+node distance=1.5cm,
+box/.style={rectangle,rounded corners,draw=black,thick,align=center,text width=2.8cm,minimum height=1.05cm,fill=gray!8,inner sep=5pt},
+review/.style={rectangle,rounded corners,draw=blue!70!black,thick,align=center,text width=3.0cm,minimum height=1.05cm,fill=blue!5,inner sep=5pt},
+arrow/.style={-{Latex[length=2mm]}, thick}
 ]
-
-\node[box] (eeg) {Real EEG input\\CHB-MIT subset};
-\node[box, right=of eeg] (feat) {Interpretable\\feature extraction};
-\node[box, right=of feat] (model) {Operational\\risk score};
-\node[box, below=of model] (xai) {Feature\\attribution};
-\node[box, right=of model] (policy) {Policy-layer\\governance};
-\node[warn, right=of policy] (clinician) {Clinician oversight\\review required};
-\node[box, below=of policy] (sim) {Authorization\\burden audit};
-
+\node[box] (eeg) {CHB-MIT EEG};
+\node[box, right=of eeg] (feat) {Interpretable feature extraction};
+\node[box, right=of feat] (model) {Operational risk score};
+\node[box, below=of model] (xai) {Feature attribution and overlap};
+\node[box, right=of model] (policy) {Calibrated temporal policy};
+\node[review, right=of policy] (review) {Human review checkpoint};
+\node[box, below=of policy] (sim) {Authorization burden and event timing};
 \draw[arrow] (eeg) -- (feat);
 \draw[arrow] (feat) -- (model);
 \draw[arrow] (model) -- (policy);
-\draw[arrow] (policy) -- (clinician);
 \draw[arrow] (model) -- (xai);
 \draw[arrow] (xai) -- (policy);
 \draw[arrow] (policy) -- (sim);
-\draw[arrow] (sim) -- (clinician);
-\end{tikzpicture}
+\draw[arrow] (policy) -- (review);
+\draw[arrow] (sim) -- (review);
+\end{tikzpicture}%
 }
-\caption{Governed adaptive neuromodulation pipeline. EEG windows are converted into interpretable features, scored for operational risk, explained through feature attribution, and passed to policy-layer governance. The output is an auditable authorization burden profile.}
+\caption{Simulated EEG-guided authorization framework. EEG windows are converted into features and operational risk scores; calibration, temporal persistence, and attribution-overlap constraints determine authorization; burden and event timing are evaluated separately from model discrimination.}
 \label{fig:pipeline}
 \end{figure}
 \FloatBarrier
 
+\subsection{Dataset, study sample, and labels}
+\label{sec:collection}
+The source was the CHB-MIT scalp EEG database, version 1.0.0\citep{guttag2010chbmit}. We analyzed five cases (chb01, chb02, chb03, chb05, and chb08), comprising all 175 EDF recordings available for those cases, 172.8294 h of EEG, and 27 annotated seizures. These cases form a convenience sample; no documented prospective clinical sampling criterion is available for their selection, so they are not treated as a representative validation cohort.
+
+Model development used 70 EDFs (67.8214 h), comprising all 27 seizure-bearing EDFs and 43 EDFs without annotated seizures. The other 105 EDFs (105.0081 h), all without seizure annotations, entered only the held-out evaluation and did not contribute to model fitting, calibrator fitting, or threshold selection. All 175 files passed SHA-256 verification, EDF header/file-length checks, and availability checks for the 22-channel analysis montage at 256 Hz. Table~\ref{tab:dataset} summarizes the recording inventory.
+
+Windows were 4 s long with a 2 s step. Window-center labels were ictal inside the annotated onset--offset interval, preictal during the preceding 300 s, and operationally negative otherwise. The binary target combined preictal and ictal labels. Labeling and temporal rules reset at EDF boundaries; preictal labeling was not propagated into a preceding EDF. Consequently, recordings without an annotated seizure contain no positive operational labels under this record-local convention, which does not imply that every sample is physiologically interictal. Across the development subset there were 5,227 positive windows.
+
+\begin{table}[htbp]
+\centering
+\caption{EEG recording inventory and analysis role. The development EDFs define model fitting, calibration, and operating-point selection; test-only EDFs contribute only to held-out scoring.}
+\label{tab:dataset}
+\small
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.15}
+\begin{tabular}{@{}lrrrrr@{}}
+\toprule
+Case & Development EDFs & Evaluation-only EDFs & Total EDFs & Total h & Seizures \\
+\midrule
+chb01 & 20 & 22 & 42 & 40.55 & 7 \\
+chb02 & 9 & 27 & 36 & 35.27 & 3 \\
+chb03 & 13 & 25 & 38 & 38.00 & 7 \\
+chb05 & 14 & 25 & 39 & 39.00 & 5 \\
+chb08 & 14 & 6 & 20 & 20.01 & 5 \\
+\midrule
+Total & 70 & 105 & 175 & 172.83 & 27 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Validation design and nested calibration partitions}
+\label{sec:partitions}
+The 70 model-development EDFs were analyzed with held-out-subject validation and within-subject chronological EDF splits using a 0.40 outer test fraction. For nested calibration, the outer-training recordings were divided into a model-fitting core and a calibration block. Calibration used the last 30\% of outer-training recordings within each subject, with a predefined class-preserving fallback when either block otherwise lacked one class. Core, calibration, and development-test EDFs were disjoint, and overlapping windows never crossed partition boundaries. Exact EDF identities and per-partition hours, windows, positive windows, and seizure-containing recordings are provided in the supplementary tables and software.
+
+For the principal held-out-subject analysis, each fitted model and its calibrator were evaluated across the full EDF inventory of the held-out case. The 105 test-only recordings were never introduced into training or parameter selection. This design tests recording-level generalization within the same five cases; it is not independent external validation in new patients.
+
+\subsection{Features and predictive models}
+\label{sec:features}
+The 20-feature vector comprised absolute and relative power in delta (0.5--4 Hz), theta (4--8 Hz), alpha (8--13 Hz), beta (13--30 Hz), and gamma (30--50 Hz) bands; spectral entropy; Hjorth activity, mobility, and complexity; line length; root-mean-square amplitude; variance; zero-crossing rate; skewness; and kurtosis. Each feature was averaged over the 22 analysis channels. Welch spectra used 256-sample segments. EEG samples were represented in volts as float32 values; duplicate channel labels were resolved deterministically, and nonfinite feature values were replaced by zero. The same feature pipeline was applied to every EDF.
+
+Logistic regression, random forest, and LightGBM were used to characterize the score generator. Thresholded model-comparison metrics used $p\geq0.5$. Policy analyses used nested-core LightGBM fits with 100 trees, learning rate 0.1, 31 maximum leaves, unrestricted depth, 20 minimum child samples, balanced class weights, and random seed 42. Because calibration recordings are withheld from nested-core fitting, nested LightGBM discrimination differs slightly from the complete outer-training model-comparison estimates.
+
+\subsection{Probability calibration and train-only operating-point selection}
+\label{sec:calibration_selection}
+Platt scaling and isotonic regression were fitted only on nested calibration recordings after LightGBM fitting. Calibration was summarized using Brier score, expected calibration error (ECE), reliability bins, calibration slope/intercept, and score range.
+
+For the primary factorial analysis, the calibrator and probability threshold were selected using training data only. Sigmoid and isotonic calibration were compared by leave-one-EDF-out cross-fitted Brier score within the calibration block; the lower-Brier mapping was refit on the complete calibration block. Thresholds from 0.01 to 0.99 were evaluated on cross-fitted calibration predictions. Thresholds producing no more than 2 false authorization clusters per calibration recording-hour were considered feasible; among them, selection maximized positive-window sensitivity, then preferred lower false-cluster burden and lower threshold. Temporal persistence was fixed at two consecutive above-threshold windows and the attribution-overlap threshold at $\gamma=0.4$.
+
+\subsection{Attribution overlap}
+\label{sec:attribution}
+LightGBM per-window contributions were obtained with \texttt{pred\_contrib=True}; the bias column was removed and absolute contributions were ranked over the fixed 20-feature order. For lag $\ell$, the top-five attribution overlap was
+\[
+S_{t,\ell}=\frac{|T_5(E_t)\cap T_5(E_{t-\ell})|}{|T_5(E_t)\cup T_5(E_{t-\ell})|}.
+\]
+Only pairs from the same EDF with the required separation were valid. The policy used adjacent-window overlap ($\ell=1$) and required $S_{t,1}>0.4$, corresponding to at least three shared top-five features. Sensitivity analyses evaluated 2, 4, 6, 10, and 20 s center separations; separations of at least 4 s contain no shared raw EEG samples. An outcome not used to define the gate was the within-case difference in mean overlap between positive-label and negative-label authorized windows. Attribution overlap is therefore evaluated as a ranked-model-contribution property, not as clinical explanation ground truth.
+
+\subsection{Authorization policies and burden endpoints}
+\label{sec:endpoints}
+The primary factorial comparison used one calibrated probability scale and one train-selected threshold within each fold. Four configurations independently toggled temporal persistence and the $S_t>0.4$ attribution-overlap constraint: calibrated threshold only; threshold plus persistence; threshold plus attribution overlap; and threshold plus both. This isolates the incremental contribution of the two policy constraints conditional on the calibrated score and selected operating point.
+
+Authorization masks were computed in EDF-local timestamp order. Selected windows were merged into a cluster when the next selected window started no later than the current cluster end plus the stated cooldown; EDF boundaries always terminated clusters. A cluster was false only when none of its selected windows carried a positive operational label. A cluster crossing a label boundary was therefore non-false if at least one selected constituent window was positive. Cooldown changes cluster consolidation without changing the authorization mask and therefore preserves a policy's own event coverage. Refractory suppression, used only in the comparator benchmark, removes subsequent decisions within the refractory interval and can change coverage.
+
+The primary burden denominator is the sum of complete durations of unique evaluated EDFs, including labeled preictal and ictal time. We therefore report false authorization clusters per analyzed recording-hour rather than an interictal-only false-alarm rate. We also report selected-window fraction, positive authorization rate (positive-label selected windows divided by all selected windows), and selected-support duration where relevant. Equal-weight case means and pooled recording-hour rates are reported separately.
+
+\subsection{Event mapping and decision-time availability}
+\label{sec:timing}
+For a seizure with onset $a$ and offset $b$, event coverage required at least one authorization timestamp in $[\max(0,a-300),b]$. A first authorization before $a$ was classified as pre-onset; a first authorization at or after $a$ as at-or-after-onset only; and an event without authorization as missed. Latency is first authorization time minus onset, and lead is its negative.
+
+Because a complete 4 s feature window is not available at its center, the principal event analysis uses the window end as the earliest causal decision timestamp. No unmeasured computation, transmission, clinician, or device delay was added. The principal timing summary is the pooled median latency and interquartile range among covered seizures.
+
+\subsection{Common-score temporal comparators}
+\label{sec:comparators}
+Temporal decision mechanisms were compared on identical model outputs. Majority-of-three voting and a firing-power rule were applied to the same calibrated LightGBM scores used by the threshold, persistence, and persistence-plus-overlap policies. Majority voting accepted at least two of the current and two preceding binary threshold decisions. Firing power averaged the last $m$ binary decisions and accepted when the fraction exceeded 0.7, with $m\in\{5,15,30,60,150\}$. These are component-level adaptations of temporal mechanisms used in recent seizure-prediction/detection work\citep{andrade2024samplealarm,batista2024postprocessing,ingolfsson2024artifact}, not reproductions of those studies' complete classifiers, cohorts, or hardware.
+
+For each family, thresholds and history length were selected using calibration data only. Feasible candidates met the same 2 false-clusters/h calibration constraint; selection then maximized window-end event coverage, minimized false-cluster burden, maximized pre-onset count, and preferred lower thresholds/shorter histories. The benchmark was evaluated both without refractory suppression and with a common 300 s refractory rule. Main-text comparisons use the common 300 s rule; the unsuppressed results are supplied in the supplement because prolonged authorization can collapse into few clusters and thereby make cluster frequency alone misleading.
+
+\subsection{Statistical summaries and reproducibility}
+\label{sec:statistics}
+Rates and case-level coverage are reported as equal-weight means $\pm$ sample SD across the five held-out cases. Pooled recording-hour rates divide summed counts by summed recording duration; pooled event coverage divides covered events by all annotated seizures. Exploratory 95\% percentile intervals enumerate all $5^5=3125$ ordered case-bootstrap draws, with paired configurations resampled jointly. Descriptive two-sided sign-flip probabilities enumerate all $2^5=32$ case-level sign patterns. With five cases and overlapping LOSO training sets, these summaries are descriptive rather than confirmatory population inference.
+
+Code, fitted LightGBM boosters and calibrators, feature order, derived inputs, per-window scores, attribution ranks, cluster/event ledgers, parameter searches, figure-generation scripts, and tests are included in the versioned reproducibility package. Raw CHB-MIT EEG is not redistributed.
+
 \section{Results}
 
-\subsection{Cohort and Leakage Audit}
-
-The five-subject CHB-MIT subset contained 70 EDF recordings, 67.82 h of EEG, and 27 annotated seizures. Sliding-window segmentation produced 122,007 windows. Held-out-subject evaluation contained 5,227 positive operational-risk windows across the five test folds. Within-subject chronological evaluation contained 49,564 held-out test windows, including 1,986 positive operational-risk windows.
-
-The leakage-control audit found no EDF overlap between train and test sets in any evaluation fold. Held-out-subject folds had zero subject overlap between train and test sets, and the held-out subject was absent from training in all five folds. Within-subject folds had subject overlap by design, used chronological file-level splits, and had no overlapping windows crossing train-test boundaries.
+\subsection{Score-generator performance and calibration}
+Held-out-subject model discrimination on the development partitions was moderate (Table~\ref{tab:performance}). LightGBM AUROC was $0.620\pm0.098$ and AUPRC $0.142\pm0.062$; the corresponding within-subject values were $0.679\pm0.231$ and $0.269\pm0.203$. These results motivate treating the classifier as an operational score generator rather than the principal endpoint.
 
 \begin{table}[H]
 \centering
-\caption{Leakage-control audit summary. Values summarize fold-level split checks.}
-\label{tab:leakage_audit}
-\small
-\resizebox{\linewidth}{!}{
-\begin{tabular}{lrrrr}
-\toprule
-Validation mode & Folds & Train-test EDF overlap & Held-out subject in train & File-level split \\
-\midrule
-Held-out subject & 5 & 0/5 & 0/5 & 5/5 \\
-Within-subject chronological & 5 & 0/5 & Not applicable & 5/5 \\
-\bottomrule
-\end{tabular}
-}
-\end{table}
-\FloatBarrier
-
-\subsection{Baseline Discrimination Establishes the Risk-Score Setting}
-
-Model discrimination was moderate (Table~\ref{tab:performance}, Figure~\ref{fig:performance}). Held-out-subject LightGBM AUROC was $0.620 \pm 0.098$ and AUPRC was $0.142 \pm 0.062$. The line-length baseline had similar held-out-subject AUROC ($0.616 \pm 0.136$), and logistic regression had higher held-out-subject AUPRC ($0.159 \pm 0.115$) than LightGBM. Within-subject validation showed higher but variable performance.
-
-The baseline comparison indicates that the predictive model should be treated as a risk-score generator rather than as the primary contribution. The main analysis therefore focuses on how governance constraints alter the translation from risk scores to intervention authorization.
-
-\begin{table}[H]
-\centering
-\caption{Window-level operational-risk discrimination and thresholded classification summaries. Values are mean $\pm$ standard deviation across five folds.}
+\caption{Development-partition window-level discrimination. Values are mean $\pm$ SD across five folds; thresholded metrics use $p\geq0.5$.}
 \label{tab:performance}
 \scriptsize
-\resizebox{\linewidth}{!}{
-\begin{tabular}{llrrrrrrr}
+\setlength{\tabcolsep}{2pt}
+\renewcommand{\arraystretch}{1.15}
+\begin{tabular}{llrrrrrr}
 \toprule
-Validation mode & Model & AUROC & AUPRC & Sens. & Spec. & F1 & Bal. acc. & False auth. windows/h \\
+Validation & Model & AUROC & AUPRC & Sens. & Spec. & F1 & Bal. acc. \\
 \midrule
-Held-out subject & Logistic regression & $0.551 \pm 0.114$ & $0.159 \pm 0.115$ & $0.358 \pm 0.167$ & $0.764 \pm 0.160$ & $0.114 \pm 0.053$ & $0.561 \pm 0.063$ & $407.83 \pm 279.79$ \\
-Held-out subject & Random forest & $0.597 \pm 0.037$ & $0.124 \pm 0.064$ & $0.058 \pm 0.046$ & $0.995 \pm 0.010$ & $0.095 \pm 0.076$ & $0.527 \pm 0.022$ & $9.08 \pm 18.01$ \\
-Held-out subject & LightGBM & $0.620 \pm 0.098$ & $0.142 \pm 0.062$ & $0.328 \pm 0.145$ & $0.853 \pm 0.064$ & $0.137 \pm 0.041$ & $0.591 \pm 0.048$ & $254.44 \pm 112.52$ \\
+\multirow{3}{*}{Held-out}
+& Logistic regression & $0.551\pm0.114$ & $0.159\pm0.115$ & $0.358\pm0.167$ & $0.764\pm0.160$ & $0.114\pm0.053$ & $0.561\pm0.063$ \\
+& Random forest & $0.597\pm0.037$ & $0.124\pm0.064$ & $0.058\pm0.046$ & $0.995\pm0.010$ & $0.095\pm0.076$ & $0.527\pm0.022$ \\
+& LightGBM & $0.620\pm0.098$ & $0.142\pm0.062$ & $0.328\pm0.145$ & $0.853\pm0.064$ & $0.137\pm0.041$ & $0.591\pm0.048$ \\
 \midrule
-Within-subject chronological & Logistic regression & $0.659 \pm 0.240$ & $0.197 \pm 0.150$ & $0.572 \pm 0.245$ & $0.676 \pm 0.137$ & $0.135 \pm 0.081$ & $0.624 \pm 0.185$ & $560.05 \pm 239.66$ \\
-Within-subject chronological & Random forest & $0.660 \pm 0.229$ & $0.267 \pm 0.204$ & $0.174 \pm 0.147$ & $0.996 \pm 0.002$ & $0.258 \pm 0.204$ & $0.585 \pm 0.074$ & $6.50 \pm 3.83$ \\
-Within-subject chronological & LightGBM & $0.679 \pm 0.231$ & $0.269 \pm 0.203$ & $0.295 \pm 0.224$ & $0.928 \pm 0.023$ & $0.195 \pm 0.154$ & $0.611 \pm 0.121$ & $123.94 \pm 37.73$ \\
+\multirow{3}{*}{Within-subject}
+& Logistic regression & $0.659\pm0.240$ & $0.197\pm0.150$ & $0.572\pm0.245$ & $0.676\pm0.137$ & $0.135\pm0.081$ & $0.624\pm0.185$ \\
+& Random forest & $0.660\pm0.229$ & $0.267\pm0.204$ & $0.174\pm0.147$ & $0.996\pm0.002$ & $0.258\pm0.204$ & $0.585\pm0.074$ \\
+& LightGBM & $0.679\pm0.231$ & $0.269\pm0.203$ & $0.295\pm0.224$ & $0.928\pm0.023$ & $0.195\pm0.154$ & $0.611\pm0.121$ \\
 \bottomrule
 \end{tabular}
-}
 \end{table}
 
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.98\linewidth]{figure2_model_performance_real_eeg.png}
-\caption{AUROC and AUPRC across validation modes. Bars show fold means with standard-deviation error bars for logistic regression, random forest, LightGBM, and the line-length baseline. Dashed references show chance AUROC and prevalence AUPRC.}
-\label{fig:performance}
-\end{figure}
-\FloatBarrier
-
-\subsection{Nested Calibration Improves Policy-Input Reliability}
-
-Nested calibration improved the numerical reliability of LightGBM policy inputs (Table~\ref{tab:calibration}, Figure~\ref{fig:calibration}). In held-out-subject validation, ECE decreased from $0.211 \pm 0.081$ raw to $0.020 \pm 0.017$ after Platt scaling and $0.021 \pm 0.018$ after isotonic calibration. Brier score decreased from $0.127 \pm 0.037$ raw to approximately $0.040$ after calibration. Within-subject validation showed a similar ECE decrease from $0.065 \pm 0.030$ raw to $0.032 \pm 0.018$ with Platt scaling and $0.026 \pm 0.020$ with isotonic calibration.
-
-Calibration improved the numerical reliability of policy inputs but did not improve discrimination. Platt scaling preserved ranking metrics, while isotonic calibration slightly changed AUROC and AUPRC in both validation modes.
+The nested-core LightGBM score evaluated across the full 175-EDF held-out inventory had raw AUROC $0.601\pm0.093$ and AUPRC $0.082\pm0.059$ (Table~\ref{tab:complete_calibration}). The isotonic mapping selected on calibration data reduced mean Brier score from $0.133$ to $0.024$ and ECE from $0.239$ to $0.024$. Sigmoid calibration had a slightly lower full-inventory Brier score, but it was not substituted post hoc because isotonic calibration had been selected from cross-fitted calibration data.
 
 \begin{table}[H]
 \centering
-\caption{Nested train-only calibration diagnostics for LightGBM operational risk scores. Values are mean $\pm$ standard deviation across five folds.}
-\label{tab:calibration}
-\scriptsize
-\resizebox{\linewidth}{!}{
-\begin{tabular}{llrrrrrrr}
-\toprule
-Validation mode & Calibration & AUROC & AUPRC & Brier & ECE & Slope & Intercept & Max $p$ \\
-\midrule
-Held-out subject & Raw & $0.612 \pm 0.053$ & $0.133 \pm 0.053$ & $0.127 \pm 0.037$ & $0.211 \pm 0.081$ & $0.353 \pm 0.174$ & $-2.747 \pm 0.373$ & $0.990 \pm 0.005$ \\
-Held-out subject & Platt & $0.612 \pm 0.053$ & $0.133 \pm 0.053$ & $0.040 \pm 0.009$ & $0.020 \pm 0.017$ & $0.820 \pm 0.498$ & $-0.171 \pm 1.595$ & $0.315 \pm 0.161$ \\
-Held-out subject & Isotonic & $0.600 \pm 0.042$ & $0.120 \pm 0.046$ & $0.041 \pm 0.010$ & $0.021 \pm 0.018$ & $0.995 \pm 0.956$ & $0.410 \pm 3.413$ & $1.000 \pm 0.000$ \\
-\midrule
-Within-subject chronological & Raw & $0.712 \pm 0.230$ & $0.283 \pm 0.210$ & $0.058 \pm 0.027$ & $0.065 \pm 0.030$ & $0.280 \pm 0.301$ & $-2.369 \pm 1.007$ & $0.998 \pm 0.003$ \\
-Within-subject chronological & Platt & $0.712 \pm 0.230$ & $0.283 \pm 0.210$ & $0.036 \pm 0.019$ & $0.032 \pm 0.018$ & $1.189 \pm 1.470$ & $-0.162 \pm 3.646$ & $0.586 \pm 0.249$ \\
-Within-subject chronological & Isotonic & $0.682 \pm 0.190$ & $0.218 \pm 0.155$ & $0.036 \pm 0.020$ & $0.026 \pm 0.020$ & $0.255 \pm 0.376$ & $-2.488 \pm 1.401$ & $1.000 \pm 0.000$ \\
-\bottomrule
-\end{tabular}
-}
-\end{table}
-
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.98\linewidth]{figure3_calibration_diagnostics_real_eeg.png}
-\caption{Nested calibration diagnostics for LightGBM. Reliability curves compare raw, Platt-scaled, and isotonic probabilities; marker size reflects bin count, and lower panels show predicted-probability bin counts on a log scale.}
-\label{fig:calibration}
-\end{figure}
-\FloatBarrier
-
-\subsection{Policy Ablation Reduces Authorization Burden}
-
-The policy ablation identified the governance layer as the main determinant of burden (Table~\ref{tab:operating}). In held-out-subject validation, fixed thresholding produced $270.05 \pm 118.01$ authorization windows/h and $88.38 \pm 30.05$ authorization clusters/h. Adding temporal persistence reduced false authorization clusters from $84.44 \pm 29.57$/h to $46.01 \pm 16.69$/h. Calibration-aware gating reduced false authorization clusters to $2.70 \pm 4.60$/h. The full governed policy reduced false authorization clusters to $1.17 \pm 2.05$/h and increased mean authorized-window $S_t$ from $0.578 \pm 0.047$ to $0.834 \pm 0.083$.
-
-The coverage-burden trade-off was explicit. Held-out-subject fold-mean event-level authorization coverage decreased from $1.00$ under fixed thresholding to $0.76 \pm 0.29$ under the full governed policy. Positive authorization rate increased from $0.093$ to $0.703$, indicating that governed authorizations were more concentrated in operational-risk windows.
-
-\begin{table}[H]
-\centering
-\caption{Selected LightGBM operating points. Values are mean $\pm$ standard deviation across five folds. Authorization clusters merge consecutive authorized windows; cooldown sensitivity is reported separately.}
-\label{tab:operating}
-\scriptsize
-\resizebox{\linewidth}{!}{
-\begin{tabular}{llrllrrrrrrr}
-\toprule
-Validation mode & Policy & $\theta$ & Calibration & Persist. & $S_t$ gate & Auth. windows/h & Auth. clusters/h & False clusters/h & Coverage & Median lead (s) & Mean $S_t$ \\
-\midrule
-Within-subject chronological & Fixed threshold & 0.5 & raw & 1 & -- & $95.99 \pm 19.18$ & $44.11 \pm 8.84$ & $40.37 \pm 10.51$ & $1.00 \pm 0.00$ & $259.5 \pm 49.9$ & $0.665 \pm 0.048$ \\
-Within-subject chronological & Threshold + temporal persistence & 0.5 & raw & 2 & -- & $45.11 \pm 16.75$ & $18.06 \pm 5.39$ & $15.67 \pm 5.43$ & $1.00 \pm 0.00$ & $155.3 \pm 149.4$ & $0.771 \pm 0.064$ \\
-Within-subject chronological & Threshold + attribution-stability gate & 0.5 & raw & 1 & 0.4 & $89.87 \pm 17.96$ & $41.50 \pm 6.80$ & $37.87 \pm 8.52$ & $1.00 \pm 0.00$ & $245.3 \pm 79.0$ & $0.694 \pm 0.043$ \\
-Within-subject chronological & Threshold + calibration-aware gate & 0.5 & raw + isotonic & 1 & -- & $15.92 \pm 10.42$ & $4.82 \pm 2.41$ & $3.53 \pm 1.96$ & $1.00 \pm 0.00$ & $72.1 \pm 105.3$ & $0.772 \pm 0.085$ \\
-Within-subject chronological & Full governed policy & 0.5 & isotonic & 2 & 0.4 & $10.38 \pm 9.28$ & $1.67 \pm 0.92$ & $0.95 \pm 0.80$ & $0.93 \pm 0.15$ & $26.1 \pm 92.5$ & $0.846 \pm 0.073$ \\
-\midrule
-Held-out subject & Fixed threshold & 0.5 & raw & 1 & -- & $270.05 \pm 118.01$ & $88.38 \pm 30.05$ & $84.44 \pm 29.57$ & $1.00 \pm 0.00$ & $235.8 \pm 60.7$ & $0.578 \pm 0.047$ \\
-Held-out subject & Threshold + temporal persistence & 0.5 & raw & 2 & -- & $160.82 \pm 101.90$ & $49.14 \pm 16.77$ & $46.01 \pm 16.69$ & $1.00 \pm 0.00$ & $184.0 \pm 113.5$ & $0.658 \pm 0.049$ \\
-Held-out subject & Threshold + attribution-stability gate & 0.5 & raw & 1 & 0.4 & $229.33 \pm 104.79$ & $79.18 \pm 26.55$ & $75.23 \pm 26.26$ & $1.00 \pm 0.00$ & $234.6 \pm 61.3$ & $0.642 \pm 0.041$ \\
-Held-out subject & Threshold + calibration-aware gate & 0.5 & raw + isotonic & 1 & -- & $10.01 \pm 13.77$ & $3.31 \pm 4.67$ & $2.70 \pm 4.60$ & $0.76 \pm 0.29$ & $7.7 \pm 57.5$ & $0.739 \pm 0.101$ \\
-Held-out subject & Full governed policy & 0.5 & isotonic & 2 & 0.4 & $5.80 \pm 7.76$ & $1.72 \pm 2.10$ & $1.17 \pm 2.05$ & $0.76 \pm 0.29$ & $-17.4 \pm 10.8$ & $0.834 \pm 0.083$ \\
-\bottomrule
-\end{tabular}
-}
-\end{table}
-\FloatBarrier
-
-\subsection{Burden-Constrained Operating Curves Expose Coverage-Burden Trade-Offs}
-
-Held-out-subject sweeps showed that no single threshold dominated across objectives (Figure~\ref{fig:operating_curves}). Lower thresholds increased event-level authorization coverage but increased false authorization clusters. Higher thresholds and governed policies moved the operating point into a lower-burden region while reducing coverage. The selected governed region reduced false authorization burden while preserving partial event-level coverage.
-
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.98\linewidth]{figure5_burden_constrained_operating_curves_real_eeg.png}
-\caption{Burden-constrained operating curves for held-out-subject policy sweeps. Curves show the trade-off between event-level authorization coverage, authorization burden, and attribution stability across threshold and governance-parameter settings. The selected governed operating region reduces false authorization burden while preserving partial event-level coverage.}
-\label{fig:operating_curves}
-\end{figure}
-\FloatBarrier
-
-\subsection{Attribution-Stability Gating Adds Evidence Consistency}
-
-Attribution-stability gating reduced false authorization burden and increased evidence consistency (Figure~\ref{fig:stability}, Table~\ref{tab:stability_diag}). In held-out-subject validation, false authorization clusters decreased from $84.44 \pm 29.57$/h under fixed thresholding to $75.23 \pm 26.26$/h with an attribution-stability gate, and mean authorized-window $S_t$ increased from $0.578 \pm 0.047$ to $0.642 \pm 0.041$. Among fixed-threshold authorization windows, true authorizations had higher mean $S_t$ than false authorizations in both validation modes.
-
-The probability-stability relationship was weak. Mean Spearman correlation between $p_t$ and $S_t$ was $-0.053 \pm 0.137$ in held-out-subject validation and $-0.077 \pm 0.125$ in within-subject validation, supporting attribution stability as a distinct governance signal.
-
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.98\linewidth]{figure4_attribution_stability_governance_real_eeg.png}
-\caption{Attribution-stability governance diagnostics. Panels show false authorization clusters before and after stability gating, mean $S_t$ before and after gating, $S_t$ distributions for true and false fixed-threshold authorizations, and the fold-level Spearman relationship between probability and attribution stability.}
-\label{fig:stability}
-\end{figure}
-
-\begin{table}[H]
-\centering
-\caption{Relationship between LightGBM probability and attribution stability. Values are mean $\pm$ standard deviation across five folds.}
-\label{tab:stability_diag}
+\caption{Nested-core LightGBM score diagnostics over the full held-out recording inventory. Values are equal-weight case means $\pm$ SD.}
+\label{tab:complete_calibration}
 \small
-\resizebox{\linewidth}{!}{
-\begin{tabular}{lrrrrr}
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{@{}lrrrr@{}}
 \toprule
-Validation mode & Spearman($p_t,S_t$) & True auth. $S_t$ & False auth. $S_t$ & True auth. $p_t$ & False auth. $p_t$ \\
+Mapping & AUROC & AUPRC & Brier & ECE \\
 \midrule
-Held-out subject & $-0.053 \pm 0.137$ & $0.658 \pm 0.048$ & $0.569 \pm 0.050$ & $0.762 \pm 0.042$ & $0.666 \pm 0.062$ \\
-Within-subject chronological & $-0.077 \pm 0.125$ & $0.710 \pm 0.135$ & $0.639 \pm 0.032$ & $0.871 \pm 0.064$ & $0.740 \pm 0.048$ \\
+Raw & $0.601\pm0.093$ & $0.082\pm0.059$ & $0.133\pm0.067$ & $0.239\pm0.101$ \\
+Sigmoid & $0.601\pm0.093$ & $0.082\pm0.059$ & $0.019\pm0.009$ & $0.020\pm0.015$ \\
+Isotonic & $0.590\pm0.031$ & $0.073\pm0.051$ & $0.024\pm0.016$ & $0.024\pm0.025$ \\
 \bottomrule
 \end{tabular}
-}
 \end{table}
-\FloatBarrier
 
-\subsection{Event-Level Authorization Summaries}
-
-Event-level summaries showed how window policies mapped to annotated seizures (Table~\ref{tab:event_level}). In held-out-subject validation, fixed thresholding covered 27/27 events and the full governed policy covered 19/27 events. Fold-mean event-level authorization coverage decreased from $1.00$ to $0.76 \pm 0.29$ while false authorization clusters decreased from $84.44 \pm 29.57$/h to $1.17 \pm 2.05$/h. Pre-onset authorization counts also decreased, reflecting the burden-coverage trade-off introduced by calibration-aware persistence and attribution-stability constraints.
+\subsection{Train-selected operating points}
+Cross-fitted Brier score selected isotonic calibration in all five held-out folds. Train-selected probability thresholds ranged from 0.22 to 0.48, and each calibration fold satisfied the predefined $\leq2$ false-clusters/recording-hour constraint before held-out evaluation (Table~\ref{tab:train_selection}).
 
 \begin{table}[H]
 \centering
-\caption{Event-level authorization summaries for LightGBM policies. Coverage is reported both as pooled event counts and as fold-mean coverage.}
-\label{tab:event_level}
+\caption{Training-only calibrator and threshold selection for held-out-subject analysis.}
+\label{tab:train_selection}
 \scriptsize
-\resizebox{\linewidth}{!}{
-\begin{tabular}{llrrrrr}
+\setlength{\tabcolsep}{5pt}
+\begin{tabular}{lcrrrr}
 \toprule
-Validation mode & Policy & Events covered & Pre-onset auth. & Fold coverage & Median lead (s) & False clusters/h \\
+Held-out case & Calibrator & Brier: Platt & Brier: isotonic & $\theta$ & Cal. false clusters/h \\
 \midrule
-Within-subject chronological & Fixed threshold & 10/10 & 10 & $1.00 \pm 0.00$ & $259.5 \pm 49.9$ & $40.37 \pm 10.51$ \\
-Within-subject chronological & Threshold + temporal persistence & 10/10 & 7 & $1.00 \pm 0.00$ & $155.3 \pm 149.4$ & $15.67 \pm 5.43$ \\
-Within-subject chronological & Threshold + attribution-stability gate & 10/10 & 9 & $1.00 \pm 0.00$ & $245.3 \pm 79.0$ & $37.87 \pm 8.52$ \\
-Within-subject chronological & Threshold + calibration-aware gate & 10/10 & 4 & $1.00 \pm 0.00$ & $72.1 \pm 105.3$ & $3.53 \pm 1.96$ \\
-Within-subject chronological & Full governed policy & 9/10 & 2 & $0.93 \pm 0.15$ & $26.1 \pm 92.5$ & $0.95 \pm 0.80$ \\
-\midrule
-Held-out subject & Fixed threshold & 27/27 & 24 & $1.00 \pm 0.00$ & $235.8 \pm 60.7$ & $84.44 \pm 29.57$ \\
-Held-out subject & Threshold + temporal persistence & 27/27 & 22 & $1.00 \pm 0.00$ & $184.0 \pm 113.5$ & $46.01 \pm 16.69$ \\
-Held-out subject & Threshold + attribution-stability gate & 27/27 & 23 & $1.00 \pm 0.00$ & $234.6 \pm 61.3$ & $75.23 \pm 26.26$ \\
-Held-out subject & Threshold + calibration-aware gate & 19/27 & 3 & $0.76 \pm 0.29$ & $7.7 \pm 57.5$ & $2.70 \pm 4.60$ \\
-Held-out subject & Full governed policy & 19/27 & 1 & $0.76 \pm 0.29$ & $-17.4 \pm 10.8$ & $1.17 \pm 2.05$ \\
+chb01 & Isotonic & 0.0362 & 0.0319 & 0.24 & 1.87 \\
+chb02 & Isotonic & 0.0327 & 0.0296 & 0.44 & 1.49 \\
+chb03 & Isotonic & 0.0265 & 0.0248 & 0.34 & 1.64 \\
+chb05 & Isotonic & 0.0323 & 0.0299 & 0.48 & 1.20 \\
+chb08 & Isotonic & 0.0319 & 0.0294 & 0.22 & 1.90 \\
 \bottomrule
 \end{tabular}
-}
 \end{table}
+
+\subsection{Held-out authorization burden across the full recording inventory}
+\label{sec:complete_results}
+Authorization burden varied markedly across cases (Table~\ref{tab:complete_cases}; Figure~\ref{fig:case_burden}). The persistence-plus-overlap policy produced 700 false clusters over 172.83 h, a pooled rate of 4.050/h. The equal-weight case mean was $3.601\pm7.748$/h, whereas the case median was 0.105/h. Four cases ranged from 0.049 to 0.340/h, while chb05 produced 681 false clusters (17.460/h). Thus, the 2/h constraint used during calibration did not generalize as a subject-independent held-out bound.
+
+\begin{table}[H]
+\centering
+\caption{Case-level false-cluster burden for the train-selected persistence-plus-attribution-overlap policy over all 175 EDFs.}
+\label{tab:complete_cases}
+\small
+\setlength{\tabcolsep}{5pt}
+\begin{tabular}{@{}lrrr@{}}
+\toprule
+Case & False clusters/h & False clusters & Evaluated h \\
+\midrule
+chb01 & 0.049 & 2 & 40.55 \\
+chb02 & 0.340 & 12 & 35.27 \\
+chb03 & 0.105 & 4 & 38.00 \\
+chb05 & 17.460 & 681 & 39.00 \\
+chb08 & 0.050 & 1 & 20.01 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.90\linewidth]{figure3_case_burden.pdf}
+\caption{False authorization-cluster burden by held-out case over the full recording inventory. The dashed line marks the 2/h calibration-side target and the dotted line marks the case median (0.105/h). The logarithmic axis makes the pronounced chb05 deviation visible without compressing the other four cases.}
+\label{fig:case_burden}
+\end{figure}
+\FloatBarrier
+
+\subsection{Factorial policy decomposition}
+On the same calibrated scores and fold-specific thresholds, calibrated thresholding, persistence, attribution overlap alone, and both constraints produced $6.044\pm12.620$, $3.657\pm7.875$, $5.791\pm12.116$, and $3.601\pm7.748$ false clusters/h, respectively (Table~\ref{tab:complete_factorial}; Figure~\ref{fig:complete_factorial}). Adding persistence reduced the paired case mean by 2.386/h, whereas adding attribution overlap after persistence reduced it by 0.056/h and removed 11 false clusters, all in chb05. The attribution-overlap gate therefore had a measurable but comparatively small incremental effect at $\gamma=0.4$.
+
+\begin{table}[H]
+\centering
+\caption{Common-score factorial analysis over the full held-out recording inventory. Event categories use window-end decision availability and sum to 27 seizures.}
+\label{tab:complete_factorial}
+\small
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.15}
+\begin{tabular}{@{}lrrc@{}}
+\toprule
+Constraint & False clusters/h & False clusters & Pre / post / missed \\
+\midrule
+Calibrated threshold only & $6.044\pm12.620$ & 1166 & 3 / 17 / 7 \\
++ persistence & $3.657\pm7.875$ & 711 & 2 / 18 / 7 \\
++ attribution overlap & $5.791\pm12.116$ & 1117 & 3 / 17 / 7 \\
++ both & $3.601\pm7.748$ & 700 & 2 / 18 / 7 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.92\linewidth]{figure4_factorial_complete.pdf}
+\caption{Case-level factorial decomposition of false authorization-cluster burden. All configurations within a case share the same calibrated score and train-selected probability threshold; only persistence and attribution-overlap constraints are toggled. The dotted horizontal line marks 2 false clusters/h and the dashed diamond trace shows the case median.}
+\label{fig:complete_factorial}
+\end{figure}
+\FloatBarrier
+
+\subsection{Event timing and temporal-rule benchmark}
+At window-end decision availability, the train-selected persistence-plus-overlap policy authorized 2/27 seizures before onset, 18/27 only at or after onset, and missed 7/27 (Figure~\ref{fig:operational_outcomes}A). Broad pooled coverage was therefore 20/27 (74.1\%), but pre-onset coverage was only 7.4\% of all seizures and 10.0\% of covered seizures. Median latency among covered events was 16 s (interquartile range 8.5--28 s). The result is consequently more consistent with seizure-responsive authorization than reliable advance seizure prediction.
+
+Under a common 300 s refractory rule and training-only selection objective, persistence, persistence plus overlap, majority-of-three voting, and firing power occupied similar burden--coverage ranges (Table~\ref{tab:comparators}; Figure~\ref{fig:operational_outcomes}B). Persistence plus overlap produced $0.611\pm1.140$ false clusters/h with 17/27 events covered; majority voting produced $0.614\pm1.193$/h with 16/27 covered; firing power produced $0.517\pm1.007$/h with 15/27 covered. None of these refractory benchmark policies authorized a seizure before onset. These component-level comparisons therefore do not establish superiority of the attribution-overlap policy.
+
+\begin{table}[H]
+\centering
+\caption{Common-score temporal-rule comparison with 300 s refractory suppression applied to every family. Support fraction is the proportion of recorded time covered by selected EEG-window supports, not VNS dose.}
+\label{tab:comparators}
+\small
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{@{}lrrr@{}}
+\toprule
+Policy & False clusters/h & Covered events & Support fraction \\
+\midrule
+Threshold & $0.786\pm1.625$ & 16/27 & 0.10\% \\
+Persistence & $0.611\pm1.140$ & 17/27 & 0.08\% \\
+Persistence + overlap & $0.611\pm1.140$ & 17/27 & 0.08\% \\
+Majority of three & $0.614\pm1.193$ & 16/27 & 0.08\% \\
+Firing power & $0.517\pm1.007$ & 15/27 & 0.07\% \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.98\linewidth]{figure5_operational_outcomes.pdf}
+\caption{Operational outcomes over the full recording inventory. (A) Seizure categories for the train-selected persistence-plus-overlap policy at window-end decision availability. (B) Burden--coverage positions of adapted temporal-rule families under a common 300 s refractory rule. Points in panel B are equal-weight case means; comparator mechanisms were selected on calibration data only.}
+\label{fig:operational_outcomes}
+\end{figure}
+\FloatBarrier
+
+\subsection{Attribution-overlap sensitivity to temporal separation}
+The positive-minus-negative attribution-overlap difference remained positive at the first non-overlapping comparison (4 s separation): mean 0.093, exploratory 95\% case-bootstrap interval 0.064--0.123 (Figure~\ref{fig:complete_lags}). The mean difference was 0.075 at 6 s, 0.055 at 10 s, and 0.033 at 20 s. At 20 s, one case (chb03) had a negative difference. Thus, the association is not explained solely by the 50\% sample overlap of adjacent windows, but it attenuates with temporal separation and does not constitute independent validation of clinical explanation quality.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.90\linewidth]{figure6_attribution_lag.pdf}
+\caption{Attribution-overlap difference between positive-label and negative-label authorized windows as a function of temporal separation. Small points show individual held-out cases; the connected points and error bars show the case mean and exploratory 95\% case-bootstrap interval. Four seconds is the first separation at which the paired 4 s windows share no raw EEG samples.}
+\label{fig:complete_lags}
+\end{figure}
 \FloatBarrier
 
 \section{Discussion}
+The principal finding of this study was that authorization burden generalized very differently across individuals despite application of the same policy architecture and train-only operating-point selection procedure. Across the complete 175-EDF evaluation, four of the five held-out cases produced only 0.049--0.340 false authorization clusters per analyzed recording-hour, whereas chb05 produced 17.460/h. Consequently, the low burden observed in most cases did not translate into a subject-independent operating guarantee. This result is important because seizure-detection and seizure-prediction systems are commonly evaluated using aggregate sensitivity and false-alarm metrics, even though alarm burden depends strongly on patient-specific signal characteristics and on the temporal rules that convert classifier scores into actionable events\citep{andrade2024samplealarm,batista2024postprocessing}. The present results extend that concern to the policy layer itself: satisfying a burden constraint during calibration was insufficient to ensure that the same operational constraint would hold for a previously unseen individual.
 
-The main finding is that adaptive neuromodulation simulations are governed by the authorization policy more than by the classifier score alone. In this CHB-MIT simulation, fixed-threshold authorization produced high burden, while calibration-aware persistence and stable-attribution constraints shifted LightGBM operating points toward lower false authorization cluster rates and higher evidence consistency.
+The common-score factorial analysis identifies temporal persistence as the principal burden-reducing component among the two policy constraints examined. Persistence reduced the case-mean false-cluster rate by 2.386/h relative to calibrated thresholding, whereas attribution overlap reduced burden only modestly after persistence. This distinction matters because an observable attribution property need not translate into a large operational benefit. Calibration, temporal regularization, and attribution gating should therefore be evaluated as separate policy components rather than inferred from one composite comparison.
 
-AUROC is insufficient for action systems because it does not specify how often an intervention would be authorized. The line-length baseline achieved similar held-out-subject AUROC to LightGBM, and logistic regression achieved higher held-out-subject AUPRC. The discriminative model is therefore best interpreted as an operational risk-score generator. The clinically relevant analysis is how a score becomes an authorization window, how windows merge into clusters, and how false authorization burden changes across operating points.
+Attribution overlap nevertheless showed a persistent association with the operational label beyond the adjacent-window sample overlap. The positive-minus-negative difference remained positive on average at 4--20 s separations, although it attenuated with lag and became negative in one case at 20 s. These findings support attribution overlap as a reproducible model-behavior descriptor, not as evidence that the resulting explanations are clinically faithful. The latter would require an independent explanatory reference, such as expert-rated physiological relevance, which is absent here\citep{vieira2023xai,salvi2025uncertainty}.
 
-Calibration acts as policy-input governance. Raw LightGBM scores were overconfident in reliability diagrams, while nested Platt and isotonic calibration improved Brier score and ECE. Calibration changed the numerical interpretation of risk thresholds used by the governance layer. It did not change the underlying event labels or provide new discrimination; it made the policy input more auditable.
+The temporal-rule benchmark further limits claims of policy-specific superiority. Majority voting, persistence, persistence plus overlap, and firing power occupied similar burden--coverage ranges under a common refractory rule. This is consistent with the broader literature showing that post-processing choices can materially change alarm behavior\citep{andrade2024samplealarm,batista2024postprocessing}. The unsuppressed firing-power analysis, reported in the supplement, also illustrates why cluster frequency must be interpreted together with selected-support duration: sustained authorization can collapse into a small number of long clusters without representing low intervention burden.
 
-Attribution stability adds an evidence-consistency constraint. A policy that authorizes an intervention from a single high score may act on transient or unstable evidence. Requiring top-feature overlap across adjacent windows suppresses part of that unstable authorization pattern and produces a measurable $S_t$ profile for the authorized windows. The weak probability-$S_t$ correlation indicates that stability contributes information not captured by the risk score alone.
-
-The burden/event-coverage trade-off is the central operating result. Held-out-subject fixed thresholding covered all annotated events but generated $84.44 \pm 29.57$ false authorization clusters/h. The full governed policy reduced this to $1.17 \pm 2.05$ false authorization clusters/h while fold-mean event-level coverage decreased to $0.76 \pm 0.29$. This trade-off is exactly what a burden-constrained authorization analysis is designed to expose.
-
-For adaptive neuromodulation research, these results motivate evaluating governed authorization policies rather than isolated risk scores. Future systems should report discrimination, calibration, authorization windows, authorization clusters, false authorization burden, event-level coverage, attribution stability, and operating-point selection together. This framework gives reviewers and clinicians an auditable map from uncertain EEG-derived scores to simulated intervention decisions.
+Event timing remains the main limitation for a predictive interpretation. Only 2 of 27 seizures were authorized before onset, whereas 18 were first authorized at or after onset, with a median covered-event latency of 16 s. The framework is therefore better interpreted as a retrospective analysis of seizure-responsive authorization than as evidence of reliable advance prediction. No VNS was delivered, and post-onset authorization cannot be interpreted as evidence of seizure termination or therapeutic benefit.
 
 \section{Limitations}
+The study contains only five CHB-MIT cases, selected as a convenience sample, and does not provide an independent patient cohort. The 70 model-development EDFs were not defined by a documented prospective clinical sampling rule and contain all seizure-bearing EDFs from these cases, whereas the 105 test-only EDFs contain no annotated seizures. This design tests held-out recording exposure without retuning but does not establish population representativeness. The strong influence of chb05 further demonstrates why case-level results must accompany averages.
 
-This study used a five-subject CHB-MIT subset, pediatric scalp EEG, retrospective annotations, and a fixed 5 min preictal labeling convention. The operational risk class combined preictal and ictal windows. These choices determine the simulated authorization target and should not be treated as a physiological ground truth.
+Labels use a fixed, record-local preictal-plus-ictal convention rather than a direct measure of physiological preictal state. Preictal intervals were not propagated across EDF boundaries, so recordings without seizure annotations are operationally negative under this convention rather than guaranteed physiologically interictal. The 2/h calibration target is an analytical operating constraint, not a validated clinical utility limit. Window-end timing omits unmeasured computation, communication, and stimulation delays.
 
-The analysis evaluates simulated authorization policies, not delivered VNS therapy. It does not model stimulation dose, duty cycle, battery state, adverse effects, seizure termination, or longitudinal response.
-
-The attribution-stability rule uses top-feature overlap across adjacent windows. External validation is required across larger cohorts, adult datasets, different montages, seizure types, and device constraints.
-
-\section{Future Work}
-
-Future work should expand the cohort, evaluate external EEG datasets, compare preictal labeling horizons, and test policy selection under prespecified burden constraints. Prospective extensions would require time-stamped device data, delivered therapy parameters, adverse effects, and longitudinal seizure outcomes.
+Attribution overlap has no independent clinical explanatory ground truth. The comparator experiments adapt temporal rule components on common scores rather than reproduce complete external systems. All analyses are retrospective and evaluate simulated authorizations only; they do not address stimulation efficacy, adverse effects, seizure termination, battery use, or long-term clinical response.
 
 \section{Conclusion}
+EEG-guided adaptive-neuromodulation simulations should be evaluated at the level of the authorization policy, not by classifier discrimination alone. Across the full recording inventory of five CHB-MIT cases, authorization burden was low in four held-out cases but failed markedly in one, showing that a training-side burden constraint does not provide a subject-independent deployment guarantee. Temporal persistence accounted for most of the burden reduction, attribution overlap added a smaller secondary constraint, and most covered seizures were authorized only after onset. The framework provides a reproducible way to separate calibration, temporal policy, attribution behavior, recording exposure, and event timing, while the present results remain insufficient to establish predictive or therapeutic VNS performance.
 
-This study presents a policy-layer explainability framework for simulated EEG-guided adaptive VNS. The analysis treats operational risk scores as inputs to governed authorization policies. Across five CHB-MIT subjects, calibration-aware persistence and attribution-stability constraints reduced false authorization clusters while exposing the cost in event-level coverage. The appropriate object of evaluation is the governed policy that converts uncertain EEG-derived scores into auditable authorization decisions.
+\section*{Declaration of Competing Interest}
 
-\section*{Data and Code Availability}
-
-The analysis uses the CHB-MIT scalp EEG database, available through PhysioNet\citep{guttag2010chbmit,goldberger2000physionet}. Analysis scripts, configuration files, generated CSV tables, and regenerated figures are organized in the project repository for reproducibility.
-
-\section*{Ethics Statement}
-
-The analysis used de-identified public EEG data from PhysioNet and did not involve direct interaction with human participants. Any extension to local clinical cohorts would require institutional review and appropriate governance for clinical AI research.
-
-\section*{Author Contributions}
-
-Antonio Pereira conceptualized the study, specified the clinical and ethical constraints, supervised the computational framing, and prepared the manuscript. Additional contributors should be added according to their roles in coding, validation, data curation, and manuscript revision.
-
-\section*{Conflict of Interest}
-
-The author declares no conflict of interest. This statement should be updated before submission if any author has financial, clinical, or device-related conflicts relevant to VNS, epilepsy care, or AI decision support.
+The authors declare that they have no known competing financial interests or personal relationships that could have appeared to influence the work reported in this paper.
 
 \section*{Funding}
 
-No specific funding was reported for the present work. This statement should be updated before submission.
+This work was financially supported by the Conselho Nacional de Desenvolvimento Cient\'ifico e Tecnol\'ogico (CNPq) under Grant No.~309589/2023-1 to A.P., and by the Coordena\c{c}\~ao de Aperfei\c{c}oamento de Pessoal de N\'ivel Superior (CAPES).
 
-\section*{Acknowledgments}
+\section*{Data and Code Availability}
+CHB-MIT EEG is publicly available through PhysioNet\citep{guttag2010chbmit}; raw EEG recordings are not redistributed. Analysis code, derived inputs, fitted model artifacts, parameter searches, event/cluster outputs, tests, and figure-generation scripts are maintained in the \href{https://github.com/squareshorts/xAI-VNS}{project repository}. The versioned archival DOI corresponding to this manuscript release is reported in the repository release metadata.
 
-The author acknowledges the developers and maintainers of open-source scientific Python tools and the PhysioNet contributors who maintain public physiological signal resources.
+\section*{Ethics Statement}
+
+This study used de-identified public EEG data and did not involve direct interaction with human participants.
+
+\section*{CRediT Authorship Contribution Statement}
+
+Suzana Cescon: Methodology, Software, Formal analysis, Validation, Data curation, Visualization, Writing -- original draft, Writing -- review and editing.
+
+Antonio Pereira: Conceptualization, Supervision, Methodology, Clinical and ethical framing, Project administration, Writing -- original draft, Writing -- review and editing, Corresponding author.
 
 \appendix
-\section{Cooldown Sensitivity}
 
-Table~\ref{tab:cooldown} summarizes the held-out-subject cluster burden for consecutive-window clusters and 30 s, 60 s, and 120 s cooldown alternatives.
+\section{Supplementary Methods and Policy Tables}
+
+\subsection{Detailed fold partitions}
 
 \begin{table}[H]
 \centering
-\caption{Held-out-subject cooldown sensitivity for LightGBM fixed-threshold and full governed policies. Values are mean $\pm$ standard deviation across five folds.}
+\caption{Nested partition composition for within-subject chronological folds. ``Sz rec.'' is the number of seizure-containing EDFs.}
+\label{tab:partition_audit}
+\scriptsize
+\setlength{\tabcolsep}{3.5pt}
+\renewcommand{\arraystretch}{1.12}
+\begin{tabular}{lrrrrrrrrrrrr}
+\toprule
+& \multicolumn{4}{c}{Core model} & \multicolumn{4}{c}{Calibration} & \multicolumn{4}{c}{Test} \\
+\cmidrule(lr){2-5}\cmidrule(lr){6-9}\cmidrule(lr){10-13}
+Fold & EDF & h & Pos. win. & Sz rec. & EDF & h & Pos. win. & Sz rec. & EDF & h & Pos. win. & Sz rec. \\
+\midrule
+chb01 & 8 & 8.00 & 506 & 3 & 4 & 4.00 & 372 & 2 & 8 & 6.55 & 398 & 2 \\
+chb02 & 3 & 2.27 & 106 & 1 & 2 & 2.00 & 191 & 1 & 4 & 4.00 & 155 & 1 \\
+chb03 & 6 & 6.00 & 545 & 3 & 2 & 2.00 & 177 & 1 & 5 & 5.00 & 534 & 3 \\
+chb05 & 5 & 5.00 & 208 & 1 & 3 & 3.00 & 206 & 1 & 6 & 6.00 & 617 & 3 \\
+chb08 & 6 & 6.00 & 700 & 3 & 2 & 2.00 & 230 & 1 & 6 & 6.00 & 282 & 1 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[H]
+\centering
+\caption{Nested partition composition for held-out-subject folds. ``Sz rec.'' is the number of seizure-containing EDFs.}
+\label{tab:partition_loso}
+\scriptsize
+\setlength{\tabcolsep}{3.5pt}
+\renewcommand{\arraystretch}{1.12}
+\begin{tabular}{lrrrrrrrrrrrr}
+\toprule
+& \multicolumn{4}{c}{Core model} & \multicolumn{4}{c}{Calibration} & \multicolumn{4}{c}{Test} \\
+\cmidrule(lr){2-5}\cmidrule(lr){6-9}\cmidrule(lr){10-13}
+Held out & EDF & h & Pos. win. & Sz rec. & EDF & h & Pos. win. & Sz rec. & EDF & h & Pos. win. & Sz rec. \\
+\midrule
+chb01 & 35 & 34.27 & 2,945 & 15 & 15 & 15.00 & 1,006 & 5 & 20 & 18.55 & 1,276 & 7 \\
+chb02 & 43 & 42.74 & 3,723 & 19 & 18 & 16.81 & 1,052 & 5 & 9 & 8.27 & 452 & 3 \\
+chb03 & 40 & 39.01 & 3,124 & 16 & 17 & 15.81 & 847 & 4 & 13 & 13.00 & 1,256 & 7 \\
+chb05 & 39 & 38.01 & 3,198 & 17 & 17 & 15.81 & 998 & 5 & 14 & 14.00 & 1,031 & 5 \\
+chb08 & 39 & 38.01 & 3,090 & 17 & 17 & 15.81 & 925 & 5 & 14 & 14.00 & 1,212 & 5 \\
+\bottomrule
+\end{tabular}
+\end{table}
+\FloatBarrier
+
+\subsection{Nominal policy-configuration comparison}
+
+\begin{table}[H]
+\centering
+\caption{Prespecified LightGBM policy configurations at $\theta=0.5$. These rows are descriptive configurations rather than an isolating ablation because probability inputs and rule components differ across rows. Values are mean $\pm$ SD across five folds.}
+\label{tab:nominal_configs}
+\scriptsize
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{llrrrr}
+\toprule
+Validation & Configuration & Auth. clusters/h & False clusters/h & Coverage & Pos. auth. rate \\
+\midrule
+\multirow{5}{*}{Within-subject}
+& Fixed threshold & $44.11\pm8.84$ & $40.37\pm10.51$ & $1.00\pm0.00$ & 0.216 \\
+& Temporal persistence & $18.06\pm5.39$ & $15.67\pm5.43$ & $1.00\pm0.00$ & 0.344 \\
+& Attribution-overlap gate & $41.50\pm6.80$ & $37.87\pm8.52$ & $1.00\pm0.00$ & 0.219 \\
+& Calibration-aware gate & $4.82\pm2.41$ & $3.53\pm1.96$ & $1.00\pm0.00$ & 0.604 \\
+& Full governed & $1.67\pm0.92$ & $0.95\pm0.80$ & $0.93\pm0.15$ & 0.740 \\
+\midrule
+\multirow{5}{*}{Held-out}
+& Fixed threshold & $88.38\pm30.05$ & $84.44\pm29.57$ & $1.00\pm0.00$ & 0.093 \\
+& Temporal persistence & $49.14\pm16.77$ & $46.01\pm16.69$ & $1.00\pm0.00$ & 0.135 \\
+& Attribution-overlap gate & $79.18\pm26.55$ & $75.23\pm26.26$ & $1.00\pm0.00$ & 0.101 \\
+& Calibration-aware gate & $3.31\pm4.67$ & $2.70\pm4.60$ & $0.76\pm0.29$ & 0.637 \\
+& Full governed & $1.72\pm2.10$ & $1.17\pm2.05$ & $0.76\pm0.29$ & 0.703 \\
+\bottomrule
+\end{tabular}
+\end{table}
+\FloatBarrier
+
+\subsection{Full nominal event mapping}
+
+\begin{table}[H]
+\centering
+\caption{Development-exposure, center-referenced nominal event mapping for LightGBM configurations. Pre-onset counts are shown among all events; post-onset-only and missed counts are derived from pooled event mappings. Lead time is the mean $\pm$ SD of fold-specific median lead times among covered events.}
+\label{tab:event_level_full}
+\scriptsize
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{llrrrrr}
+\toprule
+Validation & Configuration & Covered & Pre-onset & Post-onset only & Missed & Lead (s) \\
+\midrule
+\multirow{5}{*}{Within-subject}
+& Fixed threshold & 10/10 & 10 & 0 & 0 & $259.5\pm49.9$ \\
+& Temporal persistence & 10/10 & 7 & 3 & 0 & $155.3\pm149.4$ \\
+& Attribution-overlap gate & 10/10 & 9 & 1 & 0 & $245.3\pm79.0$ \\
+& Calibration-aware gate & 10/10 & 4 & 6 & 0 & $72.1\pm105.3$ \\
+& Full governed & 9/10 & 2 & 7 & 1 & $26.1\pm92.5$ \\
+\midrule
+\multirow{5}{*}{Held-out}
+& Fixed threshold & 27/27 & 24 & 3 & 0 & $235.8\pm60.7$ \\
+& Temporal persistence & 27/27 & 22 & 5 & 0 & $184.0\pm113.5$ \\
+& Attribution-overlap gate & 27/27 & 23 & 4 & 0 & $234.6\pm61.3$ \\
+& Calibration-aware gate & 19/27 & 3 & 16 & 8 & $7.7\pm57.5$ \\
+& Full governed & 19/27 & 1 & 18 & 8 & $-17.4\pm10.8$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+\FloatBarrier
+
+\subsection{Cooldown sensitivity}
+
+Cooldown changes cluster consolidation but not the underlying authorization-window mask. It therefore preserves each policy's own event coverage; the fixed and full policies in Table~\ref{tab:cooldown} are not matched at a common coverage level.
+
+\begin{table}[H]
+\centering
+\caption{Held-out-subject cooldown sensitivity for the nominal LightGBM fixed-threshold and full configurations. Values are mean $\pm$ standard deviation across five folds.}
 \label{tab:cooldown}
-\small
-\resizebox{\linewidth}{!}{
+\scriptsize
+\setlength{\tabcolsep}{5pt}
+\renewcommand{\arraystretch}{1.15}
 \begin{tabular}{llrrrr}
 \toprule
 Policy & Cooldown (s) & Auth. clusters/h & False clusters/h & Median duration (s) & Coverage \\
 \midrule
-Fixed threshold & 0 & $88.38 \pm 30.05$ & $84.44 \pm 29.57$ & $4.8 \pm 1.1$ & $1.00 \pm 0.00$ \\
-Fixed threshold & 30 & $20.42 \pm 4.10$ & $19.49 \pm 4.10$ & $22.0 \pm 7.9$ & $1.00 \pm 0.00$ \\
-Fixed threshold & 60 & $10.42 \pm 1.36$ & $9.79 \pm 1.39$ & $51.6 \pm 15.5$ & $1.00 \pm 0.00$ \\
-Fixed threshold & 120 & $5.11 \pm 0.92$ & $4.67 \pm 0.82$ & $184.4 \pm 94.0$ & $1.00 \pm 0.00$ \\
+\multirow{4}{*}{Fixed threshold}
+& 0   & $88.38\pm30.05$ & $84.44\pm29.57$ & $4.8\pm1.1$ & $1.00\pm0.00$ \\
+& 30  & $20.42\pm4.10$ & $19.49\pm4.10$ & $22.0\pm7.9$ & $1.00\pm0.00$ \\
+& 60  & $10.42\pm1.36$ & $9.79\pm1.39$ & $51.6\pm15.5$ & $1.00\pm0.00$ \\
+& 120 & $5.11\pm0.92$ & $4.67\pm0.82$ & $184.4\pm94.0$ & $1.00\pm0.00$ \\
 \midrule
-Full governed policy & 0 & $1.72 \pm 2.10$ & $1.17 \pm 2.05$ & $5.2 \pm 1.1$ & $0.76 \pm 0.29$ \\
-Full governed policy & 30 & $1.10 \pm 1.20$ & $0.76 \pm 1.15$ & $7.8 \pm 5.8$ & $0.76 \pm 0.29$ \\
-Full governed policy & 60 & $0.97 \pm 1.01$ & $0.64 \pm 0.95$ & $8.4 \pm 5.7$ & $0.76 \pm 0.29$ \\
-Full governed policy & 120 & $0.86 \pm 0.82$ & $0.56 \pm 0.77$ & $13.2 \pm 9.2$ & $0.76 \pm 0.29$ \\
+\multirow{4}{*}{Full governed}
+& 0   & $1.72\pm2.10$ & $1.17\pm2.05$ & $5.2\pm1.1$ & $0.76\pm0.29$ \\
+& 30  & $1.10\pm1.20$ & $0.76\pm1.15$ & $7.8\pm5.8$ & $0.76\pm0.29$ \\
+& 60  & $0.97\pm1.01$ & $0.64\pm0.95$ & $8.4\pm5.7$ & $0.76\pm0.29$ \\
+& 120 & $0.86\pm0.82$ & $0.56\pm0.77$ & $13.2\pm9.2$ & $0.76\pm0.29$ \\
 \bottomrule
 \end{tabular}
-}
 \end{table}
+\FloatBarrier
+
+\section{Case-level event timing}
+\begin{table}[htbp]
+\centering
+\caption{Train-selected policy at window-end decision time. Counts are among all events in each case. Latency summaries include covered events only.}
+\label{tab:complete_timing_cases}
+\small
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{@{}lrrrrrr@{}}
+\toprule
+Case & Events & Pre-onset & Post-onset only & Missed & Covered & Median latency (s) \\
+\midrule
+chb01 & 7 & 0 & 6 & 1 & 6 & 35.0 \\
+chb02 & 3 & 0 & 3 & 0 & 3 & 12.0 \\
+chb03 & 7 & 0 & 2 & 5 & 2 & 28.0 \\
+chb05 & 5 & 2 & 2 & 1 & 4 & -86.5 \\
+chb08 & 5 & 0 & 5 & 0 & 5 & 18.0 \\
+\midrule
+Pooled & 27 & 2 & 18 & 7 & 20 & 16.0 \\
+\bottomrule
+\end{tabular}
+\end{table}
+The pooled latency interquartile range is 8.5--28 s. The pooled lead median is $-16$ s; the mean $\pm$ SD of the five case-specific median leads is $-1.3\pm49.9$ s. The latter is not a pooled seizure-level median. A negative case median latency can coexist with substantial post-onset-only counts when a case has both early and late authorizations. Pre-onset coverage is 2/27 among all events and 2/20 among covered events. Full per-event timestamps and the center-to-end comparison are provided in \texttt{results/event\_timing\_by\_event.csv}.
+
+\section{Reproducibility Materials}
+
+\begin{table}[H]
+\centering
+\caption{Reproducibility materials supplied with the analysis package.}
+\label{tab:reproducibility}
+\small
+\setlength{\tabcolsep}{6pt}
+\renewcommand{\arraystretch}{1.25}
+\begin{tabular}{>{\raggedright\arraybackslash}p{0.24\linewidth}>{\raggedright\arraybackslash}p{0.68\linewidth}}
+\toprule
+Artifact group & Included materials \\
+\midrule
+Dataset manifest & EDF file list, configured cases, recording metadata, and CHB-MIT directory structure. \\
+Analysis configuration & Window length, overlap, preictal horizon, feature families, model settings, calibration settings, attribution-overlap parameters, thresholds, and cooldown settings. \\
+Validation files & Held-out-subject and within-subject EDF-level splits; nested core/calibration/test composition; train--test overlap checks; chronological-order checks. \\
+Model outputs & Raw probabilities, calibrated probabilities, labels, case IDs, EDF identifiers, window timestamps, and performance summaries. \\
+Calibration and attribution & Reliability data, Brier score, ECE, calibration slope/intercept, cross-fitted calibrator selection, top-feature sets, and temporal attribution-overlap analyses. \\
+Policy and event outputs & Authorization windows and clusters, false-cluster burden, train-only operating-point selection, factorial policy results, cooldown sensitivity, event categories, and lead-time summaries. \\
+Reproduction files & Figure-generation scripts, manuscript-generation scripts, package-lock file, exported environment file, and exact software versions. \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+
+\clearpage
+\setcounter{figure}{0}
+\renewcommand{\thefigure}{S\arabic{figure}}
+\renewcommand{\theHfigure}{supp.\arabic{figure}}
+\section{Supplementary Operating-Point Sensitivity}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.92\linewidth]{figureS1_operating_sweep.pdf}
+\caption{Probability-threshold sensitivity with the attribution-overlap threshold fixed at $\gamma=0.4$. The star marks the prespecified $\theta=0.5$ configuration; it is not a test-selected optimum. Error bars at the prespecified point are exploratory 95\% case-bootstrap intervals. Full case-level sweep values are provided with the reproducibility package.}
+\label{fig:supp_sweep}
+\end{figure}
+\FloatBarrier
 
 \bibliographystyle{plainnat}
 \bibliography{references}

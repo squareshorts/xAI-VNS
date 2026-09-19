@@ -1,0 +1,12 @@
+{
+  "chbmit_features.parquet": {
+    "source": "C:\\work\\explainable-AI\\data\\processed\\chbmit_features.parquet",
+    "snapshot": "C:\\work\\xai_vns_resubmission_run\\frozen_original\\chbmit_features.parquet",
+    "sha256": "275a8e28260edc82e067797bab2cce95ce0e78acbcb38f34c3087540493c842c"
+  },
+  "chbmit_window_labels.csv": {
+    "source": "C:\\work\\explainable-AI\\data\\processed\\chbmit_window_labels.csv",
+    "snapshot": "C:\\work\\xai_vns_resubmission_run\\frozen_original\\chbmit_window_labels.csv",
+    "sha256": "a25413603af13c84debb7e085fe51924ff3e4bb210e2f0330611f0883d5245d6"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "heldout_folds": 5,
+  "within_subject_fits": 5,
+  "unit_tests_passed": 15,
+  "reproduction_checks": 75,
+  "maximum_reproduction_error": 9.020562075079396e-17,
+  "all_175_usable": true,
+  "combined_hours": 172.82944444444445,
+  "false_clusters": 700,
+  "pooled_false_clusters_per_hour": 4.050235781582999,
+  "mean_case_false_clusters_per_hour": 3.601024775496433,
+  "sd_case_false_clusters_per_hour": 7.748496484866788,
+  "pre_onset": 2,
+  "post_onset_only": 18,
+  "missed": 7,
+  "main_compilation": "no errors, undefined citations/references, or box warnings",
+  "response_compilation": "no errors, undefined citations/references, or box warnings",
+  "release_version": "v1.1.0",
+  "final_main_figures": 6
+}

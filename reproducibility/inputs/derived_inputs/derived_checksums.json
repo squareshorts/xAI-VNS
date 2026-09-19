@@ -1,0 +1,13 @@
+{
+  "additional_feature_manifest.csv": "2b43f4ed542ca94ce3497fd669e024b933b9a88771ea740a71d8b83bf7ecda48",
+  "additional_features.csv.gz": "3170838bd1f4967442f93b2c4b57e0dd98facd5e523b4388701c14e574c94603",
+  "collection_manifest.csv": "424d96a04572f7eb525f8bdd7a75191670c15b681a30f565a6f84027aa31ef7a",
+  "event_manifest.csv": "9b37e39f49dd55e11459d7e2385b5c77d9db41a699f249945577e005207c42df",
+  "execution_environment.json": "b6f26d9b566c552a594aaf36e5c178d5dde6252b0ea8b195383ca7b271c8e6a8",
+  "original_feature_reproduction_checks.csv": "4584341636c7aff1ccb9216c6976bd2e948ca429b9cc2bd8b95a1736a0f69a1a",
+  "original_features.csv.gz": "822d6bef5ca095b8616fcb9d8a4f666adc835035c5006ec9432b850596f734e4",
+  "original_window_labels.csv.gz": "1fdbc1c636265bef7938f7bb4f426806140ad9bae22416f5a9d2c95894694a67",
+  "preparation_summary.json": "ea6fb37ee70663ce825a2b96d02892d21072250f7bb93bc27a458582cf488e60",
+  "protocol.json": "6c1e5b7e90359b8c637c79c7f60d7c04dddd567b85c35b1459c6c7ca142248e1",
+  "snapshot_manifest.json": "e09f8f7b83e6a4557e78ca0ffaa2442da5331b34881a02d1eeccce0bf5764a82"
+}

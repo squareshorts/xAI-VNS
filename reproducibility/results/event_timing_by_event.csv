@@ -1,0 +1,1405 @@
+subject_id,edf_file,event_index,onset,offset,clock,first_authorization,latency_seconds,lead_seconds,category,n_authorizations,fold,subject,exposure,policy,cooldown_s,theta
+chb01,chb01_03.edf,1,2996.0,3036.0,center,2712.0,-284.0,284.0,pre_onset,42,loso_chb01,chb01,original,Raw threshold 0.5,0,0.5
+chb01,chb01_04.edf,1,1467.0,1494.0,center,1272.0,-195.0,195.0,pre_onset,20,loso_chb01,chb01,original,Raw threshold 0.5,0,0.5
+chb01,chb01_15.edf,1,1732.0,1772.0,center,1498.0,-234.0,234.0,pre_onset,11,loso_chb01,chb01,original,Raw threshold 0.5,0,0.5
+chb01,chb01_16.edf,1,1015.0,1066.0,center,718.0,-297.0,297.0,pre_onset,48,loso_chb01,chb01,original,Raw threshold 0.5,0,0.5
+chb01,chb01_18.edf,1,1720.0,1810.0,center,1420.0,-300.0,300.0,pre_onset,88,loso_chb01,chb01,original,Raw threshold 0.5,0,0.5
+chb01,chb01_21.edf,1,327.0,420.0,center,218.0,-109.0,109.0,pre_onset,37,loso_chb01,chb01,original,Raw threshold 0.5,0,0.5
+chb01,chb01_26.edf,1,1862.0,1963.0,center,1616.0,-246.0,246.0,pre_onset,53,loso_chb01,chb01,original,Raw threshold 0.5,0,0.5
+chb01,chb01_03.edf,1,2996.0,3036.0,end,2714.0,-282.0,282.0,pre_onset,41,loso_chb01,chb01,original,Raw threshold 0.5,0,0.5
+chb01,chb01_04.edf,1,1467.0,1494.0,end,1274.0,-193.0,193.0,pre_onset,20,loso_chb01,chb01,original,Raw threshold 0.5,0,0.5
+chb01,chb01_15.edf,1,1732.0,1772.0,end,1500.0,-232.0,232.0,pre_onset,10,loso_chb01,chb01,original,Raw threshold 0.5,0,0.5
+chb01,chb01_16.edf,1,1015.0,1066.0,end,720.0,-295.0,295.0,pre_onset,48,loso_chb01,chb01,original,Raw threshold 0.5,0,0.5
+chb01,chb01_18.edf,1,1720.0,1810.0,end,1420.0,-300.0,300.0,pre_onset,89,loso_chb01,chb01,original,Raw threshold 0.5,0,0.5
+chb01,chb01_21.edf,1,327.0,420.0,end,220.0,-107.0,107.0,pre_onset,37,loso_chb01,chb01,original,Raw threshold 0.5,0,0.5
+chb01,chb01_26.edf,1,1862.0,1963.0,end,1618.0,-244.0,244.0,pre_onset,52,loso_chb01,chb01,original,Raw threshold 0.5,0,0.5
+chb01,chb01_03.edf,1,2996.0,3036.0,center,2730.0,-266.0,266.0,pre_onset,22,loso_chb01,chb01,original,Raw persistence 0.5,0,0.5
+chb01,chb01_04.edf,1,1467.0,1494.0,center,1274.0,-193.0,193.0,pre_onset,12,loso_chb01,chb01,original,Raw persistence 0.5,0,0.5
+chb01,chb01_15.edf,1,1732.0,1772.0,center,1704.0,-28.0,28.0,pre_onset,5,loso_chb01,chb01,original,Raw persistence 0.5,0,0.5
+chb01,chb01_16.edf,1,1015.0,1066.0,center,742.0,-273.0,273.0,pre_onset,25,loso_chb01,chb01,original,Raw persistence 0.5,0,0.5
+chb01,chb01_18.edf,1,1720.0,1810.0,center,1420.0,-300.0,300.0,pre_onset,54,loso_chb01,chb01,original,Raw persistence 0.5,0,0.5
+chb01,chb01_21.edf,1,327.0,420.0,center,332.0,5.0,-5.0,at_or_after_onset_only,33,loso_chb01,chb01,original,Raw persistence 0.5,0,0.5
+chb01,chb01_26.edf,1,1862.0,1963.0,center,1718.0,-144.0,144.0,pre_onset,46,loso_chb01,chb01,original,Raw persistence 0.5,0,0.5
+chb01,chb01_03.edf,1,2996.0,3036.0,end,2732.0,-264.0,264.0,pre_onset,22,loso_chb01,chb01,original,Raw persistence 0.5,0,0.5
+chb01,chb01_04.edf,1,1467.0,1494.0,end,1276.0,-191.0,191.0,pre_onset,12,loso_chb01,chb01,original,Raw persistence 0.5,0,0.5
+chb01,chb01_15.edf,1,1732.0,1772.0,end,1706.0,-26.0,26.0,pre_onset,4,loso_chb01,chb01,original,Raw persistence 0.5,0,0.5
+chb01,chb01_16.edf,1,1015.0,1066.0,end,744.0,-271.0,271.0,pre_onset,25,loso_chb01,chb01,original,Raw persistence 0.5,0,0.5
+chb01,chb01_18.edf,1,1720.0,1810.0,end,1420.0,-300.0,300.0,pre_onset,55,loso_chb01,chb01,original,Raw persistence 0.5,0,0.5
+chb01,chb01_21.edf,1,327.0,420.0,end,334.0,7.0,-7.0,at_or_after_onset_only,33,loso_chb01,chb01,original,Raw persistence 0.5,0,0.5
+chb01,chb01_26.edf,1,1862.0,1963.0,end,1720.0,-142.0,142.0,pre_onset,45,loso_chb01,chb01,original,Raw persistence 0.5,0,0.5
+chb01,chb01_03.edf,1,2996.0,3036.0,center,2728.0,-268.0,268.0,pre_onset,35,loso_chb01,chb01,original,Raw overlap 0.5,0,0.5
+chb01,chb01_04.edf,1,1467.0,1494.0,center,1272.0,-195.0,195.0,pre_onset,16,loso_chb01,chb01,original,Raw overlap 0.5,0,0.5
+chb01,chb01_15.edf,1,1732.0,1772.0,center,1610.0,-122.0,122.0,pre_onset,10,loso_chb01,chb01,original,Raw overlap 0.5,0,0.5
+chb01,chb01_16.edf,1,1015.0,1066.0,center,718.0,-297.0,297.0,pre_onset,46,loso_chb01,chb01,original,Raw overlap 0.5,0,0.5
+chb01,chb01_18.edf,1,1720.0,1810.0,center,1420.0,-300.0,300.0,pre_onset,83,loso_chb01,chb01,original,Raw overlap 0.5,0,0.5
+chb01,chb01_21.edf,1,327.0,420.0,center,330.0,3.0,-3.0,at_or_after_onset_only,35,loso_chb01,chb01,original,Raw overlap 0.5,0,0.5
+chb01,chb01_26.edf,1,1862.0,1963.0,center,1616.0,-246.0,246.0,pre_onset,50,loso_chb01,chb01,original,Raw overlap 0.5,0,0.5
+chb01,chb01_03.edf,1,2996.0,3036.0,end,2730.0,-266.0,266.0,pre_onset,34,loso_chb01,chb01,original,Raw overlap 0.5,0,0.5
+chb01,chb01_04.edf,1,1467.0,1494.0,end,1274.0,-193.0,193.0,pre_onset,16,loso_chb01,chb01,original,Raw overlap 0.5,0,0.5
+chb01,chb01_15.edf,1,1732.0,1772.0,end,1612.0,-120.0,120.0,pre_onset,9,loso_chb01,chb01,original,Raw overlap 0.5,0,0.5
+chb01,chb01_16.edf,1,1015.0,1066.0,end,720.0,-295.0,295.0,pre_onset,46,loso_chb01,chb01,original,Raw overlap 0.5,0,0.5
+chb01,chb01_18.edf,1,1720.0,1810.0,end,1420.0,-300.0,300.0,pre_onset,84,loso_chb01,chb01,original,Raw overlap 0.5,0,0.5
+chb01,chb01_21.edf,1,327.0,420.0,end,332.0,5.0,-5.0,at_or_after_onset_only,35,loso_chb01,chb01,original,Raw overlap 0.5,0,0.5
+chb01,chb01_26.edf,1,1862.0,1963.0,end,1618.0,-244.0,244.0,pre_onset,49,loso_chb01,chb01,original,Raw overlap 0.5,0,0.5
+chb01,chb01_03.edf,1,2996.0,3036.0,center,3024.0,28.0,-28.0,at_or_after_onset_only,3,loso_chb01,chb01,original,Nominal raw-plus-isotonic,0,0.5
+chb01,chb01_04.edf,1,1467.0,1494.0,center,1472.0,5.0,-5.0,at_or_after_onset_only,4,loso_chb01,chb01,original,Nominal raw-plus-isotonic,0,0.5
+chb01,chb01_15.edf,1,1732.0,1772.0,center,,,,missed,0,loso_chb01,chb01,original,Nominal raw-plus-isotonic,0,0.5
+chb01,chb01_16.edf,1,1015.0,1066.0,center,1020.0,5.0,-5.0,at_or_after_onset_only,5,loso_chb01,chb01,original,Nominal raw-plus-isotonic,0,0.5
+chb01,chb01_18.edf,1,1720.0,1810.0,center,1748.0,28.0,-28.0,at_or_after_onset_only,8,loso_chb01,chb01,original,Nominal raw-plus-isotonic,0,0.5
+chb01,chb01_21.edf,1,327.0,420.0,center,,,,missed,0,loso_chb01,chb01,original,Nominal raw-plus-isotonic,0,0.5
+chb01,chb01_26.edf,1,1862.0,1963.0,center,1894.0,32.0,-32.0,at_or_after_onset_only,15,loso_chb01,chb01,original,Nominal raw-plus-isotonic,0,0.5
+chb01,chb01_03.edf,1,2996.0,3036.0,end,3026.0,30.0,-30.0,at_or_after_onset_only,3,loso_chb01,chb01,original,Nominal raw-plus-isotonic,0,0.5
+chb01,chb01_04.edf,1,1467.0,1494.0,end,1474.0,7.0,-7.0,at_or_after_onset_only,4,loso_chb01,chb01,original,Nominal raw-plus-isotonic,0,0.5
+chb01,chb01_15.edf,1,1732.0,1772.0,end,,,,missed,0,loso_chb01,chb01,original,Nominal raw-plus-isotonic,0,0.5
+chb01,chb01_16.edf,1,1015.0,1066.0,end,1022.0,7.0,-7.0,at_or_after_onset_only,5,loso_chb01,chb01,original,Nominal raw-plus-isotonic,0,0.5
+chb01,chb01_18.edf,1,1720.0,1810.0,end,1750.0,30.0,-30.0,at_or_after_onset_only,8,loso_chb01,chb01,original,Nominal raw-plus-isotonic,0,0.5
+chb01,chb01_21.edf,1,327.0,420.0,end,,,,missed,0,loso_chb01,chb01,original,Nominal raw-plus-isotonic,0,0.5
+chb01,chb01_26.edf,1,1862.0,1963.0,end,1896.0,34.0,-34.0,at_or_after_onset_only,15,loso_chb01,chb01,original,Nominal raw-plus-isotonic,0,0.5
+chb01,chb01_03.edf,1,2996.0,3036.0,center,3026.0,30.0,-30.0,at_or_after_onset_only,2,loso_chb01,chb01,original,Nominal full 0.5,0,0.5
+chb01,chb01_04.edf,1,1467.0,1494.0,center,1474.0,7.0,-7.0,at_or_after_onset_only,2,loso_chb01,chb01,original,Nominal full 0.5,0,0.5
+chb01,chb01_15.edf,1,1732.0,1772.0,center,,,,missed,0,loso_chb01,chb01,original,Nominal full 0.5,0,0.5
+chb01,chb01_16.edf,1,1015.0,1066.0,center,1022.0,7.0,-7.0,at_or_after_onset_only,3,loso_chb01,chb01,original,Nominal full 0.5,0,0.5
+chb01,chb01_18.edf,1,1720.0,1810.0,center,1758.0,38.0,-38.0,at_or_after_onset_only,5,loso_chb01,chb01,original,Nominal full 0.5,0,0.5
+chb01,chb01_21.edf,1,327.0,420.0,center,,,,missed,0,loso_chb01,chb01,original,Nominal full 0.5,0,0.5
+chb01,chb01_26.edf,1,1862.0,1963.0,center,1918.0,56.0,-56.0,at_or_after_onset_only,9,loso_chb01,chb01,original,Nominal full 0.5,0,0.5
+chb01,chb01_03.edf,1,2996.0,3036.0,end,3028.0,32.0,-32.0,at_or_after_onset_only,2,loso_chb01,chb01,original,Nominal full 0.5,0,0.5
+chb01,chb01_04.edf,1,1467.0,1494.0,end,1476.0,9.0,-9.0,at_or_after_onset_only,2,loso_chb01,chb01,original,Nominal full 0.5,0,0.5
+chb01,chb01_15.edf,1,1732.0,1772.0,end,,,,missed,0,loso_chb01,chb01,original,Nominal full 0.5,0,0.5
+chb01,chb01_16.edf,1,1015.0,1066.0,end,1024.0,9.0,-9.0,at_or_after_onset_only,3,loso_chb01,chb01,original,Nominal full 0.5,0,0.5
+chb01,chb01_18.edf,1,1720.0,1810.0,end,1760.0,40.0,-40.0,at_or_after_onset_only,5,loso_chb01,chb01,original,Nominal full 0.5,0,0.5
+chb01,chb01_21.edf,1,327.0,420.0,end,,,,missed,0,loso_chb01,chb01,original,Nominal full 0.5,0,0.5
+chb01,chb01_26.edf,1,1862.0,1963.0,end,1920.0,58.0,-58.0,at_or_after_onset_only,9,loso_chb01,chb01,original,Nominal full 0.5,0,0.5
+chb01,chb01_03.edf,1,2996.0,3036.0,center,3022.0,26.0,-26.0,at_or_after_onset_only,4,loso_chb01,chb01,original,Calibrated threshold only,0,0.24
+chb01,chb01_04.edf,1,1467.0,1494.0,center,1472.0,5.0,-5.0,at_or_after_onset_only,4,loso_chb01,chb01,original,Calibrated threshold only,0,0.24
+chb01,chb01_15.edf,1,1732.0,1772.0,center,,,,missed,0,loso_chb01,chb01,original,Calibrated threshold only,0,0.24
+chb01,chb01_16.edf,1,1015.0,1066.0,center,1020.0,5.0,-5.0,at_or_after_onset_only,5,loso_chb01,chb01,original,Calibrated threshold only,0,0.24
+chb01,chb01_18.edf,1,1720.0,1810.0,center,1748.0,28.0,-28.0,at_or_after_onset_only,8,loso_chb01,chb01,original,Calibrated threshold only,0,0.24
+chb01,chb01_21.edf,1,327.0,420.0,center,370.0,43.0,-43.0,at_or_after_onset_only,2,loso_chb01,chb01,original,Calibrated threshold only,0,0.24
+chb01,chb01_26.edf,1,1862.0,1963.0,center,1894.0,32.0,-32.0,at_or_after_onset_only,16,loso_chb01,chb01,original,Calibrated threshold only,0,0.24
+chb01,chb01_03.edf,1,2996.0,3036.0,end,3024.0,28.0,-28.0,at_or_after_onset_only,4,loso_chb01,chb01,original,Calibrated threshold only,0,0.24
+chb01,chb01_04.edf,1,1467.0,1494.0,end,1474.0,7.0,-7.0,at_or_after_onset_only,4,loso_chb01,chb01,original,Calibrated threshold only,0,0.24
+chb01,chb01_15.edf,1,1732.0,1772.0,end,,,,missed,0,loso_chb01,chb01,original,Calibrated threshold only,0,0.24
+chb01,chb01_16.edf,1,1015.0,1066.0,end,1022.0,7.0,-7.0,at_or_after_onset_only,5,loso_chb01,chb01,original,Calibrated threshold only,0,0.24
+chb01,chb01_18.edf,1,1720.0,1810.0,end,1750.0,30.0,-30.0,at_or_after_onset_only,8,loso_chb01,chb01,original,Calibrated threshold only,0,0.24
+chb01,chb01_21.edf,1,327.0,420.0,end,372.0,45.0,-45.0,at_or_after_onset_only,2,loso_chb01,chb01,original,Calibrated threshold only,0,0.24
+chb01,chb01_26.edf,1,1862.0,1963.0,end,1896.0,34.0,-34.0,at_or_after_onset_only,16,loso_chb01,chb01,original,Calibrated threshold only,0,0.24
+chb01,chb01_03.edf,1,2996.0,3036.0,center,3024.0,28.0,-28.0,at_or_after_onset_only,3,loso_chb01,chb01,original,+ persistence,0,0.24
+chb01,chb01_04.edf,1,1467.0,1494.0,center,1474.0,7.0,-7.0,at_or_after_onset_only,2,loso_chb01,chb01,original,+ persistence,0,0.24
+chb01,chb01_15.edf,1,1732.0,1772.0,center,,,,missed,0,loso_chb01,chb01,original,+ persistence,0,0.24
+chb01,chb01_16.edf,1,1015.0,1066.0,center,1022.0,7.0,-7.0,at_or_after_onset_only,3,loso_chb01,chb01,original,+ persistence,0,0.24
+chb01,chb01_18.edf,1,1720.0,1810.0,center,1758.0,38.0,-38.0,at_or_after_onset_only,5,loso_chb01,chb01,original,+ persistence,0,0.24
+chb01,chb01_21.edf,1,327.0,420.0,center,372.0,45.0,-45.0,at_or_after_onset_only,1,loso_chb01,chb01,original,+ persistence,0,0.24
+chb01,chb01_26.edf,1,1862.0,1963.0,center,1918.0,56.0,-56.0,at_or_after_onset_only,10,loso_chb01,chb01,original,+ persistence,0,0.24
+chb01,chb01_03.edf,1,2996.0,3036.0,end,3026.0,30.0,-30.0,at_or_after_onset_only,3,loso_chb01,chb01,original,+ persistence,0,0.24
+chb01,chb01_04.edf,1,1467.0,1494.0,end,1476.0,9.0,-9.0,at_or_after_onset_only,2,loso_chb01,chb01,original,+ persistence,0,0.24
+chb01,chb01_15.edf,1,1732.0,1772.0,end,,,,missed,0,loso_chb01,chb01,original,+ persistence,0,0.24
+chb01,chb01_16.edf,1,1015.0,1066.0,end,1024.0,9.0,-9.0,at_or_after_onset_only,3,loso_chb01,chb01,original,+ persistence,0,0.24
+chb01,chb01_18.edf,1,1720.0,1810.0,end,1760.0,40.0,-40.0,at_or_after_onset_only,5,loso_chb01,chb01,original,+ persistence,0,0.24
+chb01,chb01_21.edf,1,327.0,420.0,end,374.0,47.0,-47.0,at_or_after_onset_only,1,loso_chb01,chb01,original,+ persistence,0,0.24
+chb01,chb01_26.edf,1,1862.0,1963.0,end,1920.0,58.0,-58.0,at_or_after_onset_only,10,loso_chb01,chb01,original,+ persistence,0,0.24
+chb01,chb01_03.edf,1,2996.0,3036.0,center,3022.0,26.0,-26.0,at_or_after_onset_only,4,loso_chb01,chb01,original,+ attribution overlap,0,0.24
+chb01,chb01_04.edf,1,1467.0,1494.0,center,1472.0,5.0,-5.0,at_or_after_onset_only,4,loso_chb01,chb01,original,+ attribution overlap,0,0.24
+chb01,chb01_15.edf,1,1732.0,1772.0,center,,,,missed,0,loso_chb01,chb01,original,+ attribution overlap,0,0.24
+chb01,chb01_16.edf,1,1015.0,1066.0,center,1020.0,5.0,-5.0,at_or_after_onset_only,5,loso_chb01,chb01,original,+ attribution overlap,0,0.24
+chb01,chb01_18.edf,1,1720.0,1810.0,center,1748.0,28.0,-28.0,at_or_after_onset_only,8,loso_chb01,chb01,original,+ attribution overlap,0,0.24
+chb01,chb01_21.edf,1,327.0,420.0,center,370.0,43.0,-43.0,at_or_after_onset_only,2,loso_chb01,chb01,original,+ attribution overlap,0,0.24
+chb01,chb01_26.edf,1,1862.0,1963.0,center,1894.0,32.0,-32.0,at_or_after_onset_only,16,loso_chb01,chb01,original,+ attribution overlap,0,0.24
+chb01,chb01_03.edf,1,2996.0,3036.0,end,3024.0,28.0,-28.0,at_or_after_onset_only,4,loso_chb01,chb01,original,+ attribution overlap,0,0.24
+chb01,chb01_04.edf,1,1467.0,1494.0,end,1474.0,7.0,-7.0,at_or_after_onset_only,4,loso_chb01,chb01,original,+ attribution overlap,0,0.24
+chb01,chb01_15.edf,1,1732.0,1772.0,end,,,,missed,0,loso_chb01,chb01,original,+ attribution overlap,0,0.24
+chb01,chb01_16.edf,1,1015.0,1066.0,end,1022.0,7.0,-7.0,at_or_after_onset_only,5,loso_chb01,chb01,original,+ attribution overlap,0,0.24
+chb01,chb01_18.edf,1,1720.0,1810.0,end,1750.0,30.0,-30.0,at_or_after_onset_only,8,loso_chb01,chb01,original,+ attribution overlap,0,0.24
+chb01,chb01_21.edf,1,327.0,420.0,end,372.0,45.0,-45.0,at_or_after_onset_only,2,loso_chb01,chb01,original,+ attribution overlap,0,0.24
+chb01,chb01_26.edf,1,1862.0,1963.0,end,1896.0,34.0,-34.0,at_or_after_onset_only,16,loso_chb01,chb01,original,+ attribution overlap,0,0.24
+chb01,chb01_03.edf,1,2996.0,3036.0,center,3024.0,28.0,-28.0,at_or_after_onset_only,3,loso_chb01,chb01,original,+ persistence + overlap,0,0.24
+chb01,chb01_04.edf,1,1467.0,1494.0,center,1474.0,7.0,-7.0,at_or_after_onset_only,2,loso_chb01,chb01,original,+ persistence + overlap,0,0.24
+chb01,chb01_15.edf,1,1732.0,1772.0,center,,,,missed,0,loso_chb01,chb01,original,+ persistence + overlap,0,0.24
+chb01,chb01_16.edf,1,1015.0,1066.0,center,1022.0,7.0,-7.0,at_or_after_onset_only,3,loso_chb01,chb01,original,+ persistence + overlap,0,0.24
+chb01,chb01_18.edf,1,1720.0,1810.0,center,1758.0,38.0,-38.0,at_or_after_onset_only,5,loso_chb01,chb01,original,+ persistence + overlap,0,0.24
+chb01,chb01_21.edf,1,327.0,420.0,center,372.0,45.0,-45.0,at_or_after_onset_only,1,loso_chb01,chb01,original,+ persistence + overlap,0,0.24
+chb01,chb01_26.edf,1,1862.0,1963.0,center,1918.0,56.0,-56.0,at_or_after_onset_only,10,loso_chb01,chb01,original,+ persistence + overlap,0,0.24
+chb01,chb01_03.edf,1,2996.0,3036.0,end,3026.0,30.0,-30.0,at_or_after_onset_only,3,loso_chb01,chb01,original,+ persistence + overlap,0,0.24
+chb01,chb01_04.edf,1,1467.0,1494.0,end,1476.0,9.0,-9.0,at_or_after_onset_only,2,loso_chb01,chb01,original,+ persistence + overlap,0,0.24
+chb01,chb01_15.edf,1,1732.0,1772.0,end,,,,missed,0,loso_chb01,chb01,original,+ persistence + overlap,0,0.24
+chb01,chb01_16.edf,1,1015.0,1066.0,end,1024.0,9.0,-9.0,at_or_after_onset_only,3,loso_chb01,chb01,original,+ persistence + overlap,0,0.24
+chb01,chb01_18.edf,1,1720.0,1810.0,end,1760.0,40.0,-40.0,at_or_after_onset_only,5,loso_chb01,chb01,original,+ persistence + overlap,0,0.24
+chb01,chb01_21.edf,1,327.0,420.0,end,374.0,47.0,-47.0,at_or_after_onset_only,1,loso_chb01,chb01,original,+ persistence + overlap,0,0.24
+chb01,chb01_26.edf,1,1862.0,1963.0,end,1920.0,58.0,-58.0,at_or_after_onset_only,10,loso_chb01,chb01,original,+ persistence + overlap,0,0.24
+chb01,chb01_03.edf,1,2996.0,3036.0,center,3024.0,28.0,-28.0,at_or_after_onset_only,3,loso_chb01,chb01,original,Full overlap lag 4s,0,0.24
+chb01,chb01_04.edf,1,1467.0,1494.0,center,1474.0,7.0,-7.0,at_or_after_onset_only,2,loso_chb01,chb01,original,Full overlap lag 4s,0,0.24
+chb01,chb01_15.edf,1,1732.0,1772.0,center,,,,missed,0,loso_chb01,chb01,original,Full overlap lag 4s,0,0.24
+chb01,chb01_16.edf,1,1015.0,1066.0,center,1022.0,7.0,-7.0,at_or_after_onset_only,3,loso_chb01,chb01,original,Full overlap lag 4s,0,0.24
+chb01,chb01_18.edf,1,1720.0,1810.0,center,1758.0,38.0,-38.0,at_or_after_onset_only,5,loso_chb01,chb01,original,Full overlap lag 4s,0,0.24
+chb01,chb01_21.edf,1,327.0,420.0,center,372.0,45.0,-45.0,at_or_after_onset_only,1,loso_chb01,chb01,original,Full overlap lag 4s,0,0.24
+chb01,chb01_26.edf,1,1862.0,1963.0,center,1918.0,56.0,-56.0,at_or_after_onset_only,10,loso_chb01,chb01,original,Full overlap lag 4s,0,0.24
+chb01,chb01_03.edf,1,2996.0,3036.0,end,3026.0,30.0,-30.0,at_or_after_onset_only,3,loso_chb01,chb01,original,Full overlap lag 4s,0,0.24
+chb01,chb01_04.edf,1,1467.0,1494.0,end,1476.0,9.0,-9.0,at_or_after_onset_only,2,loso_chb01,chb01,original,Full overlap lag 4s,0,0.24
+chb01,chb01_15.edf,1,1732.0,1772.0,end,,,,missed,0,loso_chb01,chb01,original,Full overlap lag 4s,0,0.24
+chb01,chb01_16.edf,1,1015.0,1066.0,end,1024.0,9.0,-9.0,at_or_after_onset_only,3,loso_chb01,chb01,original,Full overlap lag 4s,0,0.24
+chb01,chb01_18.edf,1,1720.0,1810.0,end,1760.0,40.0,-40.0,at_or_after_onset_only,5,loso_chb01,chb01,original,Full overlap lag 4s,0,0.24
+chb01,chb01_21.edf,1,327.0,420.0,end,374.0,47.0,-47.0,at_or_after_onset_only,1,loso_chb01,chb01,original,Full overlap lag 4s,0,0.24
+chb01,chb01_26.edf,1,1862.0,1963.0,end,1920.0,58.0,-58.0,at_or_after_onset_only,10,loso_chb01,chb01,original,Full overlap lag 4s,0,0.24
+chb01,chb01_03.edf,1,2996.0,3036.0,center,3024.0,28.0,-28.0,at_or_after_onset_only,3,loso_chb01,chb01,original,Full overlap lag 6s,0,0.24
+chb01,chb01_04.edf,1,1467.0,1494.0,center,,,,missed,0,loso_chb01,chb01,original,Full overlap lag 6s,0,0.24
+chb01,chb01_15.edf,1,1732.0,1772.0,center,,,,missed,0,loso_chb01,chb01,original,Full overlap lag 6s,0,0.24
+chb01,chb01_16.edf,1,1015.0,1066.0,center,1022.0,7.0,-7.0,at_or_after_onset_only,3,loso_chb01,chb01,original,Full overlap lag 6s,0,0.24
+chb01,chb01_18.edf,1,1720.0,1810.0,center,1758.0,38.0,-38.0,at_or_after_onset_only,5,loso_chb01,chb01,original,Full overlap lag 6s,0,0.24
+chb01,chb01_21.edf,1,327.0,420.0,center,372.0,45.0,-45.0,at_or_after_onset_only,1,loso_chb01,chb01,original,Full overlap lag 6s,0,0.24
+chb01,chb01_26.edf,1,1862.0,1963.0,center,1918.0,56.0,-56.0,at_or_after_onset_only,10,loso_chb01,chb01,original,Full overlap lag 6s,0,0.24
+chb01,chb01_03.edf,1,2996.0,3036.0,end,3026.0,30.0,-30.0,at_or_after_onset_only,3,loso_chb01,chb01,original,Full overlap lag 6s,0,0.24
+chb01,chb01_04.edf,1,1467.0,1494.0,end,,,,missed,0,loso_chb01,chb01,original,Full overlap lag 6s,0,0.24
+chb01,chb01_15.edf,1,1732.0,1772.0,end,,,,missed,0,loso_chb01,chb01,original,Full overlap lag 6s,0,0.24
+chb01,chb01_16.edf,1,1015.0,1066.0,end,1024.0,9.0,-9.0,at_or_after_onset_only,3,loso_chb01,chb01,original,Full overlap lag 6s,0,0.24
+chb01,chb01_18.edf,1,1720.0,1810.0,end,1760.0,40.0,-40.0,at_or_after_onset_only,5,loso_chb01,chb01,original,Full overlap lag 6s,0,0.24
+chb01,chb01_21.edf,1,327.0,420.0,end,374.0,47.0,-47.0,at_or_after_onset_only,1,loso_chb01,chb01,original,Full overlap lag 6s,0,0.24
+chb01,chb01_26.edf,1,1862.0,1963.0,end,1920.0,58.0,-58.0,at_or_after_onset_only,10,loso_chb01,chb01,original,Full overlap lag 6s,0,0.24
+chb01,chb01_03.edf,1,2996.0,3036.0,center,3024.0,28.0,-28.0,at_or_after_onset_only,2,loso_chb01,chb01,original,Full overlap lag 10s,0,0.24
+chb01,chb01_04.edf,1,1467.0,1494.0,center,,,,missed,0,loso_chb01,chb01,original,Full overlap lag 10s,0,0.24
+chb01,chb01_15.edf,1,1732.0,1772.0,center,,,,missed,0,loso_chb01,chb01,original,Full overlap lag 10s,0,0.24
+chb01,chb01_16.edf,1,1015.0,1066.0,center,1022.0,7.0,-7.0,at_or_after_onset_only,2,loso_chb01,chb01,original,Full overlap lag 10s,0,0.24
+chb01,chb01_18.edf,1,1720.0,1810.0,center,1758.0,38.0,-38.0,at_or_after_onset_only,5,loso_chb01,chb01,original,Full overlap lag 10s,0,0.24
+chb01,chb01_21.edf,1,327.0,420.0,center,372.0,45.0,-45.0,at_or_after_onset_only,1,loso_chb01,chb01,original,Full overlap lag 10s,0,0.24
+chb01,chb01_26.edf,1,1862.0,1963.0,center,1918.0,56.0,-56.0,at_or_after_onset_only,10,loso_chb01,chb01,original,Full overlap lag 10s,0,0.24
+chb01,chb01_03.edf,1,2996.0,3036.0,end,3026.0,30.0,-30.0,at_or_after_onset_only,2,loso_chb01,chb01,original,Full overlap lag 10s,0,0.24
+chb01,chb01_04.edf,1,1467.0,1494.0,end,,,,missed,0,loso_chb01,chb01,original,Full overlap lag 10s,0,0.24
+chb01,chb01_15.edf,1,1732.0,1772.0,end,,,,missed,0,loso_chb01,chb01,original,Full overlap lag 10s,0,0.24
+chb01,chb01_16.edf,1,1015.0,1066.0,end,1024.0,9.0,-9.0,at_or_after_onset_only,2,loso_chb01,chb01,original,Full overlap lag 10s,0,0.24
+chb01,chb01_18.edf,1,1720.0,1810.0,end,1760.0,40.0,-40.0,at_or_after_onset_only,5,loso_chb01,chb01,original,Full overlap lag 10s,0,0.24
+chb01,chb01_21.edf,1,327.0,420.0,end,374.0,47.0,-47.0,at_or_after_onset_only,1,loso_chb01,chb01,original,Full overlap lag 10s,0,0.24
+chb01,chb01_26.edf,1,1862.0,1963.0,end,1920.0,58.0,-58.0,at_or_after_onset_only,10,loso_chb01,chb01,original,Full overlap lag 10s,0,0.24
+chb01,chb01_03.edf,1,2996.0,3036.0,center,3024.0,28.0,-28.0,at_or_after_onset_only,3,loso_chb01,chb01,original,Full overlap lag 20s,0,0.24
+chb01,chb01_04.edf,1,1467.0,1494.0,center,,,,missed,0,loso_chb01,chb01,original,Full overlap lag 20s,0,0.24
+chb01,chb01_15.edf,1,1732.0,1772.0,center,,,,missed,0,loso_chb01,chb01,original,Full overlap lag 20s,0,0.24
+chb01,chb01_16.edf,1,1015.0,1066.0,center,1022.0,7.0,-7.0,at_or_after_onset_only,1,loso_chb01,chb01,original,Full overlap lag 20s,0,0.24
+chb01,chb01_18.edf,1,1720.0,1810.0,center,1760.0,40.0,-40.0,at_or_after_onset_only,4,loso_chb01,chb01,original,Full overlap lag 20s,0,0.24
+chb01,chb01_21.edf,1,327.0,420.0,center,372.0,45.0,-45.0,at_or_after_onset_only,1,loso_chb01,chb01,original,Full overlap lag 20s,0,0.24
+chb01,chb01_26.edf,1,1862.0,1963.0,center,1920.0,58.0,-58.0,at_or_after_onset_only,9,loso_chb01,chb01,original,Full overlap lag 20s,0,0.24
+chb01,chb01_03.edf,1,2996.0,3036.0,end,3026.0,30.0,-30.0,at_or_after_onset_only,3,loso_chb01,chb01,original,Full overlap lag 20s,0,0.24
+chb01,chb01_04.edf,1,1467.0,1494.0,end,,,,missed,0,loso_chb01,chb01,original,Full overlap lag 20s,0,0.24
+chb01,chb01_15.edf,1,1732.0,1772.0,end,,,,missed,0,loso_chb01,chb01,original,Full overlap lag 20s,0,0.24
+chb01,chb01_16.edf,1,1015.0,1066.0,end,1024.0,9.0,-9.0,at_or_after_onset_only,1,loso_chb01,chb01,original,Full overlap lag 20s,0,0.24
+chb01,chb01_18.edf,1,1720.0,1810.0,end,1762.0,42.0,-42.0,at_or_after_onset_only,4,loso_chb01,chb01,original,Full overlap lag 20s,0,0.24
+chb01,chb01_21.edf,1,327.0,420.0,end,374.0,47.0,-47.0,at_or_after_onset_only,1,loso_chb01,chb01,original,Full overlap lag 20s,0,0.24
+chb01,chb01_26.edf,1,1862.0,1963.0,end,1922.0,60.0,-60.0,at_or_after_onset_only,9,loso_chb01,chb01,original,Full overlap lag 20s,0,0.24
+chb01,chb01_03.edf,1,2996.0,3036.0,center,2712.0,-284.0,284.0,pre_onset,42,loso_chb01,chb01,combined,Raw threshold 0.5,0,0.5
+chb01,chb01_04.edf,1,1467.0,1494.0,center,1272.0,-195.0,195.0,pre_onset,20,loso_chb01,chb01,combined,Raw threshold 0.5,0,0.5
+chb01,chb01_15.edf,1,1732.0,1772.0,center,1498.0,-234.0,234.0,pre_onset,11,loso_chb01,chb01,combined,Raw threshold 0.5,0,0.5
+chb01,chb01_16.edf,1,1015.0,1066.0,center,718.0,-297.0,297.0,pre_onset,48,loso_chb01,chb01,combined,Raw threshold 0.5,0,0.5
+chb01,chb01_18.edf,1,1720.0,1810.0,center,1420.0,-300.0,300.0,pre_onset,88,loso_chb01,chb01,combined,Raw threshold 0.5,0,0.5
+chb01,chb01_21.edf,1,327.0,420.0,center,218.0,-109.0,109.0,pre_onset,37,loso_chb01,chb01,combined,Raw threshold 0.5,0,0.5
+chb01,chb01_26.edf,1,1862.0,1963.0,center,1616.0,-246.0,246.0,pre_onset,53,loso_chb01,chb01,combined,Raw threshold 0.5,0,0.5
+chb01,chb01_03.edf,1,2996.0,3036.0,end,2714.0,-282.0,282.0,pre_onset,41,loso_chb01,chb01,combined,Raw threshold 0.5,0,0.5
+chb01,chb01_04.edf,1,1467.0,1494.0,end,1274.0,-193.0,193.0,pre_onset,20,loso_chb01,chb01,combined,Raw threshold 0.5,0,0.5
+chb01,chb01_15.edf,1,1732.0,1772.0,end,1500.0,-232.0,232.0,pre_onset,10,loso_chb01,chb01,combined,Raw threshold 0.5,0,0.5
+chb01,chb01_16.edf,1,1015.0,1066.0,end,720.0,-295.0,295.0,pre_onset,48,loso_chb01,chb01,combined,Raw threshold 0.5,0,0.5
+chb01,chb01_18.edf,1,1720.0,1810.0,end,1420.0,-300.0,300.0,pre_onset,89,loso_chb01,chb01,combined,Raw threshold 0.5,0,0.5
+chb01,chb01_21.edf,1,327.0,420.0,end,220.0,-107.0,107.0,pre_onset,37,loso_chb01,chb01,combined,Raw threshold 0.5,0,0.5
+chb01,chb01_26.edf,1,1862.0,1963.0,end,1618.0,-244.0,244.0,pre_onset,52,loso_chb01,chb01,combined,Raw threshold 0.5,0,0.5
+chb01,chb01_03.edf,1,2996.0,3036.0,center,2730.0,-266.0,266.0,pre_onset,22,loso_chb01,chb01,combined,Raw persistence 0.5,0,0.5
+chb01,chb01_04.edf,1,1467.0,1494.0,center,1274.0,-193.0,193.0,pre_onset,12,loso_chb01,chb01,combined,Raw persistence 0.5,0,0.5
+chb01,chb01_15.edf,1,1732.0,1772.0,center,1704.0,-28.0,28.0,pre_onset,5,loso_chb01,chb01,combined,Raw persistence 0.5,0,0.5
+chb01,chb01_16.edf,1,1015.0,1066.0,center,742.0,-273.0,273.0,pre_onset,25,loso_chb01,chb01,combined,Raw persistence 0.5,0,0.5
+chb01,chb01_18.edf,1,1720.0,1810.0,center,1420.0,-300.0,300.0,pre_onset,54,loso_chb01,chb01,combined,Raw persistence 0.5,0,0.5
+chb01,chb01_21.edf,1,327.0,420.0,center,332.0,5.0,-5.0,at_or_after_onset_only,33,loso_chb01,chb01,combined,Raw persistence 0.5,0,0.5
+chb01,chb01_26.edf,1,1862.0,1963.0,center,1718.0,-144.0,144.0,pre_onset,46,loso_chb01,chb01,combined,Raw persistence 0.5,0,0.5
+chb01,chb01_03.edf,1,2996.0,3036.0,end,2732.0,-264.0,264.0,pre_onset,22,loso_chb01,chb01,combined,Raw persistence 0.5,0,0.5
+chb01,chb01_04.edf,1,1467.0,1494.0,end,1276.0,-191.0,191.0,pre_onset,12,loso_chb01,chb01,combined,Raw persistence 0.5,0,0.5
+chb01,chb01_15.edf,1,1732.0,1772.0,end,1706.0,-26.0,26.0,pre_onset,4,loso_chb01,chb01,combined,Raw persistence 0.5,0,0.5
+chb01,chb01_16.edf,1,1015.0,1066.0,end,744.0,-271.0,271.0,pre_onset,25,loso_chb01,chb01,combined,Raw persistence 0.5,0,0.5
+chb01,chb01_18.edf,1,1720.0,1810.0,end,1420.0,-300.0,300.0,pre_onset,55,loso_chb01,chb01,combined,Raw persistence 0.5,0,0.5
+chb01,chb01_21.edf,1,327.0,420.0,end,334.0,7.0,-7.0,at_or_after_onset_only,33,loso_chb01,chb01,combined,Raw persistence 0.5,0,0.5
+chb01,chb01_26.edf,1,1862.0,1963.0,end,1720.0,-142.0,142.0,pre_onset,45,loso_chb01,chb01,combined,Raw persistence 0.5,0,0.5
+chb01,chb01_03.edf,1,2996.0,3036.0,center,2728.0,-268.0,268.0,pre_onset,35,loso_chb01,chb01,combined,Raw overlap 0.5,0,0.5
+chb01,chb01_04.edf,1,1467.0,1494.0,center,1272.0,-195.0,195.0,pre_onset,16,loso_chb01,chb01,combined,Raw overlap 0.5,0,0.5
+chb01,chb01_15.edf,1,1732.0,1772.0,center,1610.0,-122.0,122.0,pre_onset,10,loso_chb01,chb01,combined,Raw overlap 0.5,0,0.5
+chb01,chb01_16.edf,1,1015.0,1066.0,center,718.0,-297.0,297.0,pre_onset,46,loso_chb01,chb01,combined,Raw overlap 0.5,0,0.5
+chb01,chb01_18.edf,1,1720.0,1810.0,center,1420.0,-300.0,300.0,pre_onset,83,loso_chb01,chb01,combined,Raw overlap 0.5,0,0.5
+chb01,chb01_21.edf,1,327.0,420.0,center,330.0,3.0,-3.0,at_or_after_onset_only,35,loso_chb01,chb01,combined,Raw overlap 0.5,0,0.5
+chb01,chb01_26.edf,1,1862.0,1963.0,center,1616.0,-246.0,246.0,pre_onset,50,loso_chb01,chb01,combined,Raw overlap 0.5,0,0.5
+chb01,chb01_03.edf,1,2996.0,3036.0,end,2730.0,-266.0,266.0,pre_onset,34,loso_chb01,chb01,combined,Raw overlap 0.5,0,0.5
+chb01,chb01_04.edf,1,1467.0,1494.0,end,1274.0,-193.0,193.0,pre_onset,16,loso_chb01,chb01,combined,Raw overlap 0.5,0,0.5
+chb01,chb01_15.edf,1,1732.0,1772.0,end,1612.0,-120.0,120.0,pre_onset,9,loso_chb01,chb01,combined,Raw overlap 0.5,0,0.5
+chb01,chb01_16.edf,1,1015.0,1066.0,end,720.0,-295.0,295.0,pre_onset,46,loso_chb01,chb01,combined,Raw overlap 0.5,0,0.5
+chb01,chb01_18.edf,1,1720.0,1810.0,end,1420.0,-300.0,300.0,pre_onset,84,loso_chb01,chb01,combined,Raw overlap 0.5,0,0.5
+chb01,chb01_21.edf,1,327.0,420.0,end,332.0,5.0,-5.0,at_or_after_onset_only,35,loso_chb01,chb01,combined,Raw overlap 0.5,0,0.5
+chb01,chb01_26.edf,1,1862.0,1963.0,end,1618.0,-244.0,244.0,pre_onset,49,loso_chb01,chb01,combined,Raw overlap 0.5,0,0.5
+chb01,chb01_03.edf,1,2996.0,3036.0,center,3024.0,28.0,-28.0,at_or_after_onset_only,3,loso_chb01,chb01,combined,Nominal raw-plus-isotonic,0,0.5
+chb01,chb01_04.edf,1,1467.0,1494.0,center,1472.0,5.0,-5.0,at_or_after_onset_only,4,loso_chb01,chb01,combined,Nominal raw-plus-isotonic,0,0.5
+chb01,chb01_15.edf,1,1732.0,1772.0,center,,,,missed,0,loso_chb01,chb01,combined,Nominal raw-plus-isotonic,0,0.5
+chb01,chb01_16.edf,1,1015.0,1066.0,center,1020.0,5.0,-5.0,at_or_after_onset_only,5,loso_chb01,chb01,combined,Nominal raw-plus-isotonic,0,0.5
+chb01,chb01_18.edf,1,1720.0,1810.0,center,1748.0,28.0,-28.0,at_or_after_onset_only,8,loso_chb01,chb01,combined,Nominal raw-plus-isotonic,0,0.5
+chb01,chb01_21.edf,1,327.0,420.0,center,,,,missed,0,loso_chb01,chb01,combined,Nominal raw-plus-isotonic,0,0.5
+chb01,chb01_26.edf,1,1862.0,1963.0,center,1894.0,32.0,-32.0,at_or_after_onset_only,15,loso_chb01,chb01,combined,Nominal raw-plus-isotonic,0,0.5
+chb01,chb01_03.edf,1,2996.0,3036.0,end,3026.0,30.0,-30.0,at_or_after_onset_only,3,loso_chb01,chb01,combined,Nominal raw-plus-isotonic,0,0.5
+chb01,chb01_04.edf,1,1467.0,1494.0,end,1474.0,7.0,-7.0,at_or_after_onset_only,4,loso_chb01,chb01,combined,Nominal raw-plus-isotonic,0,0.5
+chb01,chb01_15.edf,1,1732.0,1772.0,end,,,,missed,0,loso_chb01,chb01,combined,Nominal raw-plus-isotonic,0,0.5
+chb01,chb01_16.edf,1,1015.0,1066.0,end,1022.0,7.0,-7.0,at_or_after_onset_only,5,loso_chb01,chb01,combined,Nominal raw-plus-isotonic,0,0.5
+chb01,chb01_18.edf,1,1720.0,1810.0,end,1750.0,30.0,-30.0,at_or_after_onset_only,8,loso_chb01,chb01,combined,Nominal raw-plus-isotonic,0,0.5
+chb01,chb01_21.edf,1,327.0,420.0,end,,,,missed,0,loso_chb01,chb01,combined,Nominal raw-plus-isotonic,0,0.5
+chb01,chb01_26.edf,1,1862.0,1963.0,end,1896.0,34.0,-34.0,at_or_after_onset_only,15,loso_chb01,chb01,combined,Nominal raw-plus-isotonic,0,0.5
+chb01,chb01_03.edf,1,2996.0,3036.0,center,3026.0,30.0,-30.0,at_or_after_onset_only,2,loso_chb01,chb01,combined,Nominal full 0.5,0,0.5
+chb01,chb01_04.edf,1,1467.0,1494.0,center,1474.0,7.0,-7.0,at_or_after_onset_only,2,loso_chb01,chb01,combined,Nominal full 0.5,0,0.5
+chb01,chb01_15.edf,1,1732.0,1772.0,center,,,,missed,0,loso_chb01,chb01,combined,Nominal full 0.5,0,0.5
+chb01,chb01_16.edf,1,1015.0,1066.0,center,1022.0,7.0,-7.0,at_or_after_onset_only,3,loso_chb01,chb01,combined,Nominal full 0.5,0,0.5
+chb01,chb01_18.edf,1,1720.0,1810.0,center,1758.0,38.0,-38.0,at_or_after_onset_only,5,loso_chb01,chb01,combined,Nominal full 0.5,0,0.5
+chb01,chb01_21.edf,1,327.0,420.0,center,,,,missed,0,loso_chb01,chb01,combined,Nominal full 0.5,0,0.5
+chb01,chb01_26.edf,1,1862.0,1963.0,center,1918.0,56.0,-56.0,at_or_after_onset_only,9,loso_chb01,chb01,combined,Nominal full 0.5,0,0.5
+chb01,chb01_03.edf,1,2996.0,3036.0,end,3028.0,32.0,-32.0,at_or_after_onset_only,2,loso_chb01,chb01,combined,Nominal full 0.5,0,0.5
+chb01,chb01_04.edf,1,1467.0,1494.0,end,1476.0,9.0,-9.0,at_or_after_onset_only,2,loso_chb01,chb01,combined,Nominal full 0.5,0,0.5
+chb01,chb01_15.edf,1,1732.0,1772.0,end,,,,missed,0,loso_chb01,chb01,combined,Nominal full 0.5,0,0.5
+chb01,chb01_16.edf,1,1015.0,1066.0,end,1024.0,9.0,-9.0,at_or_after_onset_only,3,loso_chb01,chb01,combined,Nominal full 0.5,0,0.5
+chb01,chb01_18.edf,1,1720.0,1810.0,end,1760.0,40.0,-40.0,at_or_after_onset_only,5,loso_chb01,chb01,combined,Nominal full 0.5,0,0.5
+chb01,chb01_21.edf,1,327.0,420.0,end,,,,missed,0,loso_chb01,chb01,combined,Nominal full 0.5,0,0.5
+chb01,chb01_26.edf,1,1862.0,1963.0,end,1920.0,58.0,-58.0,at_or_after_onset_only,9,loso_chb01,chb01,combined,Nominal full 0.5,0,0.5
+chb01,chb01_03.edf,1,2996.0,3036.0,center,3022.0,26.0,-26.0,at_or_after_onset_only,4,loso_chb01,chb01,combined,Calibrated threshold only,0,0.24
+chb01,chb01_04.edf,1,1467.0,1494.0,center,1472.0,5.0,-5.0,at_or_after_onset_only,4,loso_chb01,chb01,combined,Calibrated threshold only,0,0.24
+chb01,chb01_15.edf,1,1732.0,1772.0,center,,,,missed,0,loso_chb01,chb01,combined,Calibrated threshold only,0,0.24
+chb01,chb01_16.edf,1,1015.0,1066.0,center,1020.0,5.0,-5.0,at_or_after_onset_only,5,loso_chb01,chb01,combined,Calibrated threshold only,0,0.24
+chb01,chb01_18.edf,1,1720.0,1810.0,center,1748.0,28.0,-28.0,at_or_after_onset_only,8,loso_chb01,chb01,combined,Calibrated threshold only,0,0.24
+chb01,chb01_21.edf,1,327.0,420.0,center,370.0,43.0,-43.0,at_or_after_onset_only,2,loso_chb01,chb01,combined,Calibrated threshold only,0,0.24
+chb01,chb01_26.edf,1,1862.0,1963.0,center,1894.0,32.0,-32.0,at_or_after_onset_only,16,loso_chb01,chb01,combined,Calibrated threshold only,0,0.24
+chb01,chb01_03.edf,1,2996.0,3036.0,end,3024.0,28.0,-28.0,at_or_after_onset_only,4,loso_chb01,chb01,combined,Calibrated threshold only,0,0.24
+chb01,chb01_04.edf,1,1467.0,1494.0,end,1474.0,7.0,-7.0,at_or_after_onset_only,4,loso_chb01,chb01,combined,Calibrated threshold only,0,0.24
+chb01,chb01_15.edf,1,1732.0,1772.0,end,,,,missed,0,loso_chb01,chb01,combined,Calibrated threshold only,0,0.24
+chb01,chb01_16.edf,1,1015.0,1066.0,end,1022.0,7.0,-7.0,at_or_after_onset_only,5,loso_chb01,chb01,combined,Calibrated threshold only,0,0.24
+chb01,chb01_18.edf,1,1720.0,1810.0,end,1750.0,30.0,-30.0,at_or_after_onset_only,8,loso_chb01,chb01,combined,Calibrated threshold only,0,0.24
+chb01,chb01_21.edf,1,327.0,420.0,end,372.0,45.0,-45.0,at_or_after_onset_only,2,loso_chb01,chb01,combined,Calibrated threshold only,0,0.24
+chb01,chb01_26.edf,1,1862.0,1963.0,end,1896.0,34.0,-34.0,at_or_after_onset_only,16,loso_chb01,chb01,combined,Calibrated threshold only,0,0.24
+chb01,chb01_03.edf,1,2996.0,3036.0,center,3024.0,28.0,-28.0,at_or_after_onset_only,3,loso_chb01,chb01,combined,+ persistence,0,0.24
+chb01,chb01_04.edf,1,1467.0,1494.0,center,1474.0,7.0,-7.0,at_or_after_onset_only,2,loso_chb01,chb01,combined,+ persistence,0,0.24
+chb01,chb01_15.edf,1,1732.0,1772.0,center,,,,missed,0,loso_chb01,chb01,combined,+ persistence,0,0.24
+chb01,chb01_16.edf,1,1015.0,1066.0,center,1022.0,7.0,-7.0,at_or_after_onset_only,3,loso_chb01,chb01,combined,+ persistence,0,0.24
+chb01,chb01_18.edf,1,1720.0,1810.0,center,1758.0,38.0,-38.0,at_or_after_onset_only,5,loso_chb01,chb01,combined,+ persistence,0,0.24
+chb01,chb01_21.edf,1,327.0,420.0,center,372.0,45.0,-45.0,at_or_after_onset_only,1,loso_chb01,chb01,combined,+ persistence,0,0.24
+chb01,chb01_26.edf,1,1862.0,1963.0,center,1918.0,56.0,-56.0,at_or_after_onset_only,10,loso_chb01,chb01,combined,+ persistence,0,0.24
+chb01,chb01_03.edf,1,2996.0,3036.0,end,3026.0,30.0,-30.0,at_or_after_onset_only,3,loso_chb01,chb01,combined,+ persistence,0,0.24
+chb01,chb01_04.edf,1,1467.0,1494.0,end,1476.0,9.0,-9.0,at_or_after_onset_only,2,loso_chb01,chb01,combined,+ persistence,0,0.24
+chb01,chb01_15.edf,1,1732.0,1772.0,end,,,,missed,0,loso_chb01,chb01,combined,+ persistence,0,0.24
+chb01,chb01_16.edf,1,1015.0,1066.0,end,1024.0,9.0,-9.0,at_or_after_onset_only,3,loso_chb01,chb01,combined,+ persistence,0,0.24
+chb01,chb01_18.edf,1,1720.0,1810.0,end,1760.0,40.0,-40.0,at_or_after_onset_only,5,loso_chb01,chb01,combined,+ persistence,0,0.24
+chb01,chb01_21.edf,1,327.0,420.0,end,374.0,47.0,-47.0,at_or_after_onset_only,1,loso_chb01,chb01,combined,+ persistence,0,0.24
+chb01,chb01_26.edf,1,1862.0,1963.0,end,1920.0,58.0,-58.0,at_or_after_onset_only,10,loso_chb01,chb01,combined,+ persistence,0,0.24
+chb01,chb01_03.edf,1,2996.0,3036.0,center,3022.0,26.0,-26.0,at_or_after_onset_only,4,loso_chb01,chb01,combined,+ attribution overlap,0,0.24
+chb01,chb01_04.edf,1,1467.0,1494.0,center,1472.0,5.0,-5.0,at_or_after_onset_only,4,loso_chb01,chb01,combined,+ attribution overlap,0,0.24
+chb01,chb01_15.edf,1,1732.0,1772.0,center,,,,missed,0,loso_chb01,chb01,combined,+ attribution overlap,0,0.24
+chb01,chb01_16.edf,1,1015.0,1066.0,center,1020.0,5.0,-5.0,at_or_after_onset_only,5,loso_chb01,chb01,combined,+ attribution overlap,0,0.24
+chb01,chb01_18.edf,1,1720.0,1810.0,center,1748.0,28.0,-28.0,at_or_after_onset_only,8,loso_chb01,chb01,combined,+ attribution overlap,0,0.24
+chb01,chb01_21.edf,1,327.0,420.0,center,370.0,43.0,-43.0,at_or_after_onset_only,2,loso_chb01,chb01,combined,+ attribution overlap,0,0.24
+chb01,chb01_26.edf,1,1862.0,1963.0,center,1894.0,32.0,-32.0,at_or_after_onset_only,16,loso_chb01,chb01,combined,+ attribution overlap,0,0.24
+chb01,chb01_03.edf,1,2996.0,3036.0,end,3024.0,28.0,-28.0,at_or_after_onset_only,4,loso_chb01,chb01,combined,+ attribution overlap,0,0.24
+chb01,chb01_04.edf,1,1467.0,1494.0,end,1474.0,7.0,-7.0,at_or_after_onset_only,4,loso_chb01,chb01,combined,+ attribution overlap,0,0.24
+chb01,chb01_15.edf,1,1732.0,1772.0,end,,,,missed,0,loso_chb01,chb01,combined,+ attribution overlap,0,0.24
+chb01,chb01_16.edf,1,1015.0,1066.0,end,1022.0,7.0,-7.0,at_or_after_onset_only,5,loso_chb01,chb01,combined,+ attribution overlap,0,0.24
+chb01,chb01_18.edf,1,1720.0,1810.0,end,1750.0,30.0,-30.0,at_or_after_onset_only,8,loso_chb01,chb01,combined,+ attribution overlap,0,0.24
+chb01,chb01_21.edf,1,327.0,420.0,end,372.0,45.0,-45.0,at_or_after_onset_only,2,loso_chb01,chb01,combined,+ attribution overlap,0,0.24
+chb01,chb01_26.edf,1,1862.0,1963.0,end,1896.0,34.0,-34.0,at_or_after_onset_only,16,loso_chb01,chb01,combined,+ attribution overlap,0,0.24
+chb01,chb01_03.edf,1,2996.0,3036.0,center,3024.0,28.0,-28.0,at_or_after_onset_only,3,loso_chb01,chb01,combined,+ persistence + overlap,0,0.24
+chb01,chb01_04.edf,1,1467.0,1494.0,center,1474.0,7.0,-7.0,at_or_after_onset_only,2,loso_chb01,chb01,combined,+ persistence + overlap,0,0.24
+chb01,chb01_15.edf,1,1732.0,1772.0,center,,,,missed,0,loso_chb01,chb01,combined,+ persistence + overlap,0,0.24
+chb01,chb01_16.edf,1,1015.0,1066.0,center,1022.0,7.0,-7.0,at_or_after_onset_only,3,loso_chb01,chb01,combined,+ persistence + overlap,0,0.24
+chb01,chb01_18.edf,1,1720.0,1810.0,center,1758.0,38.0,-38.0,at_or_after_onset_only,5,loso_chb01,chb01,combined,+ persistence + overlap,0,0.24
+chb01,chb01_21.edf,1,327.0,420.0,center,372.0,45.0,-45.0,at_or_after_onset_only,1,loso_chb01,chb01,combined,+ persistence + overlap,0,0.24
+chb01,chb01_26.edf,1,1862.0,1963.0,center,1918.0,56.0,-56.0,at_or_after_onset_only,10,loso_chb01,chb01,combined,+ persistence + overlap,0,0.24
+chb01,chb01_03.edf,1,2996.0,3036.0,end,3026.0,30.0,-30.0,at_or_after_onset_only,3,loso_chb01,chb01,combined,+ persistence + overlap,0,0.24
+chb01,chb01_04.edf,1,1467.0,1494.0,end,1476.0,9.0,-9.0,at_or_after_onset_only,2,loso_chb01,chb01,combined,+ persistence + overlap,0,0.24
+chb01,chb01_15.edf,1,1732.0,1772.0,end,,,,missed,0,loso_chb01,chb01,combined,+ persistence + overlap,0,0.24
+chb01,chb01_16.edf,1,1015.0,1066.0,end,1024.0,9.0,-9.0,at_or_after_onset_only,3,loso_chb01,chb01,combined,+ persistence + overlap,0,0.24
+chb01,chb01_18.edf,1,1720.0,1810.0,end,1760.0,40.0,-40.0,at_or_after_onset_only,5,loso_chb01,chb01,combined,+ persistence + overlap,0,0.24
+chb01,chb01_21.edf,1,327.0,420.0,end,374.0,47.0,-47.0,at_or_after_onset_only,1,loso_chb01,chb01,combined,+ persistence + overlap,0,0.24
+chb01,chb01_26.edf,1,1862.0,1963.0,end,1920.0,58.0,-58.0,at_or_after_onset_only,10,loso_chb01,chb01,combined,+ persistence + overlap,0,0.24
+chb01,chb01_03.edf,1,2996.0,3036.0,center,3024.0,28.0,-28.0,at_or_after_onset_only,3,loso_chb01,chb01,combined,Full overlap lag 4s,0,0.24
+chb01,chb01_04.edf,1,1467.0,1494.0,center,1474.0,7.0,-7.0,at_or_after_onset_only,2,loso_chb01,chb01,combined,Full overlap lag 4s,0,0.24
+chb01,chb01_15.edf,1,1732.0,1772.0,center,,,,missed,0,loso_chb01,chb01,combined,Full overlap lag 4s,0,0.24
+chb01,chb01_16.edf,1,1015.0,1066.0,center,1022.0,7.0,-7.0,at_or_after_onset_only,3,loso_chb01,chb01,combined,Full overlap lag 4s,0,0.24
+chb01,chb01_18.edf,1,1720.0,1810.0,center,1758.0,38.0,-38.0,at_or_after_onset_only,5,loso_chb01,chb01,combined,Full overlap lag 4s,0,0.24
+chb01,chb01_21.edf,1,327.0,420.0,center,372.0,45.0,-45.0,at_or_after_onset_only,1,loso_chb01,chb01,combined,Full overlap lag 4s,0,0.24
+chb01,chb01_26.edf,1,1862.0,1963.0,center,1918.0,56.0,-56.0,at_or_after_onset_only,10,loso_chb01,chb01,combined,Full overlap lag 4s,0,0.24
+chb01,chb01_03.edf,1,2996.0,3036.0,end,3026.0,30.0,-30.0,at_or_after_onset_only,3,loso_chb01,chb01,combined,Full overlap lag 4s,0,0.24
+chb01,chb01_04.edf,1,1467.0,1494.0,end,1476.0,9.0,-9.0,at_or_after_onset_only,2,loso_chb01,chb01,combined,Full overlap lag 4s,0,0.24
+chb01,chb01_15.edf,1,1732.0,1772.0,end,,,,missed,0,loso_chb01,chb01,combined,Full overlap lag 4s,0,0.24
+chb01,chb01_16.edf,1,1015.0,1066.0,end,1024.0,9.0,-9.0,at_or_after_onset_only,3,loso_chb01,chb01,combined,Full overlap lag 4s,0,0.24
+chb01,chb01_18.edf,1,1720.0,1810.0,end,1760.0,40.0,-40.0,at_or_after_onset_only,5,loso_chb01,chb01,combined,Full overlap lag 4s,0,0.24
+chb01,chb01_21.edf,1,327.0,420.0,end,374.0,47.0,-47.0,at_or_after_onset_only,1,loso_chb01,chb01,combined,Full overlap lag 4s,0,0.24
+chb01,chb01_26.edf,1,1862.0,1963.0,end,1920.0,58.0,-58.0,at_or_after_onset_only,10,loso_chb01,chb01,combined,Full overlap lag 4s,0,0.24
+chb01,chb01_03.edf,1,2996.0,3036.0,center,3024.0,28.0,-28.0,at_or_after_onset_only,3,loso_chb01,chb01,combined,Full overlap lag 6s,0,0.24
+chb01,chb01_04.edf,1,1467.0,1494.0,center,,,,missed,0,loso_chb01,chb01,combined,Full overlap lag 6s,0,0.24
+chb01,chb01_15.edf,1,1732.0,1772.0,center,,,,missed,0,loso_chb01,chb01,combined,Full overlap lag 6s,0,0.24
+chb01,chb01_16.edf,1,1015.0,1066.0,center,1022.0,7.0,-7.0,at_or_after_onset_only,3,loso_chb01,chb01,combined,Full overlap lag 6s,0,0.24
+chb01,chb01_18.edf,1,1720.0,1810.0,center,1758.0,38.0,-38.0,at_or_after_onset_only,5,loso_chb01,chb01,combined,Full overlap lag 6s,0,0.24
+chb01,chb01_21.edf,1,327.0,420.0,center,372.0,45.0,-45.0,at_or_after_onset_only,1,loso_chb01,chb01,combined,Full overlap lag 6s,0,0.24
+chb01,chb01_26.edf,1,1862.0,1963.0,center,1918.0,56.0,-56.0,at_or_after_onset_only,10,loso_chb01,chb01,combined,Full overlap lag 6s,0,0.24
+chb01,chb01_03.edf,1,2996.0,3036.0,end,3026.0,30.0,-30.0,at_or_after_onset_only,3,loso_chb01,chb01,combined,Full overlap lag 6s,0,0.24
+chb01,chb01_04.edf,1,1467.0,1494.0,end,,,,missed,0,loso_chb01,chb01,combined,Full overlap lag 6s,0,0.24
+chb01,chb01_15.edf,1,1732.0,1772.0,end,,,,missed,0,loso_chb01,chb01,combined,Full overlap lag 6s,0,0.24
+chb01,chb01_16.edf,1,1015.0,1066.0,end,1024.0,9.0,-9.0,at_or_after_onset_only,3,loso_chb01,chb01,combined,Full overlap lag 6s,0,0.24
+chb01,chb01_18.edf,1,1720.0,1810.0,end,1760.0,40.0,-40.0,at_or_after_onset_only,5,loso_chb01,chb01,combined,Full overlap lag 6s,0,0.24
+chb01,chb01_21.edf,1,327.0,420.0,end,374.0,47.0,-47.0,at_or_after_onset_only,1,loso_chb01,chb01,combined,Full overlap lag 6s,0,0.24
+chb01,chb01_26.edf,1,1862.0,1963.0,end,1920.0,58.0,-58.0,at_or_after_onset_only,10,loso_chb01,chb01,combined,Full overlap lag 6s,0,0.24
+chb01,chb01_03.edf,1,2996.0,3036.0,center,3024.0,28.0,-28.0,at_or_after_onset_only,2,loso_chb01,chb01,combined,Full overlap lag 10s,0,0.24
+chb01,chb01_04.edf,1,1467.0,1494.0,center,,,,missed,0,loso_chb01,chb01,combined,Full overlap lag 10s,0,0.24
+chb01,chb01_15.edf,1,1732.0,1772.0,center,,,,missed,0,loso_chb01,chb01,combined,Full overlap lag 10s,0,0.24
+chb01,chb01_16.edf,1,1015.0,1066.0,center,1022.0,7.0,-7.0,at_or_after_onset_only,2,loso_chb01,chb01,combined,Full overlap lag 10s,0,0.24
+chb01,chb01_18.edf,1,1720.0,1810.0,center,1758.0,38.0,-38.0,at_or_after_onset_only,5,loso_chb01,chb01,combined,Full overlap lag 10s,0,0.24
+chb01,chb01_21.edf,1,327.0,420.0,center,372.0,45.0,-45.0,at_or_after_onset_only,1,loso_chb01,chb01,combined,Full overlap lag 10s,0,0.24
+chb01,chb01_26.edf,1,1862.0,1963.0,center,1918.0,56.0,-56.0,at_or_after_onset_only,10,loso_chb01,chb01,combined,Full overlap lag 10s,0,0.24
+chb01,chb01_03.edf,1,2996.0,3036.0,end,3026.0,30.0,-30.0,at_or_after_onset_only,2,loso_chb01,chb01,combined,Full overlap lag 10s,0,0.24
+chb01,chb01_04.edf,1,1467.0,1494.0,end,,,,missed,0,loso_chb01,chb01,combined,Full overlap lag 10s,0,0.24
+chb01,chb01_15.edf,1,1732.0,1772.0,end,,,,missed,0,loso_chb01,chb01,combined,Full overlap lag 10s,0,0.24
+chb01,chb01_16.edf,1,1015.0,1066.0,end,1024.0,9.0,-9.0,at_or_after_onset_only,2,loso_chb01,chb01,combined,Full overlap lag 10s,0,0.24
+chb01,chb01_18.edf,1,1720.0,1810.0,end,1760.0,40.0,-40.0,at_or_after_onset_only,5,loso_chb01,chb01,combined,Full overlap lag 10s,0,0.24
+chb01,chb01_21.edf,1,327.0,420.0,end,374.0,47.0,-47.0,at_or_after_onset_only,1,loso_chb01,chb01,combined,Full overlap lag 10s,0,0.24
+chb01,chb01_26.edf,1,1862.0,1963.0,end,1920.0,58.0,-58.0,at_or_after_onset_only,10,loso_chb01,chb01,combined,Full overlap lag 10s,0,0.24
+chb01,chb01_03.edf,1,2996.0,3036.0,center,3024.0,28.0,-28.0,at_or_after_onset_only,3,loso_chb01,chb01,combined,Full overlap lag 20s,0,0.24
+chb01,chb01_04.edf,1,1467.0,1494.0,center,,,,missed,0,loso_chb01,chb01,combined,Full overlap lag 20s,0,0.24
+chb01,chb01_15.edf,1,1732.0,1772.0,center,,,,missed,0,loso_chb01,chb01,combined,Full overlap lag 20s,0,0.24
+chb01,chb01_16.edf,1,1015.0,1066.0,center,1022.0,7.0,-7.0,at_or_after_onset_only,1,loso_chb01,chb01,combined,Full overlap lag 20s,0,0.24
+chb01,chb01_18.edf,1,1720.0,1810.0,center,1760.0,40.0,-40.0,at_or_after_onset_only,4,loso_chb01,chb01,combined,Full overlap lag 20s,0,0.24
+chb01,chb01_21.edf,1,327.0,420.0,center,372.0,45.0,-45.0,at_or_after_onset_only,1,loso_chb01,chb01,combined,Full overlap lag 20s,0,0.24
+chb01,chb01_26.edf,1,1862.0,1963.0,center,1920.0,58.0,-58.0,at_or_after_onset_only,9,loso_chb01,chb01,combined,Full overlap lag 20s,0,0.24
+chb01,chb01_03.edf,1,2996.0,3036.0,end,3026.0,30.0,-30.0,at_or_after_onset_only,3,loso_chb01,chb01,combined,Full overlap lag 20s,0,0.24
+chb01,chb01_04.edf,1,1467.0,1494.0,end,,,,missed,0,loso_chb01,chb01,combined,Full overlap lag 20s,0,0.24
+chb01,chb01_15.edf,1,1732.0,1772.0,end,,,,missed,0,loso_chb01,chb01,combined,Full overlap lag 20s,0,0.24
+chb01,chb01_16.edf,1,1015.0,1066.0,end,1024.0,9.0,-9.0,at_or_after_onset_only,1,loso_chb01,chb01,combined,Full overlap lag 20s,0,0.24
+chb01,chb01_18.edf,1,1720.0,1810.0,end,1762.0,42.0,-42.0,at_or_after_onset_only,4,loso_chb01,chb01,combined,Full overlap lag 20s,0,0.24
+chb01,chb01_21.edf,1,327.0,420.0,end,374.0,47.0,-47.0,at_or_after_onset_only,1,loso_chb01,chb01,combined,Full overlap lag 20s,0,0.24
+chb01,chb01_26.edf,1,1862.0,1963.0,end,1922.0,60.0,-60.0,at_or_after_onset_only,9,loso_chb01,chb01,combined,Full overlap lag 20s,0,0.24
+chb02,chb02_16+.edf,1,2972.0,3053.0,center,2756.0,-216.0,216.0,pre_onset,67,loso_chb02,chb02,original,Raw threshold 0.5,0,0.5
+chb02,chb02_16.edf,1,130.0,212.0,center,2.0,-128.0,128.0,pre_onset,50,loso_chb02,chb02,original,Raw threshold 0.5,0,0.5
+chb02,chb02_19.edf,1,3369.0,3378.0,center,3158.0,-211.0,211.0,pre_onset,27,loso_chb02,chb02,original,Raw threshold 0.5,0,0.5
+chb02,chb02_16+.edf,1,2972.0,3053.0,end,2758.0,-214.0,214.0,pre_onset,66,loso_chb02,chb02,original,Raw threshold 0.5,0,0.5
+chb02,chb02_16.edf,1,130.0,212.0,end,4.0,-126.0,126.0,pre_onset,49,loso_chb02,chb02,original,Raw threshold 0.5,0,0.5
+chb02,chb02_19.edf,1,3369.0,3378.0,end,3160.0,-209.0,209.0,pre_onset,27,loso_chb02,chb02,original,Raw threshold 0.5,0,0.5
+chb02,chb02_16+.edf,1,2972.0,3053.0,center,2786.0,-186.0,186.0,pre_onset,51,loso_chb02,chb02,original,Raw persistence 0.5,0,0.5
+chb02,chb02_16.edf,1,130.0,212.0,center,4.0,-126.0,126.0,pre_onset,44,loso_chb02,chb02,original,Raw persistence 0.5,0,0.5
+chb02,chb02_19.edf,1,3369.0,3378.0,center,3160.0,-209.0,209.0,pre_onset,17,loso_chb02,chb02,original,Raw persistence 0.5,0,0.5
+chb02,chb02_16+.edf,1,2972.0,3053.0,end,2788.0,-184.0,184.0,pre_onset,50,loso_chb02,chb02,original,Raw persistence 0.5,0,0.5
+chb02,chb02_16.edf,1,130.0,212.0,end,6.0,-124.0,124.0,pre_onset,43,loso_chb02,chb02,original,Raw persistence 0.5,0,0.5
+chb02,chb02_19.edf,1,3369.0,3378.0,end,3162.0,-207.0,207.0,pre_onset,17,loso_chb02,chb02,original,Raw persistence 0.5,0,0.5
+chb02,chb02_16+.edf,1,2972.0,3053.0,center,2756.0,-216.0,216.0,pre_onset,67,loso_chb02,chb02,original,Raw overlap 0.5,0,0.5
+chb02,chb02_16.edf,1,130.0,212.0,center,4.0,-126.0,126.0,pre_onset,46,loso_chb02,chb02,original,Raw overlap 0.5,0,0.5
+chb02,chb02_19.edf,1,3369.0,3378.0,center,3160.0,-209.0,209.0,pre_onset,23,loso_chb02,chb02,original,Raw overlap 0.5,0,0.5
+chb02,chb02_16+.edf,1,2972.0,3053.0,end,2758.0,-214.0,214.0,pre_onset,66,loso_chb02,chb02,original,Raw overlap 0.5,0,0.5
+chb02,chb02_16.edf,1,130.0,212.0,end,6.0,-124.0,124.0,pre_onset,45,loso_chb02,chb02,original,Raw overlap 0.5,0,0.5
+chb02,chb02_19.edf,1,3369.0,3378.0,end,3162.0,-207.0,207.0,pre_onset,23,loso_chb02,chb02,original,Raw overlap 0.5,0,0.5
+chb02,chb02_16+.edf,1,2972.0,3053.0,center,2982.0,10.0,-10.0,at_or_after_onset_only,28,loso_chb02,chb02,original,Nominal raw-plus-isotonic,0,0.5
+chb02,chb02_16.edf,1,130.0,212.0,center,138.0,8.0,-8.0,at_or_after_onset_only,32,loso_chb02,chb02,original,Nominal raw-plus-isotonic,0,0.5
+chb02,chb02_19.edf,1,3369.0,3378.0,center,3370.0,1.0,-1.0,at_or_after_onset_only,3,loso_chb02,chb02,original,Nominal raw-plus-isotonic,0,0.5
+chb02,chb02_16+.edf,1,2972.0,3053.0,end,2984.0,12.0,-12.0,at_or_after_onset_only,28,loso_chb02,chb02,original,Nominal raw-plus-isotonic,0,0.5
+chb02,chb02_16.edf,1,130.0,212.0,end,140.0,10.0,-10.0,at_or_after_onset_only,32,loso_chb02,chb02,original,Nominal raw-plus-isotonic,0,0.5
+chb02,chb02_19.edf,1,3369.0,3378.0,end,3372.0,3.0,-3.0,at_or_after_onset_only,3,loso_chb02,chb02,original,Nominal raw-plus-isotonic,0,0.5
+chb02,chb02_16+.edf,1,2972.0,3053.0,center,2984.0,12.0,-12.0,at_or_after_onset_only,25,loso_chb02,chb02,original,Nominal full 0.5,0,0.5
+chb02,chb02_16.edf,1,130.0,212.0,center,140.0,10.0,-10.0,at_or_after_onset_only,29,loso_chb02,chb02,original,Nominal full 0.5,0,0.5
+chb02,chb02_19.edf,1,3369.0,3378.0,center,3372.0,3.0,-3.0,at_or_after_onset_only,2,loso_chb02,chb02,original,Nominal full 0.5,0,0.5
+chb02,chb02_16+.edf,1,2972.0,3053.0,end,2986.0,14.0,-14.0,at_or_after_onset_only,25,loso_chb02,chb02,original,Nominal full 0.5,0,0.5
+chb02,chb02_16.edf,1,130.0,212.0,end,142.0,12.0,-12.0,at_or_after_onset_only,29,loso_chb02,chb02,original,Nominal full 0.5,0,0.5
+chb02,chb02_19.edf,1,3369.0,3378.0,end,3374.0,5.0,-5.0,at_or_after_onset_only,2,loso_chb02,chb02,original,Nominal full 0.5,0,0.5
+chb02,chb02_16+.edf,1,2972.0,3053.0,center,2982.0,10.0,-10.0,at_or_after_onset_only,28,loso_chb02,chb02,original,Calibrated threshold only,0,0.44
+chb02,chb02_16.edf,1,130.0,212.0,center,138.0,8.0,-8.0,at_or_after_onset_only,32,loso_chb02,chb02,original,Calibrated threshold only,0,0.44
+chb02,chb02_19.edf,1,3369.0,3378.0,center,3370.0,1.0,-1.0,at_or_after_onset_only,3,loso_chb02,chb02,original,Calibrated threshold only,0,0.44
+chb02,chb02_16+.edf,1,2972.0,3053.0,end,2984.0,12.0,-12.0,at_or_after_onset_only,28,loso_chb02,chb02,original,Calibrated threshold only,0,0.44
+chb02,chb02_16.edf,1,130.0,212.0,end,140.0,10.0,-10.0,at_or_after_onset_only,32,loso_chb02,chb02,original,Calibrated threshold only,0,0.44
+chb02,chb02_19.edf,1,3369.0,3378.0,end,3372.0,3.0,-3.0,at_or_after_onset_only,3,loso_chb02,chb02,original,Calibrated threshold only,0,0.44
+chb02,chb02_16+.edf,1,2972.0,3053.0,center,2984.0,12.0,-12.0,at_or_after_onset_only,25,loso_chb02,chb02,original,+ persistence,0,0.44
+chb02,chb02_16.edf,1,130.0,212.0,center,140.0,10.0,-10.0,at_or_after_onset_only,29,loso_chb02,chb02,original,+ persistence,0,0.44
+chb02,chb02_19.edf,1,3369.0,3378.0,center,3372.0,3.0,-3.0,at_or_after_onset_only,2,loso_chb02,chb02,original,+ persistence,0,0.44
+chb02,chb02_16+.edf,1,2972.0,3053.0,end,2986.0,14.0,-14.0,at_or_after_onset_only,25,loso_chb02,chb02,original,+ persistence,0,0.44
+chb02,chb02_16.edf,1,130.0,212.0,end,142.0,12.0,-12.0,at_or_after_onset_only,29,loso_chb02,chb02,original,+ persistence,0,0.44
+chb02,chb02_19.edf,1,3369.0,3378.0,end,3374.0,5.0,-5.0,at_or_after_onset_only,2,loso_chb02,chb02,original,+ persistence,0,0.44
+chb02,chb02_16+.edf,1,2972.0,3053.0,center,2982.0,10.0,-10.0,at_or_after_onset_only,28,loso_chb02,chb02,original,+ attribution overlap,0,0.44
+chb02,chb02_16.edf,1,130.0,212.0,center,138.0,8.0,-8.0,at_or_after_onset_only,32,loso_chb02,chb02,original,+ attribution overlap,0,0.44
+chb02,chb02_19.edf,1,3369.0,3378.0,center,3370.0,1.0,-1.0,at_or_after_onset_only,3,loso_chb02,chb02,original,+ attribution overlap,0,0.44
+chb02,chb02_16+.edf,1,2972.0,3053.0,end,2984.0,12.0,-12.0,at_or_after_onset_only,28,loso_chb02,chb02,original,+ attribution overlap,0,0.44
+chb02,chb02_16.edf,1,130.0,212.0,end,140.0,10.0,-10.0,at_or_after_onset_only,32,loso_chb02,chb02,original,+ attribution overlap,0,0.44
+chb02,chb02_19.edf,1,3369.0,3378.0,end,3372.0,3.0,-3.0,at_or_after_onset_only,3,loso_chb02,chb02,original,+ attribution overlap,0,0.44
+chb02,chb02_16+.edf,1,2972.0,3053.0,center,2984.0,12.0,-12.0,at_or_after_onset_only,25,loso_chb02,chb02,original,+ persistence + overlap,0,0.44
+chb02,chb02_16.edf,1,130.0,212.0,center,140.0,10.0,-10.0,at_or_after_onset_only,29,loso_chb02,chb02,original,+ persistence + overlap,0,0.44
+chb02,chb02_19.edf,1,3369.0,3378.0,center,3372.0,3.0,-3.0,at_or_after_onset_only,2,loso_chb02,chb02,original,+ persistence + overlap,0,0.44
+chb02,chb02_16+.edf,1,2972.0,3053.0,end,2986.0,14.0,-14.0,at_or_after_onset_only,25,loso_chb02,chb02,original,+ persistence + overlap,0,0.44
+chb02,chb02_16.edf,1,130.0,212.0,end,142.0,12.0,-12.0,at_or_after_onset_only,29,loso_chb02,chb02,original,+ persistence + overlap,0,0.44
+chb02,chb02_19.edf,1,3369.0,3378.0,end,3374.0,5.0,-5.0,at_or_after_onset_only,2,loso_chb02,chb02,original,+ persistence + overlap,0,0.44
+chb02,chb02_16+.edf,1,2972.0,3053.0,center,2984.0,12.0,-12.0,at_or_after_onset_only,25,loso_chb02,chb02,original,Full overlap lag 4s,0,0.44
+chb02,chb02_16.edf,1,130.0,212.0,center,140.0,10.0,-10.0,at_or_after_onset_only,29,loso_chb02,chb02,original,Full overlap lag 4s,0,0.44
+chb02,chb02_19.edf,1,3369.0,3378.0,center,3372.0,3.0,-3.0,at_or_after_onset_only,2,loso_chb02,chb02,original,Full overlap lag 4s,0,0.44
+chb02,chb02_16+.edf,1,2972.0,3053.0,end,2986.0,14.0,-14.0,at_or_after_onset_only,25,loso_chb02,chb02,original,Full overlap lag 4s,0,0.44
+chb02,chb02_16.edf,1,130.0,212.0,end,142.0,12.0,-12.0,at_or_after_onset_only,29,loso_chb02,chb02,original,Full overlap lag 4s,0,0.44
+chb02,chb02_19.edf,1,3369.0,3378.0,end,3374.0,5.0,-5.0,at_or_after_onset_only,2,loso_chb02,chb02,original,Full overlap lag 4s,0,0.44
+chb02,chb02_16+.edf,1,2972.0,3053.0,center,2984.0,12.0,-12.0,at_or_after_onset_only,25,loso_chb02,chb02,original,Full overlap lag 6s,0,0.44
+chb02,chb02_16.edf,1,130.0,212.0,center,144.0,14.0,-14.0,at_or_after_onset_only,27,loso_chb02,chb02,original,Full overlap lag 6s,0,0.44
+chb02,chb02_19.edf,1,3369.0,3378.0,center,3374.0,5.0,-5.0,at_or_after_onset_only,1,loso_chb02,chb02,original,Full overlap lag 6s,0,0.44
+chb02,chb02_16+.edf,1,2972.0,3053.0,end,2986.0,14.0,-14.0,at_or_after_onset_only,25,loso_chb02,chb02,original,Full overlap lag 6s,0,0.44
+chb02,chb02_16.edf,1,130.0,212.0,end,146.0,16.0,-16.0,at_or_after_onset_only,27,loso_chb02,chb02,original,Full overlap lag 6s,0,0.44
+chb02,chb02_19.edf,1,3369.0,3378.0,end,3376.0,7.0,-7.0,at_or_after_onset_only,1,loso_chb02,chb02,original,Full overlap lag 6s,0,0.44
+chb02,chb02_16+.edf,1,2972.0,3053.0,center,2988.0,16.0,-16.0,at_or_after_onset_only,23,loso_chb02,chb02,original,Full overlap lag 10s,0,0.44
+chb02,chb02_16.edf,1,130.0,212.0,center,140.0,10.0,-10.0,at_or_after_onset_only,27,loso_chb02,chb02,original,Full overlap lag 10s,0,0.44
+chb02,chb02_19.edf,1,3369.0,3378.0,center,3374.0,5.0,-5.0,at_or_after_onset_only,1,loso_chb02,chb02,original,Full overlap lag 10s,0,0.44
+chb02,chb02_16+.edf,1,2972.0,3053.0,end,2990.0,18.0,-18.0,at_or_after_onset_only,23,loso_chb02,chb02,original,Full overlap lag 10s,0,0.44
+chb02,chb02_16.edf,1,130.0,212.0,end,142.0,12.0,-12.0,at_or_after_onset_only,27,loso_chb02,chb02,original,Full overlap lag 10s,0,0.44
+chb02,chb02_19.edf,1,3369.0,3378.0,end,3376.0,7.0,-7.0,at_or_after_onset_only,1,loso_chb02,chb02,original,Full overlap lag 10s,0,0.44
+chb02,chb02_16+.edf,1,2972.0,3053.0,center,3002.0,30.0,-30.0,at_or_after_onset_only,21,loso_chb02,chb02,original,Full overlap lag 20s,0,0.44
+chb02,chb02_16.edf,1,130.0,212.0,center,146.0,16.0,-16.0,at_or_after_onset_only,24,loso_chb02,chb02,original,Full overlap lag 20s,0,0.44
+chb02,chb02_19.edf,1,3369.0,3378.0,center,,,,missed,0,loso_chb02,chb02,original,Full overlap lag 20s,0,0.44
+chb02,chb02_16+.edf,1,2972.0,3053.0,end,3004.0,32.0,-32.0,at_or_after_onset_only,21,loso_chb02,chb02,original,Full overlap lag 20s,0,0.44
+chb02,chb02_16.edf,1,130.0,212.0,end,148.0,18.0,-18.0,at_or_after_onset_only,24,loso_chb02,chb02,original,Full overlap lag 20s,0,0.44
+chb02,chb02_19.edf,1,3369.0,3378.0,end,,,,missed,0,loso_chb02,chb02,original,Full overlap lag 20s,0,0.44
+chb02,chb02_16+.edf,1,2972.0,3053.0,center,2756.0,-216.0,216.0,pre_onset,67,loso_chb02,chb02,combined,Raw threshold 0.5,0,0.5
+chb02,chb02_16.edf,1,130.0,212.0,center,2.0,-128.0,128.0,pre_onset,50,loso_chb02,chb02,combined,Raw threshold 0.5,0,0.5
+chb02,chb02_19.edf,1,3369.0,3378.0,center,3158.0,-211.0,211.0,pre_onset,27,loso_chb02,chb02,combined,Raw threshold 0.5,0,0.5
+chb02,chb02_16+.edf,1,2972.0,3053.0,end,2758.0,-214.0,214.0,pre_onset,66,loso_chb02,chb02,combined,Raw threshold 0.5,0,0.5
+chb02,chb02_16.edf,1,130.0,212.0,end,4.0,-126.0,126.0,pre_onset,49,loso_chb02,chb02,combined,Raw threshold 0.5,0,0.5
+chb02,chb02_19.edf,1,3369.0,3378.0,end,3160.0,-209.0,209.0,pre_onset,27,loso_chb02,chb02,combined,Raw threshold 0.5,0,0.5
+chb02,chb02_16+.edf,1,2972.0,3053.0,center,2786.0,-186.0,186.0,pre_onset,51,loso_chb02,chb02,combined,Raw persistence 0.5,0,0.5
+chb02,chb02_16.edf,1,130.0,212.0,center,4.0,-126.0,126.0,pre_onset,44,loso_chb02,chb02,combined,Raw persistence 0.5,0,0.5
+chb02,chb02_19.edf,1,3369.0,3378.0,center,3160.0,-209.0,209.0,pre_onset,17,loso_chb02,chb02,combined,Raw persistence 0.5,0,0.5
+chb02,chb02_16+.edf,1,2972.0,3053.0,end,2788.0,-184.0,184.0,pre_onset,50,loso_chb02,chb02,combined,Raw persistence 0.5,0,0.5
+chb02,chb02_16.edf,1,130.0,212.0,end,6.0,-124.0,124.0,pre_onset,43,loso_chb02,chb02,combined,Raw persistence 0.5,0,0.5
+chb02,chb02_19.edf,1,3369.0,3378.0,end,3162.0,-207.0,207.0,pre_onset,17,loso_chb02,chb02,combined,Raw persistence 0.5,0,0.5
+chb02,chb02_16+.edf,1,2972.0,3053.0,center,2756.0,-216.0,216.0,pre_onset,67,loso_chb02,chb02,combined,Raw overlap 0.5,0,0.5
+chb02,chb02_16.edf,1,130.0,212.0,center,4.0,-126.0,126.0,pre_onset,46,loso_chb02,chb02,combined,Raw overlap 0.5,0,0.5
+chb02,chb02_19.edf,1,3369.0,3378.0,center,3160.0,-209.0,209.0,pre_onset,23,loso_chb02,chb02,combined,Raw overlap 0.5,0,0.5
+chb02,chb02_16+.edf,1,2972.0,3053.0,end,2758.0,-214.0,214.0,pre_onset,66,loso_chb02,chb02,combined,Raw overlap 0.5,0,0.5
+chb02,chb02_16.edf,1,130.0,212.0,end,6.0,-124.0,124.0,pre_onset,45,loso_chb02,chb02,combined,Raw overlap 0.5,0,0.5
+chb02,chb02_19.edf,1,3369.0,3378.0,end,3162.0,-207.0,207.0,pre_onset,23,loso_chb02,chb02,combined,Raw overlap 0.5,0,0.5
+chb02,chb02_16+.edf,1,2972.0,3053.0,center,2982.0,10.0,-10.0,at_or_after_onset_only,28,loso_chb02,chb02,combined,Nominal raw-plus-isotonic,0,0.5
+chb02,chb02_16.edf,1,130.0,212.0,center,138.0,8.0,-8.0,at_or_after_onset_only,32,loso_chb02,chb02,combined,Nominal raw-plus-isotonic,0,0.5
+chb02,chb02_19.edf,1,3369.0,3378.0,center,3370.0,1.0,-1.0,at_or_after_onset_only,3,loso_chb02,chb02,combined,Nominal raw-plus-isotonic,0,0.5
+chb02,chb02_16+.edf,1,2972.0,3053.0,end,2984.0,12.0,-12.0,at_or_after_onset_only,28,loso_chb02,chb02,combined,Nominal raw-plus-isotonic,0,0.5
+chb02,chb02_16.edf,1,130.0,212.0,end,140.0,10.0,-10.0,at_or_after_onset_only,32,loso_chb02,chb02,combined,Nominal raw-plus-isotonic,0,0.5
+chb02,chb02_19.edf,1,3369.0,3378.0,end,3372.0,3.0,-3.0,at_or_after_onset_only,3,loso_chb02,chb02,combined,Nominal raw-plus-isotonic,0,0.5
+chb02,chb02_16+.edf,1,2972.0,3053.0,center,2984.0,12.0,-12.0,at_or_after_onset_only,25,loso_chb02,chb02,combined,Nominal full 0.5,0,0.5
+chb02,chb02_16.edf,1,130.0,212.0,center,140.0,10.0,-10.0,at_or_after_onset_only,29,loso_chb02,chb02,combined,Nominal full 0.5,0,0.5
+chb02,chb02_19.edf,1,3369.0,3378.0,center,3372.0,3.0,-3.0,at_or_after_onset_only,2,loso_chb02,chb02,combined,Nominal full 0.5,0,0.5
+chb02,chb02_16+.edf,1,2972.0,3053.0,end,2986.0,14.0,-14.0,at_or_after_onset_only,25,loso_chb02,chb02,combined,Nominal full 0.5,0,0.5
+chb02,chb02_16.edf,1,130.0,212.0,end,142.0,12.0,-12.0,at_or_after_onset_only,29,loso_chb02,chb02,combined,Nominal full 0.5,0,0.5
+chb02,chb02_19.edf,1,3369.0,3378.0,end,3374.0,5.0,-5.0,at_or_after_onset_only,2,loso_chb02,chb02,combined,Nominal full 0.5,0,0.5
+chb02,chb02_16+.edf,1,2972.0,3053.0,center,2982.0,10.0,-10.0,at_or_after_onset_only,28,loso_chb02,chb02,combined,Calibrated threshold only,0,0.44
+chb02,chb02_16.edf,1,130.0,212.0,center,138.0,8.0,-8.0,at_or_after_onset_only,32,loso_chb02,chb02,combined,Calibrated threshold only,0,0.44
+chb02,chb02_19.edf,1,3369.0,3378.0,center,3370.0,1.0,-1.0,at_or_after_onset_only,3,loso_chb02,chb02,combined,Calibrated threshold only,0,0.44
+chb02,chb02_16+.edf,1,2972.0,3053.0,end,2984.0,12.0,-12.0,at_or_after_onset_only,28,loso_chb02,chb02,combined,Calibrated threshold only,0,0.44
+chb02,chb02_16.edf,1,130.0,212.0,end,140.0,10.0,-10.0,at_or_after_onset_only,32,loso_chb02,chb02,combined,Calibrated threshold only,0,0.44
+chb02,chb02_19.edf,1,3369.0,3378.0,end,3372.0,3.0,-3.0,at_or_after_onset_only,3,loso_chb02,chb02,combined,Calibrated threshold only,0,0.44
+chb02,chb02_16+.edf,1,2972.0,3053.0,center,2984.0,12.0,-12.0,at_or_after_onset_only,25,loso_chb02,chb02,combined,+ persistence,0,0.44
+chb02,chb02_16.edf,1,130.0,212.0,center,140.0,10.0,-10.0,at_or_after_onset_only,29,loso_chb02,chb02,combined,+ persistence,0,0.44
+chb02,chb02_19.edf,1,3369.0,3378.0,center,3372.0,3.0,-3.0,at_or_after_onset_only,2,loso_chb02,chb02,combined,+ persistence,0,0.44
+chb02,chb02_16+.edf,1,2972.0,3053.0,end,2986.0,14.0,-14.0,at_or_after_onset_only,25,loso_chb02,chb02,combined,+ persistence,0,0.44
+chb02,chb02_16.edf,1,130.0,212.0,end,142.0,12.0,-12.0,at_or_after_onset_only,29,loso_chb02,chb02,combined,+ persistence,0,0.44
+chb02,chb02_19.edf,1,3369.0,3378.0,end,3374.0,5.0,-5.0,at_or_after_onset_only,2,loso_chb02,chb02,combined,+ persistence,0,0.44
+chb02,chb02_16+.edf,1,2972.0,3053.0,center,2982.0,10.0,-10.0,at_or_after_onset_only,28,loso_chb02,chb02,combined,+ attribution overlap,0,0.44
+chb02,chb02_16.edf,1,130.0,212.0,center,138.0,8.0,-8.0,at_or_after_onset_only,32,loso_chb02,chb02,combined,+ attribution overlap,0,0.44
+chb02,chb02_19.edf,1,3369.0,3378.0,center,3370.0,1.0,-1.0,at_or_after_onset_only,3,loso_chb02,chb02,combined,+ attribution overlap,0,0.44
+chb02,chb02_16+.edf,1,2972.0,3053.0,end,2984.0,12.0,-12.0,at_or_after_onset_only,28,loso_chb02,chb02,combined,+ attribution overlap,0,0.44
+chb02,chb02_16.edf,1,130.0,212.0,end,140.0,10.0,-10.0,at_or_after_onset_only,32,loso_chb02,chb02,combined,+ attribution overlap,0,0.44
+chb02,chb02_19.edf,1,3369.0,3378.0,end,3372.0,3.0,-3.0,at_or_after_onset_only,3,loso_chb02,chb02,combined,+ attribution overlap,0,0.44
+chb02,chb02_16+.edf,1,2972.0,3053.0,center,2984.0,12.0,-12.0,at_or_after_onset_only,25,loso_chb02,chb02,combined,+ persistence + overlap,0,0.44
+chb02,chb02_16.edf,1,130.0,212.0,center,140.0,10.0,-10.0,at_or_after_onset_only,29,loso_chb02,chb02,combined,+ persistence + overlap,0,0.44
+chb02,chb02_19.edf,1,3369.0,3378.0,center,3372.0,3.0,-3.0,at_or_after_onset_only,2,loso_chb02,chb02,combined,+ persistence + overlap,0,0.44
+chb02,chb02_16+.edf,1,2972.0,3053.0,end,2986.0,14.0,-14.0,at_or_after_onset_only,25,loso_chb02,chb02,combined,+ persistence + overlap,0,0.44
+chb02,chb02_16.edf,1,130.0,212.0,end,142.0,12.0,-12.0,at_or_after_onset_only,29,loso_chb02,chb02,combined,+ persistence + overlap,0,0.44
+chb02,chb02_19.edf,1,3369.0,3378.0,end,3374.0,5.0,-5.0,at_or_after_onset_only,2,loso_chb02,chb02,combined,+ persistence + overlap,0,0.44
+chb02,chb02_16+.edf,1,2972.0,3053.0,center,2984.0,12.0,-12.0,at_or_after_onset_only,25,loso_chb02,chb02,combined,Full overlap lag 4s,0,0.44
+chb02,chb02_16.edf,1,130.0,212.0,center,140.0,10.0,-10.0,at_or_after_onset_only,29,loso_chb02,chb02,combined,Full overlap lag 4s,0,0.44
+chb02,chb02_19.edf,1,3369.0,3378.0,center,3372.0,3.0,-3.0,at_or_after_onset_only,2,loso_chb02,chb02,combined,Full overlap lag 4s,0,0.44
+chb02,chb02_16+.edf,1,2972.0,3053.0,end,2986.0,14.0,-14.0,at_or_after_onset_only,25,loso_chb02,chb02,combined,Full overlap lag 4s,0,0.44
+chb02,chb02_16.edf,1,130.0,212.0,end,142.0,12.0,-12.0,at_or_after_onset_only,29,loso_chb02,chb02,combined,Full overlap lag 4s,0,0.44
+chb02,chb02_19.edf,1,3369.0,3378.0,end,3374.0,5.0,-5.0,at_or_after_onset_only,2,loso_chb02,chb02,combined,Full overlap lag 4s,0,0.44
+chb02,chb02_16+.edf,1,2972.0,3053.0,center,2984.0,12.0,-12.0,at_or_after_onset_only,25,loso_chb02,chb02,combined,Full overlap lag 6s,0,0.44
+chb02,chb02_16.edf,1,130.0,212.0,center,144.0,14.0,-14.0,at_or_after_onset_only,27,loso_chb02,chb02,combined,Full overlap lag 6s,0,0.44
+chb02,chb02_19.edf,1,3369.0,3378.0,center,3374.0,5.0,-5.0,at_or_after_onset_only,1,loso_chb02,chb02,combined,Full overlap lag 6s,0,0.44
+chb02,chb02_16+.edf,1,2972.0,3053.0,end,2986.0,14.0,-14.0,at_or_after_onset_only,25,loso_chb02,chb02,combined,Full overlap lag 6s,0,0.44
+chb02,chb02_16.edf,1,130.0,212.0,end,146.0,16.0,-16.0,at_or_after_onset_only,27,loso_chb02,chb02,combined,Full overlap lag 6s,0,0.44
+chb02,chb02_19.edf,1,3369.0,3378.0,end,3376.0,7.0,-7.0,at_or_after_onset_only,1,loso_chb02,chb02,combined,Full overlap lag 6s,0,0.44
+chb02,chb02_16+.edf,1,2972.0,3053.0,center,2988.0,16.0,-16.0,at_or_after_onset_only,23,loso_chb02,chb02,combined,Full overlap lag 10s,0,0.44
+chb02,chb02_16.edf,1,130.0,212.0,center,140.0,10.0,-10.0,at_or_after_onset_only,27,loso_chb02,chb02,combined,Full overlap lag 10s,0,0.44
+chb02,chb02_19.edf,1,3369.0,3378.0,center,3374.0,5.0,-5.0,at_or_after_onset_only,1,loso_chb02,chb02,combined,Full overlap lag 10s,0,0.44
+chb02,chb02_16+.edf,1,2972.0,3053.0,end,2990.0,18.0,-18.0,at_or_after_onset_only,23,loso_chb02,chb02,combined,Full overlap lag 10s,0,0.44
+chb02,chb02_16.edf,1,130.0,212.0,end,142.0,12.0,-12.0,at_or_after_onset_only,27,loso_chb02,chb02,combined,Full overlap lag 10s,0,0.44
+chb02,chb02_19.edf,1,3369.0,3378.0,end,3376.0,7.0,-7.0,at_or_after_onset_only,1,loso_chb02,chb02,combined,Full overlap lag 10s,0,0.44
+chb02,chb02_16+.edf,1,2972.0,3053.0,center,3002.0,30.0,-30.0,at_or_after_onset_only,21,loso_chb02,chb02,combined,Full overlap lag 20s,0,0.44
+chb02,chb02_16.edf,1,130.0,212.0,center,146.0,16.0,-16.0,at_or_after_onset_only,24,loso_chb02,chb02,combined,Full overlap lag 20s,0,0.44
+chb02,chb02_19.edf,1,3369.0,3378.0,center,,,,missed,0,loso_chb02,chb02,combined,Full overlap lag 20s,0,0.44
+chb02,chb02_16+.edf,1,2972.0,3053.0,end,3004.0,32.0,-32.0,at_or_after_onset_only,21,loso_chb02,chb02,combined,Full overlap lag 20s,0,0.44
+chb02,chb02_16.edf,1,130.0,212.0,end,148.0,18.0,-18.0,at_or_after_onset_only,24,loso_chb02,chb02,combined,Full overlap lag 20s,0,0.44
+chb02,chb02_19.edf,1,3369.0,3378.0,end,,,,missed,0,loso_chb02,chb02,combined,Full overlap lag 20s,0,0.44
+chb03,chb03_01.edf,1,362.0,414.0,center,372.0,10.0,-10.0,at_or_after_onset_only,9,loso_chb03,chb03,original,Raw threshold 0.5,0,0.5
+chb03,chb03_02.edf,1,731.0,796.0,center,740.0,9.0,-9.0,at_or_after_onset_only,22,loso_chb03,chb03,original,Raw threshold 0.5,0,0.5
+chb03,chb03_03.edf,1,432.0,501.0,center,432.0,0.0,-0.0,at_or_after_onset_only,26,loso_chb03,chb03,original,Raw threshold 0.5,0,0.5
+chb03,chb03_04.edf,1,2162.0,2214.0,center,1972.0,-190.0,190.0,pre_onset,20,loso_chb03,chb03,original,Raw threshold 0.5,0,0.5
+chb03,chb03_34.edf,1,1982.0,2029.0,center,1704.0,-278.0,278.0,pre_onset,66,loso_chb03,chb03,original,Raw threshold 0.5,0,0.5
+chb03,chb03_35.edf,1,2592.0,2656.0,center,2312.0,-280.0,280.0,pre_onset,31,loso_chb03,chb03,original,Raw threshold 0.5,0,0.5
+chb03,chb03_36.edf,1,1725.0,1778.0,center,1580.0,-145.0,145.0,pre_onset,29,loso_chb03,chb03,original,Raw threshold 0.5,0,0.5
+chb03,chb03_01.edf,1,362.0,414.0,end,374.0,12.0,-12.0,at_or_after_onset_only,9,loso_chb03,chb03,original,Raw threshold 0.5,0,0.5
+chb03,chb03_02.edf,1,731.0,796.0,end,742.0,11.0,-11.0,at_or_after_onset_only,22,loso_chb03,chb03,original,Raw threshold 0.5,0,0.5
+chb03,chb03_03.edf,1,432.0,501.0,end,434.0,2.0,-2.0,at_or_after_onset_only,25,loso_chb03,chb03,original,Raw threshold 0.5,0,0.5
+chb03,chb03_04.edf,1,2162.0,2214.0,end,1974.0,-188.0,188.0,pre_onset,19,loso_chb03,chb03,original,Raw threshold 0.5,0,0.5
+chb03,chb03_34.edf,1,1982.0,2029.0,end,1706.0,-276.0,276.0,pre_onset,65,loso_chb03,chb03,original,Raw threshold 0.5,0,0.5
+chb03,chb03_35.edf,1,2592.0,2656.0,end,2314.0,-278.0,278.0,pre_onset,30,loso_chb03,chb03,original,Raw threshold 0.5,0,0.5
+chb03,chb03_36.edf,1,1725.0,1778.0,end,1582.0,-143.0,143.0,pre_onset,28,loso_chb03,chb03,original,Raw threshold 0.5,0,0.5
+chb03,chb03_01.edf,1,362.0,414.0,center,396.0,34.0,-34.0,at_or_after_onset_only,4,loso_chb03,chb03,original,Raw persistence 0.5,0,0.5
+chb03,chb03_02.edf,1,731.0,796.0,center,742.0,11.0,-11.0,at_or_after_onset_only,20,loso_chb03,chb03,original,Raw persistence 0.5,0,0.5
+chb03,chb03_03.edf,1,432.0,501.0,center,434.0,2.0,-2.0,at_or_after_onset_only,22,loso_chb03,chb03,original,Raw persistence 0.5,0,0.5
+chb03,chb03_04.edf,1,2162.0,2214.0,center,2174.0,12.0,-12.0,at_or_after_onset_only,15,loso_chb03,chb03,original,Raw persistence 0.5,0,0.5
+chb03,chb03_34.edf,1,1982.0,2029.0,center,1706.0,-276.0,276.0,pre_onset,37,loso_chb03,chb03,original,Raw persistence 0.5,0,0.5
+chb03,chb03_35.edf,1,2592.0,2656.0,center,2508.0,-84.0,84.0,pre_onset,23,loso_chb03,chb03,original,Raw persistence 0.5,0,0.5
+chb03,chb03_36.edf,1,1725.0,1778.0,center,1582.0,-143.0,143.0,pre_onset,24,loso_chb03,chb03,original,Raw persistence 0.5,0,0.5
+chb03,chb03_01.edf,1,362.0,414.0,end,398.0,36.0,-36.0,at_or_after_onset_only,4,loso_chb03,chb03,original,Raw persistence 0.5,0,0.5
+chb03,chb03_02.edf,1,731.0,796.0,end,744.0,13.0,-13.0,at_or_after_onset_only,20,loso_chb03,chb03,original,Raw persistence 0.5,0,0.5
+chb03,chb03_03.edf,1,432.0,501.0,end,436.0,4.0,-4.0,at_or_after_onset_only,21,loso_chb03,chb03,original,Raw persistence 0.5,0,0.5
+chb03,chb03_04.edf,1,2162.0,2214.0,end,2176.0,14.0,-14.0,at_or_after_onset_only,14,loso_chb03,chb03,original,Raw persistence 0.5,0,0.5
+chb03,chb03_34.edf,1,1982.0,2029.0,end,1708.0,-274.0,274.0,pre_onset,36,loso_chb03,chb03,original,Raw persistence 0.5,0,0.5
+chb03,chb03_35.edf,1,2592.0,2656.0,end,2510.0,-82.0,82.0,pre_onset,22,loso_chb03,chb03,original,Raw persistence 0.5,0,0.5
+chb03,chb03_36.edf,1,1725.0,1778.0,end,1584.0,-141.0,141.0,pre_onset,23,loso_chb03,chb03,original,Raw persistence 0.5,0,0.5
+chb03,chb03_01.edf,1,362.0,414.0,center,372.0,10.0,-10.0,at_or_after_onset_only,9,loso_chb03,chb03,original,Raw overlap 0.5,0,0.5
+chb03,chb03_02.edf,1,731.0,796.0,center,740.0,9.0,-9.0,at_or_after_onset_only,22,loso_chb03,chb03,original,Raw overlap 0.5,0,0.5
+chb03,chb03_03.edf,1,432.0,501.0,center,434.0,2.0,-2.0,at_or_after_onset_only,25,loso_chb03,chb03,original,Raw overlap 0.5,0,0.5
+chb03,chb03_04.edf,1,2162.0,2214.0,center,1972.0,-190.0,190.0,pre_onset,20,loso_chb03,chb03,original,Raw overlap 0.5,0,0.5
+chb03,chb03_34.edf,1,1982.0,2029.0,center,1704.0,-278.0,278.0,pre_onset,55,loso_chb03,chb03,original,Raw overlap 0.5,0,0.5
+chb03,chb03_35.edf,1,2592.0,2656.0,center,2312.0,-280.0,280.0,pre_onset,25,loso_chb03,chb03,original,Raw overlap 0.5,0,0.5
+chb03,chb03_36.edf,1,1725.0,1778.0,center,1582.0,-143.0,143.0,pre_onset,25,loso_chb03,chb03,original,Raw overlap 0.5,0,0.5
+chb03,chb03_01.edf,1,362.0,414.0,end,374.0,12.0,-12.0,at_or_after_onset_only,9,loso_chb03,chb03,original,Raw overlap 0.5,0,0.5
+chb03,chb03_02.edf,1,731.0,796.0,end,742.0,11.0,-11.0,at_or_after_onset_only,22,loso_chb03,chb03,original,Raw overlap 0.5,0,0.5
+chb03,chb03_03.edf,1,432.0,501.0,end,436.0,4.0,-4.0,at_or_after_onset_only,24,loso_chb03,chb03,original,Raw overlap 0.5,0,0.5
+chb03,chb03_04.edf,1,2162.0,2214.0,end,1974.0,-188.0,188.0,pre_onset,19,loso_chb03,chb03,original,Raw overlap 0.5,0,0.5
+chb03,chb03_34.edf,1,1982.0,2029.0,end,1706.0,-276.0,276.0,pre_onset,54,loso_chb03,chb03,original,Raw overlap 0.5,0,0.5
+chb03,chb03_35.edf,1,2592.0,2656.0,end,2314.0,-278.0,278.0,pre_onset,24,loso_chb03,chb03,original,Raw overlap 0.5,0,0.5
+chb03,chb03_36.edf,1,1725.0,1778.0,end,1584.0,-141.0,141.0,pre_onset,24,loso_chb03,chb03,original,Raw overlap 0.5,0,0.5
+chb03,chb03_01.edf,1,362.0,414.0,center,,,,missed,0,loso_chb03,chb03,original,Nominal raw-plus-isotonic,0,0.5
+chb03,chb03_02.edf,1,731.0,796.0,center,,,,missed,0,loso_chb03,chb03,original,Nominal raw-plus-isotonic,0,0.5
+chb03,chb03_03.edf,1,432.0,501.0,center,,,,missed,0,loso_chb03,chb03,original,Nominal raw-plus-isotonic,0,0.5
+chb03,chb03_04.edf,1,2162.0,2214.0,center,,,,missed,0,loso_chb03,chb03,original,Nominal raw-plus-isotonic,0,0.5
+chb03,chb03_34.edf,1,1982.0,2029.0,center,2006.0,24.0,-24.0,at_or_after_onset_only,3,loso_chb03,chb03,original,Nominal raw-plus-isotonic,0,0.5
+chb03,chb03_35.edf,1,2592.0,2656.0,center,2616.0,24.0,-24.0,at_or_after_onset_only,2,loso_chb03,chb03,original,Nominal raw-plus-isotonic,0,0.5
+chb03,chb03_36.edf,1,1725.0,1778.0,center,,,,missed,0,loso_chb03,chb03,original,Nominal raw-plus-isotonic,0,0.5
+chb03,chb03_01.edf,1,362.0,414.0,end,,,,missed,0,loso_chb03,chb03,original,Nominal raw-plus-isotonic,0,0.5
+chb03,chb03_02.edf,1,731.0,796.0,end,,,,missed,0,loso_chb03,chb03,original,Nominal raw-plus-isotonic,0,0.5
+chb03,chb03_03.edf,1,432.0,501.0,end,,,,missed,0,loso_chb03,chb03,original,Nominal raw-plus-isotonic,0,0.5
+chb03,chb03_04.edf,1,2162.0,2214.0,end,,,,missed,0,loso_chb03,chb03,original,Nominal raw-plus-isotonic,0,0.5
+chb03,chb03_34.edf,1,1982.0,2029.0,end,2008.0,26.0,-26.0,at_or_after_onset_only,3,loso_chb03,chb03,original,Nominal raw-plus-isotonic,0,0.5
+chb03,chb03_35.edf,1,2592.0,2656.0,end,2618.0,26.0,-26.0,at_or_after_onset_only,2,loso_chb03,chb03,original,Nominal raw-plus-isotonic,0,0.5
+chb03,chb03_36.edf,1,1725.0,1778.0,end,,,,missed,0,loso_chb03,chb03,original,Nominal raw-plus-isotonic,0,0.5
+chb03,chb03_01.edf,1,362.0,414.0,center,,,,missed,0,loso_chb03,chb03,original,Nominal full 0.5,0,0.5
+chb03,chb03_02.edf,1,731.0,796.0,center,,,,missed,0,loso_chb03,chb03,original,Nominal full 0.5,0,0.5
+chb03,chb03_03.edf,1,432.0,501.0,center,,,,missed,0,loso_chb03,chb03,original,Nominal full 0.5,0,0.5
+chb03,chb03_04.edf,1,2162.0,2214.0,center,,,,missed,0,loso_chb03,chb03,original,Nominal full 0.5,0,0.5
+chb03,chb03_34.edf,1,1982.0,2029.0,center,2008.0,26.0,-26.0,at_or_after_onset_only,1,loso_chb03,chb03,original,Nominal full 0.5,0,0.5
+chb03,chb03_35.edf,1,2592.0,2656.0,center,2618.0,26.0,-26.0,at_or_after_onset_only,1,loso_chb03,chb03,original,Nominal full 0.5,0,0.5
+chb03,chb03_36.edf,1,1725.0,1778.0,center,,,,missed,0,loso_chb03,chb03,original,Nominal full 0.5,0,0.5
+chb03,chb03_01.edf,1,362.0,414.0,end,,,,missed,0,loso_chb03,chb03,original,Nominal full 0.5,0,0.5
+chb03,chb03_02.edf,1,731.0,796.0,end,,,,missed,0,loso_chb03,chb03,original,Nominal full 0.5,0,0.5
+chb03,chb03_03.edf,1,432.0,501.0,end,,,,missed,0,loso_chb03,chb03,original,Nominal full 0.5,0,0.5
+chb03,chb03_04.edf,1,2162.0,2214.0,end,,,,missed,0,loso_chb03,chb03,original,Nominal full 0.5,0,0.5
+chb03,chb03_34.edf,1,1982.0,2029.0,end,2010.0,28.0,-28.0,at_or_after_onset_only,1,loso_chb03,chb03,original,Nominal full 0.5,0,0.5
+chb03,chb03_35.edf,1,2592.0,2656.0,end,2620.0,28.0,-28.0,at_or_after_onset_only,1,loso_chb03,chb03,original,Nominal full 0.5,0,0.5
+chb03,chb03_36.edf,1,1725.0,1778.0,end,,,,missed,0,loso_chb03,chb03,original,Nominal full 0.5,0,0.5
+chb03,chb03_01.edf,1,362.0,414.0,center,,,,missed,0,loso_chb03,chb03,original,Calibrated threshold only,0,0.34
+chb03,chb03_02.edf,1,731.0,796.0,center,,,,missed,0,loso_chb03,chb03,original,Calibrated threshold only,0,0.34
+chb03,chb03_03.edf,1,432.0,501.0,center,,,,missed,0,loso_chb03,chb03,original,Calibrated threshold only,0,0.34
+chb03,chb03_04.edf,1,2162.0,2214.0,center,,,,missed,0,loso_chb03,chb03,original,Calibrated threshold only,0,0.34
+chb03,chb03_34.edf,1,1982.0,2029.0,center,2006.0,24.0,-24.0,at_or_after_onset_only,3,loso_chb03,chb03,original,Calibrated threshold only,0,0.34
+chb03,chb03_35.edf,1,2592.0,2656.0,center,2616.0,24.0,-24.0,at_or_after_onset_only,2,loso_chb03,chb03,original,Calibrated threshold only,0,0.34
+chb03,chb03_36.edf,1,1725.0,1778.0,center,,,,missed,0,loso_chb03,chb03,original,Calibrated threshold only,0,0.34
+chb03,chb03_01.edf,1,362.0,414.0,end,,,,missed,0,loso_chb03,chb03,original,Calibrated threshold only,0,0.34
+chb03,chb03_02.edf,1,731.0,796.0,end,,,,missed,0,loso_chb03,chb03,original,Calibrated threshold only,0,0.34
+chb03,chb03_03.edf,1,432.0,501.0,end,,,,missed,0,loso_chb03,chb03,original,Calibrated threshold only,0,0.34
+chb03,chb03_04.edf,1,2162.0,2214.0,end,,,,missed,0,loso_chb03,chb03,original,Calibrated threshold only,0,0.34
+chb03,chb03_34.edf,1,1982.0,2029.0,end,2008.0,26.0,-26.0,at_or_after_onset_only,3,loso_chb03,chb03,original,Calibrated threshold only,0,0.34
+chb03,chb03_35.edf,1,2592.0,2656.0,end,2618.0,26.0,-26.0,at_or_after_onset_only,2,loso_chb03,chb03,original,Calibrated threshold only,0,0.34
+chb03,chb03_36.edf,1,1725.0,1778.0,end,,,,missed,0,loso_chb03,chb03,original,Calibrated threshold only,0,0.34
+chb03,chb03_01.edf,1,362.0,414.0,center,,,,missed,0,loso_chb03,chb03,original,+ persistence,0,0.34
+chb03,chb03_02.edf,1,731.0,796.0,center,,,,missed,0,loso_chb03,chb03,original,+ persistence,0,0.34
+chb03,chb03_03.edf,1,432.0,501.0,center,,,,missed,0,loso_chb03,chb03,original,+ persistence,0,0.34
+chb03,chb03_04.edf,1,2162.0,2214.0,center,,,,missed,0,loso_chb03,chb03,original,+ persistence,0,0.34
+chb03,chb03_34.edf,1,1982.0,2029.0,center,2008.0,26.0,-26.0,at_or_after_onset_only,1,loso_chb03,chb03,original,+ persistence,0,0.34
+chb03,chb03_35.edf,1,2592.0,2656.0,center,2618.0,26.0,-26.0,at_or_after_onset_only,1,loso_chb03,chb03,original,+ persistence,0,0.34
+chb03,chb03_36.edf,1,1725.0,1778.0,center,,,,missed,0,loso_chb03,chb03,original,+ persistence,0,0.34
+chb03,chb03_01.edf,1,362.0,414.0,end,,,,missed,0,loso_chb03,chb03,original,+ persistence,0,0.34
+chb03,chb03_02.edf,1,731.0,796.0,end,,,,missed,0,loso_chb03,chb03,original,+ persistence,0,0.34
+chb03,chb03_03.edf,1,432.0,501.0,end,,,,missed,0,loso_chb03,chb03,original,+ persistence,0,0.34
+chb03,chb03_04.edf,1,2162.0,2214.0,end,,,,missed,0,loso_chb03,chb03,original,+ persistence,0,0.34
+chb03,chb03_34.edf,1,1982.0,2029.0,end,2010.0,28.0,-28.0,at_or_after_onset_only,1,loso_chb03,chb03,original,+ persistence,0,0.34
+chb03,chb03_35.edf,1,2592.0,2656.0,end,2620.0,28.0,-28.0,at_or_after_onset_only,1,loso_chb03,chb03,original,+ persistence,0,0.34
+chb03,chb03_36.edf,1,1725.0,1778.0,end,,,,missed,0,loso_chb03,chb03,original,+ persistence,0,0.34
+chb03,chb03_01.edf,1,362.0,414.0,center,,,,missed,0,loso_chb03,chb03,original,+ attribution overlap,0,0.34
+chb03,chb03_02.edf,1,731.0,796.0,center,,,,missed,0,loso_chb03,chb03,original,+ attribution overlap,0,0.34
+chb03,chb03_03.edf,1,432.0,501.0,center,,,,missed,0,loso_chb03,chb03,original,+ attribution overlap,0,0.34
+chb03,chb03_04.edf,1,2162.0,2214.0,center,,,,missed,0,loso_chb03,chb03,original,+ attribution overlap,0,0.34
+chb03,chb03_34.edf,1,1982.0,2029.0,center,2006.0,24.0,-24.0,at_or_after_onset_only,3,loso_chb03,chb03,original,+ attribution overlap,0,0.34
+chb03,chb03_35.edf,1,2592.0,2656.0,center,2616.0,24.0,-24.0,at_or_after_onset_only,2,loso_chb03,chb03,original,+ attribution overlap,0,0.34
+chb03,chb03_36.edf,1,1725.0,1778.0,center,,,,missed,0,loso_chb03,chb03,original,+ attribution overlap,0,0.34
+chb03,chb03_01.edf,1,362.0,414.0,end,,,,missed,0,loso_chb03,chb03,original,+ attribution overlap,0,0.34
+chb03,chb03_02.edf,1,731.0,796.0,end,,,,missed,0,loso_chb03,chb03,original,+ attribution overlap,0,0.34
+chb03,chb03_03.edf,1,432.0,501.0,end,,,,missed,0,loso_chb03,chb03,original,+ attribution overlap,0,0.34
+chb03,chb03_04.edf,1,2162.0,2214.0,end,,,,missed,0,loso_chb03,chb03,original,+ attribution overlap,0,0.34
+chb03,chb03_34.edf,1,1982.0,2029.0,end,2008.0,26.0,-26.0,at_or_after_onset_only,3,loso_chb03,chb03,original,+ attribution overlap,0,0.34
+chb03,chb03_35.edf,1,2592.0,2656.0,end,2618.0,26.0,-26.0,at_or_after_onset_only,2,loso_chb03,chb03,original,+ attribution overlap,0,0.34
+chb03,chb03_36.edf,1,1725.0,1778.0,end,,,,missed,0,loso_chb03,chb03,original,+ attribution overlap,0,0.34
+chb03,chb03_01.edf,1,362.0,414.0,center,,,,missed,0,loso_chb03,chb03,original,+ persistence + overlap,0,0.34
+chb03,chb03_02.edf,1,731.0,796.0,center,,,,missed,0,loso_chb03,chb03,original,+ persistence + overlap,0,0.34
+chb03,chb03_03.edf,1,432.0,501.0,center,,,,missed,0,loso_chb03,chb03,original,+ persistence + overlap,0,0.34
+chb03,chb03_04.edf,1,2162.0,2214.0,center,,,,missed,0,loso_chb03,chb03,original,+ persistence + overlap,0,0.34
+chb03,chb03_34.edf,1,1982.0,2029.0,center,2008.0,26.0,-26.0,at_or_after_onset_only,1,loso_chb03,chb03,original,+ persistence + overlap,0,0.34
+chb03,chb03_35.edf,1,2592.0,2656.0,center,2618.0,26.0,-26.0,at_or_after_onset_only,1,loso_chb03,chb03,original,+ persistence + overlap,0,0.34
+chb03,chb03_36.edf,1,1725.0,1778.0,center,,,,missed,0,loso_chb03,chb03,original,+ persistence + overlap,0,0.34
+chb03,chb03_01.edf,1,362.0,414.0,end,,,,missed,0,loso_chb03,chb03,original,+ persistence + overlap,0,0.34
+chb03,chb03_02.edf,1,731.0,796.0,end,,,,missed,0,loso_chb03,chb03,original,+ persistence + overlap,0,0.34
+chb03,chb03_03.edf,1,432.0,501.0,end,,,,missed,0,loso_chb03,chb03,original,+ persistence + overlap,0,0.34
+chb03,chb03_04.edf,1,2162.0,2214.0,end,,,,missed,0,loso_chb03,chb03,original,+ persistence + overlap,0,0.34
+chb03,chb03_34.edf,1,1982.0,2029.0,end,2010.0,28.0,-28.0,at_or_after_onset_only,1,loso_chb03,chb03,original,+ persistence + overlap,0,0.34
+chb03,chb03_35.edf,1,2592.0,2656.0,end,2620.0,28.0,-28.0,at_or_after_onset_only,1,loso_chb03,chb03,original,+ persistence + overlap,0,0.34
+chb03,chb03_36.edf,1,1725.0,1778.0,end,,,,missed,0,loso_chb03,chb03,original,+ persistence + overlap,0,0.34
+chb03,chb03_01.edf,1,362.0,414.0,center,,,,missed,0,loso_chb03,chb03,original,Full overlap lag 4s,0,0.34
+chb03,chb03_02.edf,1,731.0,796.0,center,,,,missed,0,loso_chb03,chb03,original,Full overlap lag 4s,0,0.34
+chb03,chb03_03.edf,1,432.0,501.0,center,,,,missed,0,loso_chb03,chb03,original,Full overlap lag 4s,0,0.34
+chb03,chb03_04.edf,1,2162.0,2214.0,center,,,,missed,0,loso_chb03,chb03,original,Full overlap lag 4s,0,0.34
+chb03,chb03_34.edf,1,1982.0,2029.0,center,2008.0,26.0,-26.0,at_or_after_onset_only,1,loso_chb03,chb03,original,Full overlap lag 4s,0,0.34
+chb03,chb03_35.edf,1,2592.0,2656.0,center,2618.0,26.0,-26.0,at_or_after_onset_only,1,loso_chb03,chb03,original,Full overlap lag 4s,0,0.34
+chb03,chb03_36.edf,1,1725.0,1778.0,center,,,,missed,0,loso_chb03,chb03,original,Full overlap lag 4s,0,0.34
+chb03,chb03_01.edf,1,362.0,414.0,end,,,,missed,0,loso_chb03,chb03,original,Full overlap lag 4s,0,0.34
+chb03,chb03_02.edf,1,731.0,796.0,end,,,,missed,0,loso_chb03,chb03,original,Full overlap lag 4s,0,0.34
+chb03,chb03_03.edf,1,432.0,501.0,end,,,,missed,0,loso_chb03,chb03,original,Full overlap lag 4s,0,0.34
+chb03,chb03_04.edf,1,2162.0,2214.0,end,,,,missed,0,loso_chb03,chb03,original,Full overlap lag 4s,0,0.34
+chb03,chb03_34.edf,1,1982.0,2029.0,end,2010.0,28.0,-28.0,at_or_after_onset_only,1,loso_chb03,chb03,original,Full overlap lag 4s,0,0.34
+chb03,chb03_35.edf,1,2592.0,2656.0,end,2620.0,28.0,-28.0,at_or_after_onset_only,1,loso_chb03,chb03,original,Full overlap lag 4s,0,0.34
+chb03,chb03_36.edf,1,1725.0,1778.0,end,,,,missed,0,loso_chb03,chb03,original,Full overlap lag 4s,0,0.34
+chb03,chb03_01.edf,1,362.0,414.0,center,,,,missed,0,loso_chb03,chb03,original,Full overlap lag 6s,0,0.34
+chb03,chb03_02.edf,1,731.0,796.0,center,,,,missed,0,loso_chb03,chb03,original,Full overlap lag 6s,0,0.34
+chb03,chb03_03.edf,1,432.0,501.0,center,,,,missed,0,loso_chb03,chb03,original,Full overlap lag 6s,0,0.34
+chb03,chb03_04.edf,1,2162.0,2214.0,center,,,,missed,0,loso_chb03,chb03,original,Full overlap lag 6s,0,0.34
+chb03,chb03_34.edf,1,1982.0,2029.0,center,2008.0,26.0,-26.0,at_or_after_onset_only,1,loso_chb03,chb03,original,Full overlap lag 6s,0,0.34
+chb03,chb03_35.edf,1,2592.0,2656.0,center,,,,missed,0,loso_chb03,chb03,original,Full overlap lag 6s,0,0.34
+chb03,chb03_36.edf,1,1725.0,1778.0,center,,,,missed,0,loso_chb03,chb03,original,Full overlap lag 6s,0,0.34
+chb03,chb03_01.edf,1,362.0,414.0,end,,,,missed,0,loso_chb03,chb03,original,Full overlap lag 6s,0,0.34
+chb03,chb03_02.edf,1,731.0,796.0,end,,,,missed,0,loso_chb03,chb03,original,Full overlap lag 6s,0,0.34
+chb03,chb03_03.edf,1,432.0,501.0,end,,,,missed,0,loso_chb03,chb03,original,Full overlap lag 6s,0,0.34
+chb03,chb03_04.edf,1,2162.0,2214.0,end,,,,missed,0,loso_chb03,chb03,original,Full overlap lag 6s,0,0.34
+chb03,chb03_34.edf,1,1982.0,2029.0,end,2010.0,28.0,-28.0,at_or_after_onset_only,1,loso_chb03,chb03,original,Full overlap lag 6s,0,0.34
+chb03,chb03_35.edf,1,2592.0,2656.0,end,,,,missed,0,loso_chb03,chb03,original,Full overlap lag 6s,0,0.34
+chb03,chb03_36.edf,1,1725.0,1778.0,end,,,,missed,0,loso_chb03,chb03,original,Full overlap lag 6s,0,0.34
+chb03,chb03_01.edf,1,362.0,414.0,center,,,,missed,0,loso_chb03,chb03,original,Full overlap lag 10s,0,0.34
+chb03,chb03_02.edf,1,731.0,796.0,center,,,,missed,0,loso_chb03,chb03,original,Full overlap lag 10s,0,0.34
+chb03,chb03_03.edf,1,432.0,501.0,center,,,,missed,0,loso_chb03,chb03,original,Full overlap lag 10s,0,0.34
+chb03,chb03_04.edf,1,2162.0,2214.0,center,,,,missed,0,loso_chb03,chb03,original,Full overlap lag 10s,0,0.34
+chb03,chb03_34.edf,1,1982.0,2029.0,center,2008.0,26.0,-26.0,at_or_after_onset_only,1,loso_chb03,chb03,original,Full overlap lag 10s,0,0.34
+chb03,chb03_35.edf,1,2592.0,2656.0,center,2618.0,26.0,-26.0,at_or_after_onset_only,1,loso_chb03,chb03,original,Full overlap lag 10s,0,0.34
+chb03,chb03_36.edf,1,1725.0,1778.0,center,,,,missed,0,loso_chb03,chb03,original,Full overlap lag 10s,0,0.34
+chb03,chb03_01.edf,1,362.0,414.0,end,,,,missed,0,loso_chb03,chb03,original,Full overlap lag 10s,0,0.34
+chb03,chb03_02.edf,1,731.0,796.0,end,,,,missed,0,loso_chb03,chb03,original,Full overlap lag 10s,0,0.34
+chb03,chb03_03.edf,1,432.0,501.0,end,,,,missed,0,loso_chb03,chb03,original,Full overlap lag 10s,0,0.34
+chb03,chb03_04.edf,1,2162.0,2214.0,end,,,,missed,0,loso_chb03,chb03,original,Full overlap lag 10s,0,0.34
+chb03,chb03_34.edf,1,1982.0,2029.0,end,2010.0,28.0,-28.0,at_or_after_onset_only,1,loso_chb03,chb03,original,Full overlap lag 10s,0,0.34
+chb03,chb03_35.edf,1,2592.0,2656.0,end,2620.0,28.0,-28.0,at_or_after_onset_only,1,loso_chb03,chb03,original,Full overlap lag 10s,0,0.34
+chb03,chb03_36.edf,1,1725.0,1778.0,end,,,,missed,0,loso_chb03,chb03,original,Full overlap lag 10s,0,0.34
+chb03,chb03_01.edf,1,362.0,414.0,center,,,,missed,0,loso_chb03,chb03,original,Full overlap lag 20s,0,0.34
+chb03,chb03_02.edf,1,731.0,796.0,center,,,,missed,0,loso_chb03,chb03,original,Full overlap lag 20s,0,0.34
+chb03,chb03_03.edf,1,432.0,501.0,center,,,,missed,0,loso_chb03,chb03,original,Full overlap lag 20s,0,0.34
+chb03,chb03_04.edf,1,2162.0,2214.0,center,,,,missed,0,loso_chb03,chb03,original,Full overlap lag 20s,0,0.34
+chb03,chb03_34.edf,1,1982.0,2029.0,center,,,,missed,0,loso_chb03,chb03,original,Full overlap lag 20s,0,0.34
+chb03,chb03_35.edf,1,2592.0,2656.0,center,,,,missed,0,loso_chb03,chb03,original,Full overlap lag 20s,0,0.34
+chb03,chb03_36.edf,1,1725.0,1778.0,center,,,,missed,0,loso_chb03,chb03,original,Full overlap lag 20s,0,0.34
+chb03,chb03_01.edf,1,362.0,414.0,end,,,,missed,0,loso_chb03,chb03,original,Full overlap lag 20s,0,0.34
+chb03,chb03_02.edf,1,731.0,796.0,end,,,,missed,0,loso_chb03,chb03,original,Full overlap lag 20s,0,0.34
+chb03,chb03_03.edf,1,432.0,501.0,end,,,,missed,0,loso_chb03,chb03,original,Full overlap lag 20s,0,0.34
+chb03,chb03_04.edf,1,2162.0,2214.0,end,,,,missed,0,loso_chb03,chb03,original,Full overlap lag 20s,0,0.34
+chb03,chb03_34.edf,1,1982.0,2029.0,end,,,,missed,0,loso_chb03,chb03,original,Full overlap lag 20s,0,0.34
+chb03,chb03_35.edf,1,2592.0,2656.0,end,,,,missed,0,loso_chb03,chb03,original,Full overlap lag 20s,0,0.34
+chb03,chb03_36.edf,1,1725.0,1778.0,end,,,,missed,0,loso_chb03,chb03,original,Full overlap lag 20s,0,0.34
+chb03,chb03_01.edf,1,362.0,414.0,center,372.0,10.0,-10.0,at_or_after_onset_only,9,loso_chb03,chb03,combined,Raw threshold 0.5,0,0.5
+chb03,chb03_02.edf,1,731.0,796.0,center,740.0,9.0,-9.0,at_or_after_onset_only,22,loso_chb03,chb03,combined,Raw threshold 0.5,0,0.5
+chb03,chb03_03.edf,1,432.0,501.0,center,432.0,0.0,-0.0,at_or_after_onset_only,26,loso_chb03,chb03,combined,Raw threshold 0.5,0,0.5
+chb03,chb03_04.edf,1,2162.0,2214.0,center,1972.0,-190.0,190.0,pre_onset,20,loso_chb03,chb03,combined,Raw threshold 0.5,0,0.5
+chb03,chb03_34.edf,1,1982.0,2029.0,center,1704.0,-278.0,278.0,pre_onset,66,loso_chb03,chb03,combined,Raw threshold 0.5,0,0.5
+chb03,chb03_35.edf,1,2592.0,2656.0,center,2312.0,-280.0,280.0,pre_onset,31,loso_chb03,chb03,combined,Raw threshold 0.5,0,0.5
+chb03,chb03_36.edf,1,1725.0,1778.0,center,1580.0,-145.0,145.0,pre_onset,29,loso_chb03,chb03,combined,Raw threshold 0.5,0,0.5
+chb03,chb03_01.edf,1,362.0,414.0,end,374.0,12.0,-12.0,at_or_after_onset_only,9,loso_chb03,chb03,combined,Raw threshold 0.5,0,0.5
+chb03,chb03_02.edf,1,731.0,796.0,end,742.0,11.0,-11.0,at_or_after_onset_only,22,loso_chb03,chb03,combined,Raw threshold 0.5,0,0.5
+chb03,chb03_03.edf,1,432.0,501.0,end,434.0,2.0,-2.0,at_or_after_onset_only,25,loso_chb03,chb03,combined,Raw threshold 0.5,0,0.5
+chb03,chb03_04.edf,1,2162.0,2214.0,end,1974.0,-188.0,188.0,pre_onset,19,loso_chb03,chb03,combined,Raw threshold 0.5,0,0.5
+chb03,chb03_34.edf,1,1982.0,2029.0,end,1706.0,-276.0,276.0,pre_onset,65,loso_chb03,chb03,combined,Raw threshold 0.5,0,0.5
+chb03,chb03_35.edf,1,2592.0,2656.0,end,2314.0,-278.0,278.0,pre_onset,30,loso_chb03,chb03,combined,Raw threshold 0.5,0,0.5
+chb03,chb03_36.edf,1,1725.0,1778.0,end,1582.0,-143.0,143.0,pre_onset,28,loso_chb03,chb03,combined,Raw threshold 0.5,0,0.5
+chb03,chb03_01.edf,1,362.0,414.0,center,396.0,34.0,-34.0,at_or_after_onset_only,4,loso_chb03,chb03,combined,Raw persistence 0.5,0,0.5
+chb03,chb03_02.edf,1,731.0,796.0,center,742.0,11.0,-11.0,at_or_after_onset_only,20,loso_chb03,chb03,combined,Raw persistence 0.5,0,0.5
+chb03,chb03_03.edf,1,432.0,501.0,center,434.0,2.0,-2.0,at_or_after_onset_only,22,loso_chb03,chb03,combined,Raw persistence 0.5,0,0.5
+chb03,chb03_04.edf,1,2162.0,2214.0,center,2174.0,12.0,-12.0,at_or_after_onset_only,15,loso_chb03,chb03,combined,Raw persistence 0.5,0,0.5
+chb03,chb03_34.edf,1,1982.0,2029.0,center,1706.0,-276.0,276.0,pre_onset,37,loso_chb03,chb03,combined,Raw persistence 0.5,0,0.5
+chb03,chb03_35.edf,1,2592.0,2656.0,center,2508.0,-84.0,84.0,pre_onset,23,loso_chb03,chb03,combined,Raw persistence 0.5,0,0.5
+chb03,chb03_36.edf,1,1725.0,1778.0,center,1582.0,-143.0,143.0,pre_onset,24,loso_chb03,chb03,combined,Raw persistence 0.5,0,0.5
+chb03,chb03_01.edf,1,362.0,414.0,end,398.0,36.0,-36.0,at_or_after_onset_only,4,loso_chb03,chb03,combined,Raw persistence 0.5,0,0.5
+chb03,chb03_02.edf,1,731.0,796.0,end,744.0,13.0,-13.0,at_or_after_onset_only,20,loso_chb03,chb03,combined,Raw persistence 0.5,0,0.5
+chb03,chb03_03.edf,1,432.0,501.0,end,436.0,4.0,-4.0,at_or_after_onset_only,21,loso_chb03,chb03,combined,Raw persistence 0.5,0,0.5
+chb03,chb03_04.edf,1,2162.0,2214.0,end,2176.0,14.0,-14.0,at_or_after_onset_only,14,loso_chb03,chb03,combined,Raw persistence 0.5,0,0.5
+chb03,chb03_34.edf,1,1982.0,2029.0,end,1708.0,-274.0,274.0,pre_onset,36,loso_chb03,chb03,combined,Raw persistence 0.5,0,0.5
+chb03,chb03_35.edf,1,2592.0,2656.0,end,2510.0,-82.0,82.0,pre_onset,22,loso_chb03,chb03,combined,Raw persistence 0.5,0,0.5
+chb03,chb03_36.edf,1,1725.0,1778.0,end,1584.0,-141.0,141.0,pre_onset,23,loso_chb03,chb03,combined,Raw persistence 0.5,0,0.5
+chb03,chb03_01.edf,1,362.0,414.0,center,372.0,10.0,-10.0,at_or_after_onset_only,9,loso_chb03,chb03,combined,Raw overlap 0.5,0,0.5
+chb03,chb03_02.edf,1,731.0,796.0,center,740.0,9.0,-9.0,at_or_after_onset_only,22,loso_chb03,chb03,combined,Raw overlap 0.5,0,0.5
+chb03,chb03_03.edf,1,432.0,501.0,center,434.0,2.0,-2.0,at_or_after_onset_only,25,loso_chb03,chb03,combined,Raw overlap 0.5,0,0.5
+chb03,chb03_04.edf,1,2162.0,2214.0,center,1972.0,-190.0,190.0,pre_onset,20,loso_chb03,chb03,combined,Raw overlap 0.5,0,0.5
+chb03,chb03_34.edf,1,1982.0,2029.0,center,1704.0,-278.0,278.0,pre_onset,55,loso_chb03,chb03,combined,Raw overlap 0.5,0,0.5
+chb03,chb03_35.edf,1,2592.0,2656.0,center,2312.0,-280.0,280.0,pre_onset,25,loso_chb03,chb03,combined,Raw overlap 0.5,0,0.5
+chb03,chb03_36.edf,1,1725.0,1778.0,center,1582.0,-143.0,143.0,pre_onset,25,loso_chb03,chb03,combined,Raw overlap 0.5,0,0.5
+chb03,chb03_01.edf,1,362.0,414.0,end,374.0,12.0,-12.0,at_or_after_onset_only,9,loso_chb03,chb03,combined,Raw overlap 0.5,0,0.5
+chb03,chb03_02.edf,1,731.0,796.0,end,742.0,11.0,-11.0,at_or_after_onset_only,22,loso_chb03,chb03,combined,Raw overlap 0.5,0,0.5
+chb03,chb03_03.edf,1,432.0,501.0,end,436.0,4.0,-4.0,at_or_after_onset_only,24,loso_chb03,chb03,combined,Raw overlap 0.5,0,0.5
+chb03,chb03_04.edf,1,2162.0,2214.0,end,1974.0,-188.0,188.0,pre_onset,19,loso_chb03,chb03,combined,Raw overlap 0.5,0,0.5
+chb03,chb03_34.edf,1,1982.0,2029.0,end,1706.0,-276.0,276.0,pre_onset,54,loso_chb03,chb03,combined,Raw overlap 0.5,0,0.5
+chb03,chb03_35.edf,1,2592.0,2656.0,end,2314.0,-278.0,278.0,pre_onset,24,loso_chb03,chb03,combined,Raw overlap 0.5,0,0.5
+chb03,chb03_36.edf,1,1725.0,1778.0,end,1584.0,-141.0,141.0,pre_onset,24,loso_chb03,chb03,combined,Raw overlap 0.5,0,0.5
+chb03,chb03_01.edf,1,362.0,414.0,center,,,,missed,0,loso_chb03,chb03,combined,Nominal raw-plus-isotonic,0,0.5
+chb03,chb03_02.edf,1,731.0,796.0,center,,,,missed,0,loso_chb03,chb03,combined,Nominal raw-plus-isotonic,0,0.5
+chb03,chb03_03.edf,1,432.0,501.0,center,,,,missed,0,loso_chb03,chb03,combined,Nominal raw-plus-isotonic,0,0.5
+chb03,chb03_04.edf,1,2162.0,2214.0,center,,,,missed,0,loso_chb03,chb03,combined,Nominal raw-plus-isotonic,0,0.5
+chb03,chb03_34.edf,1,1982.0,2029.0,center,2006.0,24.0,-24.0,at_or_after_onset_only,3,loso_chb03,chb03,combined,Nominal raw-plus-isotonic,0,0.5
+chb03,chb03_35.edf,1,2592.0,2656.0,center,2616.0,24.0,-24.0,at_or_after_onset_only,2,loso_chb03,chb03,combined,Nominal raw-plus-isotonic,0,0.5
+chb03,chb03_36.edf,1,1725.0,1778.0,center,,,,missed,0,loso_chb03,chb03,combined,Nominal raw-plus-isotonic,0,0.5
+chb03,chb03_01.edf,1,362.0,414.0,end,,,,missed,0,loso_chb03,chb03,combined,Nominal raw-plus-isotonic,0,0.5
+chb03,chb03_02.edf,1,731.0,796.0,end,,,,missed,0,loso_chb03,chb03,combined,Nominal raw-plus-isotonic,0,0.5
+chb03,chb03_03.edf,1,432.0,501.0,end,,,,missed,0,loso_chb03,chb03,combined,Nominal raw-plus-isotonic,0,0.5
+chb03,chb03_04.edf,1,2162.0,2214.0,end,,,,missed,0,loso_chb03,chb03,combined,Nominal raw-plus-isotonic,0,0.5
+chb03,chb03_34.edf,1,1982.0,2029.0,end,2008.0,26.0,-26.0,at_or_after_onset_only,3,loso_chb03,chb03,combined,Nominal raw-plus-isotonic,0,0.5
+chb03,chb03_35.edf,1,2592.0,2656.0,end,2618.0,26.0,-26.0,at_or_after_onset_only,2,loso_chb03,chb03,combined,Nominal raw-plus-isotonic,0,0.5
+chb03,chb03_36.edf,1,1725.0,1778.0,end,,,,missed,0,loso_chb03,chb03,combined,Nominal raw-plus-isotonic,0,0.5
+chb03,chb03_01.edf,1,362.0,414.0,center,,,,missed,0,loso_chb03,chb03,combined,Nominal full 0.5,0,0.5
+chb03,chb03_02.edf,1,731.0,796.0,center,,,,missed,0,loso_chb03,chb03,combined,Nominal full 0.5,0,0.5
+chb03,chb03_03.edf,1,432.0,501.0,center,,,,missed,0,loso_chb03,chb03,combined,Nominal full 0.5,0,0.5
+chb03,chb03_04.edf,1,2162.0,2214.0,center,,,,missed,0,loso_chb03,chb03,combined,Nominal full 0.5,0,0.5
+chb03,chb03_34.edf,1,1982.0,2029.0,center,2008.0,26.0,-26.0,at_or_after_onset_only,1,loso_chb03,chb03,combined,Nominal full 0.5,0,0.5
+chb03,chb03_35.edf,1,2592.0,2656.0,center,2618.0,26.0,-26.0,at_or_after_onset_only,1,loso_chb03,chb03,combined,Nominal full 0.5,0,0.5
+chb03,chb03_36.edf,1,1725.0,1778.0,center,,,,missed,0,loso_chb03,chb03,combined,Nominal full 0.5,0,0.5
+chb03,chb03_01.edf,1,362.0,414.0,end,,,,missed,0,loso_chb03,chb03,combined,Nominal full 0.5,0,0.5
+chb03,chb03_02.edf,1,731.0,796.0,end,,,,missed,0,loso_chb03,chb03,combined,Nominal full 0.5,0,0.5
+chb03,chb03_03.edf,1,432.0,501.0,end,,,,missed,0,loso_chb03,chb03,combined,Nominal full 0.5,0,0.5
+chb03,chb03_04.edf,1,2162.0,2214.0,end,,,,missed,0,loso_chb03,chb03,combined,Nominal full 0.5,0,0.5
+chb03,chb03_34.edf,1,1982.0,2029.0,end,2010.0,28.0,-28.0,at_or_after_onset_only,1,loso_chb03,chb03,combined,Nominal full 0.5,0,0.5
+chb03,chb03_35.edf,1,2592.0,2656.0,end,2620.0,28.0,-28.0,at_or_after_onset_only,1,loso_chb03,chb03,combined,Nominal full 0.5,0,0.5
+chb03,chb03_36.edf,1,1725.0,1778.0,end,,,,missed,0,loso_chb03,chb03,combined,Nominal full 0.5,0,0.5
+chb03,chb03_01.edf,1,362.0,414.0,center,,,,missed,0,loso_chb03,chb03,combined,Calibrated threshold only,0,0.34
+chb03,chb03_02.edf,1,731.0,796.0,center,,,,missed,0,loso_chb03,chb03,combined,Calibrated threshold only,0,0.34
+chb03,chb03_03.edf,1,432.0,501.0,center,,,,missed,0,loso_chb03,chb03,combined,Calibrated threshold only,0,0.34
+chb03,chb03_04.edf,1,2162.0,2214.0,center,,,,missed,0,loso_chb03,chb03,combined,Calibrated threshold only,0,0.34
+chb03,chb03_34.edf,1,1982.0,2029.0,center,2006.0,24.0,-24.0,at_or_after_onset_only,3,loso_chb03,chb03,combined,Calibrated threshold only,0,0.34
+chb03,chb03_35.edf,1,2592.0,2656.0,center,2616.0,24.0,-24.0,at_or_after_onset_only,2,loso_chb03,chb03,combined,Calibrated threshold only,0,0.34
+chb03,chb03_36.edf,1,1725.0,1778.0,center,,,,missed,0,loso_chb03,chb03,combined,Calibrated threshold only,0,0.34
+chb03,chb03_01.edf,1,362.0,414.0,end,,,,missed,0,loso_chb03,chb03,combined,Calibrated threshold only,0,0.34
+chb03,chb03_02.edf,1,731.0,796.0,end,,,,missed,0,loso_chb03,chb03,combined,Calibrated threshold only,0,0.34
+chb03,chb03_03.edf,1,432.0,501.0,end,,,,missed,0,loso_chb03,chb03,combined,Calibrated threshold only,0,0.34
+chb03,chb03_04.edf,1,2162.0,2214.0,end,,,,missed,0,loso_chb03,chb03,combined,Calibrated threshold only,0,0.34
+chb03,chb03_34.edf,1,1982.0,2029.0,end,2008.0,26.0,-26.0,at_or_after_onset_only,3,loso_chb03,chb03,combined,Calibrated threshold only,0,0.34
+chb03,chb03_35.edf,1,2592.0,2656.0,end,2618.0,26.0,-26.0,at_or_after_onset_only,2,loso_chb03,chb03,combined,Calibrated threshold only,0,0.34
+chb03,chb03_36.edf,1,1725.0,1778.0,end,,,,missed,0,loso_chb03,chb03,combined,Calibrated threshold only,0,0.34
+chb03,chb03_01.edf,1,362.0,414.0,center,,,,missed,0,loso_chb03,chb03,combined,+ persistence,0,0.34
+chb03,chb03_02.edf,1,731.0,796.0,center,,,,missed,0,loso_chb03,chb03,combined,+ persistence,0,0.34
+chb03,chb03_03.edf,1,432.0,501.0,center,,,,missed,0,loso_chb03,chb03,combined,+ persistence,0,0.34
+chb03,chb03_04.edf,1,2162.0,2214.0,center,,,,missed,0,loso_chb03,chb03,combined,+ persistence,0,0.34
+chb03,chb03_34.edf,1,1982.0,2029.0,center,2008.0,26.0,-26.0,at_or_after_onset_only,1,loso_chb03,chb03,combined,+ persistence,0,0.34
+chb03,chb03_35.edf,1,2592.0,2656.0,center,2618.0,26.0,-26.0,at_or_after_onset_only,1,loso_chb03,chb03,combined,+ persistence,0,0.34
+chb03,chb03_36.edf,1,1725.0,1778.0,center,,,,missed,0,loso_chb03,chb03,combined,+ persistence,0,0.34
+chb03,chb03_01.edf,1,362.0,414.0,end,,,,missed,0,loso_chb03,chb03,combined,+ persistence,0,0.34
+chb03,chb03_02.edf,1,731.0,796.0,end,,,,missed,0,loso_chb03,chb03,combined,+ persistence,0,0.34
+chb03,chb03_03.edf,1,432.0,501.0,end,,,,missed,0,loso_chb03,chb03,combined,+ persistence,0,0.34
+chb03,chb03_04.edf,1,2162.0,2214.0,end,,,,missed,0,loso_chb03,chb03,combined,+ persistence,0,0.34
+chb03,chb03_34.edf,1,1982.0,2029.0,end,2010.0,28.0,-28.0,at_or_after_onset_only,1,loso_chb03,chb03,combined,+ persistence,0,0.34
+chb03,chb03_35.edf,1,2592.0,2656.0,end,2620.0,28.0,-28.0,at_or_after_onset_only,1,loso_chb03,chb03,combined,+ persistence,0,0.34
+chb03,chb03_36.edf,1,1725.0,1778.0,end,,,,missed,0,loso_chb03,chb03,combined,+ persistence,0,0.34
+chb03,chb03_01.edf,1,362.0,414.0,center,,,,missed,0,loso_chb03,chb03,combined,+ attribution overlap,0,0.34
+chb03,chb03_02.edf,1,731.0,796.0,center,,,,missed,0,loso_chb03,chb03,combined,+ attribution overlap,0,0.34
+chb03,chb03_03.edf,1,432.0,501.0,center,,,,missed,0,loso_chb03,chb03,combined,+ attribution overlap,0,0.34
+chb03,chb03_04.edf,1,2162.0,2214.0,center,,,,missed,0,loso_chb03,chb03,combined,+ attribution overlap,0,0.34
+chb03,chb03_34.edf,1,1982.0,2029.0,center,2006.0,24.0,-24.0,at_or_after_onset_only,3,loso_chb03,chb03,combined,+ attribution overlap,0,0.34
+chb03,chb03_35.edf,1,2592.0,2656.0,center,2616.0,24.0,-24.0,at_or_after_onset_only,2,loso_chb03,chb03,combined,+ attribution overlap,0,0.34
+chb03,chb03_36.edf,1,1725.0,1778.0,center,,,,missed,0,loso_chb03,chb03,combined,+ attribution overlap,0,0.34
+chb03,chb03_01.edf,1,362.0,414.0,end,,,,missed,0,loso_chb03,chb03,combined,+ attribution overlap,0,0.34
+chb03,chb03_02.edf,1,731.0,796.0,end,,,,missed,0,loso_chb03,chb03,combined,+ attribution overlap,0,0.34
+chb03,chb03_03.edf,1,432.0,501.0,end,,,,missed,0,loso_chb03,chb03,combined,+ attribution overlap,0,0.34
+chb03,chb03_04.edf,1,2162.0,2214.0,end,,,,missed,0,loso_chb03,chb03,combined,+ attribution overlap,0,0.34
+chb03,chb03_34.edf,1,1982.0,2029.0,end,2008.0,26.0,-26.0,at_or_after_onset_only,3,loso_chb03,chb03,combined,+ attribution overlap,0,0.34
+chb03,chb03_35.edf,1,2592.0,2656.0,end,2618.0,26.0,-26.0,at_or_after_onset_only,2,loso_chb03,chb03,combined,+ attribution overlap,0,0.34
+chb03,chb03_36.edf,1,1725.0,1778.0,end,,,,missed,0,loso_chb03,chb03,combined,+ attribution overlap,0,0.34
+chb03,chb03_01.edf,1,362.0,414.0,center,,,,missed,0,loso_chb03,chb03,combined,+ persistence + overlap,0,0.34
+chb03,chb03_02.edf,1,731.0,796.0,center,,,,missed,0,loso_chb03,chb03,combined,+ persistence + overlap,0,0.34
+chb03,chb03_03.edf,1,432.0,501.0,center,,,,missed,0,loso_chb03,chb03,combined,+ persistence + overlap,0,0.34
+chb03,chb03_04.edf,1,2162.0,2214.0,center,,,,missed,0,loso_chb03,chb03,combined,+ persistence + overlap,0,0.34
+chb03,chb03_34.edf,1,1982.0,2029.0,center,2008.0,26.0,-26.0,at_or_after_onset_only,1,loso_chb03,chb03,combined,+ persistence + overlap,0,0.34
+chb03,chb03_35.edf,1,2592.0,2656.0,center,2618.0,26.0,-26.0,at_or_after_onset_only,1,loso_chb03,chb03,combined,+ persistence + overlap,0,0.34
+chb03,chb03_36.edf,1,1725.0,1778.0,center,,,,missed,0,loso_chb03,chb03,combined,+ persistence + overlap,0,0.34
+chb03,chb03_01.edf,1,362.0,414.0,end,,,,missed,0,loso_chb03,chb03,combined,+ persistence + overlap,0,0.34
+chb03,chb03_02.edf,1,731.0,796.0,end,,,,missed,0,loso_chb03,chb03,combined,+ persistence + overlap,0,0.34
+chb03,chb03_03.edf,1,432.0,501.0,end,,,,missed,0,loso_chb03,chb03,combined,+ persistence + overlap,0,0.34
+chb03,chb03_04.edf,1,2162.0,2214.0,end,,,,missed,0,loso_chb03,chb03,combined,+ persistence + overlap,0,0.34
+chb03,chb03_34.edf,1,1982.0,2029.0,end,2010.0,28.0,-28.0,at_or_after_onset_only,1,loso_chb03,chb03,combined,+ persistence + overlap,0,0.34
+chb03,chb03_35.edf,1,2592.0,2656.0,end,2620.0,28.0,-28.0,at_or_after_onset_only,1,loso_chb03,chb03,combined,+ persistence + overlap,0,0.34
+chb03,chb03_36.edf,1,1725.0,1778.0,end,,,,missed,0,loso_chb03,chb03,combined,+ persistence + overlap,0,0.34
+chb03,chb03_01.edf,1,362.0,414.0,center,,,,missed,0,loso_chb03,chb03,combined,Full overlap lag 4s,0,0.34
+chb03,chb03_02.edf,1,731.0,796.0,center,,,,missed,0,loso_chb03,chb03,combined,Full overlap lag 4s,0,0.34
+chb03,chb03_03.edf,1,432.0,501.0,center,,,,missed,0,loso_chb03,chb03,combined,Full overlap lag 4s,0,0.34
+chb03,chb03_04.edf,1,2162.0,2214.0,center,,,,missed,0,loso_chb03,chb03,combined,Full overlap lag 4s,0,0.34
+chb03,chb03_34.edf,1,1982.0,2029.0,center,2008.0,26.0,-26.0,at_or_after_onset_only,1,loso_chb03,chb03,combined,Full overlap lag 4s,0,0.34
+chb03,chb03_35.edf,1,2592.0,2656.0,center,2618.0,26.0,-26.0,at_or_after_onset_only,1,loso_chb03,chb03,combined,Full overlap lag 4s,0,0.34
+chb03,chb03_36.edf,1,1725.0,1778.0,center,,,,missed,0,loso_chb03,chb03,combined,Full overlap lag 4s,0,0.34
+chb03,chb03_01.edf,1,362.0,414.0,end,,,,missed,0,loso_chb03,chb03,combined,Full overlap lag 4s,0,0.34
+chb03,chb03_02.edf,1,731.0,796.0,end,,,,missed,0,loso_chb03,chb03,combined,Full overlap lag 4s,0,0.34
+chb03,chb03_03.edf,1,432.0,501.0,end,,,,missed,0,loso_chb03,chb03,combined,Full overlap lag 4s,0,0.34
+chb03,chb03_04.edf,1,2162.0,2214.0,end,,,,missed,0,loso_chb03,chb03,combined,Full overlap lag 4s,0,0.34
+chb03,chb03_34.edf,1,1982.0,2029.0,end,2010.0,28.0,-28.0,at_or_after_onset_only,1,loso_chb03,chb03,combined,Full overlap lag 4s,0,0.34
+chb03,chb03_35.edf,1,2592.0,2656.0,end,2620.0,28.0,-28.0,at_or_after_onset_only,1,loso_chb03,chb03,combined,Full overlap lag 4s,0,0.34
+chb03,chb03_36.edf,1,1725.0,1778.0,end,,,,missed,0,loso_chb03,chb03,combined,Full overlap lag 4s,0,0.34
+chb03,chb03_01.edf,1,362.0,414.0,center,,,,missed,0,loso_chb03,chb03,combined,Full overlap lag 6s,0,0.34
+chb03,chb03_02.edf,1,731.0,796.0,center,,,,missed,0,loso_chb03,chb03,combined,Full overlap lag 6s,0,0.34
+chb03,chb03_03.edf,1,432.0,501.0,center,,,,missed,0,loso_chb03,chb03,combined,Full overlap lag 6s,0,0.34
+chb03,chb03_04.edf,1,2162.0,2214.0,center,,,,missed,0,loso_chb03,chb03,combined,Full overlap lag 6s,0,0.34
+chb03,chb03_34.edf,1,1982.0,2029.0,center,2008.0,26.0,-26.0,at_or_after_onset_only,1,loso_chb03,chb03,combined,Full overlap lag 6s,0,0.34
+chb03,chb03_35.edf,1,2592.0,2656.0,center,,,,missed,0,loso_chb03,chb03,combined,Full overlap lag 6s,0,0.34
+chb03,chb03_36.edf,1,1725.0,1778.0,center,,,,missed,0,loso_chb03,chb03,combined,Full overlap lag 6s,0,0.34
+chb03,chb03_01.edf,1,362.0,414.0,end,,,,missed,0,loso_chb03,chb03,combined,Full overlap lag 6s,0,0.34
+chb03,chb03_02.edf,1,731.0,796.0,end,,,,missed,0,loso_chb03,chb03,combined,Full overlap lag 6s,0,0.34
+chb03,chb03_03.edf,1,432.0,501.0,end,,,,missed,0,loso_chb03,chb03,combined,Full overlap lag 6s,0,0.34
+chb03,chb03_04.edf,1,2162.0,2214.0,end,,,,missed,0,loso_chb03,chb03,combined,Full overlap lag 6s,0,0.34
+chb03,chb03_34.edf,1,1982.0,2029.0,end,2010.0,28.0,-28.0,at_or_after_onset_only,1,loso_chb03,chb03,combined,Full overlap lag 6s,0,0.34
+chb03,chb03_35.edf,1,2592.0,2656.0,end,,,,missed,0,loso_chb03,chb03,combined,Full overlap lag 6s,0,0.34
+chb03,chb03_36.edf,1,1725.0,1778.0,end,,,,missed,0,loso_chb03,chb03,combined,Full overlap lag 6s,0,0.34
+chb03,chb03_01.edf,1,362.0,414.0,center,,,,missed,0,loso_chb03,chb03,combined,Full overlap lag 10s,0,0.34
+chb03,chb03_02.edf,1,731.0,796.0,center,,,,missed,0,loso_chb03,chb03,combined,Full overlap lag 10s,0,0.34
+chb03,chb03_03.edf,1,432.0,501.0,center,,,,missed,0,loso_chb03,chb03,combined,Full overlap lag 10s,0,0.34
+chb03,chb03_04.edf,1,2162.0,2214.0,center,,,,missed,0,loso_chb03,chb03,combined,Full overlap lag 10s,0,0.34
+chb03,chb03_34.edf,1,1982.0,2029.0,center,2008.0,26.0,-26.0,at_or_after_onset_only,1,loso_chb03,chb03,combined,Full overlap lag 10s,0,0.34
+chb03,chb03_35.edf,1,2592.0,2656.0,center,2618.0,26.0,-26.0,at_or_after_onset_only,1,loso_chb03,chb03,combined,Full overlap lag 10s,0,0.34
+chb03,chb03_36.edf,1,1725.0,1778.0,center,,,,missed,0,loso_chb03,chb03,combined,Full overlap lag 10s,0,0.34
+chb03,chb03_01.edf,1,362.0,414.0,end,,,,missed,0,loso_chb03,chb03,combined,Full overlap lag 10s,0,0.34
+chb03,chb03_02.edf,1,731.0,796.0,end,,,,missed,0,loso_chb03,chb03,combined,Full overlap lag 10s,0,0.34
+chb03,chb03_03.edf,1,432.0,501.0,end,,,,missed,0,loso_chb03,chb03,combined,Full overlap lag 10s,0,0.34
+chb03,chb03_04.edf,1,2162.0,2214.0,end,,,,missed,0,loso_chb03,chb03,combined,Full overlap lag 10s,0,0.34
+chb03,chb03_34.edf,1,1982.0,2029.0,end,2010.0,28.0,-28.0,at_or_after_onset_only,1,loso_chb03,chb03,combined,Full overlap lag 10s,0,0.34
+chb03,chb03_35.edf,1,2592.0,2656.0,end,2620.0,28.0,-28.0,at_or_after_onset_only,1,loso_chb03,chb03,combined,Full overlap lag 10s,0,0.34
+chb03,chb03_36.edf,1,1725.0,1778.0,end,,,,missed,0,loso_chb03,chb03,combined,Full overlap lag 10s,0,0.34
+chb03,chb03_01.edf,1,362.0,414.0,center,,,,missed,0,loso_chb03,chb03,combined,Full overlap lag 20s,0,0.34
+chb03,chb03_02.edf,1,731.0,796.0,center,,,,missed,0,loso_chb03,chb03,combined,Full overlap lag 20s,0,0.34
+chb03,chb03_03.edf,1,432.0,501.0,center,,,,missed,0,loso_chb03,chb03,combined,Full overlap lag 20s,0,0.34
+chb03,chb03_04.edf,1,2162.0,2214.0,center,,,,missed,0,loso_chb03,chb03,combined,Full overlap lag 20s,0,0.34
+chb03,chb03_34.edf,1,1982.0,2029.0,center,,,,missed,0,loso_chb03,chb03,combined,Full overlap lag 20s,0,0.34
+chb03,chb03_35.edf,1,2592.0,2656.0,center,,,,missed,0,loso_chb03,chb03,combined,Full overlap lag 20s,0,0.34
+chb03,chb03_36.edf,1,1725.0,1778.0,center,,,,missed,0,loso_chb03,chb03,combined,Full overlap lag 20s,0,0.34
+chb03,chb03_01.edf,1,362.0,414.0,end,,,,missed,0,loso_chb03,chb03,combined,Full overlap lag 20s,0,0.34
+chb03,chb03_02.edf,1,731.0,796.0,end,,,,missed,0,loso_chb03,chb03,combined,Full overlap lag 20s,0,0.34
+chb03,chb03_03.edf,1,432.0,501.0,end,,,,missed,0,loso_chb03,chb03,combined,Full overlap lag 20s,0,0.34
+chb03,chb03_04.edf,1,2162.0,2214.0,end,,,,missed,0,loso_chb03,chb03,combined,Full overlap lag 20s,0,0.34
+chb03,chb03_34.edf,1,1982.0,2029.0,end,,,,missed,0,loso_chb03,chb03,combined,Full overlap lag 20s,0,0.34
+chb03,chb03_35.edf,1,2592.0,2656.0,end,,,,missed,0,loso_chb03,chb03,combined,Full overlap lag 20s,0,0.34
+chb03,chb03_36.edf,1,1725.0,1778.0,end,,,,missed,0,loso_chb03,chb03,combined,Full overlap lag 20s,0,0.34
+chb05,chb05_06.edf,1,417.0,532.0,center,174.0,-243.0,243.0,pre_onset,76,loso_chb05,chb05,original,Raw threshold 0.5,0,0.5
+chb05,chb05_13.edf,1,1086.0,1196.0,center,786.0,-300.0,300.0,pre_onset,34,loso_chb05,chb05,original,Raw threshold 0.5,0,0.5
+chb05,chb05_16.edf,1,2317.0,2413.0,center,2022.0,-295.0,295.0,pre_onset,59,loso_chb05,chb05,original,Raw threshold 0.5,0,0.5
+chb05,chb05_17.edf,1,2451.0,2571.0,center,2152.0,-299.0,299.0,pre_onset,107,loso_chb05,chb05,original,Raw threshold 0.5,0,0.5
+chb05,chb05_22.edf,1,2348.0,2465.0,center,2048.0,-300.0,300.0,pre_onset,134,loso_chb05,chb05,original,Raw threshold 0.5,0,0.5
+chb05,chb05_06.edf,1,417.0,532.0,end,176.0,-241.0,241.0,pre_onset,75,loso_chb05,chb05,original,Raw threshold 0.5,0,0.5
+chb05,chb05_13.edf,1,1086.0,1196.0,end,786.0,-300.0,300.0,pre_onset,34,loso_chb05,chb05,original,Raw threshold 0.5,0,0.5
+chb05,chb05_16.edf,1,2317.0,2413.0,end,2018.0,-299.0,299.0,pre_onset,59,loso_chb05,chb05,original,Raw threshold 0.5,0,0.5
+chb05,chb05_17.edf,1,2451.0,2571.0,end,2152.0,-299.0,299.0,pre_onset,107,loso_chb05,chb05,original,Raw threshold 0.5,0,0.5
+chb05,chb05_22.edf,1,2348.0,2465.0,end,2048.0,-300.0,300.0,pre_onset,134,loso_chb05,chb05,original,Raw threshold 0.5,0,0.5
+chb05,chb05_06.edf,1,417.0,532.0,center,210.0,-207.0,207.0,pre_onset,62,loso_chb05,chb05,original,Raw persistence 0.5,0,0.5
+chb05,chb05_13.edf,1,1086.0,1196.0,center,786.0,-300.0,300.0,pre_onset,26,loso_chb05,chb05,original,Raw persistence 0.5,0,0.5
+chb05,chb05_16.edf,1,2317.0,2413.0,center,2024.0,-293.0,293.0,pre_onset,43,loso_chb05,chb05,original,Raw persistence 0.5,0,0.5
+chb05,chb05_17.edf,1,2451.0,2571.0,center,2152.0,-299.0,299.0,pre_onset,84,loso_chb05,chb05,original,Raw persistence 0.5,0,0.5
+chb05,chb05_22.edf,1,2348.0,2465.0,center,2048.0,-300.0,300.0,pre_onset,113,loso_chb05,chb05,original,Raw persistence 0.5,0,0.5
+chb05,chb05_06.edf,1,417.0,532.0,end,212.0,-205.0,205.0,pre_onset,61,loso_chb05,chb05,original,Raw persistence 0.5,0,0.5
+chb05,chb05_13.edf,1,1086.0,1196.0,end,786.0,-300.0,300.0,pre_onset,26,loso_chb05,chb05,original,Raw persistence 0.5,0,0.5
+chb05,chb05_16.edf,1,2317.0,2413.0,end,2026.0,-291.0,291.0,pre_onset,42,loso_chb05,chb05,original,Raw persistence 0.5,0,0.5
+chb05,chb05_17.edf,1,2451.0,2571.0,end,2154.0,-297.0,297.0,pre_onset,84,loso_chb05,chb05,original,Raw persistence 0.5,0,0.5
+chb05,chb05_22.edf,1,2348.0,2465.0,end,2048.0,-300.0,300.0,pre_onset,113,loso_chb05,chb05,original,Raw persistence 0.5,0,0.5
+chb05,chb05_06.edf,1,417.0,532.0,center,208.0,-209.0,209.0,pre_onset,72,loso_chb05,chb05,original,Raw overlap 0.5,0,0.5
+chb05,chb05_13.edf,1,1086.0,1196.0,center,786.0,-300.0,300.0,pre_onset,30,loso_chb05,chb05,original,Raw overlap 0.5,0,0.5
+chb05,chb05_16.edf,1,2317.0,2413.0,center,2024.0,-293.0,293.0,pre_onset,42,loso_chb05,chb05,original,Raw overlap 0.5,0,0.5
+chb05,chb05_17.edf,1,2451.0,2571.0,center,2152.0,-299.0,299.0,pre_onset,90,loso_chb05,chb05,original,Raw overlap 0.5,0,0.5
+chb05,chb05_22.edf,1,2348.0,2465.0,center,2048.0,-300.0,300.0,pre_onset,125,loso_chb05,chb05,original,Raw overlap 0.5,0,0.5
+chb05,chb05_06.edf,1,417.0,532.0,end,210.0,-207.0,207.0,pre_onset,71,loso_chb05,chb05,original,Raw overlap 0.5,0,0.5
+chb05,chb05_13.edf,1,1086.0,1196.0,end,786.0,-300.0,300.0,pre_onset,31,loso_chb05,chb05,original,Raw overlap 0.5,0,0.5
+chb05,chb05_16.edf,1,2317.0,2413.0,end,2026.0,-291.0,291.0,pre_onset,41,loso_chb05,chb05,original,Raw overlap 0.5,0,0.5
+chb05,chb05_17.edf,1,2451.0,2571.0,end,2152.0,-299.0,299.0,pre_onset,90,loso_chb05,chb05,original,Raw overlap 0.5,0,0.5
+chb05,chb05_22.edf,1,2348.0,2465.0,end,2048.0,-300.0,300.0,pre_onset,125,loso_chb05,chb05,original,Raw overlap 0.5,0,0.5
+chb05,chb05_06.edf,1,417.0,532.0,center,420.0,3.0,-3.0,at_or_after_onset_only,18,loso_chb05,chb05,original,Nominal raw-plus-isotonic,0,0.5
+chb05,chb05_13.edf,1,1086.0,1196.0,center,,,,missed,0,loso_chb05,chb05,original,Nominal raw-plus-isotonic,0,0.5
+chb05,chb05_16.edf,1,2317.0,2413.0,center,2114.0,-203.0,203.0,pre_onset,13,loso_chb05,chb05,original,Nominal raw-plus-isotonic,0,0.5
+chb05,chb05_17.edf,1,2451.0,2571.0,center,2414.0,-37.0,37.0,pre_onset,29,loso_chb05,chb05,original,Nominal raw-plus-isotonic,0,0.5
+chb05,chb05_22.edf,1,2348.0,2465.0,center,2166.0,-182.0,182.0,pre_onset,18,loso_chb05,chb05,original,Nominal raw-plus-isotonic,0,0.5
+chb05,chb05_06.edf,1,417.0,532.0,end,422.0,5.0,-5.0,at_or_after_onset_only,18,loso_chb05,chb05,original,Nominal raw-plus-isotonic,0,0.5
+chb05,chb05_13.edf,1,1086.0,1196.0,end,,,,missed,0,loso_chb05,chb05,original,Nominal raw-plus-isotonic,0,0.5
+chb05,chb05_16.edf,1,2317.0,2413.0,end,2116.0,-201.0,201.0,pre_onset,13,loso_chb05,chb05,original,Nominal raw-plus-isotonic,0,0.5
+chb05,chb05_17.edf,1,2451.0,2571.0,end,2416.0,-35.0,35.0,pre_onset,28,loso_chb05,chb05,original,Nominal raw-plus-isotonic,0,0.5
+chb05,chb05_22.edf,1,2348.0,2465.0,end,2168.0,-180.0,180.0,pre_onset,18,loso_chb05,chb05,original,Nominal raw-plus-isotonic,0,0.5
+chb05,chb05_06.edf,1,417.0,532.0,center,422.0,5.0,-5.0,at_or_after_onset_only,17,loso_chb05,chb05,original,Nominal full 0.5,0,0.5
+chb05,chb05_13.edf,1,1086.0,1196.0,center,,,,missed,0,loso_chb05,chb05,original,Nominal full 0.5,0,0.5
+chb05,chb05_16.edf,1,2317.0,2413.0,center,2322.0,5.0,-5.0,at_or_after_onset_only,11,loso_chb05,chb05,original,Nominal full 0.5,0,0.5
+chb05,chb05_17.edf,1,2451.0,2571.0,center,2454.0,3.0,-3.0,at_or_after_onset_only,26,loso_chb05,chb05,original,Nominal full 0.5,0,0.5
+chb05,chb05_22.edf,1,2348.0,2465.0,center,2168.0,-180.0,180.0,pre_onset,12,loso_chb05,chb05,original,Nominal full 0.5,0,0.5
+chb05,chb05_06.edf,1,417.0,532.0,end,424.0,7.0,-7.0,at_or_after_onset_only,17,loso_chb05,chb05,original,Nominal full 0.5,0,0.5
+chb05,chb05_13.edf,1,1086.0,1196.0,end,,,,missed,0,loso_chb05,chb05,original,Nominal full 0.5,0,0.5
+chb05,chb05_16.edf,1,2317.0,2413.0,end,2324.0,7.0,-7.0,at_or_after_onset_only,11,loso_chb05,chb05,original,Nominal full 0.5,0,0.5
+chb05,chb05_17.edf,1,2451.0,2571.0,end,2456.0,5.0,-5.0,at_or_after_onset_only,26,loso_chb05,chb05,original,Nominal full 0.5,0,0.5
+chb05,chb05_22.edf,1,2348.0,2465.0,end,2170.0,-178.0,178.0,pre_onset,12,loso_chb05,chb05,original,Nominal full 0.5,0,0.5
+chb05,chb05_06.edf,1,417.0,532.0,center,420.0,3.0,-3.0,at_or_after_onset_only,18,loso_chb05,chb05,original,Calibrated threshold only,0,0.48
+chb05,chb05_13.edf,1,1086.0,1196.0,center,,,,missed,0,loso_chb05,chb05,original,Calibrated threshold only,0,0.48
+chb05,chb05_16.edf,1,2317.0,2413.0,center,2112.0,-205.0,205.0,pre_onset,14,loso_chb05,chb05,original,Calibrated threshold only,0,0.48
+chb05,chb05_17.edf,1,2451.0,2571.0,center,2414.0,-37.0,37.0,pre_onset,29,loso_chb05,chb05,original,Calibrated threshold only,0,0.48
+chb05,chb05_22.edf,1,2348.0,2465.0,center,2166.0,-182.0,182.0,pre_onset,18,loso_chb05,chb05,original,Calibrated threshold only,0,0.48
+chb05,chb05_06.edf,1,417.0,532.0,end,422.0,5.0,-5.0,at_or_after_onset_only,18,loso_chb05,chb05,original,Calibrated threshold only,0,0.48
+chb05,chb05_13.edf,1,1086.0,1196.0,end,,,,missed,0,loso_chb05,chb05,original,Calibrated threshold only,0,0.48
+chb05,chb05_16.edf,1,2317.0,2413.0,end,2114.0,-203.0,203.0,pre_onset,14,loso_chb05,chb05,original,Calibrated threshold only,0,0.48
+chb05,chb05_17.edf,1,2451.0,2571.0,end,2416.0,-35.0,35.0,pre_onset,28,loso_chb05,chb05,original,Calibrated threshold only,0,0.48
+chb05,chb05_22.edf,1,2348.0,2465.0,end,2168.0,-180.0,180.0,pre_onset,18,loso_chb05,chb05,original,Calibrated threshold only,0,0.48
+chb05,chb05_06.edf,1,417.0,532.0,center,422.0,5.0,-5.0,at_or_after_onset_only,17,loso_chb05,chb05,original,+ persistence,0,0.48
+chb05,chb05_13.edf,1,1086.0,1196.0,center,,,,missed,0,loso_chb05,chb05,original,+ persistence,0,0.48
+chb05,chb05_16.edf,1,2317.0,2413.0,center,2114.0,-203.0,203.0,pre_onset,12,loso_chb05,chb05,original,+ persistence,0,0.48
+chb05,chb05_17.edf,1,2451.0,2571.0,center,2454.0,3.0,-3.0,at_or_after_onset_only,26,loso_chb05,chb05,original,+ persistence,0,0.48
+chb05,chb05_22.edf,1,2348.0,2465.0,center,2168.0,-180.0,180.0,pre_onset,12,loso_chb05,chb05,original,+ persistence,0,0.48
+chb05,chb05_06.edf,1,417.0,532.0,end,424.0,7.0,-7.0,at_or_after_onset_only,17,loso_chb05,chb05,original,+ persistence,0,0.48
+chb05,chb05_13.edf,1,1086.0,1196.0,end,,,,missed,0,loso_chb05,chb05,original,+ persistence,0,0.48
+chb05,chb05_16.edf,1,2317.0,2413.0,end,2116.0,-201.0,201.0,pre_onset,12,loso_chb05,chb05,original,+ persistence,0,0.48
+chb05,chb05_17.edf,1,2451.0,2571.0,end,2456.0,5.0,-5.0,at_or_after_onset_only,26,loso_chb05,chb05,original,+ persistence,0,0.48
+chb05,chb05_22.edf,1,2348.0,2465.0,end,2170.0,-178.0,178.0,pre_onset,12,loso_chb05,chb05,original,+ persistence,0,0.48
+chb05,chb05_06.edf,1,417.0,532.0,center,420.0,3.0,-3.0,at_or_after_onset_only,18,loso_chb05,chb05,original,+ attribution overlap,0,0.48
+chb05,chb05_13.edf,1,1086.0,1196.0,center,,,,missed,0,loso_chb05,chb05,original,+ attribution overlap,0,0.48
+chb05,chb05_16.edf,1,2317.0,2413.0,center,2112.0,-205.0,205.0,pre_onset,13,loso_chb05,chb05,original,+ attribution overlap,0,0.48
+chb05,chb05_17.edf,1,2451.0,2571.0,center,2414.0,-37.0,37.0,pre_onset,29,loso_chb05,chb05,original,+ attribution overlap,0,0.48
+chb05,chb05_22.edf,1,2348.0,2465.0,center,2166.0,-182.0,182.0,pre_onset,18,loso_chb05,chb05,original,+ attribution overlap,0,0.48
+chb05,chb05_06.edf,1,417.0,532.0,end,422.0,5.0,-5.0,at_or_after_onset_only,18,loso_chb05,chb05,original,+ attribution overlap,0,0.48
+chb05,chb05_13.edf,1,1086.0,1196.0,end,,,,missed,0,loso_chb05,chb05,original,+ attribution overlap,0,0.48
+chb05,chb05_16.edf,1,2317.0,2413.0,end,2114.0,-203.0,203.0,pre_onset,13,loso_chb05,chb05,original,+ attribution overlap,0,0.48
+chb05,chb05_17.edf,1,2451.0,2571.0,end,2416.0,-35.0,35.0,pre_onset,28,loso_chb05,chb05,original,+ attribution overlap,0,0.48
+chb05,chb05_22.edf,1,2348.0,2465.0,end,2168.0,-180.0,180.0,pre_onset,18,loso_chb05,chb05,original,+ attribution overlap,0,0.48
+chb05,chb05_06.edf,1,417.0,532.0,center,422.0,5.0,-5.0,at_or_after_onset_only,17,loso_chb05,chb05,original,+ persistence + overlap,0,0.48
+chb05,chb05_13.edf,1,1086.0,1196.0,center,,,,missed,0,loso_chb05,chb05,original,+ persistence + overlap,0,0.48
+chb05,chb05_16.edf,1,2317.0,2413.0,center,2114.0,-203.0,203.0,pre_onset,12,loso_chb05,chb05,original,+ persistence + overlap,0,0.48
+chb05,chb05_17.edf,1,2451.0,2571.0,center,2454.0,3.0,-3.0,at_or_after_onset_only,26,loso_chb05,chb05,original,+ persistence + overlap,0,0.48
+chb05,chb05_22.edf,1,2348.0,2465.0,center,2168.0,-180.0,180.0,pre_onset,12,loso_chb05,chb05,original,+ persistence + overlap,0,0.48
+chb05,chb05_06.edf,1,417.0,532.0,end,424.0,7.0,-7.0,at_or_after_onset_only,17,loso_chb05,chb05,original,+ persistence + overlap,0,0.48
+chb05,chb05_13.edf,1,1086.0,1196.0,end,,,,missed,0,loso_chb05,chb05,original,+ persistence + overlap,0,0.48
+chb05,chb05_16.edf,1,2317.0,2413.0,end,2116.0,-201.0,201.0,pre_onset,12,loso_chb05,chb05,original,+ persistence + overlap,0,0.48
+chb05,chb05_17.edf,1,2451.0,2571.0,end,2456.0,5.0,-5.0,at_or_after_onset_only,26,loso_chb05,chb05,original,+ persistence + overlap,0,0.48
+chb05,chb05_22.edf,1,2348.0,2465.0,end,2170.0,-178.0,178.0,pre_onset,12,loso_chb05,chb05,original,+ persistence + overlap,0,0.48
+chb05,chb05_06.edf,1,417.0,532.0,center,422.0,5.0,-5.0,at_or_after_onset_only,17,loso_chb05,chb05,original,Full overlap lag 4s,0,0.48
+chb05,chb05_13.edf,1,1086.0,1196.0,center,,,,missed,0,loso_chb05,chb05,original,Full overlap lag 4s,0,0.48
+chb05,chb05_16.edf,1,2317.0,2413.0,center,2114.0,-203.0,203.0,pre_onset,11,loso_chb05,chb05,original,Full overlap lag 4s,0,0.48
+chb05,chb05_17.edf,1,2451.0,2571.0,center,2454.0,3.0,-3.0,at_or_after_onset_only,26,loso_chb05,chb05,original,Full overlap lag 4s,0,0.48
+chb05,chb05_22.edf,1,2348.0,2465.0,center,2168.0,-180.0,180.0,pre_onset,12,loso_chb05,chb05,original,Full overlap lag 4s,0,0.48
+chb05,chb05_06.edf,1,417.0,532.0,end,424.0,7.0,-7.0,at_or_after_onset_only,17,loso_chb05,chb05,original,Full overlap lag 4s,0,0.48
+chb05,chb05_13.edf,1,1086.0,1196.0,end,,,,missed,0,loso_chb05,chb05,original,Full overlap lag 4s,0,0.48
+chb05,chb05_16.edf,1,2317.0,2413.0,end,2116.0,-201.0,201.0,pre_onset,11,loso_chb05,chb05,original,Full overlap lag 4s,0,0.48
+chb05,chb05_17.edf,1,2451.0,2571.0,end,2456.0,5.0,-5.0,at_or_after_onset_only,26,loso_chb05,chb05,original,Full overlap lag 4s,0,0.48
+chb05,chb05_22.edf,1,2348.0,2465.0,end,2170.0,-178.0,178.0,pre_onset,12,loso_chb05,chb05,original,Full overlap lag 4s,0,0.48
+chb05,chb05_06.edf,1,417.0,532.0,center,422.0,5.0,-5.0,at_or_after_onset_only,17,loso_chb05,chb05,original,Full overlap lag 6s,0,0.48
+chb05,chb05_13.edf,1,1086.0,1196.0,center,,,,missed,0,loso_chb05,chb05,original,Full overlap lag 6s,0,0.48
+chb05,chb05_16.edf,1,2317.0,2413.0,center,2114.0,-203.0,203.0,pre_onset,11,loso_chb05,chb05,original,Full overlap lag 6s,0,0.48
+chb05,chb05_17.edf,1,2451.0,2571.0,center,2454.0,3.0,-3.0,at_or_after_onset_only,26,loso_chb05,chb05,original,Full overlap lag 6s,0,0.48
+chb05,chb05_22.edf,1,2348.0,2465.0,center,2168.0,-180.0,180.0,pre_onset,12,loso_chb05,chb05,original,Full overlap lag 6s,0,0.48
+chb05,chb05_06.edf,1,417.0,532.0,end,424.0,7.0,-7.0,at_or_after_onset_only,17,loso_chb05,chb05,original,Full overlap lag 6s,0,0.48
+chb05,chb05_13.edf,1,1086.0,1196.0,end,,,,missed,0,loso_chb05,chb05,original,Full overlap lag 6s,0,0.48
+chb05,chb05_16.edf,1,2317.0,2413.0,end,2116.0,-201.0,201.0,pre_onset,11,loso_chb05,chb05,original,Full overlap lag 6s,0,0.48
+chb05,chb05_17.edf,1,2451.0,2571.0,end,2456.0,5.0,-5.0,at_or_after_onset_only,26,loso_chb05,chb05,original,Full overlap lag 6s,0,0.48
+chb05,chb05_22.edf,1,2348.0,2465.0,end,2170.0,-178.0,178.0,pre_onset,12,loso_chb05,chb05,original,Full overlap lag 6s,0,0.48
+chb05,chb05_06.edf,1,417.0,532.0,center,422.0,5.0,-5.0,at_or_after_onset_only,17,loso_chb05,chb05,original,Full overlap lag 10s,0,0.48
+chb05,chb05_13.edf,1,1086.0,1196.0,center,,,,missed,0,loso_chb05,chb05,original,Full overlap lag 10s,0,0.48
+chb05,chb05_16.edf,1,2317.0,2413.0,center,2114.0,-203.0,203.0,pre_onset,10,loso_chb05,chb05,original,Full overlap lag 10s,0,0.48
+chb05,chb05_17.edf,1,2451.0,2571.0,center,2454.0,3.0,-3.0,at_or_after_onset_only,26,loso_chb05,chb05,original,Full overlap lag 10s,0,0.48
+chb05,chb05_22.edf,1,2348.0,2465.0,center,2348.0,0.0,-0.0,at_or_after_onset_only,11,loso_chb05,chb05,original,Full overlap lag 10s,0,0.48
+chb05,chb05_06.edf,1,417.0,532.0,end,424.0,7.0,-7.0,at_or_after_onset_only,17,loso_chb05,chb05,original,Full overlap lag 10s,0,0.48
+chb05,chb05_13.edf,1,1086.0,1196.0,end,,,,missed,0,loso_chb05,chb05,original,Full overlap lag 10s,0,0.48
+chb05,chb05_16.edf,1,2317.0,2413.0,end,2116.0,-201.0,201.0,pre_onset,10,loso_chb05,chb05,original,Full overlap lag 10s,0,0.48
+chb05,chb05_17.edf,1,2451.0,2571.0,end,2456.0,5.0,-5.0,at_or_after_onset_only,26,loso_chb05,chb05,original,Full overlap lag 10s,0,0.48
+chb05,chb05_22.edf,1,2348.0,2465.0,end,2350.0,2.0,-2.0,at_or_after_onset_only,11,loso_chb05,chb05,original,Full overlap lag 10s,0,0.48
+chb05,chb05_06.edf,1,417.0,532.0,center,424.0,7.0,-7.0,at_or_after_onset_only,15,loso_chb05,chb05,original,Full overlap lag 20s,0,0.48
+chb05,chb05_13.edf,1,1086.0,1196.0,center,,,,missed,0,loso_chb05,chb05,original,Full overlap lag 20s,0,0.48
+chb05,chb05_16.edf,1,2317.0,2413.0,center,2114.0,-203.0,203.0,pre_onset,9,loso_chb05,chb05,original,Full overlap lag 20s,0,0.48
+chb05,chb05_17.edf,1,2451.0,2571.0,center,2454.0,3.0,-3.0,at_or_after_onset_only,24,loso_chb05,chb05,original,Full overlap lag 20s,0,0.48
+chb05,chb05_22.edf,1,2348.0,2465.0,center,2168.0,-180.0,180.0,pre_onset,12,loso_chb05,chb05,original,Full overlap lag 20s,0,0.48
+chb05,chb05_06.edf,1,417.0,532.0,end,426.0,9.0,-9.0,at_or_after_onset_only,15,loso_chb05,chb05,original,Full overlap lag 20s,0,0.48
+chb05,chb05_13.edf,1,1086.0,1196.0,end,,,,missed,0,loso_chb05,chb05,original,Full overlap lag 20s,0,0.48
+chb05,chb05_16.edf,1,2317.0,2413.0,end,2116.0,-201.0,201.0,pre_onset,9,loso_chb05,chb05,original,Full overlap lag 20s,0,0.48
+chb05,chb05_17.edf,1,2451.0,2571.0,end,2456.0,5.0,-5.0,at_or_after_onset_only,24,loso_chb05,chb05,original,Full overlap lag 20s,0,0.48
+chb05,chb05_22.edf,1,2348.0,2465.0,end,2170.0,-178.0,178.0,pre_onset,12,loso_chb05,chb05,original,Full overlap lag 20s,0,0.48
+chb05,chb05_06.edf,1,417.0,532.0,center,174.0,-243.0,243.0,pre_onset,76,loso_chb05,chb05,combined,Raw threshold 0.5,0,0.5
+chb05,chb05_13.edf,1,1086.0,1196.0,center,786.0,-300.0,300.0,pre_onset,34,loso_chb05,chb05,combined,Raw threshold 0.5,0,0.5
+chb05,chb05_16.edf,1,2317.0,2413.0,center,2022.0,-295.0,295.0,pre_onset,59,loso_chb05,chb05,combined,Raw threshold 0.5,0,0.5
+chb05,chb05_17.edf,1,2451.0,2571.0,center,2152.0,-299.0,299.0,pre_onset,107,loso_chb05,chb05,combined,Raw threshold 0.5,0,0.5
+chb05,chb05_22.edf,1,2348.0,2465.0,center,2048.0,-300.0,300.0,pre_onset,134,loso_chb05,chb05,combined,Raw threshold 0.5,0,0.5
+chb05,chb05_06.edf,1,417.0,532.0,end,176.0,-241.0,241.0,pre_onset,75,loso_chb05,chb05,combined,Raw threshold 0.5,0,0.5
+chb05,chb05_13.edf,1,1086.0,1196.0,end,786.0,-300.0,300.0,pre_onset,34,loso_chb05,chb05,combined,Raw threshold 0.5,0,0.5
+chb05,chb05_16.edf,1,2317.0,2413.0,end,2018.0,-299.0,299.0,pre_onset,59,loso_chb05,chb05,combined,Raw threshold 0.5,0,0.5
+chb05,chb05_17.edf,1,2451.0,2571.0,end,2152.0,-299.0,299.0,pre_onset,107,loso_chb05,chb05,combined,Raw threshold 0.5,0,0.5
+chb05,chb05_22.edf,1,2348.0,2465.0,end,2048.0,-300.0,300.0,pre_onset,134,loso_chb05,chb05,combined,Raw threshold 0.5,0,0.5
+chb05,chb05_06.edf,1,417.0,532.0,center,210.0,-207.0,207.0,pre_onset,62,loso_chb05,chb05,combined,Raw persistence 0.5,0,0.5
+chb05,chb05_13.edf,1,1086.0,1196.0,center,786.0,-300.0,300.0,pre_onset,26,loso_chb05,chb05,combined,Raw persistence 0.5,0,0.5
+chb05,chb05_16.edf,1,2317.0,2413.0,center,2024.0,-293.0,293.0,pre_onset,43,loso_chb05,chb05,combined,Raw persistence 0.5,0,0.5
+chb05,chb05_17.edf,1,2451.0,2571.0,center,2152.0,-299.0,299.0,pre_onset,84,loso_chb05,chb05,combined,Raw persistence 0.5,0,0.5
+chb05,chb05_22.edf,1,2348.0,2465.0,center,2048.0,-300.0,300.0,pre_onset,113,loso_chb05,chb05,combined,Raw persistence 0.5,0,0.5
+chb05,chb05_06.edf,1,417.0,532.0,end,212.0,-205.0,205.0,pre_onset,61,loso_chb05,chb05,combined,Raw persistence 0.5,0,0.5
+chb05,chb05_13.edf,1,1086.0,1196.0,end,786.0,-300.0,300.0,pre_onset,26,loso_chb05,chb05,combined,Raw persistence 0.5,0,0.5
+chb05,chb05_16.edf,1,2317.0,2413.0,end,2026.0,-291.0,291.0,pre_onset,42,loso_chb05,chb05,combined,Raw persistence 0.5,0,0.5
+chb05,chb05_17.edf,1,2451.0,2571.0,end,2154.0,-297.0,297.0,pre_onset,84,loso_chb05,chb05,combined,Raw persistence 0.5,0,0.5
+chb05,chb05_22.edf,1,2348.0,2465.0,end,2048.0,-300.0,300.0,pre_onset,113,loso_chb05,chb05,combined,Raw persistence 0.5,0,0.5
+chb05,chb05_06.edf,1,417.0,532.0,center,208.0,-209.0,209.0,pre_onset,72,loso_chb05,chb05,combined,Raw overlap 0.5,0,0.5
+chb05,chb05_13.edf,1,1086.0,1196.0,center,786.0,-300.0,300.0,pre_onset,30,loso_chb05,chb05,combined,Raw overlap 0.5,0,0.5
+chb05,chb05_16.edf,1,2317.0,2413.0,center,2024.0,-293.0,293.0,pre_onset,42,loso_chb05,chb05,combined,Raw overlap 0.5,0,0.5
+chb05,chb05_17.edf,1,2451.0,2571.0,center,2152.0,-299.0,299.0,pre_onset,90,loso_chb05,chb05,combined,Raw overlap 0.5,0,0.5
+chb05,chb05_22.edf,1,2348.0,2465.0,center,2048.0,-300.0,300.0,pre_onset,125,loso_chb05,chb05,combined,Raw overlap 0.5,0,0.5
+chb05,chb05_06.edf,1,417.0,532.0,end,210.0,-207.0,207.0,pre_onset,71,loso_chb05,chb05,combined,Raw overlap 0.5,0,0.5
+chb05,chb05_13.edf,1,1086.0,1196.0,end,786.0,-300.0,300.0,pre_onset,31,loso_chb05,chb05,combined,Raw overlap 0.5,0,0.5
+chb05,chb05_16.edf,1,2317.0,2413.0,end,2026.0,-291.0,291.0,pre_onset,41,loso_chb05,chb05,combined,Raw overlap 0.5,0,0.5
+chb05,chb05_17.edf,1,2451.0,2571.0,end,2152.0,-299.0,299.0,pre_onset,90,loso_chb05,chb05,combined,Raw overlap 0.5,0,0.5
+chb05,chb05_22.edf,1,2348.0,2465.0,end,2048.0,-300.0,300.0,pre_onset,125,loso_chb05,chb05,combined,Raw overlap 0.5,0,0.5
+chb05,chb05_06.edf,1,417.0,532.0,center,420.0,3.0,-3.0,at_or_after_onset_only,18,loso_chb05,chb05,combined,Nominal raw-plus-isotonic,0,0.5
+chb05,chb05_13.edf,1,1086.0,1196.0,center,,,,missed,0,loso_chb05,chb05,combined,Nominal raw-plus-isotonic,0,0.5
+chb05,chb05_16.edf,1,2317.0,2413.0,center,2114.0,-203.0,203.0,pre_onset,13,loso_chb05,chb05,combined,Nominal raw-plus-isotonic,0,0.5
+chb05,chb05_17.edf,1,2451.0,2571.0,center,2414.0,-37.0,37.0,pre_onset,29,loso_chb05,chb05,combined,Nominal raw-plus-isotonic,0,0.5
+chb05,chb05_22.edf,1,2348.0,2465.0,center,2166.0,-182.0,182.0,pre_onset,18,loso_chb05,chb05,combined,Nominal raw-plus-isotonic,0,0.5
+chb05,chb05_06.edf,1,417.0,532.0,end,422.0,5.0,-5.0,at_or_after_onset_only,18,loso_chb05,chb05,combined,Nominal raw-plus-isotonic,0,0.5
+chb05,chb05_13.edf,1,1086.0,1196.0,end,,,,missed,0,loso_chb05,chb05,combined,Nominal raw-plus-isotonic,0,0.5
+chb05,chb05_16.edf,1,2317.0,2413.0,end,2116.0,-201.0,201.0,pre_onset,13,loso_chb05,chb05,combined,Nominal raw-plus-isotonic,0,0.5
+chb05,chb05_17.edf,1,2451.0,2571.0,end,2416.0,-35.0,35.0,pre_onset,28,loso_chb05,chb05,combined,Nominal raw-plus-isotonic,0,0.5
+chb05,chb05_22.edf,1,2348.0,2465.0,end,2168.0,-180.0,180.0,pre_onset,18,loso_chb05,chb05,combined,Nominal raw-plus-isotonic,0,0.5
+chb05,chb05_06.edf,1,417.0,532.0,center,422.0,5.0,-5.0,at_or_after_onset_only,17,loso_chb05,chb05,combined,Nominal full 0.5,0,0.5
+chb05,chb05_13.edf,1,1086.0,1196.0,center,,,,missed,0,loso_chb05,chb05,combined,Nominal full 0.5,0,0.5
+chb05,chb05_16.edf,1,2317.0,2413.0,center,2322.0,5.0,-5.0,at_or_after_onset_only,11,loso_chb05,chb05,combined,Nominal full 0.5,0,0.5
+chb05,chb05_17.edf,1,2451.0,2571.0,center,2454.0,3.0,-3.0,at_or_after_onset_only,26,loso_chb05,chb05,combined,Nominal full 0.5,0,0.5
+chb05,chb05_22.edf,1,2348.0,2465.0,center,2168.0,-180.0,180.0,pre_onset,12,loso_chb05,chb05,combined,Nominal full 0.5,0,0.5
+chb05,chb05_06.edf,1,417.0,532.0,end,424.0,7.0,-7.0,at_or_after_onset_only,17,loso_chb05,chb05,combined,Nominal full 0.5,0,0.5
+chb05,chb05_13.edf,1,1086.0,1196.0,end,,,,missed,0,loso_chb05,chb05,combined,Nominal full 0.5,0,0.5
+chb05,chb05_16.edf,1,2317.0,2413.0,end,2324.0,7.0,-7.0,at_or_after_onset_only,11,loso_chb05,chb05,combined,Nominal full 0.5,0,0.5
+chb05,chb05_17.edf,1,2451.0,2571.0,end,2456.0,5.0,-5.0,at_or_after_onset_only,26,loso_chb05,chb05,combined,Nominal full 0.5,0,0.5
+chb05,chb05_22.edf,1,2348.0,2465.0,end,2170.0,-178.0,178.0,pre_onset,12,loso_chb05,chb05,combined,Nominal full 0.5,0,0.5
+chb05,chb05_06.edf,1,417.0,532.0,center,420.0,3.0,-3.0,at_or_after_onset_only,18,loso_chb05,chb05,combined,Calibrated threshold only,0,0.48
+chb05,chb05_13.edf,1,1086.0,1196.0,center,,,,missed,0,loso_chb05,chb05,combined,Calibrated threshold only,0,0.48
+chb05,chb05_16.edf,1,2317.0,2413.0,center,2112.0,-205.0,205.0,pre_onset,14,loso_chb05,chb05,combined,Calibrated threshold only,0,0.48
+chb05,chb05_17.edf,1,2451.0,2571.0,center,2414.0,-37.0,37.0,pre_onset,29,loso_chb05,chb05,combined,Calibrated threshold only,0,0.48
+chb05,chb05_22.edf,1,2348.0,2465.0,center,2166.0,-182.0,182.0,pre_onset,18,loso_chb05,chb05,combined,Calibrated threshold only,0,0.48
+chb05,chb05_06.edf,1,417.0,532.0,end,422.0,5.0,-5.0,at_or_after_onset_only,18,loso_chb05,chb05,combined,Calibrated threshold only,0,0.48
+chb05,chb05_13.edf,1,1086.0,1196.0,end,,,,missed,0,loso_chb05,chb05,combined,Calibrated threshold only,0,0.48
+chb05,chb05_16.edf,1,2317.0,2413.0,end,2114.0,-203.0,203.0,pre_onset,14,loso_chb05,chb05,combined,Calibrated threshold only,0,0.48
+chb05,chb05_17.edf,1,2451.0,2571.0,end,2416.0,-35.0,35.0,pre_onset,28,loso_chb05,chb05,combined,Calibrated threshold only,0,0.48
+chb05,chb05_22.edf,1,2348.0,2465.0,end,2168.0,-180.0,180.0,pre_onset,18,loso_chb05,chb05,combined,Calibrated threshold only,0,0.48
+chb05,chb05_06.edf,1,417.0,532.0,center,422.0,5.0,-5.0,at_or_after_onset_only,17,loso_chb05,chb05,combined,+ persistence,0,0.48
+chb05,chb05_13.edf,1,1086.0,1196.0,center,,,,missed,0,loso_chb05,chb05,combined,+ persistence,0,0.48
+chb05,chb05_16.edf,1,2317.0,2413.0,center,2114.0,-203.0,203.0,pre_onset,12,loso_chb05,chb05,combined,+ persistence,0,0.48
+chb05,chb05_17.edf,1,2451.0,2571.0,center,2454.0,3.0,-3.0,at_or_after_onset_only,26,loso_chb05,chb05,combined,+ persistence,0,0.48
+chb05,chb05_22.edf,1,2348.0,2465.0,center,2168.0,-180.0,180.0,pre_onset,12,loso_chb05,chb05,combined,+ persistence,0,0.48
+chb05,chb05_06.edf,1,417.0,532.0,end,424.0,7.0,-7.0,at_or_after_onset_only,17,loso_chb05,chb05,combined,+ persistence,0,0.48
+chb05,chb05_13.edf,1,1086.0,1196.0,end,,,,missed,0,loso_chb05,chb05,combined,+ persistence,0,0.48
+chb05,chb05_16.edf,1,2317.0,2413.0,end,2116.0,-201.0,201.0,pre_onset,12,loso_chb05,chb05,combined,+ persistence,0,0.48
+chb05,chb05_17.edf,1,2451.0,2571.0,end,2456.0,5.0,-5.0,at_or_after_onset_only,26,loso_chb05,chb05,combined,+ persistence,0,0.48
+chb05,chb05_22.edf,1,2348.0,2465.0,end,2170.0,-178.0,178.0,pre_onset,12,loso_chb05,chb05,combined,+ persistence,0,0.48
+chb05,chb05_06.edf,1,417.0,532.0,center,420.0,3.0,-3.0,at_or_after_onset_only,18,loso_chb05,chb05,combined,+ attribution overlap,0,0.48
+chb05,chb05_13.edf,1,1086.0,1196.0,center,,,,missed,0,loso_chb05,chb05,combined,+ attribution overlap,0,0.48
+chb05,chb05_16.edf,1,2317.0,2413.0,center,2112.0,-205.0,205.0,pre_onset,13,loso_chb05,chb05,combined,+ attribution overlap,0,0.48
+chb05,chb05_17.edf,1,2451.0,2571.0,center,2414.0,-37.0,37.0,pre_onset,29,loso_chb05,chb05,combined,+ attribution overlap,0,0.48
+chb05,chb05_22.edf,1,2348.0,2465.0,center,2166.0,-182.0,182.0,pre_onset,18,loso_chb05,chb05,combined,+ attribution overlap,0,0.48
+chb05,chb05_06.edf,1,417.0,532.0,end,422.0,5.0,-5.0,at_or_after_onset_only,18,loso_chb05,chb05,combined,+ attribution overlap,0,0.48
+chb05,chb05_13.edf,1,1086.0,1196.0,end,,,,missed,0,loso_chb05,chb05,combined,+ attribution overlap,0,0.48
+chb05,chb05_16.edf,1,2317.0,2413.0,end,2114.0,-203.0,203.0,pre_onset,13,loso_chb05,chb05,combined,+ attribution overlap,0,0.48
+chb05,chb05_17.edf,1,2451.0,2571.0,end,2416.0,-35.0,35.0,pre_onset,28,loso_chb05,chb05,combined,+ attribution overlap,0,0.48
+chb05,chb05_22.edf,1,2348.0,2465.0,end,2168.0,-180.0,180.0,pre_onset,18,loso_chb05,chb05,combined,+ attribution overlap,0,0.48
+chb05,chb05_06.edf,1,417.0,532.0,center,422.0,5.0,-5.0,at_or_after_onset_only,17,loso_chb05,chb05,combined,+ persistence + overlap,0,0.48
+chb05,chb05_13.edf,1,1086.0,1196.0,center,,,,missed,0,loso_chb05,chb05,combined,+ persistence + overlap,0,0.48
+chb05,chb05_16.edf,1,2317.0,2413.0,center,2114.0,-203.0,203.0,pre_onset,12,loso_chb05,chb05,combined,+ persistence + overlap,0,0.48
+chb05,chb05_17.edf,1,2451.0,2571.0,center,2454.0,3.0,-3.0,at_or_after_onset_only,26,loso_chb05,chb05,combined,+ persistence + overlap,0,0.48
+chb05,chb05_22.edf,1,2348.0,2465.0,center,2168.0,-180.0,180.0,pre_onset,12,loso_chb05,chb05,combined,+ persistence + overlap,0,0.48
+chb05,chb05_06.edf,1,417.0,532.0,end,424.0,7.0,-7.0,at_or_after_onset_only,17,loso_chb05,chb05,combined,+ persistence + overlap,0,0.48
+chb05,chb05_13.edf,1,1086.0,1196.0,end,,,,missed,0,loso_chb05,chb05,combined,+ persistence + overlap,0,0.48
+chb05,chb05_16.edf,1,2317.0,2413.0,end,2116.0,-201.0,201.0,pre_onset,12,loso_chb05,chb05,combined,+ persistence + overlap,0,0.48
+chb05,chb05_17.edf,1,2451.0,2571.0,end,2456.0,5.0,-5.0,at_or_after_onset_only,26,loso_chb05,chb05,combined,+ persistence + overlap,0,0.48
+chb05,chb05_22.edf,1,2348.0,2465.0,end,2170.0,-178.0,178.0,pre_onset,12,loso_chb05,chb05,combined,+ persistence + overlap,0,0.48
+chb05,chb05_06.edf,1,417.0,532.0,center,422.0,5.0,-5.0,at_or_after_onset_only,17,loso_chb05,chb05,combined,Full overlap lag 4s,0,0.48
+chb05,chb05_13.edf,1,1086.0,1196.0,center,,,,missed,0,loso_chb05,chb05,combined,Full overlap lag 4s,0,0.48
+chb05,chb05_16.edf,1,2317.0,2413.0,center,2114.0,-203.0,203.0,pre_onset,11,loso_chb05,chb05,combined,Full overlap lag 4s,0,0.48
+chb05,chb05_17.edf,1,2451.0,2571.0,center,2454.0,3.0,-3.0,at_or_after_onset_only,26,loso_chb05,chb05,combined,Full overlap lag 4s,0,0.48
+chb05,chb05_22.edf,1,2348.0,2465.0,center,2168.0,-180.0,180.0,pre_onset,12,loso_chb05,chb05,combined,Full overlap lag 4s,0,0.48
+chb05,chb05_06.edf,1,417.0,532.0,end,424.0,7.0,-7.0,at_or_after_onset_only,17,loso_chb05,chb05,combined,Full overlap lag 4s,0,0.48
+chb05,chb05_13.edf,1,1086.0,1196.0,end,,,,missed,0,loso_chb05,chb05,combined,Full overlap lag 4s,0,0.48
+chb05,chb05_16.edf,1,2317.0,2413.0,end,2116.0,-201.0,201.0,pre_onset,11,loso_chb05,chb05,combined,Full overlap lag 4s,0,0.48
+chb05,chb05_17.edf,1,2451.0,2571.0,end,2456.0,5.0,-5.0,at_or_after_onset_only,26,loso_chb05,chb05,combined,Full overlap lag 4s,0,0.48
+chb05,chb05_22.edf,1,2348.0,2465.0,end,2170.0,-178.0,178.0,pre_onset,12,loso_chb05,chb05,combined,Full overlap lag 4s,0,0.48
+chb05,chb05_06.edf,1,417.0,532.0,center,422.0,5.0,-5.0,at_or_after_onset_only,17,loso_chb05,chb05,combined,Full overlap lag 6s,0,0.48
+chb05,chb05_13.edf,1,1086.0,1196.0,center,,,,missed,0,loso_chb05,chb05,combined,Full overlap lag 6s,0,0.48
+chb05,chb05_16.edf,1,2317.0,2413.0,center,2114.0,-203.0,203.0,pre_onset,11,loso_chb05,chb05,combined,Full overlap lag 6s,0,0.48
+chb05,chb05_17.edf,1,2451.0,2571.0,center,2454.0,3.0,-3.0,at_or_after_onset_only,26,loso_chb05,chb05,combined,Full overlap lag 6s,0,0.48
+chb05,chb05_22.edf,1,2348.0,2465.0,center,2168.0,-180.0,180.0,pre_onset,12,loso_chb05,chb05,combined,Full overlap lag 6s,0,0.48
+chb05,chb05_06.edf,1,417.0,532.0,end,424.0,7.0,-7.0,at_or_after_onset_only,17,loso_chb05,chb05,combined,Full overlap lag 6s,0,0.48
+chb05,chb05_13.edf,1,1086.0,1196.0,end,,,,missed,0,loso_chb05,chb05,combined,Full overlap lag 6s,0,0.48
+chb05,chb05_16.edf,1,2317.0,2413.0,end,2116.0,-201.0,201.0,pre_onset,11,loso_chb05,chb05,combined,Full overlap lag 6s,0,0.48
+chb05,chb05_17.edf,1,2451.0,2571.0,end,2456.0,5.0,-5.0,at_or_after_onset_only,26,loso_chb05,chb05,combined,Full overlap lag 6s,0,0.48
+chb05,chb05_22.edf,1,2348.0,2465.0,end,2170.0,-178.0,178.0,pre_onset,12,loso_chb05,chb05,combined,Full overlap lag 6s,0,0.48
+chb05,chb05_06.edf,1,417.0,532.0,center,422.0,5.0,-5.0,at_or_after_onset_only,17,loso_chb05,chb05,combined,Full overlap lag 10s,0,0.48
+chb05,chb05_13.edf,1,1086.0,1196.0,center,,,,missed,0,loso_chb05,chb05,combined,Full overlap lag 10s,0,0.48
+chb05,chb05_16.edf,1,2317.0,2413.0,center,2114.0,-203.0,203.0,pre_onset,10,loso_chb05,chb05,combined,Full overlap lag 10s,0,0.48
+chb05,chb05_17.edf,1,2451.0,2571.0,center,2454.0,3.0,-3.0,at_or_after_onset_only,26,loso_chb05,chb05,combined,Full overlap lag 10s,0,0.48
+chb05,chb05_22.edf,1,2348.0,2465.0,center,2348.0,0.0,-0.0,at_or_after_onset_only,11,loso_chb05,chb05,combined,Full overlap lag 10s,0,0.48
+chb05,chb05_06.edf,1,417.0,532.0,end,424.0,7.0,-7.0,at_or_after_onset_only,17,loso_chb05,chb05,combined,Full overlap lag 10s,0,0.48
+chb05,chb05_13.edf,1,1086.0,1196.0,end,,,,missed,0,loso_chb05,chb05,combined,Full overlap lag 10s,0,0.48
+chb05,chb05_16.edf,1,2317.0,2413.0,end,2116.0,-201.0,201.0,pre_onset,10,loso_chb05,chb05,combined,Full overlap lag 10s,0,0.48
+chb05,chb05_17.edf,1,2451.0,2571.0,end,2456.0,5.0,-5.0,at_or_after_onset_only,26,loso_chb05,chb05,combined,Full overlap lag 10s,0,0.48
+chb05,chb05_22.edf,1,2348.0,2465.0,end,2350.0,2.0,-2.0,at_or_after_onset_only,11,loso_chb05,chb05,combined,Full overlap lag 10s,0,0.48
+chb05,chb05_06.edf,1,417.0,532.0,center,424.0,7.0,-7.0,at_or_after_onset_only,15,loso_chb05,chb05,combined,Full overlap lag 20s,0,0.48
+chb05,chb05_13.edf,1,1086.0,1196.0,center,,,,missed,0,loso_chb05,chb05,combined,Full overlap lag 20s,0,0.48
+chb05,chb05_16.edf,1,2317.0,2413.0,center,2114.0,-203.0,203.0,pre_onset,9,loso_chb05,chb05,combined,Full overlap lag 20s,0,0.48
+chb05,chb05_17.edf,1,2451.0,2571.0,center,2454.0,3.0,-3.0,at_or_after_onset_only,24,loso_chb05,chb05,combined,Full overlap lag 20s,0,0.48
+chb05,chb05_22.edf,1,2348.0,2465.0,center,2168.0,-180.0,180.0,pre_onset,12,loso_chb05,chb05,combined,Full overlap lag 20s,0,0.48
+chb05,chb05_06.edf,1,417.0,532.0,end,426.0,9.0,-9.0,at_or_after_onset_only,15,loso_chb05,chb05,combined,Full overlap lag 20s,0,0.48
+chb05,chb05_13.edf,1,1086.0,1196.0,end,,,,missed,0,loso_chb05,chb05,combined,Full overlap lag 20s,0,0.48
+chb05,chb05_16.edf,1,2317.0,2413.0,end,2116.0,-201.0,201.0,pre_onset,9,loso_chb05,chb05,combined,Full overlap lag 20s,0,0.48
+chb05,chb05_17.edf,1,2451.0,2571.0,end,2456.0,5.0,-5.0,at_or_after_onset_only,24,loso_chb05,chb05,combined,Full overlap lag 20s,0,0.48
+chb05,chb05_22.edf,1,2348.0,2465.0,end,2170.0,-178.0,178.0,pre_onset,12,loso_chb05,chb05,combined,Full overlap lag 20s,0,0.48
+chb08,chb08_02.edf,1,2670.0,2841.0,center,2384.0,-286.0,286.0,pre_onset,58,loso_chb08,chb08,original,Raw threshold 0.5,0,0.5
+chb08,chb08_05.edf,1,2856.0,3046.0,center,2578.0,-278.0,278.0,pre_onset,72,loso_chb08,chb08,original,Raw threshold 0.5,0,0.5
+chb08,chb08_11.edf,1,2988.0,3122.0,center,2812.0,-176.0,176.0,pre_onset,66,loso_chb08,chb08,original,Raw threshold 0.5,0,0.5
+chb08,chb08_13.edf,1,2417.0,2577.0,center,2124.0,-293.0,293.0,pre_onset,101,loso_chb08,chb08,original,Raw threshold 0.5,0,0.5
+chb08,chb08_21.edf,1,2083.0,2347.0,center,1964.0,-119.0,119.0,pre_onset,89,loso_chb08,chb08,original,Raw threshold 0.5,0,0.5
+chb08,chb08_02.edf,1,2670.0,2841.0,end,2386.0,-284.0,284.0,pre_onset,58,loso_chb08,chb08,original,Raw threshold 0.5,0,0.5
+chb08,chb08_05.edf,1,2856.0,3046.0,end,2580.0,-276.0,276.0,pre_onset,72,loso_chb08,chb08,original,Raw threshold 0.5,0,0.5
+chb08,chb08_11.edf,1,2988.0,3122.0,end,2814.0,-174.0,174.0,pre_onset,66,loso_chb08,chb08,original,Raw threshold 0.5,0,0.5
+chb08,chb08_13.edf,1,2417.0,2577.0,end,2126.0,-291.0,291.0,pre_onset,101,loso_chb08,chb08,original,Raw threshold 0.5,0,0.5
+chb08,chb08_21.edf,1,2083.0,2347.0,end,1966.0,-117.0,117.0,pre_onset,89,loso_chb08,chb08,original,Raw threshold 0.5,0,0.5
+chb08,chb08_02.edf,1,2670.0,2841.0,center,2426.0,-244.0,244.0,pre_onset,42,loso_chb08,chb08,original,Raw persistence 0.5,0,0.5
+chb08,chb08_05.edf,1,2856.0,3046.0,center,2580.0,-276.0,276.0,pre_onset,57,loso_chb08,chb08,original,Raw persistence 0.5,0,0.5
+chb08,chb08_11.edf,1,2988.0,3122.0,center,2814.0,-174.0,174.0,pre_onset,51,loso_chb08,chb08,original,Raw persistence 0.5,0,0.5
+chb08,chb08_13.edf,1,2417.0,2577.0,center,2134.0,-283.0,283.0,pre_onset,77,loso_chb08,chb08,original,Raw persistence 0.5,0,0.5
+chb08,chb08_21.edf,1,2083.0,2347.0,center,2074.0,-9.0,9.0,pre_onset,68,loso_chb08,chb08,original,Raw persistence 0.5,0,0.5
+chb08,chb08_02.edf,1,2670.0,2841.0,end,2428.0,-242.0,242.0,pre_onset,42,loso_chb08,chb08,original,Raw persistence 0.5,0,0.5
+chb08,chb08_05.edf,1,2856.0,3046.0,end,2582.0,-274.0,274.0,pre_onset,57,loso_chb08,chb08,original,Raw persistence 0.5,0,0.5
+chb08,chb08_11.edf,1,2988.0,3122.0,end,2816.0,-172.0,172.0,pre_onset,51,loso_chb08,chb08,original,Raw persistence 0.5,0,0.5
+chb08,chb08_13.edf,1,2417.0,2577.0,end,2136.0,-281.0,281.0,pre_onset,77,loso_chb08,chb08,original,Raw persistence 0.5,0,0.5
+chb08,chb08_21.edf,1,2083.0,2347.0,end,2076.0,-7.0,7.0,pre_onset,68,loso_chb08,chb08,original,Raw persistence 0.5,0,0.5
+chb08,chb08_02.edf,1,2670.0,2841.0,center,2384.0,-286.0,286.0,pre_onset,54,loso_chb08,chb08,original,Raw overlap 0.5,0,0.5
+chb08,chb08_05.edf,1,2856.0,3046.0,center,2580.0,-276.0,276.0,pre_onset,65,loso_chb08,chb08,original,Raw overlap 0.5,0,0.5
+chb08,chb08_11.edf,1,2988.0,3122.0,center,2814.0,-174.0,174.0,pre_onset,63,loso_chb08,chb08,original,Raw overlap 0.5,0,0.5
+chb08,chb08_13.edf,1,2417.0,2577.0,center,2124.0,-293.0,293.0,pre_onset,95,loso_chb08,chb08,original,Raw overlap 0.5,0,0.5
+chb08,chb08_21.edf,1,2083.0,2347.0,center,1964.0,-119.0,119.0,pre_onset,85,loso_chb08,chb08,original,Raw overlap 0.5,0,0.5
+chb08,chb08_02.edf,1,2670.0,2841.0,end,2386.0,-284.0,284.0,pre_onset,54,loso_chb08,chb08,original,Raw overlap 0.5,0,0.5
+chb08,chb08_05.edf,1,2856.0,3046.0,end,2582.0,-274.0,274.0,pre_onset,65,loso_chb08,chb08,original,Raw overlap 0.5,0,0.5
+chb08,chb08_11.edf,1,2988.0,3122.0,end,2816.0,-172.0,172.0,pre_onset,63,loso_chb08,chb08,original,Raw overlap 0.5,0,0.5
+chb08,chb08_13.edf,1,2417.0,2577.0,end,2126.0,-291.0,291.0,pre_onset,95,loso_chb08,chb08,original,Raw overlap 0.5,0,0.5
+chb08,chb08_21.edf,1,2083.0,2347.0,end,1966.0,-117.0,117.0,pre_onset,85,loso_chb08,chb08,original,Raw overlap 0.5,0,0.5
+chb08,chb08_02.edf,1,2670.0,2841.0,center,2680.0,10.0,-10.0,at_or_after_onset_only,5,loso_chb08,chb08,original,Nominal raw-plus-isotonic,0,0.5
+chb08,chb08_05.edf,1,2856.0,3046.0,center,2872.0,16.0,-16.0,at_or_after_onset_only,8,loso_chb08,chb08,original,Nominal raw-plus-isotonic,0,0.5
+chb08,chb08_11.edf,1,2988.0,3122.0,center,3002.0,14.0,-14.0,at_or_after_onset_only,7,loso_chb08,chb08,original,Nominal raw-plus-isotonic,0,0.5
+chb08,chb08_13.edf,1,2417.0,2577.0,center,2428.0,11.0,-11.0,at_or_after_onset_only,8,loso_chb08,chb08,original,Nominal raw-plus-isotonic,0,0.5
+chb08,chb08_21.edf,1,2083.0,2347.0,center,2092.0,9.0,-9.0,at_or_after_onset_only,6,loso_chb08,chb08,original,Nominal raw-plus-isotonic,0,0.5
+chb08,chb08_02.edf,1,2670.0,2841.0,end,2682.0,12.0,-12.0,at_or_after_onset_only,5,loso_chb08,chb08,original,Nominal raw-plus-isotonic,0,0.5
+chb08,chb08_05.edf,1,2856.0,3046.0,end,2874.0,18.0,-18.0,at_or_after_onset_only,8,loso_chb08,chb08,original,Nominal raw-plus-isotonic,0,0.5
+chb08,chb08_11.edf,1,2988.0,3122.0,end,3004.0,16.0,-16.0,at_or_after_onset_only,7,loso_chb08,chb08,original,Nominal raw-plus-isotonic,0,0.5
+chb08,chb08_13.edf,1,2417.0,2577.0,end,2430.0,13.0,-13.0,at_or_after_onset_only,8,loso_chb08,chb08,original,Nominal raw-plus-isotonic,0,0.5
+chb08,chb08_21.edf,1,2083.0,2347.0,end,2094.0,11.0,-11.0,at_or_after_onset_only,6,loso_chb08,chb08,original,Nominal raw-plus-isotonic,0,0.5
+chb08,chb08_02.edf,1,2670.0,2841.0,center,2686.0,16.0,-16.0,at_or_after_onset_only,2,loso_chb08,chb08,original,Nominal full 0.5,0,0.5
+chb08,chb08_05.edf,1,2856.0,3046.0,center,2878.0,22.0,-22.0,at_or_after_onset_only,4,loso_chb08,chb08,original,Nominal full 0.5,0,0.5
+chb08,chb08_11.edf,1,2988.0,3122.0,center,3004.0,16.0,-16.0,at_or_after_onset_only,3,loso_chb08,chb08,original,Nominal full 0.5,0,0.5
+chb08,chb08_13.edf,1,2417.0,2577.0,center,2434.0,17.0,-17.0,at_or_after_onset_only,4,loso_chb08,chb08,original,Nominal full 0.5,0,0.5
+chb08,chb08_21.edf,1,2083.0,2347.0,center,2106.0,23.0,-23.0,at_or_after_onset_only,2,loso_chb08,chb08,original,Nominal full 0.5,0,0.5
+chb08,chb08_02.edf,1,2670.0,2841.0,end,2688.0,18.0,-18.0,at_or_after_onset_only,2,loso_chb08,chb08,original,Nominal full 0.5,0,0.5
+chb08,chb08_05.edf,1,2856.0,3046.0,end,2880.0,24.0,-24.0,at_or_after_onset_only,4,loso_chb08,chb08,original,Nominal full 0.5,0,0.5
+chb08,chb08_11.edf,1,2988.0,3122.0,end,3006.0,18.0,-18.0,at_or_after_onset_only,3,loso_chb08,chb08,original,Nominal full 0.5,0,0.5
+chb08,chb08_13.edf,1,2417.0,2577.0,end,2436.0,19.0,-19.0,at_or_after_onset_only,4,loso_chb08,chb08,original,Nominal full 0.5,0,0.5
+chb08,chb08_21.edf,1,2083.0,2347.0,end,2108.0,25.0,-25.0,at_or_after_onset_only,2,loso_chb08,chb08,original,Nominal full 0.5,0,0.5
+chb08,chb08_02.edf,1,2670.0,2841.0,center,2680.0,10.0,-10.0,at_or_after_onset_only,8,loso_chb08,chb08,original,Calibrated threshold only,0,0.22
+chb08,chb08_05.edf,1,2856.0,3046.0,center,2866.0,10.0,-10.0,at_or_after_onset_only,13,loso_chb08,chb08,original,Calibrated threshold only,0,0.22
+chb08,chb08_11.edf,1,2988.0,3122.0,center,2998.0,10.0,-10.0,at_or_after_onset_only,10,loso_chb08,chb08,original,Calibrated threshold only,0,0.22
+chb08,chb08_13.edf,1,2417.0,2577.0,center,2428.0,11.0,-11.0,at_or_after_onset_only,10,loso_chb08,chb08,original,Calibrated threshold only,0,0.22
+chb08,chb08_21.edf,1,2083.0,2347.0,center,2092.0,9.0,-9.0,at_or_after_onset_only,7,loso_chb08,chb08,original,Calibrated threshold only,0,0.22
+chb08,chb08_02.edf,1,2670.0,2841.0,end,2682.0,12.0,-12.0,at_or_after_onset_only,8,loso_chb08,chb08,original,Calibrated threshold only,0,0.22
+chb08,chb08_05.edf,1,2856.0,3046.0,end,2868.0,12.0,-12.0,at_or_after_onset_only,13,loso_chb08,chb08,original,Calibrated threshold only,0,0.22
+chb08,chb08_11.edf,1,2988.0,3122.0,end,3000.0,12.0,-12.0,at_or_after_onset_only,10,loso_chb08,chb08,original,Calibrated threshold only,0,0.22
+chb08,chb08_13.edf,1,2417.0,2577.0,end,2430.0,13.0,-13.0,at_or_after_onset_only,10,loso_chb08,chb08,original,Calibrated threshold only,0,0.22
+chb08,chb08_21.edf,1,2083.0,2347.0,end,2094.0,11.0,-11.0,at_or_after_onset_only,7,loso_chb08,chb08,original,Calibrated threshold only,0,0.22
+chb08,chb08_02.edf,1,2670.0,2841.0,center,2686.0,16.0,-16.0,at_or_after_onset_only,2,loso_chb08,chb08,original,+ persistence,0,0.22
+chb08,chb08_05.edf,1,2856.0,3046.0,center,2868.0,12.0,-12.0,at_or_after_onset_only,6,loso_chb08,chb08,original,+ persistence,0,0.22
+chb08,chb08_11.edf,1,2988.0,3122.0,center,3004.0,16.0,-16.0,at_or_after_onset_only,3,loso_chb08,chb08,original,+ persistence,0,0.22
+chb08,chb08_13.edf,1,2417.0,2577.0,center,2434.0,17.0,-17.0,at_or_after_onset_only,5,loso_chb08,chb08,original,+ persistence,0,0.22
+chb08,chb08_21.edf,1,2083.0,2347.0,center,2106.0,23.0,-23.0,at_or_after_onset_only,2,loso_chb08,chb08,original,+ persistence,0,0.22
+chb08,chb08_02.edf,1,2670.0,2841.0,end,2688.0,18.0,-18.0,at_or_after_onset_only,2,loso_chb08,chb08,original,+ persistence,0,0.22
+chb08,chb08_05.edf,1,2856.0,3046.0,end,2870.0,14.0,-14.0,at_or_after_onset_only,6,loso_chb08,chb08,original,+ persistence,0,0.22
+chb08,chb08_11.edf,1,2988.0,3122.0,end,3006.0,18.0,-18.0,at_or_after_onset_only,3,loso_chb08,chb08,original,+ persistence,0,0.22
+chb08,chb08_13.edf,1,2417.0,2577.0,end,2436.0,19.0,-19.0,at_or_after_onset_only,5,loso_chb08,chb08,original,+ persistence,0,0.22
+chb08,chb08_21.edf,1,2083.0,2347.0,end,2108.0,25.0,-25.0,at_or_after_onset_only,2,loso_chb08,chb08,original,+ persistence,0,0.22
+chb08,chb08_02.edf,1,2670.0,2841.0,center,2680.0,10.0,-10.0,at_or_after_onset_only,8,loso_chb08,chb08,original,+ attribution overlap,0,0.22
+chb08,chb08_05.edf,1,2856.0,3046.0,center,2866.0,10.0,-10.0,at_or_after_onset_only,13,loso_chb08,chb08,original,+ attribution overlap,0,0.22
+chb08,chb08_11.edf,1,2988.0,3122.0,center,3002.0,14.0,-14.0,at_or_after_onset_only,9,loso_chb08,chb08,original,+ attribution overlap,0,0.22
+chb08,chb08_13.edf,1,2417.0,2577.0,center,2428.0,11.0,-11.0,at_or_after_onset_only,10,loso_chb08,chb08,original,+ attribution overlap,0,0.22
+chb08,chb08_21.edf,1,2083.0,2347.0,center,2092.0,9.0,-9.0,at_or_after_onset_only,7,loso_chb08,chb08,original,+ attribution overlap,0,0.22
+chb08,chb08_02.edf,1,2670.0,2841.0,end,2682.0,12.0,-12.0,at_or_after_onset_only,8,loso_chb08,chb08,original,+ attribution overlap,0,0.22
+chb08,chb08_05.edf,1,2856.0,3046.0,end,2868.0,12.0,-12.0,at_or_after_onset_only,13,loso_chb08,chb08,original,+ attribution overlap,0,0.22
+chb08,chb08_11.edf,1,2988.0,3122.0,end,3004.0,16.0,-16.0,at_or_after_onset_only,9,loso_chb08,chb08,original,+ attribution overlap,0,0.22
+chb08,chb08_13.edf,1,2417.0,2577.0,end,2430.0,13.0,-13.0,at_or_after_onset_only,10,loso_chb08,chb08,original,+ attribution overlap,0,0.22
+chb08,chb08_21.edf,1,2083.0,2347.0,end,2094.0,11.0,-11.0,at_or_after_onset_only,7,loso_chb08,chb08,original,+ attribution overlap,0,0.22
+chb08,chb08_02.edf,1,2670.0,2841.0,center,2686.0,16.0,-16.0,at_or_after_onset_only,2,loso_chb08,chb08,original,+ persistence + overlap,0,0.22
+chb08,chb08_05.edf,1,2856.0,3046.0,center,2868.0,12.0,-12.0,at_or_after_onset_only,6,loso_chb08,chb08,original,+ persistence + overlap,0,0.22
+chb08,chb08_11.edf,1,2988.0,3122.0,center,3004.0,16.0,-16.0,at_or_after_onset_only,3,loso_chb08,chb08,original,+ persistence + overlap,0,0.22
+chb08,chb08_13.edf,1,2417.0,2577.0,center,2434.0,17.0,-17.0,at_or_after_onset_only,5,loso_chb08,chb08,original,+ persistence + overlap,0,0.22
+chb08,chb08_21.edf,1,2083.0,2347.0,center,2106.0,23.0,-23.0,at_or_after_onset_only,2,loso_chb08,chb08,original,+ persistence + overlap,0,0.22
+chb08,chb08_02.edf,1,2670.0,2841.0,end,2688.0,18.0,-18.0,at_or_after_onset_only,2,loso_chb08,chb08,original,+ persistence + overlap,0,0.22
+chb08,chb08_05.edf,1,2856.0,3046.0,end,2870.0,14.0,-14.0,at_or_after_onset_only,6,loso_chb08,chb08,original,+ persistence + overlap,0,0.22
+chb08,chb08_11.edf,1,2988.0,3122.0,end,3006.0,18.0,-18.0,at_or_after_onset_only,3,loso_chb08,chb08,original,+ persistence + overlap,0,0.22
+chb08,chb08_13.edf,1,2417.0,2577.0,end,2436.0,19.0,-19.0,at_or_after_onset_only,5,loso_chb08,chb08,original,+ persistence + overlap,0,0.22
+chb08,chb08_21.edf,1,2083.0,2347.0,end,2108.0,25.0,-25.0,at_or_after_onset_only,2,loso_chb08,chb08,original,+ persistence + overlap,0,0.22
+chb08,chb08_02.edf,1,2670.0,2841.0,center,2686.0,16.0,-16.0,at_or_after_onset_only,2,loso_chb08,chb08,original,Full overlap lag 4s,0,0.22
+chb08,chb08_05.edf,1,2856.0,3046.0,center,2868.0,12.0,-12.0,at_or_after_onset_only,6,loso_chb08,chb08,original,Full overlap lag 4s,0,0.22
+chb08,chb08_11.edf,1,2988.0,3122.0,center,3004.0,16.0,-16.0,at_or_after_onset_only,3,loso_chb08,chb08,original,Full overlap lag 4s,0,0.22
+chb08,chb08_13.edf,1,2417.0,2577.0,center,2434.0,17.0,-17.0,at_or_after_onset_only,5,loso_chb08,chb08,original,Full overlap lag 4s,0,0.22
+chb08,chb08_21.edf,1,2083.0,2347.0,center,2106.0,23.0,-23.0,at_or_after_onset_only,2,loso_chb08,chb08,original,Full overlap lag 4s,0,0.22
+chb08,chb08_02.edf,1,2670.0,2841.0,end,2688.0,18.0,-18.0,at_or_after_onset_only,2,loso_chb08,chb08,original,Full overlap lag 4s,0,0.22
+chb08,chb08_05.edf,1,2856.0,3046.0,end,2870.0,14.0,-14.0,at_or_after_onset_only,6,loso_chb08,chb08,original,Full overlap lag 4s,0,0.22
+chb08,chb08_11.edf,1,2988.0,3122.0,end,3006.0,18.0,-18.0,at_or_after_onset_only,3,loso_chb08,chb08,original,Full overlap lag 4s,0,0.22
+chb08,chb08_13.edf,1,2417.0,2577.0,end,2436.0,19.0,-19.0,at_or_after_onset_only,5,loso_chb08,chb08,original,Full overlap lag 4s,0,0.22
+chb08,chb08_21.edf,1,2083.0,2347.0,end,2108.0,25.0,-25.0,at_or_after_onset_only,2,loso_chb08,chb08,original,Full overlap lag 4s,0,0.22
+chb08,chb08_02.edf,1,2670.0,2841.0,center,2686.0,16.0,-16.0,at_or_after_onset_only,2,loso_chb08,chb08,original,Full overlap lag 6s,0,0.22
+chb08,chb08_05.edf,1,2856.0,3046.0,center,2868.0,12.0,-12.0,at_or_after_onset_only,6,loso_chb08,chb08,original,Full overlap lag 6s,0,0.22
+chb08,chb08_11.edf,1,2988.0,3122.0,center,3004.0,16.0,-16.0,at_or_after_onset_only,3,loso_chb08,chb08,original,Full overlap lag 6s,0,0.22
+chb08,chb08_13.edf,1,2417.0,2577.0,center,2434.0,17.0,-17.0,at_or_after_onset_only,5,loso_chb08,chb08,original,Full overlap lag 6s,0,0.22
+chb08,chb08_21.edf,1,2083.0,2347.0,center,2106.0,23.0,-23.0,at_or_after_onset_only,2,loso_chb08,chb08,original,Full overlap lag 6s,0,0.22
+chb08,chb08_02.edf,1,2670.0,2841.0,end,2688.0,18.0,-18.0,at_or_after_onset_only,2,loso_chb08,chb08,original,Full overlap lag 6s,0,0.22
+chb08,chb08_05.edf,1,2856.0,3046.0,end,2870.0,14.0,-14.0,at_or_after_onset_only,6,loso_chb08,chb08,original,Full overlap lag 6s,0,0.22
+chb08,chb08_11.edf,1,2988.0,3122.0,end,3006.0,18.0,-18.0,at_or_after_onset_only,3,loso_chb08,chb08,original,Full overlap lag 6s,0,0.22
+chb08,chb08_13.edf,1,2417.0,2577.0,end,2436.0,19.0,-19.0,at_or_after_onset_only,5,loso_chb08,chb08,original,Full overlap lag 6s,0,0.22
+chb08,chb08_21.edf,1,2083.0,2347.0,end,2108.0,25.0,-25.0,at_or_after_onset_only,2,loso_chb08,chb08,original,Full overlap lag 6s,0,0.22
+chb08,chb08_02.edf,1,2670.0,2841.0,center,2686.0,16.0,-16.0,at_or_after_onset_only,2,loso_chb08,chb08,original,Full overlap lag 10s,0,0.22
+chb08,chb08_05.edf,1,2856.0,3046.0,center,2878.0,22.0,-22.0,at_or_after_onset_only,5,loso_chb08,chb08,original,Full overlap lag 10s,0,0.22
+chb08,chb08_11.edf,1,2988.0,3122.0,center,3010.0,22.0,-22.0,at_or_after_onset_only,2,loso_chb08,chb08,original,Full overlap lag 10s,0,0.22
+chb08,chb08_13.edf,1,2417.0,2577.0,center,2434.0,17.0,-17.0,at_or_after_onset_only,5,loso_chb08,chb08,original,Full overlap lag 10s,0,0.22
+chb08,chb08_21.edf,1,2083.0,2347.0,center,2106.0,23.0,-23.0,at_or_after_onset_only,2,loso_chb08,chb08,original,Full overlap lag 10s,0,0.22
+chb08,chb08_02.edf,1,2670.0,2841.0,end,2688.0,18.0,-18.0,at_or_after_onset_only,2,loso_chb08,chb08,original,Full overlap lag 10s,0,0.22
+chb08,chb08_05.edf,1,2856.0,3046.0,end,2880.0,24.0,-24.0,at_or_after_onset_only,5,loso_chb08,chb08,original,Full overlap lag 10s,0,0.22
+chb08,chb08_11.edf,1,2988.0,3122.0,end,3012.0,24.0,-24.0,at_or_after_onset_only,2,loso_chb08,chb08,original,Full overlap lag 10s,0,0.22
+chb08,chb08_13.edf,1,2417.0,2577.0,end,2436.0,19.0,-19.0,at_or_after_onset_only,5,loso_chb08,chb08,original,Full overlap lag 10s,0,0.22
+chb08,chb08_21.edf,1,2083.0,2347.0,end,2108.0,25.0,-25.0,at_or_after_onset_only,2,loso_chb08,chb08,original,Full overlap lag 10s,0,0.22
+chb08,chb08_02.edf,1,2670.0,2841.0,center,,,,missed,0,loso_chb08,chb08,original,Full overlap lag 20s,0,0.22
+chb08,chb08_05.edf,1,2856.0,3046.0,center,2890.0,34.0,-34.0,at_or_after_onset_only,4,loso_chb08,chb08,original,Full overlap lag 20s,0,0.22
+chb08,chb08_11.edf,1,2988.0,3122.0,center,3004.0,16.0,-16.0,at_or_after_onset_only,2,loso_chb08,chb08,original,Full overlap lag 20s,0,0.22
+chb08,chb08_13.edf,1,2417.0,2577.0,center,2434.0,17.0,-17.0,at_or_after_onset_only,3,loso_chb08,chb08,original,Full overlap lag 20s,0,0.22
+chb08,chb08_21.edf,1,2083.0,2347.0,center,2218.0,135.0,-135.0,at_or_after_onset_only,1,loso_chb08,chb08,original,Full overlap lag 20s,0,0.22
+chb08,chb08_02.edf,1,2670.0,2841.0,end,,,,missed,0,loso_chb08,chb08,original,Full overlap lag 20s,0,0.22
+chb08,chb08_05.edf,1,2856.0,3046.0,end,2892.0,36.0,-36.0,at_or_after_onset_only,4,loso_chb08,chb08,original,Full overlap lag 20s,0,0.22
+chb08,chb08_11.edf,1,2988.0,3122.0,end,3006.0,18.0,-18.0,at_or_after_onset_only,2,loso_chb08,chb08,original,Full overlap lag 20s,0,0.22
+chb08,chb08_13.edf,1,2417.0,2577.0,end,2436.0,19.0,-19.0,at_or_after_onset_only,3,loso_chb08,chb08,original,Full overlap lag 20s,0,0.22
+chb08,chb08_21.edf,1,2083.0,2347.0,end,2220.0,137.0,-137.0,at_or_after_onset_only,1,loso_chb08,chb08,original,Full overlap lag 20s,0,0.22
+chb08,chb08_02.edf,1,2670.0,2841.0,center,2384.0,-286.0,286.0,pre_onset,58,loso_chb08,chb08,combined,Raw threshold 0.5,0,0.5
+chb08,chb08_05.edf,1,2856.0,3046.0,center,2578.0,-278.0,278.0,pre_onset,72,loso_chb08,chb08,combined,Raw threshold 0.5,0,0.5
+chb08,chb08_11.edf,1,2988.0,3122.0,center,2812.0,-176.0,176.0,pre_onset,66,loso_chb08,chb08,combined,Raw threshold 0.5,0,0.5
+chb08,chb08_13.edf,1,2417.0,2577.0,center,2124.0,-293.0,293.0,pre_onset,101,loso_chb08,chb08,combined,Raw threshold 0.5,0,0.5
+chb08,chb08_21.edf,1,2083.0,2347.0,center,1964.0,-119.0,119.0,pre_onset,89,loso_chb08,chb08,combined,Raw threshold 0.5,0,0.5
+chb08,chb08_02.edf,1,2670.0,2841.0,end,2386.0,-284.0,284.0,pre_onset,58,loso_chb08,chb08,combined,Raw threshold 0.5,0,0.5
+chb08,chb08_05.edf,1,2856.0,3046.0,end,2580.0,-276.0,276.0,pre_onset,72,loso_chb08,chb08,combined,Raw threshold 0.5,0,0.5
+chb08,chb08_11.edf,1,2988.0,3122.0,end,2814.0,-174.0,174.0,pre_onset,66,loso_chb08,chb08,combined,Raw threshold 0.5,0,0.5
+chb08,chb08_13.edf,1,2417.0,2577.0,end,2126.0,-291.0,291.0,pre_onset,101,loso_chb08,chb08,combined,Raw threshold 0.5,0,0.5
+chb08,chb08_21.edf,1,2083.0,2347.0,end,1966.0,-117.0,117.0,pre_onset,89,loso_chb08,chb08,combined,Raw threshold 0.5,0,0.5
+chb08,chb08_02.edf,1,2670.0,2841.0,center,2426.0,-244.0,244.0,pre_onset,42,loso_chb08,chb08,combined,Raw persistence 0.5,0,0.5
+chb08,chb08_05.edf,1,2856.0,3046.0,center,2580.0,-276.0,276.0,pre_onset,57,loso_chb08,chb08,combined,Raw persistence 0.5,0,0.5
+chb08,chb08_11.edf,1,2988.0,3122.0,center,2814.0,-174.0,174.0,pre_onset,51,loso_chb08,chb08,combined,Raw persistence 0.5,0,0.5
+chb08,chb08_13.edf,1,2417.0,2577.0,center,2134.0,-283.0,283.0,pre_onset,77,loso_chb08,chb08,combined,Raw persistence 0.5,0,0.5
+chb08,chb08_21.edf,1,2083.0,2347.0,center,2074.0,-9.0,9.0,pre_onset,68,loso_chb08,chb08,combined,Raw persistence 0.5,0,0.5
+chb08,chb08_02.edf,1,2670.0,2841.0,end,2428.0,-242.0,242.0,pre_onset,42,loso_chb08,chb08,combined,Raw persistence 0.5,0,0.5
+chb08,chb08_05.edf,1,2856.0,3046.0,end,2582.0,-274.0,274.0,pre_onset,57,loso_chb08,chb08,combined,Raw persistence 0.5,0,0.5
+chb08,chb08_11.edf,1,2988.0,3122.0,end,2816.0,-172.0,172.0,pre_onset,51,loso_chb08,chb08,combined,Raw persistence 0.5,0,0.5
+chb08,chb08_13.edf,1,2417.0,2577.0,end,2136.0,-281.0,281.0,pre_onset,77,loso_chb08,chb08,combined,Raw persistence 0.5,0,0.5
+chb08,chb08_21.edf,1,2083.0,2347.0,end,2076.0,-7.0,7.0,pre_onset,68,loso_chb08,chb08,combined,Raw persistence 0.5,0,0.5
+chb08,chb08_02.edf,1,2670.0,2841.0,center,2384.0,-286.0,286.0,pre_onset,54,loso_chb08,chb08,combined,Raw overlap 0.5,0,0.5
+chb08,chb08_05.edf,1,2856.0,3046.0,center,2580.0,-276.0,276.0,pre_onset,65,loso_chb08,chb08,combined,Raw overlap 0.5,0,0.5
+chb08,chb08_11.edf,1,2988.0,3122.0,center,2814.0,-174.0,174.0,pre_onset,63,loso_chb08,chb08,combined,Raw overlap 0.5,0,0.5
+chb08,chb08_13.edf,1,2417.0,2577.0,center,2124.0,-293.0,293.0,pre_onset,95,loso_chb08,chb08,combined,Raw overlap 0.5,0,0.5
+chb08,chb08_21.edf,1,2083.0,2347.0,center,1964.0,-119.0,119.0,pre_onset,85,loso_chb08,chb08,combined,Raw overlap 0.5,0,0.5
+chb08,chb08_02.edf,1,2670.0,2841.0,end,2386.0,-284.0,284.0,pre_onset,54,loso_chb08,chb08,combined,Raw overlap 0.5,0,0.5
+chb08,chb08_05.edf,1,2856.0,3046.0,end,2582.0,-274.0,274.0,pre_onset,65,loso_chb08,chb08,combined,Raw overlap 0.5,0,0.5
+chb08,chb08_11.edf,1,2988.0,3122.0,end,2816.0,-172.0,172.0,pre_onset,63,loso_chb08,chb08,combined,Raw overlap 0.5,0,0.5
+chb08,chb08_13.edf,1,2417.0,2577.0,end,2126.0,-291.0,291.0,pre_onset,95,loso_chb08,chb08,combined,Raw overlap 0.5,0,0.5
+chb08,chb08_21.edf,1,2083.0,2347.0,end,1966.0,-117.0,117.0,pre_onset,85,loso_chb08,chb08,combined,Raw overlap 0.5,0,0.5
+chb08,chb08_02.edf,1,2670.0,2841.0,center,2680.0,10.0,-10.0,at_or_after_onset_only,5,loso_chb08,chb08,combined,Nominal raw-plus-isotonic,0,0.5
+chb08,chb08_05.edf,1,2856.0,3046.0,center,2872.0,16.0,-16.0,at_or_after_onset_only,8,loso_chb08,chb08,combined,Nominal raw-plus-isotonic,0,0.5
+chb08,chb08_11.edf,1,2988.0,3122.0,center,3002.0,14.0,-14.0,at_or_after_onset_only,7,loso_chb08,chb08,combined,Nominal raw-plus-isotonic,0,0.5
+chb08,chb08_13.edf,1,2417.0,2577.0,center,2428.0,11.0,-11.0,at_or_after_onset_only,8,loso_chb08,chb08,combined,Nominal raw-plus-isotonic,0,0.5
+chb08,chb08_21.edf,1,2083.0,2347.0,center,2092.0,9.0,-9.0,at_or_after_onset_only,6,loso_chb08,chb08,combined,Nominal raw-plus-isotonic,0,0.5
+chb08,chb08_02.edf,1,2670.0,2841.0,end,2682.0,12.0,-12.0,at_or_after_onset_only,5,loso_chb08,chb08,combined,Nominal raw-plus-isotonic,0,0.5
+chb08,chb08_05.edf,1,2856.0,3046.0,end,2874.0,18.0,-18.0,at_or_after_onset_only,8,loso_chb08,chb08,combined,Nominal raw-plus-isotonic,0,0.5
+chb08,chb08_11.edf,1,2988.0,3122.0,end,3004.0,16.0,-16.0,at_or_after_onset_only,7,loso_chb08,chb08,combined,Nominal raw-plus-isotonic,0,0.5
+chb08,chb08_13.edf,1,2417.0,2577.0,end,2430.0,13.0,-13.0,at_or_after_onset_only,8,loso_chb08,chb08,combined,Nominal raw-plus-isotonic,0,0.5
+chb08,chb08_21.edf,1,2083.0,2347.0,end,2094.0,11.0,-11.0,at_or_after_onset_only,6,loso_chb08,chb08,combined,Nominal raw-plus-isotonic,0,0.5
+chb08,chb08_02.edf,1,2670.0,2841.0,center,2686.0,16.0,-16.0,at_or_after_onset_only,2,loso_chb08,chb08,combined,Nominal full 0.5,0,0.5
+chb08,chb08_05.edf,1,2856.0,3046.0,center,2878.0,22.0,-22.0,at_or_after_onset_only,4,loso_chb08,chb08,combined,Nominal full 0.5,0,0.5
+chb08,chb08_11.edf,1,2988.0,3122.0,center,3004.0,16.0,-16.0,at_or_after_onset_only,3,loso_chb08,chb08,combined,Nominal full 0.5,0,0.5
+chb08,chb08_13.edf,1,2417.0,2577.0,center,2434.0,17.0,-17.0,at_or_after_onset_only,4,loso_chb08,chb08,combined,Nominal full 0.5,0,0.5
+chb08,chb08_21.edf,1,2083.0,2347.0,center,2106.0,23.0,-23.0,at_or_after_onset_only,2,loso_chb08,chb08,combined,Nominal full 0.5,0,0.5
+chb08,chb08_02.edf,1,2670.0,2841.0,end,2688.0,18.0,-18.0,at_or_after_onset_only,2,loso_chb08,chb08,combined,Nominal full 0.5,0,0.5
+chb08,chb08_05.edf,1,2856.0,3046.0,end,2880.0,24.0,-24.0,at_or_after_onset_only,4,loso_chb08,chb08,combined,Nominal full 0.5,0,0.5
+chb08,chb08_11.edf,1,2988.0,3122.0,end,3006.0,18.0,-18.0,at_or_after_onset_only,3,loso_chb08,chb08,combined,Nominal full 0.5,0,0.5
+chb08,chb08_13.edf,1,2417.0,2577.0,end,2436.0,19.0,-19.0,at_or_after_onset_only,4,loso_chb08,chb08,combined,Nominal full 0.5,0,0.5
+chb08,chb08_21.edf,1,2083.0,2347.0,end,2108.0,25.0,-25.0,at_or_after_onset_only,2,loso_chb08,chb08,combined,Nominal full 0.5,0,0.5
+chb08,chb08_02.edf,1,2670.0,2841.0,center,2680.0,10.0,-10.0,at_or_after_onset_only,8,loso_chb08,chb08,combined,Calibrated threshold only,0,0.22
+chb08,chb08_05.edf,1,2856.0,3046.0,center,2866.0,10.0,-10.0,at_or_after_onset_only,13,loso_chb08,chb08,combined,Calibrated threshold only,0,0.22
+chb08,chb08_11.edf,1,2988.0,3122.0,center,2998.0,10.0,-10.0,at_or_after_onset_only,10,loso_chb08,chb08,combined,Calibrated threshold only,0,0.22
+chb08,chb08_13.edf,1,2417.0,2577.0,center,2428.0,11.0,-11.0,at_or_after_onset_only,10,loso_chb08,chb08,combined,Calibrated threshold only,0,0.22
+chb08,chb08_21.edf,1,2083.0,2347.0,center,2092.0,9.0,-9.0,at_or_after_onset_only,7,loso_chb08,chb08,combined,Calibrated threshold only,0,0.22
+chb08,chb08_02.edf,1,2670.0,2841.0,end,2682.0,12.0,-12.0,at_or_after_onset_only,8,loso_chb08,chb08,combined,Calibrated threshold only,0,0.22
+chb08,chb08_05.edf,1,2856.0,3046.0,end,2868.0,12.0,-12.0,at_or_after_onset_only,13,loso_chb08,chb08,combined,Calibrated threshold only,0,0.22
+chb08,chb08_11.edf,1,2988.0,3122.0,end,3000.0,12.0,-12.0,at_or_after_onset_only,10,loso_chb08,chb08,combined,Calibrated threshold only,0,0.22
+chb08,chb08_13.edf,1,2417.0,2577.0,end,2430.0,13.0,-13.0,at_or_after_onset_only,10,loso_chb08,chb08,combined,Calibrated threshold only,0,0.22
+chb08,chb08_21.edf,1,2083.0,2347.0,end,2094.0,11.0,-11.0,at_or_after_onset_only,7,loso_chb08,chb08,combined,Calibrated threshold only,0,0.22
+chb08,chb08_02.edf,1,2670.0,2841.0,center,2686.0,16.0,-16.0,at_or_after_onset_only,2,loso_chb08,chb08,combined,+ persistence,0,0.22
+chb08,chb08_05.edf,1,2856.0,3046.0,center,2868.0,12.0,-12.0,at_or_after_onset_only,6,loso_chb08,chb08,combined,+ persistence,0,0.22
+chb08,chb08_11.edf,1,2988.0,3122.0,center,3004.0,16.0,-16.0,at_or_after_onset_only,3,loso_chb08,chb08,combined,+ persistence,0,0.22
+chb08,chb08_13.edf,1,2417.0,2577.0,center,2434.0,17.0,-17.0,at_or_after_onset_only,5,loso_chb08,chb08,combined,+ persistence,0,0.22
+chb08,chb08_21.edf,1,2083.0,2347.0,center,2106.0,23.0,-23.0,at_or_after_onset_only,2,loso_chb08,chb08,combined,+ persistence,0,0.22
+chb08,chb08_02.edf,1,2670.0,2841.0,end,2688.0,18.0,-18.0,at_or_after_onset_only,2,loso_chb08,chb08,combined,+ persistence,0,0.22
+chb08,chb08_05.edf,1,2856.0,3046.0,end,2870.0,14.0,-14.0,at_or_after_onset_only,6,loso_chb08,chb08,combined,+ persistence,0,0.22
+chb08,chb08_11.edf,1,2988.0,3122.0,end,3006.0,18.0,-18.0,at_or_after_onset_only,3,loso_chb08,chb08,combined,+ persistence,0,0.22
+chb08,chb08_13.edf,1,2417.0,2577.0,end,2436.0,19.0,-19.0,at_or_after_onset_only,5,loso_chb08,chb08,combined,+ persistence,0,0.22
+chb08,chb08_21.edf,1,2083.0,2347.0,end,2108.0,25.0,-25.0,at_or_after_onset_only,2,loso_chb08,chb08,combined,+ persistence,0,0.22
+chb08,chb08_02.edf,1,2670.0,2841.0,center,2680.0,10.0,-10.0,at_or_after_onset_only,8,loso_chb08,chb08,combined,+ attribution overlap,0,0.22
+chb08,chb08_05.edf,1,2856.0,3046.0,center,2866.0,10.0,-10.0,at_or_after_onset_only,13,loso_chb08,chb08,combined,+ attribution overlap,0,0.22
+chb08,chb08_11.edf,1,2988.0,3122.0,center,3002.0,14.0,-14.0,at_or_after_onset_only,9,loso_chb08,chb08,combined,+ attribution overlap,0,0.22
+chb08,chb08_13.edf,1,2417.0,2577.0,center,2428.0,11.0,-11.0,at_or_after_onset_only,10,loso_chb08,chb08,combined,+ attribution overlap,0,0.22
+chb08,chb08_21.edf,1,2083.0,2347.0,center,2092.0,9.0,-9.0,at_or_after_onset_only,7,loso_chb08,chb08,combined,+ attribution overlap,0,0.22
+chb08,chb08_02.edf,1,2670.0,2841.0,end,2682.0,12.0,-12.0,at_or_after_onset_only,8,loso_chb08,chb08,combined,+ attribution overlap,0,0.22
+chb08,chb08_05.edf,1,2856.0,3046.0,end,2868.0,12.0,-12.0,at_or_after_onset_only,13,loso_chb08,chb08,combined,+ attribution overlap,0,0.22
+chb08,chb08_11.edf,1,2988.0,3122.0,end,3004.0,16.0,-16.0,at_or_after_onset_only,9,loso_chb08,chb08,combined,+ attribution overlap,0,0.22
+chb08,chb08_13.edf,1,2417.0,2577.0,end,2430.0,13.0,-13.0,at_or_after_onset_only,10,loso_chb08,chb08,combined,+ attribution overlap,0,0.22
+chb08,chb08_21.edf,1,2083.0,2347.0,end,2094.0,11.0,-11.0,at_or_after_onset_only,7,loso_chb08,chb08,combined,+ attribution overlap,0,0.22
+chb08,chb08_02.edf,1,2670.0,2841.0,center,2686.0,16.0,-16.0,at_or_after_onset_only,2,loso_chb08,chb08,combined,+ persistence + overlap,0,0.22
+chb08,chb08_05.edf,1,2856.0,3046.0,center,2868.0,12.0,-12.0,at_or_after_onset_only,6,loso_chb08,chb08,combined,+ persistence + overlap,0,0.22
+chb08,chb08_11.edf,1,2988.0,3122.0,center,3004.0,16.0,-16.0,at_or_after_onset_only,3,loso_chb08,chb08,combined,+ persistence + overlap,0,0.22
+chb08,chb08_13.edf,1,2417.0,2577.0,center,2434.0,17.0,-17.0,at_or_after_onset_only,5,loso_chb08,chb08,combined,+ persistence + overlap,0,0.22
+chb08,chb08_21.edf,1,2083.0,2347.0,center,2106.0,23.0,-23.0,at_or_after_onset_only,2,loso_chb08,chb08,combined,+ persistence + overlap,0,0.22
+chb08,chb08_02.edf,1,2670.0,2841.0,end,2688.0,18.0,-18.0,at_or_after_onset_only,2,loso_chb08,chb08,combined,+ persistence + overlap,0,0.22
+chb08,chb08_05.edf,1,2856.0,3046.0,end,2870.0,14.0,-14.0,at_or_after_onset_only,6,loso_chb08,chb08,combined,+ persistence + overlap,0,0.22
+chb08,chb08_11.edf,1,2988.0,3122.0,end,3006.0,18.0,-18.0,at_or_after_onset_only,3,loso_chb08,chb08,combined,+ persistence + overlap,0,0.22
+chb08,chb08_13.edf,1,2417.0,2577.0,end,2436.0,19.0,-19.0,at_or_after_onset_only,5,loso_chb08,chb08,combined,+ persistence + overlap,0,0.22
+chb08,chb08_21.edf,1,2083.0,2347.0,end,2108.0,25.0,-25.0,at_or_after_onset_only,2,loso_chb08,chb08,combined,+ persistence + overlap,0,0.22
+chb08,chb08_02.edf,1,2670.0,2841.0,center,2686.0,16.0,-16.0,at_or_after_onset_only,2,loso_chb08,chb08,combined,Full overlap lag 4s,0,0.22
+chb08,chb08_05.edf,1,2856.0,3046.0,center,2868.0,12.0,-12.0,at_or_after_onset_only,6,loso_chb08,chb08,combined,Full overlap lag 4s,0,0.22
+chb08,chb08_11.edf,1,2988.0,3122.0,center,3004.0,16.0,-16.0,at_or_after_onset_only,3,loso_chb08,chb08,combined,Full overlap lag 4s,0,0.22
+chb08,chb08_13.edf,1,2417.0,2577.0,center,2434.0,17.0,-17.0,at_or_after_onset_only,5,loso_chb08,chb08,combined,Full overlap lag 4s,0,0.22
+chb08,chb08_21.edf,1,2083.0,2347.0,center,2106.0,23.0,-23.0,at_or_after_onset_only,2,loso_chb08,chb08,combined,Full overlap lag 4s,0,0.22
+chb08,chb08_02.edf,1,2670.0,2841.0,end,2688.0,18.0,-18.0,at_or_after_onset_only,2,loso_chb08,chb08,combined,Full overlap lag 4s,0,0.22
+chb08,chb08_05.edf,1,2856.0,3046.0,end,2870.0,14.0,-14.0,at_or_after_onset_only,6,loso_chb08,chb08,combined,Full overlap lag 4s,0,0.22
+chb08,chb08_11.edf,1,2988.0,3122.0,end,3006.0,18.0,-18.0,at_or_after_onset_only,3,loso_chb08,chb08,combined,Full overlap lag 4s,0,0.22
+chb08,chb08_13.edf,1,2417.0,2577.0,end,2436.0,19.0,-19.0,at_or_after_onset_only,5,loso_chb08,chb08,combined,Full overlap lag 4s,0,0.22
+chb08,chb08_21.edf,1,2083.0,2347.0,end,2108.0,25.0,-25.0,at_or_after_onset_only,2,loso_chb08,chb08,combined,Full overlap lag 4s,0,0.22
+chb08,chb08_02.edf,1,2670.0,2841.0,center,2686.0,16.0,-16.0,at_or_after_onset_only,2,loso_chb08,chb08,combined,Full overlap lag 6s,0,0.22
+chb08,chb08_05.edf,1,2856.0,3046.0,center,2868.0,12.0,-12.0,at_or_after_onset_only,6,loso_chb08,chb08,combined,Full overlap lag 6s,0,0.22
+chb08,chb08_11.edf,1,2988.0,3122.0,center,3004.0,16.0,-16.0,at_or_after_onset_only,3,loso_chb08,chb08,combined,Full overlap lag 6s,0,0.22
+chb08,chb08_13.edf,1,2417.0,2577.0,center,2434.0,17.0,-17.0,at_or_after_onset_only,5,loso_chb08,chb08,combined,Full overlap lag 6s,0,0.22
+chb08,chb08_21.edf,1,2083.0,2347.0,center,2106.0,23.0,-23.0,at_or_after_onset_only,2,loso_chb08,chb08,combined,Full overlap lag 6s,0,0.22
+chb08,chb08_02.edf,1,2670.0,2841.0,end,2688.0,18.0,-18.0,at_or_after_onset_only,2,loso_chb08,chb08,combined,Full overlap lag 6s,0,0.22
+chb08,chb08_05.edf,1,2856.0,3046.0,end,2870.0,14.0,-14.0,at_or_after_onset_only,6,loso_chb08,chb08,combined,Full overlap lag 6s,0,0.22
+chb08,chb08_11.edf,1,2988.0,3122.0,end,3006.0,18.0,-18.0,at_or_after_onset_only,3,loso_chb08,chb08,combined,Full overlap lag 6s,0,0.22
+chb08,chb08_13.edf,1,2417.0,2577.0,end,2436.0,19.0,-19.0,at_or_after_onset_only,5,loso_chb08,chb08,combined,Full overlap lag 6s,0,0.22
+chb08,chb08_21.edf,1,2083.0,2347.0,end,2108.0,25.0,-25.0,at_or_after_onset_only,2,loso_chb08,chb08,combined,Full overlap lag 6s,0,0.22
+chb08,chb08_02.edf,1,2670.0,2841.0,center,2686.0,16.0,-16.0,at_or_after_onset_only,2,loso_chb08,chb08,combined,Full overlap lag 10s,0,0.22
+chb08,chb08_05.edf,1,2856.0,3046.0,center,2878.0,22.0,-22.0,at_or_after_onset_only,5,loso_chb08,chb08,combined,Full overlap lag 10s,0,0.22
+chb08,chb08_11.edf,1,2988.0,3122.0,center,3010.0,22.0,-22.0,at_or_after_onset_only,2,loso_chb08,chb08,combined,Full overlap lag 10s,0,0.22
+chb08,chb08_13.edf,1,2417.0,2577.0,center,2434.0,17.0,-17.0,at_or_after_onset_only,5,loso_chb08,chb08,combined,Full overlap lag 10s,0,0.22
+chb08,chb08_21.edf,1,2083.0,2347.0,center,2106.0,23.0,-23.0,at_or_after_onset_only,2,loso_chb08,chb08,combined,Full overlap lag 10s,0,0.22
+chb08,chb08_02.edf,1,2670.0,2841.0,end,2688.0,18.0,-18.0,at_or_after_onset_only,2,loso_chb08,chb08,combined,Full overlap lag 10s,0,0.22
+chb08,chb08_05.edf,1,2856.0,3046.0,end,2880.0,24.0,-24.0,at_or_after_onset_only,5,loso_chb08,chb08,combined,Full overlap lag 10s,0,0.22
+chb08,chb08_11.edf,1,2988.0,3122.0,end,3012.0,24.0,-24.0,at_or_after_onset_only,2,loso_chb08,chb08,combined,Full overlap lag 10s,0,0.22
+chb08,chb08_13.edf,1,2417.0,2577.0,end,2436.0,19.0,-19.0,at_or_after_onset_only,5,loso_chb08,chb08,combined,Full overlap lag 10s,0,0.22
+chb08,chb08_21.edf,1,2083.0,2347.0,end,2108.0,25.0,-25.0,at_or_after_onset_only,2,loso_chb08,chb08,combined,Full overlap lag 10s,0,0.22
+chb08,chb08_02.edf,1,2670.0,2841.0,center,,,,missed,0,loso_chb08,chb08,combined,Full overlap lag 20s,0,0.22
+chb08,chb08_05.edf,1,2856.0,3046.0,center,2890.0,34.0,-34.0,at_or_after_onset_only,4,loso_chb08,chb08,combined,Full overlap lag 20s,0,0.22
+chb08,chb08_11.edf,1,2988.0,3122.0,center,3004.0,16.0,-16.0,at_or_after_onset_only,2,loso_chb08,chb08,combined,Full overlap lag 20s,0,0.22
+chb08,chb08_13.edf,1,2417.0,2577.0,center,2434.0,17.0,-17.0,at_or_after_onset_only,3,loso_chb08,chb08,combined,Full overlap lag 20s,0,0.22
+chb08,chb08_21.edf,1,2083.0,2347.0,center,2218.0,135.0,-135.0,at_or_after_onset_only,1,loso_chb08,chb08,combined,Full overlap lag 20s,0,0.22
+chb08,chb08_02.edf,1,2670.0,2841.0,end,,,,missed,0,loso_chb08,chb08,combined,Full overlap lag 20s,0,0.22
+chb08,chb08_05.edf,1,2856.0,3046.0,end,2892.0,36.0,-36.0,at_or_after_onset_only,4,loso_chb08,chb08,combined,Full overlap lag 20s,0,0.22
+chb08,chb08_11.edf,1,2988.0,3122.0,end,3006.0,18.0,-18.0,at_or_after_onset_only,2,loso_chb08,chb08,combined,Full overlap lag 20s,0,0.22
+chb08,chb08_13.edf,1,2417.0,2577.0,end,2436.0,19.0,-19.0,at_or_after_onset_only,3,loso_chb08,chb08,combined,Full overlap lag 20s,0,0.22
+chb08,chb08_21.edf,1,2083.0,2347.0,end,2220.0,137.0,-137.0,at_or_after_onset_only,1,loso_chb08,chb08,combined,Full overlap lag 20s,0,0.22

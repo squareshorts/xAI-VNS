@@ -1,40 +1,40 @@
-# Python cache and temporary files
+# Python
 __pycache__/
 *.py[cod]
-*$py.class
 .pytest_cache/
-.ipynb_checkpoints/
 .venv/
 venv/
 env/
 
-# OS specific files
+# OS / IDE
 .DS_Store
 Thumbs.db
-
-# IDE settings
 .vscode/
 .idea/
 
-# LaTeX build outputs (ignore auxiliary files, keep tex, bib, sty, pdf)
-manuscript/*.aux
-manuscript/*.log
-manuscript/*.out
-manuscript/*.blg
-manuscript/*.bbl
-manuscript/*.synctex.gz
-manuscript/*.toc
-manuscript/*.fdb_latexmk
-manuscript/*.fls
-
-# Data directories (ignore actual datasets and features, keep folder structures)
-data/external/**/*
-data/raw/**/*
-data/interim/**/*
-data/processed/**/*
-# Avoid committing raw/processed data files directly
+# Raw EEG and local working data
 *.edf
 *.parquet
-chbmit_window_labels.csv
 *.pkl
+data/external/**
+data/raw/**
+data/interim/**
+data/processed/**
 
+# Local run/cache directories
+xai_vns_resubmission_run/
+*_inventory/
+
+# LaTeX build intermediates
+*.aux
+*.log
+*.out
+*.blg
+*.bbl
+*.synctex.gz
+*.toc
+*.fdb_latexmk
+*.fls
+
+# Transfer bundles are release assets, not repository content
+*.zip

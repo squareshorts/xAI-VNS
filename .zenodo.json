@@ -1,0 +1,23 @@
+{
+  "title": "xAI-VNS: Burden-Constrained Policy-Layer Explainability for Simulated EEG-Guided Adaptive Vagus Nerve Stimulation",
+  "upload_type": "software",
+  "version": "v1.1.0",
+  "creators": [
+    {"name": "Cescon, Suzana", "affiliation": "Federal University of Para"},
+    {"name": "Pereira, Antonio", "affiliation": "Federal University of Para", "orcid": "0000-0002-0808-1058"}
+  ],
+  "description": "Executable complete-recording analysis accompanying the manuscript on simulated EEG-guided VNS authorization. Version v1.1.0 evaluates all 175 EDF recordings available for five CHB-MIT cases while keeping model fitting, calibration, and operating-point selection restricted to the model-development recordings. The release includes derived inputs, fitted models, predictions, policy/event outputs, tests, final manuscript figures, and LaTeX sources. Raw CHB-MIT EEG is not redistributed.",
+  "keywords": [
+    "EEG",
+    "epilepsy",
+    "vagus nerve stimulation",
+    "adaptive neuromodulation",
+    "explainable artificial intelligence",
+    "probability calibration",
+    "seizure detection",
+    "CHB-MIT"
+  ],
+  "related_identifiers": [
+    {"identifier": "10.13026/C2K01R", "relation": "isDerivedFrom", "scheme": "doi"}
+  ]
+}

@@ -1,7 +1,0 @@
-evaluation_mode,policy,event_count,pre_onset_authorizations,event_level_sensitivity,median_latency_seconds,iqr_latency_seconds,false_authorization_windows_per_hour
-within_subject_chronological,Fixed threshold,10/10,10,1.0,-280.0,155.25,123.94 $\pm$ 37.73
-within_subject_chronological,Temporal persistence,10/10,6,1.0,-154.5,293.25,53.35 $\pm$ 29.10
-within_subject_chronological,Attribution-stability gating,10/10,6,1.0,-154.5,293.25,50.65 $\pm$ 29.30
-held_out_subject,Fixed threshold,27/27,22,1.0,-269.0,149.5,254.44 $\pm$ 112.52
-held_out_subject,Temporal persistence,27/27,20,1.0,-199.0,281.5,154.64 $\pm$ 104.23
-held_out_subject,Attribution-stability gating,27/27,20,1.0,-199.0,282.5,146.67 $\pm$ 101.55
