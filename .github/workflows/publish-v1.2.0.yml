@@ -1,0 +1,30 @@
+name: Publish v1.2.0 release
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/publish-v1.2.0.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Publish v1.2.0
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if gh release view v1.2.0 >/dev/null 2>&1; then
+            echo "v1.2.0 already exists"
+          else
+            gh release create v1.2.0 \
+              --target main \
+              --title "v1.2.0 - Final targeted-robustness resubmission release" \
+              --notes-file RELEASE_NOTES_v1.2.0.md \
+              manuscript/main.pdf \
+              manuscript/response_to_reviewers.pdf
+          fi
