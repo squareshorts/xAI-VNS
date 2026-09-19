@@ -1,6 +1,6 @@
 # xAI-VNS
 
-Reproducible analysis accompanying the manuscript **“Burden-Constrained Policy-Layer Explainability for Simulated EEG-Guided Adaptive Vagus Nerve Stimulation.”**
+Reproducible analysis accompanying the manuscript **“Burden-Constrained Policy-Layer Authorization for Simulated EEG-Guided Adaptive Vagus Nerve Stimulation.”**
 
 This repository evaluates how calibrated EEG model scores are converted into **simulated VNS authorization decisions**. The analysis separates model discrimination from operational policy behavior, including temporal persistence, attribution overlap, false authorization-cluster burden, event timing, and temporal-rule comparisons.
 
@@ -8,18 +8,19 @@ This repository evaluates how calibrated EEG model scores are converted into **s
 
 The study uses five CHB-MIT cases (`chb01`, `chb02`, `chb03`, `chb05`, `chb08`). The complete evaluation inventory contains **175 EDF recordings, 172.83 h of EEG, 310,916 four-second windows, and 27 annotated seizures**.
 
-Model fitting, calibration, and operating-point selection use 70 EDF recordings. The fitted pipeline is then evaluated over the full 175-EDF inventory; the other 105 EDFs enter evaluation only and are never used for fitting or parameter selection.
+The original 70-EDF analysis inventory supplies the fold-specific model-fitting, calibration, and development-test partitions. The fold-specific fitted pipelines are then evaluated over the full 175-EDF inventory; the other 105 EDFs enter evaluation only and are never used for fitting or parameter selection.
 
 No VNS was delivered. The repository does not establish clinical efficacy, reliable advance seizure prediction, or a subject-independent low-burden guarantee.
 
-## Principal findings in v1.1.0
+## Principal findings in v1.2.0
 
 - Full-inventory false authorization-cluster burden for the train-selected persistence-plus-attribution-overlap policy: case median **0.105/h**, case mean **3.601 +/- 7.748/h**, pooled **4.050/h**.
-- Burden is strongly heterogeneous: `chb05` contributes 681 of 700 false clusters; the other four cases range from 0.049 to 0.340/h.
+- Burden is strongly heterogeneous: `chb05` contributes 681 of 700 false clusters; the other four cases range from 0.049 to 0.340/h. The chb05 result is distributed across 32 of 39 EDFs rather than driven by a single file; the largest EDF contributes 12.6% of chb05 false clusters.
 - In the common-score factorial analysis, temporal persistence accounts for most of the burden reduction; attribution overlap adds a smaller incremental restriction.
 - At complete-window decision time: **2/27** seizures are authorized pre-onset, **18/27** only at/after onset, and **7/27** are missed; median latency among covered events is **16 s** (IQR 8.5-28 s).
 - The attribution-overlap difference remains positive on average at the first non-overlapping comparison (4 s separation), but this is not clinical validation of explanation reliability.
-- Adapted majority-voting and firing-power rules occupy similar burden-coverage ranges under a common 300 s refractory rule; no comparator family is presented as a winner.
+- Reclassifying false-cluster truth at window-end decision availability leaves the principal 700-cluster burden result unchanged.
+- Adapted majority-voting and firing-power rules occupy similar burden-coverage ranges under a common 300 s refractory rule; paired case-level uncertainty is reported descriptively and no comparator family is presented as a winner.
 
 ## Repository layout
 
@@ -28,7 +29,7 @@ No VNS was delivered. The repository does not establish clinical efficacy, relia
 - `results/figures/` - final raster exports of manuscript figures.
 - `src/`, `configs/`, `tests/` - core analysis code retained from the development pipeline.
 
-Legacy `archive/` material and obsolete manuscript/result snapshots are intentionally excluded from v1.1.0; they remain available through Git history and the immutable v1.0.1 release.
+Legacy `archive/` material and obsolete manuscript/result snapshots remain excluded from v1.2.0; they are available through Git history and prior immutable releases.
 
 ## Reproduce the complete-recording analysis
 
@@ -55,7 +56,8 @@ Raw EEG is **not** redistributed in this repository. Public file manifests, subj
 ## Versioning and archival record
 
 - `v1.0.1`: historical manuscript archive; Zenodo DOI `10.5281/zenodo.20403195`.
-- `v1.1.0`: complete-recording resubmission release. A new version-specific Zenodo DOI is generated when this GitHub release is archived by the connected Zenodo integration.
+- `v1.1.0`: complete-recording major-revision release; Zenodo DOI `10.5281/zenodo.22849640`.
+- `v1.2.0`: final targeted-robustness resubmission release. A new version-specific Zenodo DOI is generated when this GitHub release is archived by the connected Zenodo integration.
 
 ## Authors
 
