@@ -5,9 +5,13 @@ on:
     paths:
       - 'reproducibility/scripts/final_targeted_analyses.py'
       - '.github/workflows/final-targeted-analyses.yml'
+  pull_request:
+    paths:
+      - 'reproducibility/scripts/final_targeted_analyses.py'
+      - '.github/workflows/final-targeted-analyses.yml'
 
 permissions:
-  contents: write
+  contents: read
 
 jobs:
   analyze:
@@ -22,17 +26,14 @@ jobs:
       - name: Run targeted analyses
         working-directory: reproducibility/scripts
         run: python final_targeted_analyses.py
-      - name: Commit generated results
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add reproducibility/results/decision_time_false_cluster_sensitivity.csv
-          git add reproducibility/results/decision_time_changed_clusters.csv
-          git add reproducibility/results/decision_time_sensitivity_summary.json
-          git add reproducibility/results/chb05_per_edf_diagnostic.csv
-          git add reproducibility/results/chb05_score_shift_summary.csv
-          git add reproducibility/results/chb05_diagnostic_summary.json
-          if ! git diff --cached --quiet; then
-            git commit -m "Add final targeted analysis results"
-            git push
-          fi
+      - name: Upload targeted-analysis outputs
+        uses: actions/upload-artifact@v4
+        with:
+          name: final-targeted-analysis-results
+          path: |
+            reproducibility/results/decision_time_false_cluster_sensitivity.csv
+            reproducibility/results/decision_time_changed_clusters.csv
+            reproducibility/results/decision_time_sensitivity_summary.json
+            reproducibility/results/chb05_per_edf_diagnostic.csv
+            reproducibility/results/chb05_score_shift_summary.csv
+            reproducibility/results/chb05_diagnostic_summary.json
