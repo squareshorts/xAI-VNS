@@ -8,7 +8,7 @@ This repository evaluates how calibrated EEG model scores are converted into **s
 
 The study uses five CHB-MIT cases (`chb01`, `chb02`, `chb03`, `chb05`, `chb08`). The complete evaluation inventory contains **175 EDF recordings, 172.83 h of EEG, 310,916 four-second windows, and 27 annotated seizures**.
 
-The original 70-EDF analysis inventory supplies the fold-specific model-fitting, calibration, and development-test partitions. The fold-specific fitted pipelines are then evaluated over the full 175-EDF inventory; the other 105 EDFs enter evaluation only and are never used for fitting or parameter selection.
+Before recording completion, 70 EDFs were available to the analysis pipeline and supplied the predefined fold-specific model-fitting, calibration, and development-test partitions. After the remaining 105 EDFs were restored, the frozen fold-specific pipelines were evaluated over the full 175-EDF inventory; the restored EDFs enter evaluation only and are never used for fitting or parameter selection.
 
 No VNS was delivered. The repository does not establish clinical efficacy, reliable advance seizure prediction, or a subject-independent low-burden guarantee.
 
