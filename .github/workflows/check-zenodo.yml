@@ -1,0 +1,35 @@
+name: Check Zenodo archive
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/check-zenodo.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Query Zenodo API
+        run: |
+          python - <<'PY'
+          import json, urllib.parse, urllib.request
+          q = urllib.parse.quote('xAI-VNS')
+          url = f'https://zenodo.org/api/records/?q={q}&sort=mostrecent&size=20'
+          with urllib.request.urlopen(url, timeout=60) as r:
+              data=json.load(r)
+          for hit in data.get('hits',{}).get('hits',[]):
+              md=hit.get('metadata',{})
+              print(json.dumps({
+                  'id': hit.get('id'),
+                  'doi': hit.get('doi'),
+                  'title': md.get('title'),
+                  'version': md.get('version'),
+                  'publication_date': md.get('publication_date'),
+                  'conceptdoi': hit.get('conceptdoi'),
+                  'links': {k:v for k,v in hit.get('links',{}).items() if k in ['html','doi','self']},
+              }, ensure_ascii=False))
+          PY
