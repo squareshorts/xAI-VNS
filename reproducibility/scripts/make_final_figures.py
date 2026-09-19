@@ -22,16 +22,18 @@ studies = ["Andrade et al.\n(2024)", "Batista et al.\n(2024)", "Ingolfsson et al
 cols = ["Score /\nmodel", "Probability\ncalibration", "Temporal\nrule", "Burden /\ntiming", "Attribution /\nXAI", "Simulated VNS\nauthorization"]
 M = np.array([[1,0,1,1,0,0],[1,0,1,1,0,0],[1,0,1,1,0,0],[1,0,0,0,1,0],[1,1,1,1,1,1]], dtype=float)
 fig, ax = plt.subplots(figsize=(9.2,4.0))
-ax.imshow(M, aspect="auto", vmin=0, vmax=1, cmap="Greys")
+# Neutral structural map: use symbols rather than filled cells so the present-study
+# row is not visually encoded as a performance ranking.
+ax.set_xlim(-0.5, len(cols)-0.5)
+ax.set_ylim(len(studies)-0.5, -0.5)
 ax.set_xticks(range(len(cols)), cols, fontsize=10)
 ax.set_yticks(range(len(studies)), studies, fontsize=10)
 for i in range(M.shape[0]):
     for j in range(M.shape[1]):
-        ax.text(j, i, "●" if M[i,j] else "–", ha="center", va="center", fontsize=15,
-                color="white" if M[i,j] else "black")
+        ax.text(j, i, "●" if M[i,j] else "–", ha="center", va="center", fontsize=15)
 ax.set_xticks(np.arange(-.5, len(cols), 1), minor=True)
 ax.set_yticks(np.arange(-.5, len(studies), 1), minor=True)
-ax.grid(which="minor", linewidth=0.8)
+ax.grid(which="minor", linewidth=0.8, alpha=0.45)
 ax.tick_params(which="minor", bottom=False, left=False)
 ax.tick_params(axis="x", pad=8)
 for spine in ax.spines.values(): spine.set_visible(False)
