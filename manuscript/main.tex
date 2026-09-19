@@ -41,7 +41,7 @@
 \begin{abstract}
 EEG-guided adaptive neuromodulation requires explicit rules for converting model scores into intervention authorization. We evaluated a simulated vagus nerve stimulation (VNS) authorization framework that combines probability calibration, temporal persistence, and attribution overlap, with burden and event timing treated as policy-level outcomes rather than inferred from discrimination alone.
 
-Five CHB-MIT cases contributed 175 EDF recordings (172.83 h), 310,916 four-second windows, and 27 annotated seizures. Model development, calibrator fitting, and threshold selection used the original 70-EDF analysis inventory; the fold-specific fitted pipelines were then evaluated over the complete 175-EDF inventory, with the other 105 recordings entering evaluation only and no operating parameter retuned on them. Authorization burden was strongly case dependent: four held-out cases produced 0.049--0.340 false authorization clusters per recording-hour, whereas chb05 produced 17.46/h, yielding 700 false clusters overall and a pooled rate of 4.05/h. Complete-recording evaluation therefore exposed a pronounced case-specific generalization failure despite satisfaction of the training-side burden constraint. In a common-score factorial analysis, temporal persistence accounted for most of the reduction in authorization burden, whereas attribution overlap provided a smaller incremental restriction. At the earliest complete-window decision time, 2/27 seizures were authorized before onset, 18/27 at or after onset, and 7/27 were missed; median latency among covered events was 16 s (interquartile range 8.5--28 s). Reclassifying false-cluster truth at window-end decision availability left the principal burden result unchanged. Adapted majority-voting and firing-power comparators occupied similar burden--coverage ranges under a common 300 s refractory rule.
+Five CHB-MIT cases contributed 175 EDF recordings (172.83 h), 310,916 four-second windows, and 27 annotated seizures. Before recording completion, 70 EDFs were available to the analysis pipeline. Within each fold, model fitting, calibrator fitting, and threshold selection used only the designated core and calibration partitions among those recordings. After the remaining 105 EDFs were restored, the frozen fold-specific pipelines were evaluated over the complete 175-EDF inventory with no operating parameter retuned on the restored recordings. Authorization burden was strongly case dependent: four held-out cases produced 0.049--0.340 false authorization clusters per recording-hour, whereas chb05 produced 17.46/h, yielding 700 false clusters overall and a pooled rate of 4.05/h. Complete-recording evaluation therefore exposed a pronounced case-specific generalization failure despite satisfaction of the training-side burden constraint. In a common-score factorial analysis, temporal persistence accounted for most of the reduction in authorization burden, whereas attribution overlap provided a smaller incremental restriction. At the earliest complete-window decision time, 2/27 seizures were authorized before onset, 18/27 at or after onset, and 7/27 were missed; median latency among covered events was 16 s (interquartile range 8.5--28 s). Reclassifying false-cluster truth at window-end decision availability left the principal burden result unchanged. Adapted majority-voting and firing-power comparators occupied similar burden--coverage ranges under a common 300 s refractory rule.
 
 These findings show that discrimination and calibration-side operating constraints alone do not characterize an adaptive authorization policy. Complete recording exposure, temporal post-processing, causal decision-time availability, attribution constraints, and case-level burden must be evaluated explicitly. The framework provides a reproducible policy-layer methodology for simulated EEG-guided neuromodulation while distinguishing seizure-responsive authorization from advance prediction and therapeutic validation.
 \end{abstract}
@@ -166,13 +166,13 @@ arrow/.style={-{Latex[length=2mm]}, thick}
 \label{sec:collection}
 The source was the CHB-MIT scalp EEG database, version 1.0.0\citep{guttag2010chbmit}. We analyzed five cases (chb01, chb02, chb03, chb05, and chb08), comprising all 175 EDF recordings available for those cases, 172.8294 h of EEG, and 27 annotated seizures. These cases form a convenience sample; no documented prospective clinical sampling criterion is available for their selection, so they are not treated as a representative validation cohort.
 
-The original 70-EDF analysis inventory (67.8214 h) comprised all 27 seizure-bearing EDFs and 43 EDFs without annotated seizures. Within each fold, only the designated core and calibration partitions from this inventory contributed to model fitting, calibrator fitting, or threshold selection. The other 105 EDFs (105.0081 h), all without seizure annotations, entered only the expanded held-out evaluation. All 175 files matched the SHA-256 values in the PhysioNet version-1.0.0 registry and passed EDF header/file-length and 22-channel, 256-Hz montage checks. Table~\ref{tab:dataset} summarizes the recording inventory.
+Before the collection audit and recording completion, 70 EDFs (67.8214 h) were locally available, comprising all 27 seizure-bearing EDFs and 43 EDFs without annotated seizures. Within each fold, only the designated core and calibration partitions among these recordings contributed to model fitting, calibrator fitting, or threshold selection. The 105 subsequently restored EDFs (105.0081 h), all without seizure annotations, entered only the expanded held-out evaluation. All 175 files matched the SHA-256 values in the PhysioNet version-1.0.0 registry and passed EDF header/file-length and 22-channel, 256-Hz montage checks. Table~\ref{tab:dataset} summarizes the recording inventory.
 
 Windows were 4 s long with a 2 s step. Window-center labels were ictal inside the annotated onset--offset interval, preictal during the preceding 300 s, and operationally negative otherwise. The binary target combined preictal and ictal labels. Accordingly, the binary target represents seizure-responsive authorization over the defined preictal-to-ictal interval; pre-onset performance is evaluated separately at the event level rather than being implied by the positive class definition. Labeling and temporal rules reset at EDF boundaries; preictal labeling was not propagated into a preceding EDF. Consequently, recordings without an annotated seizure contain no positive operational labels under this record-local convention, which does not imply that every sample is physiologically interictal. Across the development subset there were 5,227 positive windows.
 
 \begin{table}[htbp]
 \centering
-\caption{EEG recording inventory and analysis role. The original analysis-inventory EDFs supply the fold-specific core, calibration, and development-test partitions; additional evaluation-only EDFs contribute only to held-out scoring.}
+\caption{EEG recording inventory and analysis role. EDFs available before recording completion supply the predefined fold-specific core, calibration, and development-test partitions; subsequently restored EDFs contribute only to held-out scoring.}
 \label{tab:dataset}
 \small
 \setlength{\tabcolsep}{4pt}
@@ -246,7 +246,7 @@ Code, fitted LightGBM boosters and calibrators, feature order, derived inputs, p
 
 \subsection{Targeted decision-time and case diagnostics}
 \label{sec:targeted_diagnostics}
-Two targeted robustness analyses were performed after completion of the main revision analyses, without refitting models or retuning any operating parameter. First, the selected authorization masks and support-defined clusters were held fixed while cluster truth was recomputed from operational labels evaluated at window-end decision availability rather than window centers. This tests whether the false-cluster endpoint is sensitive to the same causal timing convention used for event-level authorization. Second, the chb05 burden was decomposed by EDF for the train-selected persistence-plus-overlap policy. We quantified the number and share of false clusters contributed by each recording, compared the original analysis-inventory and additional evaluation-only exposures, and summarized the upper tail of calibrated scores among operationally negative windows. The latter comparison is descriptive and is used to characterize where the held-out burden arises, not to define a new operating point.
+Two targeted robustness analyses were performed after completion of the main revision analyses, without refitting models or retuning any operating parameter. First, the selected authorization masks and support-defined clusters were held fixed while cluster truth was recomputed from operational labels evaluated at window-end decision availability rather than window centers. This tests whether the false-cluster endpoint is sensitive to the same causal timing convention used for event-level authorization. Second, the chb05 burden was decomposed by EDF for the train-selected persistence-plus-overlap policy. We quantified the number and share of false clusters contributed by each recording, compared the pre-completion held-out exposure with the subsequently restored evaluation-only exposure, and summarized the upper tail of calibrated scores among operationally negative windows. The latter comparison is descriptive and is used to characterize where the held-out burden arises, not to define a new operating point.
 
 \section{Results}
 
@@ -716,7 +716,7 @@ Pooled & 700 & 700 & 172.83 & 4.050 \\
 
 \begin{table}[H]
 \centering
-\caption{Distribution of chb05 false-cluster burden across the original analysis inventory and the additional evaluation-only exposure for the principal train-selected policy.}
+\caption{Distribution of chb05 false-cluster burden across the pre-completion held-out exposure and the subsequently restored evaluation-only exposure for the principal train-selected policy.}
 \label{tab:chb05_diagnostic}
 \scriptsize
 \setlength{\tabcolsep}{5pt}
@@ -724,15 +724,15 @@ Pooled & 700 & 700 & 172.83 & 4.050 \\
 \toprule
 Exposure & EDFs & EDFs w/ false & Evaluated h & False clusters & False/h \\
 \midrule
-Original analysis inventory & 14 & 10 & 14.00 & 66 & 4.71 \\
-Additional evaluation only & 25 & 22 & 25.00 & 615 & 24.60 \\
+Pre-completion held-out EDFs & 14 & 10 & 14.00 & 66 & 4.71 \\
+Restored evaluation-only EDFs & 25 & 22 & 25.00 & 615 & 24.60 \\
 \midrule
 Combined & 39 & 32 & 39.00 & 681 & 17.46 \\
 \bottomrule
 \end{tabular}
 \end{table}
 
-For chb05, the largest single EDF contributed 86/681 (12.6\%) false clusters, the three largest contributed 33.5\%, and the five largest contributed 48.3\%. Among operationally negative windows, the fraction of calibrated scores exceeding the frozen threshold $\theta=0.48$ was 0.14\% in cross-fitted calibration predictions, 1.63\% in the original held-out analysis inventory, and 7.06\% in the additional evaluation-only recordings. Full EDF-level values and score quantiles are provided in \texttt{results/chb05\_per\_edf\_diagnostic.csv} and \texttt{results/chb05\_score\_shift\_summary.csv}.
+For chb05, the largest single EDF contributed 86/681 (12.6\%) false clusters, the three largest contributed 33.5\%, and the five largest contributed 48.3\%. Among operationally negative windows, the fraction of calibrated scores exceeding the frozen threshold $\theta=0.48$ was 0.14\% in cross-fitted calibration predictions, 1.63\% in the pre-completion held-out EDFs, and 7.06\% in the subsequently restored evaluation-only recordings. Full EDF-level values and score quantiles are provided in \texttt{results/chb05\_per\_edf\_diagnostic.csv} and \texttt{results/chb05\_score\_shift\_summary.csv}.
 
 \bibliographystyle{plainnat}
 \bibliography{references}
