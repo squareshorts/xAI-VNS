@@ -79,10 +79,20 @@ ax = axes[0]; bars = ax.bar(["Pre-onset","At/after\nonset only","Missed"], count
 for bar,c in zip(bars,counts): ax.text(bar.get_x()+bar.get_width()/2, c+0.35, f"{c}/27", ha="center", va="bottom", fontsize=10)
 ax.set_ylabel("Seizures"); ax.set_ylim(0,max(counts)+3); ax.text(-0.08,1.03,"A",transform=ax.transAxes,fontweight="bold",fontsize=13); ax.grid(axis="y",alpha=.2)
 ax = axes[1]
+# Persistence and persistence + overlap have identical refractory coordinates.
+# Plot the shared coordinate once and label it explicitly so neither comparator
+# appears to be missing because of exact marker occlusion.
 for _,r in summary.iterrows():
-    name = family_names.get(r.family, r.family); ax.scatter(r.false_h,r.coverage,s=75)
+    name = family_names.get(r.family, r.family)
+    if name == "Persistence + overlap":
+        continue
+    display_name = "Persistence / persistence + overlap" if name == "Persistence" else name
+    ax.scatter(r.false_h,r.coverage,s=75)
     dy = -16 if name == "Firing power" else 5
-    ax.annotate(name,(r.false_h,r.coverage),xytext=(5,dy),textcoords="offset points",fontsize=9)
+    dx = 6 if name == "Persistence" else 5
+    if name == "Persistence":
+        dy = 7
+    ax.annotate(display_name,(r.false_h,r.coverage),xytext=(dx,dy),textcoords="offset points",fontsize=9)
 ax.set_xlabel("False authorization clusters / recording-hour\n(case mean; 300 s refractory suppression)")
 ax.set_ylabel("Event coverage (case mean)"); ax.set_ylim(.45,.76); ax.grid(alpha=.2); ax.text(-.08,1.03,"B",transform=ax.transAxes,fontweight="bold",fontsize=13)
 fig.tight_layout(); save(fig, "figure5_operational_outcomes")
@@ -109,7 +119,10 @@ fig, ax = plt.subplots(figsize=(7.8,4.8))
 ax.plot(agg.false_h,agg.coverage,marker="o")
 nom = agg[np.isclose(agg.theta,0.5)]
 if len(nom): ax.scatter(nom.false_h.iloc[0],nom.coverage.iloc[0],marker="*",s=150,zorder=5)
-for _,r in agg.iterrows(): ax.annotate(f"θ={r.theta:.1f}",(r.false_h,r.coverage),xytext=(4,4),textcoords="offset points",fontsize=8)
+label_offsets = {0.2: (6, 11), 0.3: (-42, -14)}
+for _,r in agg.iterrows():
+    dx, dy = label_offsets.get(round(float(r.theta), 1), (4, 4))
+    ax.annotate(f"θ={r.theta:.1f}",(r.false_h,r.coverage),xytext=(dx,dy),textcoords="offset points",fontsize=8)
 ax.set_xscale("log"); ax.set_xlabel("False authorization clusters / recording-hour (case mean)"); ax.set_ylabel("Event coverage (case mean)")
 ax.grid(alpha=.22,which="both"); fig.tight_layout(); save(fig,"figureS1_operating_sweep")
 
