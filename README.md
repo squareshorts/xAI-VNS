@@ -57,7 +57,7 @@ Raw EEG is **not** redistributed in this repository. Public file manifests, subj
 
 - `v1.0.1`: historical manuscript archive; Zenodo DOI `10.5281/zenodo.20403195`.
 - `v1.1.0`: complete-recording major-revision release; Zenodo DOI `10.5281/zenodo.22849640`.
-- `v1.2.0`: final targeted-robustness resubmission release. A new version-specific Zenodo DOI is generated when this GitHub release is archived by the connected Zenodo integration.
+- `v1.2.0`: final targeted-robustness resubmission release; Zenodo DOI `10.5281/zenodo.22849836`.
 
 ## Authors
 
